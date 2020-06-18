@@ -2,7 +2,7 @@
 //  BackGroundsSymbol.swift
 //  Project
 //
-//  Created by ブラック狼 on 08.06.2020.
+//  Created by ブラック狼 on 18.06.2020.
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 

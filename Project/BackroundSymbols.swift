@@ -15,7 +15,6 @@ func randomBackgroundKanji() -> String{
     var array: Int
         for _ in 1...20{
             array = background.randomElement()!
-     
     }
         return String(array) // чет у меня не вышло сделать нормальное возвращение
     }

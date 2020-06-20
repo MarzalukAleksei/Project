@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         label(labelText: "12", labelWidth: 50, labelHeight: heightOfLabel)
     }
-    
+
     func getCountOfLabels() -> Int {
         //UIScreen.main.bounds.height - высота всей вьюхи
         let count = Int( UIScreen.main.bounds.height / heightOfLabel ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество

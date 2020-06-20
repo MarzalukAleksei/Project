@@ -16,14 +16,14 @@ class ViewController: UIViewController {
         
        
         
-        label(labelText: "12")
+        label(labelText: "12", labelWidth: 50, labelHeight: 50)
         
     }
     
     
-    func label(labelText: String){
+    func label(labelText: String, labelWidth: Int,labelHeight: Int){
         
-    let label = UILabel(frame: CGRect(x: 10,y: 10,width: 50,height: 50))
+    let label = UILabel(frame: CGRect(x: 10,y: 10,width: labelWidth,height: labelHeight))
     label.center = CGPoint(x: 30,y: 50)
     label.textAlignment = .center
     label.text = labelText

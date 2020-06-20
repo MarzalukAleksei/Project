@@ -21,9 +21,21 @@ class ViewController: UIViewController {
         
     }
     
-    func height (){
-        _ = UIScreen.main.bounds.height / 50
-    }
+    
+    
+    func width() {
+    var screenWidth: CGFloat {
+    return UIScreen.main.bounds.width / 50
+        }}
+    func height(){
+    var screenHeight: CGFloat {
+    return UIScreen.main.bounds.height / 50
+        }}
+    
+    
+    
+    
+    
     
     func label(labelText: String, labelWidth: Int,labelHeight: Int){
         

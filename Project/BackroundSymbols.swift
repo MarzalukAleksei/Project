@@ -20,4 +20,4 @@ func randomBackgroundKanji() -> String{
         return "\(array)" // чет у меня не вышло сделать нормальное возвращение
     }
 
-randomBackgroundKanji()
+let array = randomBackgroundKanji()

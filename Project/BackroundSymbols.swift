@@ -19,7 +19,23 @@ func randomBackgroundKanji() -> String {
     return String(changeToString)
 }
 
+func returnArrayString(integer: Int) -> [String]{
+    var array = [String]()
+    for _ in 1...integer{
+        array.append(randomBackgroundKanji())
+    }
+    
+    return array
+}
 
+
+
+
+
+
+
+
+/*
 func guardExample() -> Bool{
     // сомотри, есть в самом guard до слова else указываается условие которе должно выполнится, а в скобках после else указываается то, что должно быть выполнено, условие после guard не рааботает
     //простой пример:
@@ -32,3 +48,4 @@ func guardExample() -> Bool{
     }
     return true
 }
+*/

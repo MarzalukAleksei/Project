@@ -14,19 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-         var screenWidth: CGFloat {
-            return UIScreen.main.bounds.width
-        }
-
-         var screenHeight: CGFloat {
-            return UIScreen.main.bounds.height
-        }
+        
         
         
         label(labelText: "12", labelWidth: 50, labelHeight: 50)
         
     }
     
+    func height (){
+        _ = UIScreen.main.bounds.height / 50
+    }
     
     func label(labelText: String, labelWidth: Int,labelHeight: Int){
         

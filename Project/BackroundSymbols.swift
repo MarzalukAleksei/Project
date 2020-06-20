@@ -20,12 +20,12 @@ func randomBackgroundKanji() -> String {
 }
 
 func returnArrayString(integer: Int) -> [String]{
-    var array = [String]()
+    var array: [String] = []
     if integer > 0 {
     for _ in 1...integer{
         array.append(randomBackgroundKanji())
-    }
-    }
+        }
+        }
     return array
 }
 

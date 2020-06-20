@@ -18,10 +18,10 @@ class ViewController: UIViewController {
         
     }
     
-    func getCountOfLabels() -> Int {
-        //UIScreen.main.bounds.height - высота всей вьюхи
-        let count = Int( UIScreen.main.bounds.height / 50 ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
-        
+//    func getCountOfLabels() -> Int {
+//        //UIScreen.main.bounds.height - высота всей вьюхи
+//        let count = Int( UIScreen.main.bounds.height / 50 ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
+
         return count
     }
     

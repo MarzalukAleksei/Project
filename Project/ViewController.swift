@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     func label(labelText: String){
         
     let label = UILabel(frame: CGRect(x: 10,y: 10,width: 50,height: 50))
-    label.center = CGPoint(x: 60,y: 50)
+    label.center = CGPoint(x: 30,y: 50)
     label.textAlignment = .center
     label.text = labelText
     label.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)

@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for _ in 1...50{
-            _ = background.randomElement()!
-        }
+        backgroundKanji()
+        
+        
     }
-
+    
 
 }
 

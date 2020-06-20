@@ -12,32 +12,37 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
+        print (width())
         label(labelText: "12", labelWidth: 50, labelHeight: 50)
         
     }
     
+    func getCountOfLabels() -> Int {
+        //UIScreen.main.bounds.height - высота всей вьюхи
+        let count = Int( UIScreen.main.bounds.height / 50 ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
+        
+        return count
+    }
     
+    func width() -> Int{
+    var screenWidth: Int {
+        return Int(UIScreen.main.bounds.width / 50)
+        }
+        return screenWidth
+    }
     
-    func width() {
-    var screenWidth: CGFloat {
-    return UIScreen.main.bounds.width / 50
-        }}
-    func height(){
+    func height() {
     var screenHeight: CGFloat {
-    return UIScreen.main.bounds.height / 50
-        }}
+        return UIScreen.main.bounds.height / 50
+        }
+    }
     
     
     
     
     
     
-    func label(labelText: String, labelWidth: Int,labelHeight: Int){
+    func label(labelText: String, labelWidth: Int,labelHeight: Int) {
         
     let label = UILabel(frame: CGRect(x: 10,y: 10,width: labelWidth,height: labelHeight))
     label.center = CGPoint(x: 30,y: 50)

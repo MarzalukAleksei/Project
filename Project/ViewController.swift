@@ -14,18 +14,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        func label(){
+        func label(labelText: String){
             
             
         let label = UILabel(frame: CGRect(x: 10,y: 10,width: 50,height: 50))
         label.center = CGPoint(x: 150,y: 150)
         label.textAlignment = .center
-        label.text = "1"
+        label.text = labelText
         self.view.addSubview(label)
         
         }
         
-        label()
+        label(labelText: "12")
         
     }
     

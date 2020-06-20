@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-       
+         var screenWidth: CGFloat {
+            return UIScreen.main.bounds.width
+        }
+
+         var screenHeight: CGFloat {
+            return UIScreen.main.bounds.height
+        }
+        
         
         label(labelText: "12", labelWidth: 50, labelHeight: 50)
         
@@ -29,8 +36,9 @@ class ViewController: UIViewController {
     label.text = labelText
     label.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     self.view.addSubview(label)
-    
+
     }
+    
     
 
 }

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print (width())
+        print (height())
         label(labelText: "12", labelWidth: 50, labelHeight: 50)
         
     }
@@ -31,10 +32,11 @@ class ViewController: UIViewController {
         return screenWidth
     }
     
-    func height() {
-    var screenHeight: CGFloat {
-        return UIScreen.main.bounds.height / 50
+    func height() -> Int{
+    var screenHeight: Int {
+        return Int(UIScreen.main.bounds.height / 50)
         }
+        return screenHeight
     }
     
     

@@ -17,7 +17,7 @@ func randomBackgroundKanji() -> String{
             array = background.randomElement()!
      
     }
-        return "\(array)" // чет у меня не вышло сделать нормальное возвращение
+        return String(array) // чет у меня не вышло сделать нормальное возвращение
     }
 
 let array = randomBackgroundKanji()

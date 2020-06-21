@@ -19,7 +19,7 @@ func randomBackgroundKanji() -> String {
     return String(changeToString)
 }
 
-func returnArrayString(integer: Int) -> [String]{
+func returnArrayString(verticalCounts: Int,integer: Int) -> [String]{
     var array: [String] = []
     if integer > 0 {
     for _ in 1...integer{

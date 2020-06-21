@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         for value in 0...countOfLabels { 
             let arrayItem = randomBackgroundKanji()
             let y = heightOfLabel * CGFloat(value)
-//            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+            
         }
     }
     
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
         label.textAlignment = .center
         label.text = labelText
         label.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-        self.view.addSubview(label)
+//        self.view.addSubview(label)
         return (labelText,labelWidth,labelHeight,yCordinate,xCordinate)
     }
     

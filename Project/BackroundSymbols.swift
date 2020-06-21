@@ -31,13 +31,13 @@ func returnArrayString(integer: Int) -> [String]{
 
 
 
-func randomOne() -> Double{
-    let random = Double.random(in: 0.40...0.85)
+func randomOne() -> CGFloat{
+    let random = CGFloat.random(in: 0.40...0.85)
     return random
 }
 
-func randomTwo() -> Int {
-    let random = Int.random(in: 15...49)
+func randomTwo() -> CGFloat {
+    let random = CGFloat.random(in: 15...49)
     return random
 }
 

@@ -41,7 +41,8 @@ class ViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
         label.textAlignment = .center
         label.text = labelText
-
+        label.alpha = randomOne()
+        label.font.withSize(randomTwo())
         return label
     }
     

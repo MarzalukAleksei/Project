@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let heightOfLabel: CGFloat = 50
+        let widthOfLabel: CGFloat = 50
         
         let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
         // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
         for value in 0...countOfLabels { 
             let arrayItem = randomBackgroundKanji()
             let y = heightOfLabel * CGFloat(value)
-            label(labelText: arrayItem, labelWidth: 50, labelHeight: heightOfLabel, yCordinate: y)
+            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y)
         }
     }
     

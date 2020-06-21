@@ -26,6 +26,8 @@ class ViewController: UIViewController {
             let arrayItem = randomBackgroundKanji()
             let y = heightOfLabel * CGFloat(value)
             let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+//            
+            
         }
     }
     

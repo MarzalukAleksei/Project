@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         
         let heightOfLabel: CGFloat = 50
         let widthOfLabel: CGFloat = 50
+        let xCordinate: CGFloat = 10
         
         let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
         // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
         for value in 0...countOfLabels { 
             let arrayItem = randomBackgroundKanji()
             let y = heightOfLabel * CGFloat(value)
-            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y)
+//            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
         }
     }
     
@@ -32,12 +33,14 @@ class ViewController: UIViewController {
         return count
     }
     
-    func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat) {
-        let label = UILabel(frame: CGRect(x: 10,y: yCordinate, width: labelWidth, height: labelHeight))
+    func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> (String, CGFloat, CGFloat, CGFloat, CGFloat){
+        let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
         label.textAlignment = .center
         label.text = labelText
         label.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         self.view.addSubview(label)
+        return (labelText,labelWidth,labelHeight,yCordinate,xCordinate)
     }
+    
 }
 

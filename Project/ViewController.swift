@@ -23,8 +23,9 @@ class ViewController: UIViewController {
         for value in 0...countOfLabels { 
             let arrayItem = randomBackgroundKanji()
             let y = heightOfLabel * CGFloat(value)
-            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
-            
+//            label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+            self.view.addSubview(label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y
+            , xCordinate: xCordinate))
         }
     }
     
@@ -34,13 +35,13 @@ class ViewController: UIViewController {
         return count
     }
     
-    func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> (String, CGFloat, CGFloat, CGFloat, CGFloat){
+    func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
         let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
         label.textAlignment = .center
         label.text = labelText
         label.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
 //        self.view.addSubview(label)
-        return (labelText,labelWidth,labelHeight,yCordinate,xCordinate)
+        return label
     }
     
 }

@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         return count
     }
     
-    func getLabelsY(labelCount: Int, heightLabel: Int) -> CGFloat{// labelCount - строка, heightLabel - размер лейба
+    func getLabelsY(labelCount: Int, heightLabel: Int) -> CGFloat{// labelCount - строка, heightLabel - размер лейба для отступа
         var yCordinate = 10
         if labelCount > 1{
             for _ in 2...labelCount{

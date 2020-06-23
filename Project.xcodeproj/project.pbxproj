@@ -15,6 +15,7 @@
 		CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CFD8045B249FC6C500E6CCDA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8045A249FC6C500E6CCDA /* SecondViewController.swift */; };
+		CFD8045D24A289D600E6CCDA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8045C24A289D500E6CCDA /* ThirdViewController.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		CF30CD612472CD1F005B09F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
 		CFD8045A249FC6C500E6CCDA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CFD8045C24A289D500E6CCDA /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				CF30CD572472CD1C005B09F4 /* ViewController.swift */,
 				CFD8045A249FC6C500E6CCDA /* SecondViewController.swift */,
 				CF30CD592472CD1C005B09F4 /* Main.storyboard */,
+				CFD8045C24A289D500E6CCDA /* ThirdViewController.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
 				CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CFD8045B249FC6C500E6CCDA /* SecondViewController.swift in Sources */,
+				CFD8045D24A289D600E6CCDA /* ThirdViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

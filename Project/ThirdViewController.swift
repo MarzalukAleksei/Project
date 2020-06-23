@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: SecondViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +30,13 @@ class SecondViewController: UIViewController {
             }
         }
         
-        func getCountOfLabels(heightOfLabel: CGFloat) -> Int {
+    override func getCountOfLabels(heightOfLabel: CGFloat) -> Int {
             //UIScreen.main.bounds.height - высота всей вьюхи
             let count = Int( UIScreen.main.bounds.height / heightOfLabel ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
             return count
         }
         
-        func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
+    override func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
             let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
             label.textAlignment = .center
             label.text = labelText

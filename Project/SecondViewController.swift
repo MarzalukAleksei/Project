@@ -12,7 +12,14 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let heightOfLabel: CGFloat = 50
+        
+        
+        createLabel()
+        
+}
+
+func createLabel() {
+            let heightOfLabel: CGFloat = 50
             let widthOfLabel: CGFloat = 50
             let xCordinate: CGFloat = 10
             
@@ -43,6 +50,5 @@ class SecondViewController: UIViewController {
             label.alpha = randomOne()
             label.font.withSize(randomTwo())
             return label
-        
-}
+        }
 }

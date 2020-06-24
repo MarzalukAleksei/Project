@@ -8,51 +8,47 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-
+        createLabel()
         
 }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        rightSideBackground()
-       
 
+func createLabel() {
+            let heightOfLabel: CGFloat = 50
+            let widthOfLabel: CGFloat = 50
+            let xCordinate: CGFloat = 10
+            
+            let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
+            // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
+            
+            
+            
+            for value in 0...countOfLabels {
+                let arrayItem = randomBackgroundKanji()
+                let y = heightOfLabel * CGFloat(value)
+                let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+                view.addSubview(newLabel)
+                
+            }
         }
-    
-    
-    func rightSideBackground(){
-    let heightLabel: CGFloat = 50
-    let widthLabel: CGFloat = 50
-    let xCordinate = UIScreen.main.bounds.width - widthLabel
-    let lCount = labelCount(heighLabel: heightLabel)
-    
-    
-    for item in 0...lCount{
-        let arrayItem = randomBackgroundKanji()
-        let yCordinate = heightLabel * CGFloat(item)
-        let rightLabel = rightSideLabel(labelText: arrayItem, xCor: xCordinate, yCor: yCordinate, heighLabel: heightLabel, widthLabel: widthLabel)
-        view.addSubview(rightLabel)
-    }
-   
+        
+        func getCountOfLabels(heightOfLabel: CGFloat) -> Int {
+            //UIScreen.main.bounds.height - высота всей вьюхи
+            let count = Int( UIScreen.main.bounds.height / heightOfLabel ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
+            return count
+        }
+        
+        func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
+            let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
+            label.textAlignment = .center
+            label.text = labelText
+            label.alpha = randomOne()
+            label.font.withSize(randomTwo())
+            return label
+        }
 }
-
-func labelCount (heighLabel: CGFloat) -> Int{
-    let count = UIScreen.main.bounds.height / heighLabel
-    return Int(count)
-}
-
-func rightSideLabel(labelText: String,xCor: CGFloat,yCor: CGFloat,heighLabel: CGFloat, widthLabel: CGFloat) -> UILabel{ // проверить возвращение и без
-    let label = UILabel(frame: CGRect(x: xCor, y: yCor, width: widthLabel, height: heighLabel))
-    label.textAlignment = .center
-    label.text = labelText
-    label.alpha = 1
-    
-    return label
-}
-}
-

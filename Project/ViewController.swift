@@ -51,9 +51,9 @@ class ViewController: UIViewController {
         }
         
     
-    func animateLabel(label: UILabel, duration: Int){
+    func animateLabel(label: UILabel, duration: Double){
         
-        UIView.animate(withDuration: Double(duration), animations: {
+        UIView.animate(withDuration: duration, animations: {
             label.frame.origin.x = self.view.frame.width // те указали что Х = ширине(длинне) экрана, не путай с высотой - height
         }) { (_) in
             // здесь будет выполняться то, когда закончится анимация

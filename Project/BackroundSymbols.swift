@@ -41,8 +41,8 @@ func randomTwo() -> CGFloat {
     return random
 }
 
-func randomTwentyHundred() -> Int{
-    let random = Int.random(in: 20...100)
+func randomTwentyHundred() -> Double{
+    let random = Double.random(in: 20...100)
     return random
 }
 

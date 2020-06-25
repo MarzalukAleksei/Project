@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +25,16 @@ func createLabel() {
             
             let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
             // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
-            
+    var labelArray: [UILabel] = []
             
             
             for value in 0...countOfLabels {
                 let arrayItem = randomBackgroundKanji()
                 let y = heightOfLabel * CGFloat(value)
                 let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+                labelArray.append(newLabel)
                 view.addSubview(newLabel)
+                
                 
             }
         }

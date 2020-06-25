@@ -14,18 +14,42 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        createLabel()
         
 }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createLabel(xCor: 0)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 10, animations: {
+            
+                
+                
+            
+            
+        })
+        
+        
+        
+    }
 
-func createLabel() {
-            let heightOfLabel: CGFloat = 50
+    func createLabel(xCor: CGFloat) {
             let widthOfLabel: CGFloat = 50
-            let xCordinate: CGFloat = 10
+            let heightOfLabel: CGFloat = 50
+            let xCordinate: CGFloat = xCor
             
             let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
             // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
-    var labelArray: [UILabel] = []
+           
+        
+        
+//        let countXLabels = countXCorLabels(widthLabel: widthLabel)
+        
+        
+            var labelArray: [UILabel] = []
             
             
             for value in 0...countOfLabels {
@@ -39,11 +63,18 @@ func createLabel() {
             }
         }
         
+    
+    
         func getCountOfLabels(heightOfLabel: CGFloat) -> Int {
             //UIScreen.main.bounds.height - высота всей вьюхи
             let count = Int( UIScreen.main.bounds.height / heightOfLabel ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
             return count
         }
+        
+//    func countXCorLabels(widthLabel: CGFloat) -> Int{
+//        let count = UIScreen.main.bounds.width / widthLabel
+//        return Int(count)
+//    }
         
         func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
             let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))

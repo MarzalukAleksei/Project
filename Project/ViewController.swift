@@ -44,13 +44,15 @@ class ViewController: UIViewController {
                 labelArray.append(newLabel)
                 view.addSubview(newLabel)
             }
-            getLabel(label: <#T##UILabel#>)
+            animateLabel(label: <#T##UILabel#>)
         
         }
         
     
-    func getLabel(label: UILabel){
-        
+    func animateLabel(label: UILabel){
+        UIView.animate(withDuration: 1) {
+            
+        }
         
         
     }

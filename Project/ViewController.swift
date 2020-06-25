@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 10, animations: {
+        UIView.animate(withDuration: 1, animations: {
             
                 
                 

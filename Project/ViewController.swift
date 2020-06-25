@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             let heightOfLabel: CGFloat = 50
             let xCordinate: CGFloat = 10
             
+        
             let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
             // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
            
@@ -43,16 +44,16 @@ class ViewController: UIViewController {
                 let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
              //   labelArray.append(newLabel)
                 view.addSubview(newLabel)
-                animateLabel(label: newLabel ) // добавили сюда, массив в принципе не особо нужен как оказалось
+                animateLabel(label: newLabel,duration: randomTwentyHundred() ) // добавили сюда, массив в принципе не особо нужен как оказалось
             }
            
         
         }
         
     
-    func animateLabel(label: UILabel){
+    func animateLabel(label: UILabel, duration: Int){
         
-        UIView.animate(withDuration: 10, animations: {
+        UIView.animate(withDuration: Double(duration), animations: {
             label.frame.origin.x = self.view.frame.width // те указали что Х = ширине(длинне) экрана, не путай с высотой - height
         }) { (_) in
             // здесь будет выполняться то, когда закончится анимация

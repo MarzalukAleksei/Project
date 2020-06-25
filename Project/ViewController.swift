@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 10, animations: {
             label.frame.origin.x = self.view.frame.width // те указали что Х = ширине(длинне) экрана, не путай с высотой - height
-        }) { (_) ins
+        }) { (_) in
             // здесь будет выполняться то, когда закончится анимация
         }
     }

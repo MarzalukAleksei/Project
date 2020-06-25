@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        createLabel()
         
 }
     
@@ -34,27 +34,29 @@ class ViewController: UIViewController {
 //        let countXLabels = countXCorLabels(widthLabel: widthLabel)
         
         
-            var labelArray: [UILabel] = []
+          //  var labelArray: [UILabel] = []
             
             
             for value in 0...countOfLabels {
                 let arrayItem = randomBackgroundKanji()
                 let y = heightOfLabel * CGFloat(value)
                 let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
-                labelArray.append(newLabel)
+             //   labelArray.append(newLabel)
                 view.addSubview(newLabel)
+                animateLabel(label: newLabel ) // добавили сюда, массив в принципе не особо нужен как оказалось
             }
-            animateLabel(label: )
+           
         
         }
         
     
     func animateLabel(label: UILabel){
-        UIView.animate(withDuration: 20) {
-            label
+        
+        UIView.animate(withDuration: 10, animations: {
+            label.frame.origin.x = self.view.frame.width // те указали что Х = ширине(длинне) экрана, не путай с высотой - height
+        }) { (_) ins
+            // здесь будет выполняться то, когда закончится анимация
         }
-        
-        
     }
     
         func getCountOfLabels(heightOfLabel: CGFloat) -> Int {

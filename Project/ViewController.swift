@@ -44,7 +44,7 @@ class ViewController: UIViewController {
                 let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
              //   labelArray.append(newLabel)
                 view.addSubview(newLabel)
-                animateLabel(label: newLabel,duration: randomTwentyHundred() ) // добавили сюда, массив в принципе не особо нужен как оказалось
+                animateLabel(label: newLabel,duration: randomTwentyHundred() )// добавили сюда, массив в принципе не особо нужен как оказалось
             }
            
         
@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         }) { (_) in
             // здесь будет выполняться то, когда закончится анимация
             label.frame.origin.x = -50
+            self.animateLabel(label: label, duration: duration)
         }
     }
     

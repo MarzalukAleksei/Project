@@ -46,8 +46,10 @@ func randomTwentyHundred() -> Double{
     return random
 }
 
-
-
+func randomScreenPointWidth() -> CGFloat{
+    let random = CGFloat.random(in: -50...UIScreen.main.bounds.width)
+        return random
+   }
 
 
 

@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     func createLabel() {
             let widthOfLabel: CGFloat = 50
             let heightOfLabel: CGFloat = 50
-            let xCordinate: CGFloat = 10
+//            let xCordinate: CGFloat = -50
+        
             
         
             let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
             for value in 0...countOfLabels {
                 let arrayItem = randomBackgroundKanji()
                 let y = heightOfLabel * CGFloat(value)
-                let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: xCordinate)
+                let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomScreenPointWidth())
              //   labelArray.append(newLabel)
                 view.addSubview(newLabel)
                 animateLabel(label: newLabel,duration: randomTwentyHundred() )// добавили сюда, массив в принципе не особо нужен как оказалось
@@ -68,7 +69,8 @@ class ViewController: UIViewController {
             return count
         }
         
-    
+   
+
         
         func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
             let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))

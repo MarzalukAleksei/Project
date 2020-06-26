@@ -31,6 +31,7 @@
 		CF30CD5F2472CD1F005B09F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF30CD612472CD1F005B09F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
+		CFD8045E24A65FB700E6CCDA /* MyProgram.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; name = MyProgram.sketch; path = ../../../MyProgram.sketch; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +94,7 @@
 				CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */,
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
+				CFD8045E24A65FB700E6CCDA /* MyProgram.sketch */,
 			);
 			path = Project;
 			sourceTree = "<group>";

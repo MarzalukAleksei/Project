@@ -1,5 +1,5 @@
 //
-//  BackgroundAlfabel.swift
+//  BackgroundAlphabel.swift
 //  Project
 //
 //  Created by ブラック狼 on 29.06.2020.

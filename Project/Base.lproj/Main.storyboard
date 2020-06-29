@@ -77,7 +77,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,6 +102,9 @@
                                 <state key="normal" title="ИЕРОГЛИФЫ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="IYF-NM-3kk" kind="show" id="Yo0-W9-Umd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -113,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="87.228260869565219"/>
         </scene>
-        <!--Kanji Select Level View Controller-->
+        <!--Kanji-->
         <scene sceneID="ZHn-rn-uYI">
             <objects>
                 <viewController id="IYF-NM-3kk" customClass="KanjiSelectLevelViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,6 +173,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CA0-dh-3dx"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Kanji" id="cFe-8Y-aLK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RD2-mo-vl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

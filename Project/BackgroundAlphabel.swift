@@ -19,3 +19,13 @@ func kanaCount() -> Int {
     return count
 }
 
+// MARK: RANDOM KANA
+func randomHiragana() -> String{
+    guard let random = hiragana.randomElement() else { return "" }
+    return random
+}
+
+func randomKatakana() -> String{
+    guard let random = katakana.randomElement() else { return "" }
+    return random
+}

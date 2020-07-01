@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "cell"
+private let reuseIdentifier = "Сell"
 
 class CollectionViewController: UICollectionViewController {
 

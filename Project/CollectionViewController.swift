@@ -23,6 +23,14 @@ class CollectionViewController: UICollectionViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "kanaSegue" {
+            let kana = segue.destination as! DetailKana
+            let cell = sender as! CollectionViewCell
+            kana.detailLabel = cell.labelKana // ВОТ ТУТ ЧТО Я НЕПРАВИЛЬНО НАПИСАЛ?
+        }
+    }
+    
     
     // MARK: UICollectionViewDataSource
 
@@ -43,7 +51,7 @@ class CollectionViewController: UICollectionViewController {
 
 //        let kana = katakana[indexPath.item]
         
-        cell.label.text = hiragana[indexPath.item]
+        cell.labelKana.text = hiragana[indexPath.item]
         
     
         return cell

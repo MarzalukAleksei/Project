@@ -88,7 +88,7 @@
                                 <size key="customSize" width="110" height="110"/>
                                 <connections>
                                     <outlet property="labelKana" destination="MaT-TL-2SP" id="ucl-WJ-ona"/>
-                                    <segue destination="l8d-ht-EgW" kind="presentation" identifier="kanaSegue" id="44I-3X-8kr"/>
+                                    <segue destination="l8d-ht-EgW" kind="show" identifier="kanaSegue" id="pav-Q6-P8x"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -244,11 +244,11 @@
             <objects>
                 <viewController id="l8d-ht-EgW" customClass="DetailKana" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qIK-i9-gj0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-V1-QY9">
-                                <rect key="frame" x="87" y="238" width="240" height="240"/>
+                                <rect key="frame" x="87" y="270" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-p2-AoA" userLabel="Label">
                                         <rect key="frame" x="8" y="8" width="224" height="224"/>
@@ -277,6 +277,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PPe-NL-NzD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2zy-pG-hqc"/>
                     <connections>
                         <outlet property="detailLabel" destination="bUq-p2-AoA" id="42y-NR-Ijx"/>
                     </connections>

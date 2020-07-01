@@ -17,11 +17,6 @@ class AlphabetViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
     func kanaBackgroundLabel(){
         let labelWidth: CGFloat = 60
         let labelHeigth: CGFloat = 60
@@ -33,10 +28,10 @@ class AlphabetViewController: UIViewController {
                 let x = labelWidth * CGFloat(horizontalItem)
                 let y = labelHeigth * CGFloat(verticalItem)
                 if verticalItem % 2 == 0 {
-                    let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKatakana())
+                    let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKana(selectKana: katakana))
                     view.addSubview(label)
                 }else{
-                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomHiragana())
+                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKana(selectKana: hiragana))
                     view.addSubview(newLabel)}
             }
         }

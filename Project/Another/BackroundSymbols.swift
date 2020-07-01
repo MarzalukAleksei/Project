@@ -34,25 +34,33 @@ func returnArrayString(integer: Int) -> [String]{
 
 
 
-func randomOne() -> CGFloat{
-    let random = CGFloat.random(in: 0.40...0.85)
+func randomFloat(from: CGFloat, to: CGFloat) -> CGFloat{
+    let random = CGFloat.random(in: from...to)
     return random
 }
 
-func randomTwo() -> CGFloat {
-    let random = CGFloat.random(in: 15...49)
-    return random
-}
 
-func randomTwentyHundred() -> Double{
-    let random = Double.random(in: 20...100)
-    return random
-}
 
-func randomScreenPointWidth() -> CGFloat{
-    let random = CGFloat.random(in: -50...UIScreen.main.bounds.width)
-        return random
-   }
+
+//func randomOne() -> CGFloat{
+//    let random = CGFloat.random(in: 0.40...0.85)
+//    return random
+//}
+//
+//func randomTwo() -> CGFloat {
+//    let random = CGFloat.random(in: 15...49)
+//    return random
+//}
+//
+//func randomTwentyHundred() -> Double{
+//    let random = Double.random(in: 20...100)
+//    return random
+//}
+//
+//func randomScreenPointWidth() -> CGFloat{
+//    let random = CGFloat.random(in: -50...UIScreen.main.bounds.width)
+//        return random
+//   }
 
 
 

@@ -16,7 +16,7 @@ class BackgroundViewController: UIViewController {
  
                 createLabel()
                 
-                
+        
         }
             
             
@@ -44,10 +44,10 @@ class BackgroundViewController: UIViewController {
                     for value in 0...countOfLabels {
                         let arrayItem = randomBackgroundKanji()
                         let y = heightOfLabel * CGFloat(value)
-                        let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomScreenPointWidth())
+                        let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: -50, to: UIScreen.main.bounds.width))
                      //   labelArray.append(newLabel)
                         view.addSubview(newLabel)
-                        animateLabel(label: newLabel,duration: randomTwentyHundred() )// добавили сюда, массив в принципе не особо нужен как оказалось
+                        animateLabel(label: newLabel,duration: Double(randomFloat(from: 20, to: 100)) )// добавили сюда, массив в принципе не особо нужен как оказалось
                     }
                    
                 
@@ -78,8 +78,8 @@ class BackgroundViewController: UIViewController {
                     let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
                     label.textAlignment = .center
                     label.text = labelText
-                    label.alpha = randomOne()
-                    label.font.withSize(randomTwo())
+                    label.alpha = randomFloat(from: 0.40, to: 0.85)
+                    label.font.withSize(randomFloat(from: 15, to: 49))
                     return label
                 }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailKana: UIViewController {
+class DetailKanaViewController: UIViewController {
 
     var kana = ""
     @IBOutlet weak var detailLabel: UILabel!

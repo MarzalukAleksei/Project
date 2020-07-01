@@ -25,9 +25,9 @@ class CollectionViewController: UICollectionViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "kanaSegue" {
-            let kana = segue.destination as! DetailKana
+            let destinationKana = segue.destination as! DetailKana
             let cell = sender as! CollectionViewCell
-            kana.detailLabel.text = cell.labelKana.text // ВОТ ТУТ ЧТО Я НЕПРАВИЛЬНО СДЕЛАЛ?
+            destinationKana.kana = cell.labelKana.text! 
         }
     }
     

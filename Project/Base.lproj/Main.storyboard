@@ -23,6 +23,9 @@
                                 <state key="normal" title="ХИРАГАНА">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7Ep-3m-IaG" kind="show" id="wU0-ND-JfU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7U-Qa-d7m">
                                 <rect key="frame" x="107" y="416" width="200" height="50"/>
@@ -43,16 +46,17 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="-607.33695652173913"/>
         </scene>
-        <!--View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="sX5-4y-5Sv">
             <objects>
-                <viewController id="7Ep-3m-IaG" sceneMemberID="viewController">
+                <viewController id="7Ep-3m-IaG" customClass="CollectionViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iPK-E6-vJR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VcE-zp-jfG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LMJ-Gi-ZcM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IX-ji-nCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,7 @@
 		CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */; };
 		CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */; };
 		CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */; };
+		CF4B820324AC702600A2CBA8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* CollectionViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
@@ -36,6 +37,7 @@
 		CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
 		CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAlphabel.swift; sourceTree = "<group>"; };
 		CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		CF4B820224AC702600A2CBA8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
 		CFD8045E24A65FB700E6CCDA /* MyProgram.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; name = MyProgram.sketch; path = ../../../MyProgram.sketch; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
 				CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */,
 				CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */,
+				CF4B820224AC702600A2CBA8 /* CollectionViewController.swift */,
 				CF30CD592472CD1C005B09F4 /* Main.storyboard */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
 				CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 				CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
+				CF4B820324AC702600A2CBA8 /* CollectionViewController.swift in Sources */,
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,

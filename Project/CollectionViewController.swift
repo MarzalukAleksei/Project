@@ -27,7 +27,7 @@ class CollectionViewController: UICollectionViewController {
         if segue.identifier == "kanaSegue" {
             let kana = segue.destination as! DetailKana
             let cell = sender as! CollectionViewCell
-            kana.detailLabel = cell.labelKana // ВОТ ТУТ ЧТО Я НЕПРАВИЛЬНО НАПИСАЛ?
+            kana.detailLabel.text = cell.labelKana.text // ВОТ ТУТ ЧТО Я НЕПРАВИЛЬНО СДЕЛАЛ?
         }
     }
     

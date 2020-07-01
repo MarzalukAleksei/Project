@@ -55,14 +55,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HF2-4F-Hbg">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HF2-4F-Hbg">
                             <size key="itemSize" width="110" height="110"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Сell" id="k5q-n3-eiJ" customClass="CollectionViewCell" customModule="Project" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kanaCell" id="k5q-n3-eiJ" customClass="CollectionViewCell" customModule="Project" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mft-0O-hkh">
@@ -78,7 +78,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="MaT-TL-2SP" firstAttribute="leading" secondItem="Mft-0O-hkh" secondAttribute="leading" constant="8" id="65l-td-UEV"/>
+                                        <constraint firstAttribute="trailing" secondItem="MaT-TL-2SP" secondAttribute="trailing" constant="8" id="Anu-9S-RwE"/>
                                         <constraint firstItem="MaT-TL-2SP" firstAttribute="top" secondItem="Mft-0O-hkh" secondAttribute="top" constant="8" id="NdF-3K-IpM"/>
+                                        <constraint firstAttribute="bottom" secondItem="MaT-TL-2SP" secondAttribute="bottom" constant="8" id="cNq-G0-vGy"/>
                                         <constraint firstItem="MaT-TL-2SP" firstAttribute="centerY" secondItem="Mft-0O-hkh" secondAttribute="centerY" id="swM-bC-QBy"/>
                                         <constraint firstItem="MaT-TL-2SP" firstAttribute="centerX" secondItem="Mft-0O-hkh" secondAttribute="centerX" id="w7x-2z-L59"/>
                                     </constraints>

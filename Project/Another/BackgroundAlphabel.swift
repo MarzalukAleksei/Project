@@ -35,6 +35,6 @@ func kanaCount() -> Int {
 //}
 
 func randomKana(selectKana: [String]) -> String {
-    let random = selectKana.randomElement() ?? ""  // Можно делать так? Или нужно guard использовать?
+    guard let random = selectKana.randomElement() else { return "" } 
     return random
 }

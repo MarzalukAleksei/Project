@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSc-ix-vbl">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +13,7 @@
             <objects>
                 <viewController id="vuT-wG-8Qt" customClass="AlphabetViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z0p-TT-ghc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhx-ld-xxC">
@@ -35,6 +36,9 @@
                                 <state key="normal" title="КАТАКАНА">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="FpQ-62-Edf" kind="show" id="B2C-QD-kzL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -51,7 +55,7 @@
             <objects>
                 <collectionViewController id="FpQ-62-Edf" customClass="CollectionViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="h7r-DT-xJn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HF2-4F-Hbg">
@@ -123,7 +127,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8A-2Z-XrN">
@@ -165,7 +169,7 @@
             <objects>
                 <viewController id="IYF-NM-3kk" customClass="KanjiSelectLevelViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kc1-kz-Itv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-gD-URT">
@@ -228,7 +232,7 @@
             <objects>
                 <viewController id="EhD-Qf-jav" customClass="KanjiListViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71i-0U-Wvs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="E7A-jF-5Cx"/>
@@ -243,11 +247,11 @@
             <objects>
                 <viewController id="l8d-ht-EgW" customClass="DetailKanaViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qIK-i9-gj0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-V1-QY9">
-                                <rect key="frame" x="180" y="202" width="240" height="240"/>
+                                <rect key="frame" x="87" y="180" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-p2-AoA" userLabel="Label">
                                         <rect key="frame" x="8" y="8" width="224" height="224"/>
@@ -268,17 +272,62 @@
                                     <constraint firstItem="bUq-p2-AoA" firstAttribute="leading" secondItem="H3G-V1-QY9" secondAttribute="leading" constant="8" id="nIB-Fq-Gyn"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ej-Fp-daP">
+                                <rect key="frame" x="95" y="436" width="224" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42c-iH-Fa7">
+                                        <rect key="frame" x="97" y="29" width="30" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Ej-Fp-daP" secondAttribute="height" multiplier="7:4" id="JV4-gm-Rn1"/>
+                                    <constraint firstItem="42c-iH-Fa7" firstAttribute="centerY" secondItem="1Ej-Fp-daP" secondAttribute="centerY" constant="0.5" id="hYj-S6-qBl"/>
+                                    <constraint firstItem="42c-iH-Fa7" firstAttribute="centerX" secondItem="1Ej-Fp-daP" secondAttribute="centerX" id="v5e-Xh-EK9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hc-5K-mD5">
+                                <rect key="frame" x="17" y="485" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Kana -1"/>
+                                <connections>
+                                    <action selector="previousButtom:" destination="l8d-ht-EgW" eventType="touchUpInside" id="cPY-2x-gNC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYJ-rk-bcl">
+                                <rect key="frame" x="341" y="485" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Kana +1"/>
+                                <connections>
+                                    <action selector="nextButtom:" destination="l8d-ht-EgW" eventType="touchUpInside" id="Bg2-FB-mv4"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="speaker.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-gT-5OC">
+                                <rect key="frame" x="182" y="590.66666666666652" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="H3G-V1-QY9" firstAttribute="centerY" secondItem="PPe-NL-NzD" secondAttribute="centerY" id="89y-dv-gFH"/>
+                            <constraint firstItem="1Ej-Fp-daP" firstAttribute="top" secondItem="bUq-p2-AoA" secondAttribute="bottom" constant="24" id="2H9-iK-osi"/>
+                            <constraint firstItem="H3G-V1-QY9" firstAttribute="centerY" secondItem="PPe-NL-NzD" secondAttribute="centerY" constant="-90" id="89y-dv-gFH"/>
+                            <constraint firstItem="1Ej-Fp-daP" firstAttribute="leading" secondItem="bUq-p2-AoA" secondAttribute="leading" id="VTF-jS-rqx"/>
                             <constraint firstItem="H3G-V1-QY9" firstAttribute="centerX" secondItem="PPe-NL-NzD" secondAttribute="centerX" id="cfb-Lp-KFA"/>
+                            <constraint firstItem="1Ej-Fp-daP" firstAttribute="centerX" secondItem="PPe-NL-NzD" secondAttribute="centerX" id="iye-PS-jWy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PPe-NL-NzD"/>
                     </view>
                     <navigationItem key="navigationItem" id="2zy-pG-hqc"/>
                     <connections>
                         <outlet property="detailLabel" destination="bUq-p2-AoA" id="42y-NR-Ijx"/>
+                        <outlet property="readingLabel" destination="42c-iH-Fa7" id="5b9-ff-1lw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eij-T6-fXG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,7 +339,7 @@
             <objects>
                 <viewController id="OgL-ut-9Iq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wdO-Y1-ykK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JfO-XD-e6R"/>
@@ -305,7 +354,7 @@
             <objects>
                 <viewController id="X5P-o0-aIU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8B-K6-fMp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Sh-uqx">
@@ -323,4 +372,10 @@
             <point key="canvasLocation" x="3383" y="86"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="B2C-QD-kzL"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="speaker.3.fill" catalog="system" width="128" height="90"/>
+    </resources>
 </document>

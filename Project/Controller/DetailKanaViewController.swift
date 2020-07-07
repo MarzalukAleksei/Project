@@ -10,12 +10,26 @@ import UIKit
 
 class DetailKanaViewController: UIViewController {
 
-    var kana = ""
+    var detailKana = ""
+    var detailReadingKana = ""
+    var previousKana = ""
+    var nextKana = ""
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var readingLabel: UILabel!
+    @IBAction func previousButtom(_ sender: UIButton) {
+        
+    }
+    @IBAction func nextButtom(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detailLabel.text = kana
+        detailLabel.text = detailKana
+        readingLabel.text = detailReadingKana
+        
+        
+        
         
         
     }

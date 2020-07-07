@@ -13,8 +13,9 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
 
-    let itemsAtRow: CGFloat = 8
+    let itemsAtRow: CGFloat = 3
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class CollectionViewController: UICollectionViewController {
         if segue.identifier == "kanaSegue" {
             let destinationKana = segue.destination as! DetailKanaViewController
             let cell = sender as! CollectionViewCell
-            destinationKana.kana = cell.labelKana.text ?? ""
+            destinationKana.detailKana = cell.labelKana.text ?? ""
         }
     }
     
@@ -50,10 +51,10 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as! CollectionViewCell
 
-//        let kana = katakana[indexPath.item]
+        
         
         cell.labelKana.text = hiragana[indexPath.item]
-        
+        cell.backgroundColor = .blue
     
         return cell
     }
@@ -62,7 +63,7 @@ class CollectionViewController: UICollectionViewController {
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-            let paddingWidth = sectionInsets.left * (itemsAtRow + 1.1) // почему-то неправильно будет, если введу 1
+            let paddingWidth = sectionInsets.left * (itemsAtRow + 1.000001)
             let avalableWidth = collectionView.frame.width - paddingWidth
             let widthPerItem = avalableWidth / itemsAtRow
             return CGSize(width: widthPerItem, height: widthPerItem)

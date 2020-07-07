@@ -27,7 +27,7 @@ class KanaCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "kanaSegue" {
             let destinationKana = segue.destination as! DetailKanaViewController
-            let cell = sender as! CollectionViewCell
+            let cell = sender as! KanaCollectionViewCell
             destinationKana.detailKana = cell.labelKana.text ?? ""
         }
     }
@@ -49,7 +49,7 @@ class KanaCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as! KanaCollectionViewCell
 
         
         

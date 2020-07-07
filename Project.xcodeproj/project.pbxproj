@@ -17,7 +17,7 @@
 		CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */; };
 		CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */; };
 		CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */; };
-		CF4B820524AC8ACD00A2CBA8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* CollectionViewCell.swift */; };
+		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
 		CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CFE27BD624B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE27BD524B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift */; };
@@ -42,7 +42,7 @@
 		CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAlphabel.swift; sourceTree = "<group>"; };
 		CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
-		CF4B820424AC8ACD00A2CBA8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanaViewController.swift; sourceTree = "<group>"; };
 		CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyProgram.sketch; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
 				CFE27BD524B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift */,
-				CF4B820424AC8ACD00A2CBA8 /* CollectionViewCell.swift */,
+				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
@@ -266,7 +266,7 @@
 				CFE27BD624B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */,
-				CF4B820524AC8ACD00A2CBA8 /* CollectionViewCell.swift in Sources */,
+				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,

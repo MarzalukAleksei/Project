@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class KanaCollectionViewCell: UICollectionViewCell {
         
     @IBOutlet weak var labelKana: UILabel!
     

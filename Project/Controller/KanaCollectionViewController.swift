@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class CollectionViewController: UICollectionViewController {
+class KanaCollectionViewController: UICollectionViewController {
 
     let itemsAtRow: CGFloat = 3
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -59,7 +59,7 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
 }
-    extension CollectionViewController: UICollectionViewDelegateFlowLayout{
+    extension KanaCollectionViewController: UICollectionViewDelegateFlowLayout{
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             

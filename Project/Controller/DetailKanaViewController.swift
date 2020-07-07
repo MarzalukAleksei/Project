@@ -12,22 +12,25 @@ class DetailKanaViewController: UIViewController {
 
     var detailKana = ""
     var detailReadingKana = ""
-    var previousKana = ""
-    var nextKana = ""
+    var previousKana = "test -1"
+    var nextKana = "test +1"
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
     @IBAction func previousButtom(_ sender: UIButton) {
-        
     }
     @IBAction func nextButtom(_ sender: UIButton) {
     }
+    @IBAction func spekerButtom(_ sender: UIButton) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         detailLabel.text = detailKana
         readingLabel.text = detailReadingKana
-        
+
         
         
         

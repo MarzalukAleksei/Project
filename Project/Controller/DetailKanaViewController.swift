@@ -16,12 +16,9 @@ class DetailKanaViewController: UIViewController {
     var nextKana = "test +1"
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
-    @IBAction func previousButtom(_ sender: UIButton) {
-    }
-    @IBAction func nextButtom(_ sender: UIButton) {
-    }
-    @IBAction func spekerButtom(_ sender: UIButton) {
-    }
+    @IBOutlet weak var previousButtonOutlet: UIButton!
+    @IBOutlet weak var nextButtonOutlet: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -30,7 +27,8 @@ class DetailKanaViewController: UIViewController {
         
         detailLabel.text = detailKana
         readingLabel.text = detailReadingKana
-
+        previousButtonOutlet.setTitle(previousKana, for: .normal) // показывает предудущую кану
+        nextButtonOutlet.setTitle(nextKana, for: .normal) // следующую кану
         
         
         
@@ -38,14 +36,10 @@ class DetailKanaViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     @IBAction func previousButtom(_ sender: UIButton) {
+     }
+     @IBAction func nextButtom(_ sender: UIButton) {
+     }
+     @IBAction func spekerButtom(_ sender: UIButton) {
+     }
 }

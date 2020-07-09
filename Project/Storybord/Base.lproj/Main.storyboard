@@ -310,7 +310,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-V1-QY9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-V1-QY9" customClass="KanaXib" customModule="Project" customModuleProvider="target">
                                 <rect key="frame" x="87" y="180" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-p2-AoA" userLabel="Label">
@@ -390,6 +390,8 @@
                     <navigationItem key="navigationItem" id="2zy-pG-hqc"/>
                     <connections>
                         <outlet property="detailLabel" destination="bUq-p2-AoA" id="42y-NR-Ijx"/>
+                        <outlet property="nextButtonOutlet" destination="UYJ-rk-bcl" id="1lu-WF-LM2"/>
+                        <outlet property="previousButtonOutlet" destination="6Hc-5K-mD5" id="cVk-yb-l7c"/>
                         <outlet property="readingLabel" destination="42c-iH-Fa7" id="5b9-ff-1lw"/>
                     </connections>
                 </viewController>

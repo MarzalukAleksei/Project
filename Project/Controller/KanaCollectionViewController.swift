@@ -29,6 +29,7 @@ class KanaCollectionViewController: UICollectionViewController {
             let destinationKana = segue.destination as! DetailKanaViewController
             let cell = sender as! KanaCollectionViewCell
             destinationKana.detailKana = cell.labelKana.text ?? ""
+            
         }
     }
     

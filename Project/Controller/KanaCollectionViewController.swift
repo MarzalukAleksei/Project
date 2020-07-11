@@ -54,7 +54,7 @@ class KanaCollectionViewController: UICollectionViewController {
 
         
         
-        cell.labelKana.text = hiragana[indexPath.item]
+//        cell.labelKana.text = hiragana[indexPath.item]
         cell.backgroundColor = .blue
     
         return cell

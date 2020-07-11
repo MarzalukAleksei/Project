@@ -10,6 +10,8 @@ import UIKit
 
 class KanaXib: UIView {
 
+    @IBOutlet var contentView: KanaXib!
+    @IBOutlet weak var kanaLabel: UILabel!
     override init (frame: CGRect){
         super.init(frame: frame)
         commonInit()
@@ -20,7 +22,10 @@ class KanaXib: UIView {
     }
     
     func commonInit(){
-        Bundle.main
+        Bundle.main.loadNibNamed("KanaXib", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
 }

@@ -26,8 +26,11 @@ class KanaCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as? KanaCollectionViewCell
+        let element = hiragana[indexPath.item]
+        let vc = DetailKanaViewController()
+        vc.startElement = element
         
+        self.present(vc, animated: true, completion: nil)
         
     }
     

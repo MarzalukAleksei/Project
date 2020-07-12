@@ -10,7 +10,7 @@ import UIKit
 
 class DetailKanaViewController: UIViewController {
 
-    
+    var startElement :Kana? = nil
     var detailKana = ""
     var detailReadingKana = ""
     var previousKana = "test -1"
@@ -25,8 +25,8 @@ class DetailKanaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detailLabel.text = detailKana
-        readingLabel.text = detailReadingKana
+        detailLabel.text = startElement?.kana
+        readingLabel.text = startElement?.reading
         previousButtonOutlet.setTitle(previousKana, for: .normal) // показывает предудущую кану
         nextButtonOutlet.setTitle(nextKana, for: .normal) // следующую кану
         

@@ -101,7 +101,6 @@
                                 <size key="customSize" width="110" height="110"/>
                                 <connections>
                                     <outlet property="labelKana" destination="MaT-TL-2SP" id="ucl-WJ-ona"/>
-                                    <segue destination="l8d-ht-EgW" kind="show" identifier="kanaSegue" id="pav-Q6-P8x"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -352,7 +351,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-V1-QY9">
-                                <rect key="frame" x="87" y="180" width="240" height="240"/>
+                                <rect key="frame" x="87" y="158" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-p2-AoA" userLabel="Label">
                                         <rect key="frame" x="8" y="8" width="224" height="224"/>
@@ -374,7 +373,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ej-Fp-daP">
-                                <rect key="frame" x="95" y="436" width="224" height="128"/>
+                                <rect key="frame" x="95" y="414" width="224" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42c-iH-Fa7">
                                         <rect key="frame" x="97" y="29" width="30" height="71"/>

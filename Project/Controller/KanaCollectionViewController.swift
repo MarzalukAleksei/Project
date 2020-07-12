@@ -25,14 +25,20 @@ class KanaCollectionViewController: UICollectionViewController {
         
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "kanaSegue" {
-            let destinationKana = segue.destination as! DetailKanaViewController
-            let cell = sender as! KanaCollectionViewCell
-            destinationKana.detailKana = cell.labelKana.text ?? ""
-            
-        }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? KanaCollectionViewCell
+        
+        
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "kanaSegue" {
+//            let destinationKana = segue.destination as! DetailKanaViewController
+//            let cell = sender as! KanaCollectionViewCell
+//            destinationKana.detailKana = cell.labelKana.text ?? ""
+//
+//        }
+//    }
     
     
     

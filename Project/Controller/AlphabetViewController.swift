@@ -28,10 +28,16 @@ class AlphabetViewController: UIViewController {
                 let x = labelWidth * CGFloat(horizontalItem)
                 let y = labelHeigth * CGFloat(verticalItem)
                 if verticalItem % 2 == 0 {
-                    let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKana(selectKana: katakana).kana)
+                    guard let object = randomKana(objectArray: katakana) else {
+                        return
+                    }
+                    let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
                     view.addSubview(label)
                 }else{
-                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKana(selectKana: hiragana).kana)
+                    guard let object = randomKana(objectArray: hiragana) else {
+                        return
+                    }
+                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
                     view.addSubview(newLabel)}
             }
         }

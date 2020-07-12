@@ -27,5 +27,5 @@ class KanaXib: UIView {
         contentView.frame = self.bounds
 //        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-
+// отключил вьюху
 }

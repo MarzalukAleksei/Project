@@ -22,6 +22,7 @@ class KanaCollectionViewController: UICollectionViewController {
 
         
         
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

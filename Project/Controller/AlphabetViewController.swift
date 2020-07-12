@@ -31,8 +31,11 @@ class AlphabetViewController: UIViewController {
                     let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKana(selectKana: katakana).key)
                     view.addSubview(label)
                 }else{
-                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomKana(selectKana: hiragana).key)
+                    guard let randomObject = randomKana(objectArray: hiragana) else { return }
+                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: randomObject.kana)// пояснение твоей ошибки ниже
                     view.addSubview(newLabel)}
+                
+                // конкретно здесь была проблема в том, что функция возвращала 2 параметра String, а функция createLabel принимаала в "text" один параметр
             }
         }
         

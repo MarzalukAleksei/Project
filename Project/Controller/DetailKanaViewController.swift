@@ -27,8 +27,8 @@ class DetailKanaViewController: UIViewController {
 
         detailLabel.text = startElement?.kana
         readingLabel.text = startElement?.reading
-        previousButtonOutlet.setTitle(previousKana, for: .normal) // показывает предудущую кану
-        nextButtonOutlet.setTitle(nextKana, for: .normal) // следующую кану
+//        previousButtonOutlet.setTitle(previousKana, for: .normal) // показывает предудущую кану
+//        nextButtonOutlet.setTitle(nextKana, for: .normal) // следующую кану
         
         
         

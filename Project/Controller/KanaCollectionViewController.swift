@@ -29,8 +29,8 @@ class KanaCollectionViewController: UICollectionViewController {
         let element = hiragana[indexPath.item]
         let vc = DetailKanaViewController()
         vc.startElement = element
-        
-        self.present(vc, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.present(navigationController, animated: true, completion: nil)
         
     }
     

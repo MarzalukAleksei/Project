@@ -22,6 +22,7 @@
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CFAA1D4524B79124004F9260 /* KanaXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAA1D4424B79123004F9260 /* KanaXib.xib */; };
 		CFAA1D4724B79292004F9260 /* KanaXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA1D4624B79292004F9260 /* KanaXib.swift */; };
+		CFAA1D4924BCF540004F9260 /* KanjiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA1D4824BCF540004F9260 /* KanjiViewController.swift */; };
 		CFE27BD624B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE27BD524B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
@@ -49,6 +50,7 @@
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
 		CFAA1D4424B79123004F9260 /* KanaXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KanaXib.xib; sourceTree = "<group>"; };
 		CFAA1D4624B79292004F9260 /* KanaXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaXib.swift; sourceTree = "<group>"; };
+		CFAA1D4824BCF540004F9260 /* KanjiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewController.swift; sourceTree = "<group>"; };
 		CFE27BD524B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */,
 				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
 				CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */,
+				CFAA1D4824BCF540004F9260 /* KanjiViewController.swift */,
 				CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */,
 				CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */,
 				CFAA1D4624B79292004F9260 /* KanaXib.swift */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAA1D4924BCF540004F9260 /* KanjiViewController.swift in Sources */,
 				CFAA1D4724B79292004F9260 /* KanaXib.swift in Sources */,
 				CFE27BD624B4C75C00CD6EB7 /* KanjiCollectionViewCell.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,

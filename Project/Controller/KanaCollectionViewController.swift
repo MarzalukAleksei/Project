@@ -27,12 +27,12 @@ class KanaCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let element = hiragana[indexPath.item]
-        let vc = DetailKanaViewController()
+    
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
         vc.startElement = element
-     
-        let stbrd = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
-//        let navigationController = UINavigationController(rootViewController: vc)?
-        self.present(stbrd, animated: true)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
         
     }
     

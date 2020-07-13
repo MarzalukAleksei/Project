@@ -24,9 +24,6 @@ class DetailKanaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        detailLabel.text = startElement?.kana
-        readingLabel.text = startElement?.reading
 //        previousButtonOutlet.setTitle(previousKana, for: .normal) // показывает предудущую кану
 //        nextButtonOutlet.setTitle(nextKana, for: .normal) // следующую кану
         
@@ -35,7 +32,13 @@ class DetailKanaViewController: UIViewController {
         
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let element = startElement else { return }
+        detailLabel.text = element.kana
+        readingLabel.text = element.reading
+    }
+    
      @IBAction func previousButtom(_ sender: UIButton) {
      }
      @IBAction func nextButtom(_ sender: UIButton) {

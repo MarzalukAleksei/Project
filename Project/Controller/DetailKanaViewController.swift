@@ -36,12 +36,28 @@ class DetailKanaViewController: UIViewController {
         readingLabel.text = element.reading
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
         nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
+        
     }
     
      @IBAction func previousButtom(_ sender: UIButton) {
+        changeKana()
      }
      @IBAction func nextButtom(_ sender: UIButton) {
      }
      @IBAction func spekerButtom(_ sender: UIButton) {
      }
+    
+    func changeKana(){
+        startElement = previousElement
+        previousElement = hiragana[startElement!.id - 2]
+        nextElement = hiragana[startElement!.id]
+        detailLabel.text = startElement?.kana
+        readingLabel.text = startElement?.kana
+        previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
+        nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
+    }
+    
+    
 }
+
+

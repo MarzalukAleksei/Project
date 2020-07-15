@@ -40,17 +40,17 @@ class DetailKanaViewController: UIViewController {
     }
     
      @IBAction func previousButtom(_ sender: UIButton) {
-        changeKana(leftButtomAction: true)
+        changeKana(tappedLeftButtom: true)
      }
      @IBAction func nextButtom(_ sender: UIButton) {
-        changeKana(leftButtomAction: false)
+        changeKana(tappedLeftButtom: false)
      }
      @IBAction func spekerButtom(_ sender: UIButton) {
      }
     
-    func changeKana(leftButtomAction: Bool){
+    func changeKana(tappedLeftButtom: Bool){
         
-        switch leftButtomAction {
+        switch tappedLeftButtom {
         case true:
             if previousElement?.id != hiragana.first?.id && previousElement != nil{
                 startElement = previousElement

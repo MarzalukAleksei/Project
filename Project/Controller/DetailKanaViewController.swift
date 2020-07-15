@@ -52,7 +52,7 @@ class DetailKanaViewController: UIViewController {
         previousElement = hiragana[startElement!.id - 2]
         nextElement = hiragana[startElement!.id]
         detailLabel.text = startElement?.kana
-        readingLabel.text = startElement?.kana
+        readingLabel.text = startElement?.reading
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
         nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
     }

@@ -27,14 +27,34 @@ class KanaCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let element = hiragana[indexPath.item]
-    
+        var secondElement: Kana? = nil
+        var thirdElement: Kana? = nil
+        if element.id != hiragana.first?.id && element.id != hiragana.last?.id{
+            secondElement = hiragana[indexPath.item - 1]
+            thirdElement = hiragana[indexPath.item + 1]
+        }else if element.id == hiragana.first?.id{
+            thirdElement = hiragana[indexPath.item + 1]
+        }else if element.id == hiragana.last?.id{
+            secondElement = hiragana[indexPath.item - 1]
+        }
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
         vc.startElement = element
-        
+        vc.previousElement = secondElement
+        vc.nextElement = thirdElement
         self.navigationController?.pushViewController(vc, animated: true)
         
         
     }
+    
+//    func selectKana<T>(object: [T]) -> [T?]  {
+//
+//        return 0
+//    }
+    
+    
+    
+    
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "kanaSegue" {

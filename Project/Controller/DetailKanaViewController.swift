@@ -40,17 +40,41 @@ class DetailKanaViewController: UIViewController {
     }
     
      @IBAction func previousButtom(_ sender: UIButton) {
-        changeKana()
+        changeKana(tappedLeftButtom: true)
      }
      @IBAction func nextButtom(_ sender: UIButton) {
+        changeKana(tappedLeftButtom: false)
      }
      @IBAction func spekerButtom(_ sender: UIButton) {
      }
     
-    func changeKana(){
-        startElement = previousElement
-        previousElement = hiragana[startElement!.id - 2]
-        nextElement = hiragana[startElement!.id]
+    func changeKana(tappedLeftButtom: Bool){
+        
+        switch tappedLeftButtom {
+        case true:
+            if previousElement?.id != hiragana.first?.id && previousElement != nil{
+                startElement = previousElement
+                previousElement = hiragana[startElement!.id - 2]
+                nextElement = hiragana[startElement!.id]
+            }else if previousElement?.id == hiragana.first?.id{
+                startElement = previousElement
+                previousElement = nil
+                nextElement = hiragana[startElement!.id]
+            }
+        default:
+            if nextElement?.id != hiragana.last?.id && nextElement != nil{
+                startElement = nextElement
+                nextElement = hiragana[startElement!.id]
+                previousElement = hiragana[startElement!.id - 2]
+            }else if nextElement?.id == hiragana.last?.id{
+                startElement = nextElement
+                nextElement = nil
+                previousElement = hiragana[startElement!.id - 2]
+        }
+        
+        
+        }
+
         detailLabel.text = startElement?.kana
         readingLabel.text = startElement?.reading
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)

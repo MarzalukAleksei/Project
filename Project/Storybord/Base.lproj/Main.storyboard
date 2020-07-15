@@ -404,7 +404,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Kana +1"/>
                                 <connections>
-                                    <action selector="nextButtom:" destination="l8d-ht-EgW" eventType="touchUpInside" id="zrS-E4-2Lk"/>
+                                    <action selector="nextButtom:" destination="l8d-ht-EgW" eventType="touchUpInside" id="zwG-Zb-kU8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGc-gK-8Qe">

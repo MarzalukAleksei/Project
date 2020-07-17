@@ -68,9 +68,9 @@ class DetailKanaViewController: UIViewController {
         
         switch buttom {
         case .leftButtom:
-            leftButtomAction(collectiont: collectionArray!)
+            buttomAction(collection: collectionArray!, buttom: .leftButtom)
         case .rightButtom:
-            rightButtomAction(collectiont: collectionArray!)
+            buttomAction(collection: collectionArray!, buttom: .rightButtom)
         default: break
         }
         detailLabel.text = startElement?.kana
@@ -78,28 +78,34 @@ class DetailKanaViewController: UIViewController {
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
         nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
     }
-    func leftButtomAction(collectiont: [Kana]) {
-        if previousElement?.id != collectiont.first?.id && previousElement != nil{
+    func buttomAction(collection: [Kana], buttom: SideButtom) {
+    switch buttom {
+    case .leftButtom:
+        if previousElement?.id != collection.first?.id && previousElement != nil{
             startElement = previousElement
-            previousElement = collectiont[startElement!.id - integerForPreviousId]
-            nextElement = collectiont[startElement!.id]
-        }else if previousElement?.id == collectiont.first?.id{
+            previousElement = collection[startElement!.id - integerForPreviousId]
+            nextElement = collection[startElement!.id]
+        }else if previousElement?.id == collection.first?.id{
             startElement = previousElement
             previousElement = nil
-            nextElement = collectiont[startElement!.id]
+            nextElement = collection[startElement!.id]
         }
-    }
-    func rightButtomAction(collectiont: [Kana]) {
-        if nextElement?.id != collectiont.last?.id && nextElement != nil{
+    case .rightButtom:
+        if nextElement?.id != collection.last?.id && nextElement != nil{
                 startElement = nextElement
-                nextElement = collectiont[startElement!.id]
-                previousElement = collectiont[startElement!.id - integerForPreviousId]
-            }else if nextElement?.id == collectiont.last?.id{
+                nextElement = collection[startElement!.id]
+                previousElement = collection[startElement!.id - integerForPreviousId]
+            }else if nextElement?.id == collection.last?.id{
                 startElement = nextElement
                 nextElement = nil
-                previousElement = collectiont[startElement!.id - integerForPreviousId]
+                previousElement = collection[startElement!.id - integerForPreviousId]
         }
+    default: break
     }
+    
+    }
+    
 }
+
 
 

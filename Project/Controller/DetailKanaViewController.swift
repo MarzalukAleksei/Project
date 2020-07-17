@@ -10,16 +10,14 @@ import UIKit
 
 class DetailKanaViewController: UIViewController {
 
-    var startElement: Kana? = nil
-    var previousElement: Kana? = nil
-    var nextElement: Kana? = nil
+    var startElement: Kana?
+    var previousElement: Kana?
+    var nextElement: Kana?
     let integerForPreviousId = 2 // id начинается с 1
     var typeOfColletion: TypeOfCollectionItem?
     var collectionArray: [Kana]?
     enum SideButtom {
-        case rightButtom
-        case leftButtom
-        case none
+        case rightButtom, leftButtom, none
     }
     
     @IBOutlet weak var detailLabel: UILabel!

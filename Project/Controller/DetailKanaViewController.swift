@@ -13,6 +13,14 @@ class DetailKanaViewController: UIViewController {
     var startElement: Kana? = nil
     var previousElement: Kana? = nil
     var nextElement: Kana? = nil
+    let integerForPreviousId = 2 // id начинается с 1
+    var typeOfColletion: TypeOfCollectionItem?
+    var collectionArray: [Kana]?
+    enum SideButtom {
+        case rightButtom
+        case leftButtom
+    }
+    
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
     @IBOutlet weak var previousButtonOutlet: UIButton!
@@ -22,11 +30,20 @@ class DetailKanaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        changeCollectionArray()
         
         
         
-        
+    }
+    
+    func changeCollectionArray(){
+        switch typeOfColletion {
+        case .hiragana:
+            collectionArray = hiragana
+        case .katakana:
+            collectionArray = katakana
+        default: break
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,44 +57,49 @@ class DetailKanaViewController: UIViewController {
     }
     
      @IBAction func previousButtom(_ sender: UIButton) {
-        changeKana(leftButtomAction: true)
+        changeKana(buttom: SideButtom.leftButtom)
      }
      @IBAction func nextButtom(_ sender: UIButton) {
-        changeKana(leftButtomAction: false)
+        changeKana(buttom: SideButtom.rightButtom)
      }
      @IBAction func spekerButtom(_ sender: UIButton) {
      }
     
-    func changeKana(leftButtomAction: Bool){
+    func changeKana(buttom: SideButtom){
         
-        switch leftButtomAction {
-        case true:
-            if previousElement?.id != hiragana.first?.id && previousElement != nil{
-                startElement = previousElement
-                previousElement = hiragana[startElement!.id - 2]
-                nextElement = hiragana[startElement!.id]
-            }else if previousElement?.id == hiragana.first?.id{
-                startElement = previousElement
-                previousElement = nil
-                nextElement = hiragana[startElement!.id]
-            }
+        switch buttom {
+        case .leftButtom:
+            leftButtomAction(collectiont: collectionArray!)
         default:
-            if nextElement?.id != hiragana.last?.id && nextElement != nil{
-                startElement = nextElement
-                nextElement = hiragana[startElement!.id]
-                previousElement = hiragana[startElement!.id - 2]
-            }else if nextElement?.id == hiragana.last?.id{
-                startElement = nextElement
-                nextElement = nil
-                previousElement = hiragana[startElement!.id - 2]
-        }
+            rightButtomAction(collectiont: collectionArray!)
         }
         detailLabel.text = startElement?.kana
         readingLabel.text = startElement?.reading
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
         nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
     }
-    
+    func leftButtomAction(collectiont: [Kana]) {
+        if previousElement?.id != collectiont.first?.id && previousElement != nil{
+            startElement = previousElement
+            previousElement = collectiont[startElement!.id - integerForPreviousId]
+            nextElement = collectiont[startElement!.id]
+        }else if previousElement?.id == collectiont.first?.id{
+            startElement = previousElement
+            previousElement = nil
+            nextElement = collectiont[startElement!.id]
+        }
+    }
+    func rightButtomAction(collectiont: [Kana]) {
+        if nextElement?.id != collectiont.last?.id && nextElement != nil{
+                startElement = nextElement
+                nextElement = collectiont[startElement!.id]
+                previousElement = collectiont[startElement!.id - integerForPreviousId]
+            }else if nextElement?.id == collectiont.last?.id{
+                startElement = nextElement
+                nextElement = nil
+                previousElement = collectiont[startElement!.id - integerForPreviousId]
+        }
+    }
 }
 
 

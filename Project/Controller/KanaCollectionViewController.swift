@@ -16,35 +16,54 @@ class KanaCollectionViewController: UICollectionViewController {
     let itemsAtRow: CGFloat = 3
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
+    var typeOfColletion: TypeOfCollectionItem?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
         
         
         
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let element = hiragana[indexPath.item]
+        
+        func selectElement(collection: [Kana]) {
+        let element = collection[indexPath.item]
         var secondElement: Kana? = nil
         var thirdElement: Kana? = nil
-        if element.id != hiragana.first?.id && element.id != hiragana.last?.id{
-            secondElement = hiragana[indexPath.item - 1]
-            thirdElement = hiragana[indexPath.item + 1]
-        }else if element.id == hiragana.first?.id{
-            thirdElement = hiragana[indexPath.item + 1]
-        }else if element.id == hiragana.last?.id{
-            secondElement = hiragana[indexPath.item - 1]
+        if element.id != collection.first?.id && element.id != collection.last?.id{
+            secondElement = collection[indexPath.item - 1]
+            thirdElement = collection[indexPath.item + 1]
+        }else if element.id == collection.first?.id{
+            thirdElement = collection[indexPath.item + 1]
+        }else if element.id == collection.last?.id{
+            secondElement = collection[indexPath.item - 1]
         }
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
         vc.startElement = element
         vc.previousElement = secondElement
         vc.nextElement = thirdElement
+        vc.typeOfColletion = typeOfColletion
         self.navigationController?.pushViewController(vc, animated: true)
         
-        
+        }
+        switch typeOfColletion {
+        case .hiragana:
+            selectElement(collection: hiragana)
+        case .katakana:
+            selectElement(collection: katakana)
+        default: break
+        }
     }
+    
+    
+    
+    
+    
+    
     
 //    func selectKana<T>(object: [T]) -> [T?]  {
 //
@@ -84,9 +103,14 @@ class KanaCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as! KanaCollectionViewCell
 
-        
-        
-        cell.labelKana.text = hiragana[indexPath.item].kana
+        switch typeOfColletion {
+        case .hiragana:
+            cell.labelKana.text = hiragana[indexPath.item].kana
+        case .katakana:
+            cell.labelKana.text = katakana[indexPath.item].kana
+        default:
+            cell.labelKana.text = ""
+        }
         cell.backgroundColor = .blue
     
         return cell
@@ -110,6 +134,7 @@ class KanaCollectionViewController: UICollectionViewController {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             return sectionInsets.left
         }
+        
     }
     
    

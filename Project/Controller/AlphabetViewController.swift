@@ -16,6 +16,15 @@ class AlphabetViewController: UIViewController {
         kanaBackgroundLabel()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "hiraganaSegue"{
+                guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
+                destitantion.typeOfColletion = TypeOfCollectionItem.hiragana
+            }else if segue.identifier == "katakanaSegue"{
+                guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
+                destitantion.typeOfColletion = TypeOfCollectionItem.katakana
+            }
+        }
     
     func kanaBackgroundLabel(){
         let labelWidth: CGFloat = 60

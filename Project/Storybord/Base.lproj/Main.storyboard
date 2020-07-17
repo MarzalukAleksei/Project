@@ -28,7 +28,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="ww2-9V-vEo"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="hiraganaSegue" id="ww2-9V-vEo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7U-Qa-d7m">
@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="B2C-QD-kzL"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="katakanaSegue" id="B2C-QD-kzL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -205,7 +205,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EhD-Qf-jav" kind="show" id="KmM-9H-fQi"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" id="meG-gm-L8s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-zH-6XL">
@@ -216,7 +216,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EhD-Qf-jav" kind="show" id="LSq-b8-rtz"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" id="pNM-Fk-YJG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrl-UI-Bz6">
@@ -227,7 +227,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EhD-Qf-jav" kind="show" id="LVH-UP-rUN"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" id="caG-RW-w0a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-SS-PiB">
@@ -238,7 +238,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EhD-Qf-jav" kind="show" id="1gN-Iy-TYf"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" id="T2Q-CN-afJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-od-7tV">
@@ -249,7 +249,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EhD-Qf-jav" kind="show" id="1rL-6b-m5B"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" id="J2y-Np-xBf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -281,66 +281,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RD2-mo-vl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="86.413043478260875"/>
-        </scene>
-        <!--Kanji View Controller-->
-        <scene sceneID="rT4-Ji-97v">
-            <objects>
-                <viewController id="EhD-Qf-jav" customClass="KanjiViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="71i-0U-Wvs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YWS-sF-Dky">
-                                <rect key="frame" x="87" y="44" width="240" height="692"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YRU-Ck-BoV">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kanjiCell" id="eq4-pN-oyk" customClass="KanjiCollectionViewCell" customModule="Project" customModuleProvider="target">
-                                        <rect key="frame" x="56" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rEs-pt-lcF">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxx-zT-z6E">
-                                                    <rect key="frame" x="43" y="53.666666666666657" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="cxx-zT-z6E" firstAttribute="centerX" secondItem="rEs-pt-lcF" secondAttribute="centerX" id="4L5-SP-o7H"/>
-                                                <constraint firstItem="cxx-zT-z6E" firstAttribute="centerY" secondItem="rEs-pt-lcF" secondAttribute="centerY" id="guf-Wl-6QE"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="kanjiListLabel" destination="cxx-zT-z6E" id="7J9-fP-qgj"/>
-                                            <segue destination="OgL-ut-9Iq" kind="show" id="wTI-II-52U"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="YWS-sF-Dky" firstAttribute="leading" secondItem="E7A-jF-5Cx" secondAttribute="leading" constant="87" id="N27-ry-kBr"/>
-                            <constraint firstItem="E7A-jF-5Cx" firstAttribute="trailing" secondItem="YWS-sF-Dky" secondAttribute="trailing" constant="87" id="ZSr-TD-4h5"/>
-                            <constraint firstItem="E7A-jF-5Cx" firstAttribute="bottom" secondItem="YWS-sF-Dky" secondAttribute="bottom" id="pPG-qN-ZdT"/>
-                            <constraint firstItem="YWS-sF-Dky" firstAttribute="top" secondItem="E7A-jF-5Cx" secondAttribute="top" id="rv9-rq-YmT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="E7A-jF-5Cx"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="OIC-NT-3uH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dZE-04-xmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1750.7246376811595" y="86.413043478260875"/>
         </scene>
         <!--Detail Kana View Controller-->
         <scene sceneID="v3z-yE-6rF">
@@ -439,48 +379,9 @@
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="-607.33695652173913"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="C0C-Du-HXp">
-            <objects>
-                <viewController id="OgL-ut-9Iq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wdO-Y1-ykK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="JfO-XD-e6R"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xSc-ug-MFg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8k-lD-4fE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2528" y="87"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="GhM-M5-O5s">
-            <objects>
-                <viewController id="X5P-o0-aIU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E8B-K6-fMp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-Sh-uqx">
-                                <rect key="frame" x="87" y="152" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="xPF-DQ-VF8"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D68-NJ-KTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3383" y="86"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KmM-9H-fQi"/>
-        <segue reference="B2C-QD-kzL"/>
+        <segue reference="ww2-9V-vEo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="speaker.3.fill" catalog="system" width="128" height="90"/>

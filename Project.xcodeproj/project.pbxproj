@@ -20,6 +20,7 @@
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
 		CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
+		CF857BD824C1B25A0084DCE9 /* Kanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF857BD724C1B25A0084DCE9 /* Kanji.swift */; };
 		CFAA1D4524B79124004F9260 /* KanaXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAA1D4424B79123004F9260 /* KanaXib.xib */; };
 		CFAA1D4724B79292004F9260 /* KanaXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA1D4624B79292004F9260 /* KanaXib.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
@@ -46,6 +47,7 @@
 		CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanaViewController.swift; sourceTree = "<group>"; };
 		CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyProgram.sketch; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
+		CF857BD724C1B25A0084DCE9 /* Kanji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanji.swift; sourceTree = "<group>"; };
 		CFAA1D4424B79123004F9260 /* KanaXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KanaXib.xib; sourceTree = "<group>"; };
 		CFAA1D4624B79292004F9260 /* KanaXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaXib.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */,
+				CF857BD724C1B25A0084DCE9 /* Kanji.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
 				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */,
@@ -275,6 +278,7 @@
 				CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
+				CF857BD824C1B25A0084DCE9 /* Kanji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

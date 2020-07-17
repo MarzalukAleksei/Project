@@ -19,6 +19,7 @@ class DetailKanaViewController: UIViewController {
     enum SideButtom {
         case rightButtom
         case leftButtom
+        case none
     }
     
     @IBOutlet weak var detailLabel: UILabel!
@@ -70,8 +71,9 @@ class DetailKanaViewController: UIViewController {
         switch buttom {
         case .leftButtom:
             leftButtomAction(collectiont: collectionArray!)
-        default:
+        case .rightButtom:
             rightButtomAction(collectiont: collectionArray!)
+        default: break
         }
         detailLabel.text = startElement?.kana
         readingLabel.text = startElement?.reading

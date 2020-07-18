@@ -52,7 +52,6 @@ class DetailKanaViewController: UIViewController {
         readingLabel.text = element.reading
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
         nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
-        
     }
     
      @IBAction func previousButtom(_ sender: UIButton) {
@@ -64,13 +63,46 @@ class DetailKanaViewController: UIViewController {
      @IBAction func spekerButtom(_ sender: UIButton) {
      }
     
+//    func changeKana(leftButtomAction: Bool){
+//
+//           switch leftButtomAction {
+//           case true:
+//               guard let id = previousElement?.id else { return }
+//               if previousElement?.id != hiragana.first?.id && previousElement != nil{
+//                   startElement = previousElement
+//                   previousElement = hiragana[id - 2]
+//                   nextElement = hiragana[id]
+//               }else if previousElement?.id == hiragana.first?.id{
+//                   startElement = previousElement
+//                   previousElement = nil
+//                   nextElement = hiragana[id]
+//               }
+//           default:
+//               guard let id = nextElement?.id else { return }
+//               if nextElement?.id != hiragana.last?.id && nextElement != nil{
+//                   startElement = nextElement
+//                   nextElement = hiragana[id]
+//                   previousElement = hiragana[id - 2]
+//               }else if nextElement?.id == hiragana.last?.id{
+//                   startElement = nextElement
+//                   nextElement = nil
+//                   previousElement = hiragana[id - 2]
+//           }
+//           }
+//           detailLabel.text = startElement?.kana
+//           readingLabel.text = startElement?.reading
+//           previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
+//           nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
+//       }
+    
     func changeKana(buttom: SideButtom){
-        
+        guard let collection = collectionArray else { return }
+    
         switch buttom {
         case .leftButtom:
-            buttomAction(collection: collectionArray!, buttom: .leftButtom)
+            buttomAction(collection: collection, buttom: .leftButtom)
         case .rightButtom:
-            buttomAction(collection: collectionArray!, buttom: .rightButtom)
+            buttomAction(collection: collection, buttom: .rightButtom)
         default: break
         }
         detailLabel.text = startElement?.kana

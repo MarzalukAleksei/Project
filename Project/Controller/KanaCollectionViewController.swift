@@ -18,16 +18,14 @@ class KanaCollectionViewController: UICollectionViewController {
     
     var typeOfColletion: TypeOfCollectionItem?
 
+    var arrayOfElements = [Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
-        
-        
-        
+        guard let type = typeOfColletion else { return }
+        arrayOfElements = getArray(typeOf: type)
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         func selectElement(collection: [Kana]) {
@@ -59,58 +57,31 @@ class KanaCollectionViewController: UICollectionViewController {
         }
     }
     
-    
-    
-    
-    
-    
-    
-//    func selectKana<T>(object: [T]) -> [T?]  {
-//
-//        return 0
-//    }
-    
-    
-    
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "kanaSegue" {
-//            let destinationKana = segue.destination as! DetailKanaViewController
-//            let cell = sender as! KanaCollectionViewCell
-//            destinationKana.detailKana = cell.labelKana.text ?? ""
-//
-//        }
-//    }
-    
-    
+
     
     // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // #warning Incomplete implementation, return the number of items
-        return kanaCount()
+        return arrayOfElements.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as! KanaCollectionViewCell
-
-        switch typeOfColletion {
-        case .hiragana:
-            cell.labelKana.text = hiragana[indexPath.item].kana
-        case .katakana:
-            cell.labelKana.text = katakana[indexPath.item].kana
-        default:
-            cell.labelKana.text = ""
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as? KanaCollectionViewCell else {
+            return UICollectionViewCell()
         }
+        
+        switch typeOfColletion {
+        case .hiragana, .katakana:
+            let element = arrayOfElements[indexPath.item] as? Kana
+            cell.labelKana.text = element?.kana ?? "-"
+        case .kanji:
+            cell.labelKana.text = ""
+        case .none: break
+        }
+    
         cell.backgroundColor = .blue
     
         return cell

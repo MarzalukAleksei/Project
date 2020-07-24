@@ -17,9 +17,20 @@ class KanjiBottomViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "n1Segue" {
-            guard let destination = segue.destination as? KanaCollectionViewController else { return }
-            destination.typeOfCollection = TypeOfCollectionItem.kanji
+        switch segue.identifier {
+        case "n1Segue":
+            guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
+            destinasion.typeOfCollection = TypeOfCollectionItem.kanji
+        case "n2Segue":
+            break
+        case "n3Segue":
+            break
+        case "n4Segue":
+            break
+        case "n5Segue":
+            break
+        default: break
+            
         }
     }
 }

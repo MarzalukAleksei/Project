@@ -15,6 +15,7 @@ class DetailKanaViewController: UIViewController {
     var nextElement: Kana?
     let integerForPreviousId = 2 // id начинается с 1
     var typeOfColletion: TypeOfCollectionItem?
+//    var arrayOfElements = [Any]()
     var collectionArray: [Kana]?
     enum SideButtom {
         case rightButtom, leftButtom, none
@@ -30,7 +31,8 @@ class DetailKanaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         changeCollectionArray()
-        
+//        guard let type = typeOfColletion else { return }
+//        arrayOfElements = getArray(typeOf: type)
         
         
     }
@@ -48,6 +50,7 @@ class DetailKanaViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let element = startElement else { return }
+        
         detailLabel.text = element.kana
         readingLabel.text = element.reading
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)

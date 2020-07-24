@@ -28,7 +28,7 @@ class KanaCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        func selectElement(collection: [Kana]) {
+        func selectKanaElement(collection: [Kana]) {
         let element = collection[indexPath.item]
         var secondElement: Kana? = nil
         var thirdElement: Kana? = nil
@@ -46,13 +46,15 @@ class KanaCollectionViewController: UICollectionViewController {
         vc.nextElement = thirdElement
         vc.typeOfColletion = typeOfCollection
         self.navigationController?.pushViewController(vc, animated: true)
-        
         }
+        
         switch typeOfCollection {
         case .hiragana:
-            selectElement(collection: hiragana)
+            selectKanaElement(collection: hiragana)
         case .katakana:
-            selectElement(collection: katakana)
+            selectKanaElement(collection: katakana)
+        case .kanji: break
+//            selectElement(collection: kanji)
         default: break
         }
     }
@@ -73,7 +75,8 @@ class KanaCollectionViewController: UICollectionViewController {
             let element = arrayOfElements[indexPath.item] as? Kana
             cell.labelKana.text = element?.kana ?? "-"
         case .kanji:
-            cell.labelKana.text = ""
+            let element = arrayOfElements[indexPath.item] as? Kanji
+            cell.labelKana.text = element?.body ?? "-"
         case .none: break
         }
     

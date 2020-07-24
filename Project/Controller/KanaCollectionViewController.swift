@@ -16,13 +16,13 @@ class KanaCollectionViewController: UICollectionViewController {
     let itemsAtRow: CGFloat = 3
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
-    var typeOfColletion: TypeOfCollectionItem?
+    var typeOfCollection: TypeOfCollectionItem?
 
     var arrayOfElements = [Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let type = typeOfColletion else { return }
+        guard let type = typeOfCollection else { return }
         arrayOfElements = getArray(typeOf: type)
     }
     
@@ -44,11 +44,11 @@ class KanaCollectionViewController: UICollectionViewController {
         vc.startElement = element
         vc.previousElement = secondElement
         vc.nextElement = thirdElement
-        vc.typeOfColletion = typeOfColletion
+        vc.typeOfColletion = typeOfCollection
         self.navigationController?.pushViewController(vc, animated: true)
         
         }
-        switch typeOfColletion {
+        switch typeOfCollection {
         case .hiragana:
             selectElement(collection: hiragana)
         case .katakana:
@@ -57,11 +57,6 @@ class KanaCollectionViewController: UICollectionViewController {
         }
     }
     
-
-    
-    // MARK: UICollectionViewDataSource
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // #warning Incomplete implementation, return the number of items
@@ -73,7 +68,7 @@ class KanaCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         
-        switch typeOfColletion {
+        switch typeOfCollection {
         case .hiragana, .katakana:
             let element = arrayOfElements[indexPath.item] as? Kana
             cell.labelKana.text = element?.kana ?? "-"

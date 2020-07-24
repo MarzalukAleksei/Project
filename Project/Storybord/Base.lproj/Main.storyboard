@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSc-ix-vbl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSc-ix-vbl">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -188,7 +188,7 @@
         <!--Kanji-->
         <scene sceneID="ZHn-rn-uYI">
             <objects>
-                <viewController id="IYF-NM-3kk" customClass="KanjiSelectLevelViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IYF-NM-3kk" customClass="KanjiBottomViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kc1-kz-Itv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="meG-gm-L8s"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="n1Segue" id="meG-gm-L8s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-zH-6XL">
@@ -381,7 +381,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="caG-RW-w0a"/>
+        <segue reference="meG-gm-L8s"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="speaker.3.fill" catalog="system" width="128" height="90"/>

@@ -19,10 +19,10 @@ class AlphabetViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "hiraganaSegue"{
                 guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
-                destitantion.typeOfColletion = TypeOfCollectionItem.hiragana
+                destitantion.typeOfCollection = TypeOfCollectionItem.hiragana
             }else if segue.identifier == "katakanaSegue"{
                 guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
-                destitantion.typeOfColletion = TypeOfCollectionItem.katakana
+                destitantion.typeOfCollection = TypeOfCollectionItem.katakana
             }
         }
     

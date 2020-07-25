@@ -9,40 +9,38 @@
 import UIKit
 
 class DetailKanaViewController: UIViewController {
-
-    var startElement: Kana?
-    var previousElement: Kana?
-    var nextElement: Kana?
-    let integerForPreviousId = 2 // id начинается с 1
-    var typeOfColletion: TypeOfCollectionItem?
-//    var arrayOfElements = [Any]()
-    var collectionArray: [Kana]?
-    enum SideButtom {
-        case rightButtom, leftButtom, none
-    }
     
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
     @IBOutlet weak var previousButtonOutlet: UIButton!
     @IBOutlet weak var nextButtonOutlet: UIButton!
     
+    enum SideButtom {
+        case rightButtom, leftButtom, none
+    }
     
+    var startElement: Any?
     
+    let integerForPreviousId = 2 // id начинается с 1
+    
+    var typeOfColletion: TypeOfCollectionItem?
+    
+    var array: [Any]?
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         changeCollectionArray()
-//        guard let type = typeOfColletion else { return }
-//        arrayOfElements = getArray(typeOf: type)
-        
-        
     }
     
-    func changeCollectionArray(){
+    func changeCollectionArray() {
         switch typeOfColletion {
         case .hiragana:
-            collectionArray = hiragana
+            array = hiragana
         case .katakana:
-            collectionArray = katakana
+            array = katakana
+        case .kanji:
+            array = kanji
         default: break
         }
     }
@@ -50,21 +48,47 @@ class DetailKanaViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let element = startElement else { return }
-        
-        detailLabel.text = element.kana
-        readingLabel.text = element.reading
-        previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
-        nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
+        setupElement(element: element)
+
     }
     
-     @IBAction func previousButtom(_ sender: UIButton) {
-        changeKana(buttom: SideButtom.leftButtom)
-     }
-     @IBAction func nextButtom(_ sender: UIButton) {
-        changeKana(buttom: SideButtom.rightButtom)
-     }
-     @IBAction func spekerButtom(_ sender: UIButton) {
-     }
+    
+    
+    private func setupElement(element: Any) {
+        var detail = ""
+        var reading = ""
+        var previous = ""
+        var next = ""
+        switch element {
+        case is Kana:
+            detail = ""
+            reading = ""
+            previous = ""
+            next = ""
+        case is Kanji:
+            detail = ""
+            reading = ""
+            previous = ""
+            next = ""
+        default: break
+        }
+        detailLabel.text = detail
+        readingLabel.text = reading
+        previousButtonOutlet.setTitle(previous, for: .normal)
+        nextButtonOutlet.setTitle(next, for: .normal)
+    }
+    
+    @IBAction func previousButtom(_ sender: UIButton) {
+     //   changeKana(buttom: SideButtom.leftButtom)
+    }
+    
+    @IBAction func nextButtom(_ sender: UIButton) {
+      //  changeKana(buttom: SideButtom.rightButtom)
+    }
+    
+    @IBAction func spekerButtom(_ sender: UIButton) {
+        
+    }
     
 //    func changeKana(leftButtomAction: Bool){
 //
@@ -98,49 +122,51 @@ class DetailKanaViewController: UIViewController {
 //           nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
 //       }
     
-    func changeKana(buttom: SideButtom){
-        guard let collection = collectionArray else { return }
-    
+//    func changeKana(buttom: SideButtom){
+//        guard let collection = array else { return }
+//
+//        switch buttom {
+//        case .leftButtom:
+//            buttomAction(collection: collection, buttom: .leftButtom)
+//        case .rightButtom:
+//            buttomAction(collection: collection, buttom: .rightButtom)
+//        default: break
+//        }
+//        detailLabel.text = startElement?.kana
+//        readingLabel.text = startElement?.reading
+//        previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
+//        nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
+//    }
+    func buttomAction(collection: [Any], buttom: SideButtom) {
         switch buttom {
         case .leftButtom:
-            buttomAction(collection: collection, buttom: .leftButtom)
+            break
+//        if previousElement?.id != ((collection.first) as? Kana)?.id && previousElement != nil{
+//            startElement = previousElement
+//            guard let id = startElement?.id else { return }
+//            previousElement = collection[id - integerForPreviousId] as? Kana
+//            nextElement = collection[id] as? Kana
+//        }else if previousElement?.id == (collection.first as? Kana)?.id{
+//            startElement = previousElement
+//            guard let id = startElement?.id else { return }
+//            previousElement = nil
+//            nextElement = collection[id] as? Kana
+//        }
         case .rightButtom:
-            buttomAction(collection: collection, buttom: .rightButtom)
+            break
+//        if nextElement?.id != (collection.last as? Kana)?.id && nextElement != nil{
+//                startElement = nextElement
+//            guard let id = startElement?.id else { return }
+//            nextElement = collection[id] as? Kana
+//            previousElement = collection[id - integerForPreviousId] as? Kana
+//        }else if nextElement?.id == (collection.last as? Kana)?.id {
+//                startElement = nextElement
+//            guard let id = startElement?.id else { return }
+//                nextElement = nil
+//                previousElement = collection[id - integerForPreviousId] as? Kana
+//        }
         default: break
         }
-        detailLabel.text = startElement?.kana
-        readingLabel.text = startElement?.reading
-        previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
-        nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
-    }
-    func buttomAction(collection: [Any], buttom: SideButtom) {
-    switch buttom {
-    case .leftButtom:
-        if previousElement?.id != ((collection.first) as? Kana)?.id && previousElement != nil{
-            startElement = previousElement
-            guard let id = startElement?.id else { return }
-            previousElement = collection[id - integerForPreviousId] as? Kana
-            nextElement = collection[id] as? Kana
-        }else if previousElement?.id == (collection.first as? Kana)?.id{
-            startElement = previousElement
-            guard let id = startElement?.id else { return }
-            previousElement = nil
-            nextElement = collection[id] as? Kana
-        }
-    case .rightButtom:
-        if nextElement?.id != (collection.last as? Kana)?.id && nextElement != nil{
-                startElement = nextElement
-            guard let id = startElement?.id else { return }
-            nextElement = collection[id] as? Kana
-            previousElement = collection[id - integerForPreviousId] as? Kana
-        }else if nextElement?.id == (collection.last as? Kana)?.id {
-                startElement = nextElement
-            guard let id = startElement?.id else { return }
-                nextElement = nil
-                previousElement = collection[id - integerForPreviousId] as? Kana
-        }
-    default: break
-    }
     }
 }
 

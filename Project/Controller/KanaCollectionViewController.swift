@@ -26,43 +26,31 @@ class KanaCollectionViewController: UICollectionViewController {
         arrayOfElements = getArray(typeOf: type)
     }
     
+    func pushToNextViewController(element: Any) {
+        let nameOfStoryboard: String = "Main"
+        
+        let vc = UIStoryboard(name: nameOfStoryboard, bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
+        vc.startElement = element
+        vc.typeOfColletion = typeOfCollection
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func elementByIndex(array: [Any], index: Int) -> Any? {
+        return array[index]
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        func selectElement(collection: [Any]) {
-        let element = collection[indexPath.item]
-        var secondElement: Any = 0
-        var thirdElement: Any = 0
-            func pushToNextViewController() {
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
-                vc.startElement = element as? Kana
-                vc.previousElement = secondElement as? Kana
-                vc.nextElement = thirdElement as? Kana
-            vc.typeOfColletion = typeOfCollection
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
-            if (element as? Kana)?.id != (collection.first as? Kana)?.id && (element as? Kana)?.id != (collection.last as? Kana)?.id{
-            secondElement = collection[indexPath.item - 1]
-            thirdElement = collection[indexPath.item + 1]
-                pushToNextViewController()
-            }else if (element as? Kana)?.id == (collection.first as? Kana)?.id{
-            thirdElement = collection[indexPath.item + 1]
-                pushToNextViewController()
-            }else if (element as? Kana)?.id == (collection.last as? Kana)?.id{
-            secondElement = collection[indexPath.item - 1]
-                pushToNextViewController()
-        }
-            
-        }
-        
+        var element: Any?
         switch typeOfCollection {
         case .hiragana:
-            selectElement(collection: hiragana)
+            element = elementByIndex(array: hiragana, index: indexPath.row)
         case .katakana:
-            selectElement(collection: katakana)
+            element = elementByIndex(array: katakana, index: indexPath.row)
         case .kanji: 
-            selectElement(collection: kanji)
+            element = elementByIndex(array: kanji, index: indexPath.row)
         default: break
         }
+        pushToNextViewController(element: element)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

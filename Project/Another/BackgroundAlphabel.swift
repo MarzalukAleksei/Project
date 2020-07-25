@@ -22,6 +22,7 @@ enum TypeOfCollectionItem {
     case katakana
     case kanji
 }
+
 func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
     switch typeOf {
         case .hiragana: return hiragana

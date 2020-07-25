@@ -113,33 +113,35 @@ class DetailKanaViewController: UIViewController {
         previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
         nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
     }
-    func buttomAction(collection: [Kana], buttom: SideButtom) {
+    func buttomAction(collection: [Any], buttom: SideButtom) {
     switch buttom {
     case .leftButtom:
-        if previousElement?.id != collection.first?.id && previousElement != nil{
+        if previousElement?.id != ((collection.first) as? Kana)?.id && previousElement != nil{
             startElement = previousElement
-            previousElement = collection[startElement!.id - integerForPreviousId]
-            nextElement = collection[startElement!.id]
-        }else if previousElement?.id == collection.first?.id{
+            guard let id = startElement?.id else { return }
+            previousElement = collection[id - integerForPreviousId] as? Kana
+            nextElement = collection[id] as? Kana
+        }else if previousElement?.id == (collection.first as? Kana)?.id{
             startElement = previousElement
+            guard let id = startElement?.id else { return }
             previousElement = nil
-            nextElement = collection[startElement!.id]
+            nextElement = collection[id] as? Kana
         }
     case .rightButtom:
-        if nextElement?.id != collection.last?.id && nextElement != nil{
+        if nextElement?.id != (collection.last as? Kana)?.id && nextElement != nil{
                 startElement = nextElement
-                nextElement = collection[startElement!.id]
-                previousElement = collection[startElement!.id - integerForPreviousId]
-            }else if nextElement?.id == collection.last?.id{
+            guard let id = startElement?.id else { return }
+            nextElement = collection[id] as? Kana
+            previousElement = collection[id - integerForPreviousId] as? Kana
+        }else if nextElement?.id == (collection.last as? Kana)?.id {
                 startElement = nextElement
+            guard let id = startElement?.id else { return }
                 nextElement = nil
-                previousElement = collection[startElement!.id - integerForPreviousId]
+                previousElement = collection[id - integerForPreviousId] as? Kana
         }
     default: break
     }
-    
     }
-    
 }
 
 

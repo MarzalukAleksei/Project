@@ -28,33 +28,39 @@ class KanaCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        func selectKanaElement(collection: [Kana]) {
+        func selectElement(collection: [Any]) {
         let element = collection[indexPath.item]
-        var secondElement: Kana? = nil
-        var thirdElement: Kana? = nil
-        if element.id != collection.first?.id && element.id != collection.last?.id{
+        var secondElement: Any = 0
+        var thirdElement: Any = 0
+            func pushToNextViewController() {
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
+                vc.startElement = element as? Kana
+                vc.previousElement = secondElement as? Kana
+                vc.nextElement = thirdElement as? Kana
+            vc.typeOfColletion = typeOfCollection
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            if (element as? Kana)?.id != (collection.first as? Kana)?.id && (element as? Kana)?.id != (collection.last as? Kana)?.id{
             secondElement = collection[indexPath.item - 1]
             thirdElement = collection[indexPath.item + 1]
-        }else if element.id == collection.first?.id{
+                pushToNextViewController()
+            }else if (element as? Kana)?.id == (collection.first as? Kana)?.id{
             thirdElement = collection[indexPath.item + 1]
-        }else if element.id == collection.last?.id{
+                pushToNextViewController()
+            }else if (element as? Kana)?.id == (collection.last as? Kana)?.id{
             secondElement = collection[indexPath.item - 1]
+                pushToNextViewController()
         }
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
-        vc.startElement = element
-        vc.previousElement = secondElement
-        vc.nextElement = thirdElement
-        vc.typeOfColletion = typeOfCollection
-        self.navigationController?.pushViewController(vc, animated: true)
+            
         }
         
         switch typeOfCollection {
         case .hiragana:
-            selectKanaElement(collection: hiragana)
+            selectElement(collection: hiragana)
         case .katakana:
-            selectKanaElement(collection: katakana)
-        case .kanji: break
-//            selectElement(collection: kanji)
+            selectElement(collection: katakana)
+        case .kanji: 
+            selectElement(collection: kanji)
         default: break
         }
     }

@@ -82,9 +82,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-TL-2SP">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-TL-2SP">
                                             <rect key="frame" x="8" y="8" width="94" height="94"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -216,7 +216,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="pNM-Fk-YJG"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="n2Segue" id="pNM-Fk-YJG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrl-UI-Bz6">
@@ -227,7 +227,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="caG-RW-w0a"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="n3Segue" id="caG-RW-w0a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-SS-PiB">
@@ -238,7 +238,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="T2Q-CN-afJ"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="n4Segue" id="T2Q-CN-afJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-od-7tV">
@@ -249,7 +249,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FpQ-62-Edf" kind="show" id="J2y-Np-xBf"/>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="n5Segue" id="J2y-Np-xBf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -321,10 +321,30 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKW-Ze-Ab3">
+                                        <rect key="frame" x="0.0" y="-11" width="224" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7W-5v-fVu">
+                                        <rect key="frame" x="0.0" y="68" width="224" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="224" id="UfQ-An-8bv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="AKW-Ze-Ab3" firstAttribute="leading" secondItem="1Ej-Fp-daP" secondAttribute="leading" id="7Qe-Be-89f"/>
+                                    <constraint firstItem="AKW-Ze-Ab3" firstAttribute="width" secondItem="1Ej-Fp-daP" secondAttribute="width" id="D2R-Re-dTX"/>
+                                    <constraint firstItem="s7W-5v-fVu" firstAttribute="leading" secondItem="1Ej-Fp-daP" secondAttribute="leading" id="Hy8-QO-5Ag"/>
                                     <constraint firstAttribute="width" secondItem="1Ej-Fp-daP" secondAttribute="height" multiplier="7:4" id="JV4-gm-Rn1"/>
+                                    <constraint firstItem="AKW-Ze-Ab3" firstAttribute="top" secondItem="1Ej-Fp-daP" secondAttribute="top" constant="-11" id="Utk-hT-0IU"/>
+                                    <constraint firstItem="s7W-5v-fVu" firstAttribute="top" secondItem="1Ej-Fp-daP" secondAttribute="top" constant="68" id="acp-J4-ttr"/>
                                     <constraint firstItem="42c-iH-Fa7" firstAttribute="centerY" secondItem="1Ej-Fp-daP" secondAttribute="centerY" constant="0.5" id="hYj-S6-qBl"/>
                                     <constraint firstItem="42c-iH-Fa7" firstAttribute="centerX" secondItem="1Ej-Fp-daP" secondAttribute="centerX" id="v5e-Xh-EK9"/>
                                 </constraints>
@@ -370,6 +390,8 @@
                     <navigationItem key="navigationItem" id="2zy-pG-hqc"/>
                     <connections>
                         <outlet property="detailLabel" destination="bUq-p2-AoA" id="42y-NR-Ijx"/>
+                        <outlet property="hiraganaReading" destination="AKW-Ze-Ab3" id="keZ-10-aNa"/>
+                        <outlet property="katakanaReading" destination="s7W-5v-fVu" id="Cgh-BP-6a1"/>
                         <outlet property="nextButtonOutlet" destination="UYJ-rk-bcl" id="1lu-WF-LM2"/>
                         <outlet property="previousButtonOutlet" destination="6Hc-5K-mD5" id="cVk-yb-l7c"/>
                         <outlet property="readingLabel" destination="42c-iH-Fa7" id="5b9-ff-1lw"/>
@@ -381,7 +403,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="meG-gm-L8s"/>
+        <segue reference="J2y-Np-xBf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="speaker.3.fill" catalog="system" width="128" height="90"/>

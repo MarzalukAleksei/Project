@@ -22,6 +22,13 @@ enum TypeOfCollectionItem {
     case katakana
     case kanji
 }
+enum DifficultLevel {
+    case n1
+    case n2
+    case n3
+    case n4
+    case n5
+}
 
 func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
     switch typeOf {

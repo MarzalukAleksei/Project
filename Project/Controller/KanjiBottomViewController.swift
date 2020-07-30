@@ -22,13 +22,17 @@ class KanjiBottomViewController: UIViewController {
             guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
             destinasion.typeOfCollection = TypeOfCollectionItem.kanji
         case "n2Segue":
-            break
+            guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
+            destinasion.typeOfCollection = TypeOfCollectionItem.kanji
         case "n3Segue":
-            break
+            guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
+            destinasion.typeOfCollection = TypeOfCollectionItem.kanji
         case "n4Segue":
-            break
+            guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
+            destinasion.typeOfCollection = TypeOfCollectionItem.kanji
         case "n5Segue":
-            break
+            guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
+            destinasion.typeOfCollection = TypeOfCollectionItem.kanji
         default: break
             
         }

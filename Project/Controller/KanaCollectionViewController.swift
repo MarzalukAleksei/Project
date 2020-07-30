@@ -17,6 +17,7 @@ class KanaCollectionViewController: UICollectionViewController {
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     var typeOfCollection: TypeOfCollectionItem?
+    var difficaultLevel: DifficultLevel?
 
     var arrayOfElements = [Any]()
     
@@ -50,7 +51,7 @@ class KanaCollectionViewController: UICollectionViewController {
             element = elementByIndex(array: kanji, index: indexPath.row)
         default: break
         }
-        pushToNextViewController(element: element)
+        pushToNextViewController(element: element as Any) // требует так или !
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -14,6 +14,8 @@ class DetailKanaViewController: UIViewController {
     @IBOutlet weak var readingLabel: UILabel!
     @IBOutlet weak var previousButtonOutlet: UIButton!
     @IBOutlet weak var nextButtonOutlet: UIButton!
+    @IBOutlet weak var hiraganaReading: UILabel!
+    @IBOutlet weak var katakanaReading: UILabel!
     
     enum SideButtom {
         case rightButtom, leftButtom, none
@@ -21,11 +23,14 @@ class DetailKanaViewController: UIViewController {
     
     var startElement: Any?
     
-    let integerForPreviousId = 2 // id начинается с 1
     
     var typeOfColletion: TypeOfCollectionItem?
     
     var array: [Any]?
+    
+    var previousElement: Any?
+    var nextElement: Any?
+    
 
 
     override func viewDidLoad() {
@@ -59,30 +64,185 @@ class DetailKanaViewController: UIViewController {
         var reading = ""
         var previous = ""
         var next = ""
+        var hiragana = ""
+        var katakana = ""
         switch element {
         case is Kana:
-            detail = ""
-            reading = ""
-            previous = ""
-            next = ""
+            guard let currentElement = element as? Kana else { return }
+            guard let currentArray = array as? [Kana] else { return }
+            if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
+                previous = currentArray[currentElement.id - 2].kana
+                next = currentArray[currentElement.id].kana
+            } else if currentElement.id == currentArray.first?.id{
+                next = currentArray[currentElement.id].kana
+            } else if currentElement.id == currentArray.last?.id{
+                previous = currentArray[currentElement.id - 2].kana
+            }
+            detail = currentElement.kana
+            reading = currentElement.reading
+            startElement = currentArray[currentElement.id - 1]
         case is Kanji:
-            detail = ""
-            reading = ""
-            previous = ""
-            next = ""
+            guard let currentElement = element as? Kanji else { return }
+            guard let currentArray = array as? [Kanji] else { return }
+            if currentElement.number != currentArray.first?.number && currentElement.number != currentArray.last?.number {
+                previous = currentArray[currentElement.number - 2].body
+                next = currentArray[currentElement.number].body
+            } else if currentElement.number == currentArray.first?.number{
+                next = currentArray[currentElement.number].body
+            } else if currentElement.number == currentArray.last?.number{
+                previous = currentArray[currentElement.number - 2].body
+            }
+            detail = currentElement.body
+            hiragana = currentElement.readingHiragana
+            katakana = currentElement.readingKatakana
+            startElement = currentArray[currentElement.number - 1]
         default: break
         }
         detailLabel.text = detail
         readingLabel.text = reading
+        hiraganaReading.text = hiragana
+        katakanaReading.text = katakana
+        previousButtonOutlet.setTitle(previous, for: .normal)
+        nextButtonOutlet.setTitle(next, for: .normal)
+    }
+    
+    private func leftButtomAction(element: Any) {
+        var detail: String?
+        var reading: String?
+        var previous: String?
+        var next: String?
+        var hiragana: String?
+        var katakana: String?
+        switch element {
+        case is Kana:
+            guard let currentElement = element as? Kana else { return }
+            guard let currentArray = array as? [Kana] else { return }
+            if currentElement.id != currentArray.first?.id && currentElement.id >= 3 {
+                next = currentElement.kana
+                detail = currentArray[currentElement.id - 2].kana
+                reading = currentArray[currentElement.id - 2].reading
+                previous = currentArray[currentElement.id - 3].kana
+                startElement = currentArray[currentElement.id - 2]
+            } else if currentElement.id == 2 {
+                next = currentElement.kana
+                detail = currentArray[currentElement.id - 2].kana
+                reading = currentArray[currentElement.id - 2].reading
+                previous = nil
+                startElement = currentArray[currentElement.id - 2]
+            } else if currentElement.id == 1 {
+                next = currentElement.kana
+                detail = currentArray[currentElement.id - 1].kana
+                reading = currentArray[currentElement.id - 1].reading
+                previous = nil
+            }
+            
+        case is Kanji:
+            guard let currentElement = element as? Kanji else { return }
+            guard let currentArray = array as? [Kanji] else { return }
+            if currentElement.number != currentArray.first?.number && currentElement.number >= 3 {
+                next = currentElement.body
+                detail = currentArray[currentElement.number - 2].body
+                hiragana = currentArray[currentElement.number - 2].readingHiragana
+                katakana = currentArray[currentElement.number - 2].readingKatakana
+                previous = currentArray[currentElement.number - 3].body
+                startElement = currentArray[currentElement.number - 2]
+            } else if currentElement.number == 2 {
+                next = currentElement.body
+                detail = currentArray[currentElement.number - 2].body
+                hiragana = currentArray[currentElement.number - 2].readingHiragana
+                katakana = currentArray[currentElement.number - 2].readingKatakana
+                previous = nil
+                startElement = currentArray[currentElement.number - 2]
+            } else if currentElement.number == 1 {
+                next = currentElement.body
+                detail = currentArray[currentElement.number - 1].body
+                hiragana = currentArray[currentElement.number - 1].readingHiragana
+                katakana = currentArray[currentElement.number - 1].readingKatakana
+                previous = nil
+            }
+        default: break
+        }
+        detailLabel.text = detail
+        readingLabel.text = reading
+        hiraganaReading.text = hiragana
+        katakanaReading.text = katakana
+        previousButtonOutlet.setTitle(previous, for: .normal)
+        nextButtonOutlet.setTitle(next, for: .normal)
+    }
+    
+    private func rightButtomAction(element: Any) {
+        var detail: String?
+        var reading: String?
+        var previous: String?
+        var next: String?
+        var hiragana: String?
+        var katakana: String?
+        switch element {
+        case is Kana:
+            guard let currentElement = element as? Kana else { return }
+            guard let currentArray = array as? [Kana] else { return }
+            if currentElement.id != currentArray.last?.id {
+                next = currentArray[currentElement.id + 1].kana
+                detail = currentArray[currentElement.id].kana
+                reading = currentArray[currentElement.id].reading
+                previous = currentArray[currentElement.id - 1].kana
+                startElement = currentArray[currentElement.id]
+            } else if currentElement.id - 2) {
+                next = currentElement.kana
+                detail = currentArray[currentElement.id - 2].kana
+                reading = currentArray[currentElement.id - 2].reading
+                previous = nil
+                startElement = currentArray[currentElement.id - 2]
+            } else if currentElement.id == 1 {
+                next = currentElement.kana
+                detail = currentArray[currentElement.id - 1].kana
+                reading = currentArray[currentElement.id - 1].reading
+                previous = nil
+            }
+            
+        case is Kanji:
+            guard let currentElement = element as? Kanji else { return }
+            guard let currentArray = array as? [Kanji] else { return }
+            if currentElement.number != currentArray.first?.number && currentElement.number >= 3 {
+                next = currentArray[currentElement.number + 1].body
+                detail = currentArray[currentElement.number].body
+                hiragana = currentArray[currentElement.number].readingHiragana
+                katakana = currentArray[currentElement.number].readingKatakana
+                previous = currentArray[currentElement.number - 1].body
+                startElement = currentArray[currentElement.number]
+            } else if currentElement.number == 2 {
+                next = currentElement.body
+                detail = currentArray[currentElement.number - 2].body
+                hiragana = currentArray[currentElement.number - 2].readingHiragana
+                katakana = currentArray[currentElement.number - 2].readingKatakana
+                previous = nil
+                startElement = currentArray[currentElement.number - 2]
+            } else if currentElement.number == 1 {
+                next = currentElement.body
+                detail = currentArray[currentElement.number - 1].body
+                hiragana = currentArray[currentElement.number - 1].readingHiragana
+                katakana = currentArray[currentElement.number - 1].readingKatakana
+                previous = nil
+            }
+        default: break
+        }
+        detailLabel.text = detail
+        readingLabel.text = reading
+        hiraganaReading.text = hiragana
+        katakanaReading.text = katakana
         previousButtonOutlet.setTitle(previous, for: .normal)
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
     @IBAction func previousButtom(_ sender: UIButton) {
+        guard let element = startElement else { return }
+        leftButtomAction(element: element)
      //   changeKana(buttom: SideButtom.leftButtom)
     }
     
     @IBAction func nextButtom(_ sender: UIButton) {
+        guard let element = startElement else { return }
+        rightButtomAction(element: element)
       //  changeKana(buttom: SideButtom.rightButtom)
     }
     
@@ -90,84 +250,8 @@ class DetailKanaViewController: UIViewController {
         
     }
     
-//    func changeKana(leftButtomAction: Bool){
-//
-//           switch leftButtomAction {
-//           case true:
-//               guard let id = previousElement?.id else { return }
-//               if previousElement?.id != hiragana.first?.id && previousElement != nil{
-//                   startElement = previousElement
-//                   previousElement = hiragana[id - 2]
-//                   nextElement = hiragana[id]
-//               }else if previousElement?.id == hiragana.first?.id{
-//                   startElement = previousElement
-//                   previousElement = nil
-//                   nextElement = hiragana[id]
-//               }
-//           default:
-//               guard let id = nextElement?.id else { return }
-//               if nextElement?.id != hiragana.last?.id && nextElement != nil{
-//                   startElement = nextElement
-//                   nextElement = hiragana[id]
-//                   previousElement = hiragana[id - 2]
-//               }else if nextElement?.id == hiragana.last?.id{
-//                   startElement = nextElement
-//                   nextElement = nil
-//                   previousElement = hiragana[id - 2]
-//           }
-//           }
-//           detailLabel.text = startElement?.kana
-//           readingLabel.text = startElement?.reading
-//           previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
-//           nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
-//       }
     
-//    func changeKana(buttom: SideButtom){
-//        guard let collection = array else { return }
-//
-//        switch buttom {
-//        case .leftButtom:
-//            buttomAction(collection: collection, buttom: .leftButtom)
-//        case .rightButtom:
-//            buttomAction(collection: collection, buttom: .rightButtom)
-//        default: break
-//        }
-//        detailLabel.text = startElement?.kana
-//        readingLabel.text = startElement?.reading
-//        previousButtonOutlet.setTitle(previousElement?.kana, for: .normal)
-//        nextButtonOutlet.setTitle(nextElement?.kana, for: .normal)
-//    }
-    func buttomAction(collection: [Any], buttom: SideButtom) {
-        switch buttom {
-        case .leftButtom:
-            break
-//        if previousElement?.id != ((collection.first) as? Kana)?.id && previousElement != nil{
-//            startElement = previousElement
-//            guard let id = startElement?.id else { return }
-//            previousElement = collection[id - integerForPreviousId] as? Kana
-//            nextElement = collection[id] as? Kana
-//        }else if previousElement?.id == (collection.first as? Kana)?.id{
-//            startElement = previousElement
-//            guard let id = startElement?.id else { return }
-//            previousElement = nil
-//            nextElement = collection[id] as? Kana
-//        }
-        case .rightButtom:
-            break
-//        if nextElement?.id != (collection.last as? Kana)?.id && nextElement != nil{
-//                startElement = nextElement
-//            guard let id = startElement?.id else { return }
-//            nextElement = collection[id] as? Kana
-//            previousElement = collection[id - integerForPreviousId] as? Kana
-//        }else if nextElement?.id == (collection.last as? Kana)?.id {
-//                startElement = nextElement
-//            guard let id = startElement?.id else { return }
-//                nextElement = nil
-//                previousElement = collection[id - integerForPreviousId] as? Kana
-//        }
-        default: break
-        }
-    }
+    
 }
 
 

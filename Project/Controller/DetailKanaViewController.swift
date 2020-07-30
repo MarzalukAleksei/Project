@@ -122,50 +122,55 @@ class DetailKanaViewController: UIViewController {
         var katakana: String?
         switch element {
         case is Kana:
-            guard let currentElement = element as? Kana else { return }
+            guard var currentElement = element as? Kana else { return }
             guard let currentArray = array as? [Kana] else { return }
-            if currentElement.id != currentArray.first?.id && currentElement.id >= 3 {
+            guard var preElement = previousElement as? Kana else { return }
+            if preElement.id != currentArray.first?.id && previousElement != nil {
                 next = currentElement.kana
-                detail = currentArray[currentElement.id - 2].kana
-                reading = currentArray[currentElement.id - 2].reading
-                previous = currentArray[currentElement.id - 3].kana
-                startElement = currentArray[currentElement.id - 2]
-            } else if currentElement.id == 2 {
+                currentElement = preElement
+                startElement = currentElement
+                preElement = currentArray[currentElement.id - 2]
+                previousElement = preElement
+                nextElement = currentArray[currentElement.id]
+                detail = currentElement.kana
+                reading = currentElement.reading
+                previous = preElement.kana
+            } else if preElement.id == currentArray.first?.id {
                 next = currentElement.kana
-                detail = currentArray[currentElement.id - 2].kana
-                reading = currentArray[currentElement.id - 2].reading
-                previous = nil
-                startElement = currentArray[currentElement.id - 2]
-            } else if currentElement.id == 1 {
-                next = currentElement.kana
-                detail = currentArray[currentElement.id - 1].kana
-                reading = currentArray[currentElement.id - 1].reading
-                previous = nil
+                currentElement = preElement
+                startElement = currentElement
+                previousElement = nil
+                nextElement = currentArray[currentElement.id]
+                detail = currentElement.kana
+                reading = currentElement.reading
+                previous = ""
             }
             
         case is Kanji:
-            guard let currentElement = element as? Kanji else { return }
+            guard var currentElement = element as? Kanji else { return }
             guard let currentArray = array as? [Kanji] else { return }
-            if currentElement.number != currentArray.first?.number && currentElement.number >= 3 {
+            guard var preElement = previousElement as? Kanji else { return }
+            if preElement.number != currentArray.first?.number && previousElement != nil {
                 next = currentElement.body
-                detail = currentArray[currentElement.number - 2].body
-                hiragana = currentArray[currentElement.number - 2].readingHiragana
-                katakana = currentArray[currentElement.number - 2].readingKatakana
-                previous = currentArray[currentElement.number - 3].body
-                startElement = currentArray[currentElement.number - 2]
-            } else if currentElement.number == 2 {
+                currentElement = preElement
+                startElement = currentElement
+                preElement = currentArray[currentElement.number - 2]
+                previousElement = preElement
+                nextElement = currentArray[currentElement.number]
+                detail = currentElement.body
+                hiragana = currentElement.readingHiragana
+                katakana = currentElement.readingKatakana
+                previous = preElement.body
+            } else if preElement.number == currentArray.first?.number {
                 next = currentElement.body
-                detail = currentArray[currentElement.number - 2].body
-                hiragana = currentArray[currentElement.number - 2].readingHiragana
-                katakana = currentArray[currentElement.number - 2].readingKatakana
-                previous = nil
-                startElement = currentArray[currentElement.number - 2]
-            } else if currentElement.number == 1 {
-                next = currentElement.body
-                detail = currentArray[currentElement.number - 1].body
-                hiragana = currentArray[currentElement.number - 1].readingHiragana
-                katakana = currentArray[currentElement.number - 1].readingKatakana
-                previous = nil
+                currentElement = preElement
+                startElement = currentElement
+                previousElement = nil
+                nextElement = currentArray[currentElement.number]
+                detail = currentElement.body
+                hiragana = currentElement.readingHiragana
+                katakana = currentElement.readingKatakana
+                previous = ""
             }
         default: break
         }
@@ -186,26 +191,54 @@ class DetailKanaViewController: UIViewController {
         var katakana: String?
         switch element {
         case is Kana:
-            guard let currentElement = element as? Kana else { return }
+            guard var currentElement = element as? Kana else { return }
             guard let currentArray = array as? [Kana] else { return }
-            if currentElement.id != currentArray.last?.id {
-                next = currentArray[currentElement.id + 1].kana
-                detail = currentArray[currentElement.id].kana
-                reading = currentArray[currentElement.id].reading
-                previous = currentArray[currentElement.id - 1].kana
-                startElement = currentArray[currentElement.id]
+            guard var nexElement = nextElement as? Kana else { return }
+            if nexElement.id != currentArray.last?.id && nextElement != nil {
+                previous = currentElement.kana
+                previousElement = currentElement
+                currentElement = nexElement
+                startElement = currentElement
+                nexElement = currentArray[currentElement.id]
+                nextElement = nexElement
+                detail = currentElement.kana
+                reading = currentElement.reading
+                next = nexElement.kana
+            } else if nexElement.id == currentArray.last?.id {
+                previous = currentElement.kana
+                previousElement = currentElement
+                currentElement = nexElement
+                startElement = currentElement
+                nextElement = nil
+                detail = currentElement.kana
+                reading = currentElement.reading
+                next = ""
             }
             
         case is Kanji:
-            guard let currentElement = element as? Kanji else { return }
+            guard var currentElement = element as? Kanji else { return }
             guard let currentArray = array as? [Kanji] else { return }
-            if currentElement.number != currentArray.first?.number && currentElement.number >= 3 {
-                next = currentArray[currentElement.number + 1].body
-                detail = currentArray[currentElement.number].body
-                hiragana = currentArray[currentElement.number].readingHiragana
-                katakana = currentArray[currentElement.number].readingKatakana
-                previous = currentArray[currentElement.number - 1].body
-                startElement = currentArray[currentElement.number]
+            guard var nexElement = nextElement as? Kanji else { return }
+            if nexElement.number != currentArray.last?.number && nextElement != nil {
+                previous = currentElement.body
+                previousElement = currentElement
+                currentElement = nexElement
+                startElement = currentElement
+                nexElement = currentArray[currentElement.number]
+                nextElement = nexElement
+                detail = currentElement.body
+                hiragana = currentElement.readingHiragana
+                katakana = currentElement.readingKatakana
+            } else if nexElement.number == currentArray.last?.number {
+                previous = currentElement.body
+                previousElement = currentElement
+                currentElement = nexElement
+                startElement = currentElement
+                nextElement = nil
+                detail = currentElement.body
+                hiragana = currentElement.readingHiragana
+                katakana = currentElement.readingKatakana
+                next = ""
             }
         default: break
         }

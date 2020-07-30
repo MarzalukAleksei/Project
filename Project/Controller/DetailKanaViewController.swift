@@ -54,7 +54,6 @@ class DetailKanaViewController: UIViewController {
         super.viewWillAppear(animated)
         guard let element = startElement else { return }
         setupElement(element: element)
-
     }
     
     
@@ -72,11 +71,15 @@ class DetailKanaViewController: UIViewController {
             guard let currentArray = array as? [Kana] else { return }
             if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
                 previous = currentArray[currentElement.id - 2].kana
+                previousElement = currentArray[currentElement.id - 2]
                 next = currentArray[currentElement.id].kana
+                nextElement = currentArray[currentElement.id]
             } else if currentElement.id == currentArray.first?.id{
                 next = currentArray[currentElement.id].kana
+                nextElement = currentArray[currentElement.id]
             } else if currentElement.id == currentArray.last?.id{
                 previous = currentArray[currentElement.id - 2].kana
+                previousElement = currentArray[currentElement.id - 2]
             }
             detail = currentElement.kana
             reading = currentElement.reading
@@ -86,11 +89,15 @@ class DetailKanaViewController: UIViewController {
             guard let currentArray = array as? [Kanji] else { return }
             if currentElement.number != currentArray.first?.number && currentElement.number != currentArray.last?.number {
                 previous = currentArray[currentElement.number - 2].body
+                previousElement = currentArray[currentElement.number - 2]
                 next = currentArray[currentElement.number].body
+                nextElement = currentArray[currentElement.number]
             } else if currentElement.number == currentArray.first?.number{
                 next = currentArray[currentElement.number].body
+                nextElement = currentArray[currentElement.number]
             } else if currentElement.number == currentArray.last?.number{
                 previous = currentArray[currentElement.number - 2].body
+                previousElement = currentArray[currentElement.number - 2]
             }
             detail = currentElement.body
             hiragana = currentElement.readingHiragana
@@ -187,17 +194,6 @@ class DetailKanaViewController: UIViewController {
                 reading = currentArray[currentElement.id].reading
                 previous = currentArray[currentElement.id - 1].kana
                 startElement = currentArray[currentElement.id]
-            } else if currentElement.id - 2) {
-                next = currentElement.kana
-                detail = currentArray[currentElement.id - 2].kana
-                reading = currentArray[currentElement.id - 2].reading
-                previous = nil
-                startElement = currentArray[currentElement.id - 2]
-            } else if currentElement.id == 1 {
-                next = currentElement.kana
-                detail = currentArray[currentElement.id - 1].kana
-                reading = currentArray[currentElement.id - 1].reading
-                previous = nil
             }
             
         case is Kanji:
@@ -210,19 +206,6 @@ class DetailKanaViewController: UIViewController {
                 katakana = currentArray[currentElement.number].readingKatakana
                 previous = currentArray[currentElement.number - 1].body
                 startElement = currentArray[currentElement.number]
-            } else if currentElement.number == 2 {
-                next = currentElement.body
-                detail = currentArray[currentElement.number - 2].body
-                hiragana = currentArray[currentElement.number - 2].readingHiragana
-                katakana = currentArray[currentElement.number - 2].readingKatakana
-                previous = nil
-                startElement = currentArray[currentElement.number - 2]
-            } else if currentElement.number == 1 {
-                next = currentElement.body
-                detail = currentArray[currentElement.number - 1].body
-                hiragana = currentArray[currentElement.number - 1].readingHiragana
-                katakana = currentArray[currentElement.number - 1].readingKatakana
-                previous = nil
             }
         default: break
         }

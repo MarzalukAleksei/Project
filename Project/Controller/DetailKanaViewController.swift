@@ -44,7 +44,7 @@ class DetailKanaViewController: UIViewController {
             array = hiragana
         case .katakana:
             array = katakana
-        case .kanjiN1:
+        case .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             array = newKanjiArray
         default: break
         }
@@ -87,22 +87,25 @@ class DetailKanaViewController: UIViewController {
         case is Kanji:
             guard let currentElement = element as? Kanji else { return }
             guard let currentArray = array as? [Kanji] else { return }
-            if currentElement.number != currentArray.first?.number && currentElement.number != currentArray.last?.number {
-                previous = currentArray[currentElement.number - 2].body
-                previousElement = currentArray[currentElement.number - 2]
-                next = currentArray[currentElement.number].body
-                nextElement = currentArray[currentElement.number]
-            } else if currentElement.number == currentArray.first?.number{
-                next = currentArray[currentElement.number].body
-                nextElement = currentArray[currentElement.number]
-            } else if currentElement.number == currentArray.last?.number{
-                previous = currentArray[currentElement.number - 2].body
-                previousElement = currentArray[currentElement.number - 2]
+            if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
+                previous = currentArray[currentElement.id - 2].body
+                previousElement = currentArray[currentElement.id - 2]
+                next = currentArray[currentElement.id].body
+                nextElement = currentArray[currentElement.id]
+            } else if currentElement.id == currentArray.first?.id && currentElement.id == currentArray.last?.id {
+                nextElement = nil
+                previousElement = nil
+            } else if currentElement.id == currentArray.last?.id{
+                previous = currentArray[currentElement.id - 2].body
+                previousElement = currentArray[currentElement.id - 2]
+            } else if currentElement.id == currentArray.first?.id {
+                next = currentArray[currentElement.id].body
+                nextElement = currentArray[currentElement.id]
             }
             detail = currentElement.body
             hiragana = currentElement.readingHiragana
             katakana = currentElement.readingKatakana
-            startElement = currentArray[currentElement.number - 1]
+            startElement = currentArray[currentElement.id - 1]
         default: break
         }
         detailLabel.text = detail

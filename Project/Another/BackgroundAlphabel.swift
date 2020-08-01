@@ -46,9 +46,11 @@ func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
 
 private func selectLevelFromArray (difficultLevel: Int) -> [Any] {
     newKanjiArray.removeAll()
-    for element in kanji {
+    for var element in kanji {
         if element.level == difficultLevel {
+            element.id = newKanjiArray.count + 1
             newKanjiArray.append(element)
+            
         }
     }
     return newKanjiArray

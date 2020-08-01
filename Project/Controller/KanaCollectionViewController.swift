@@ -47,14 +47,16 @@ class KanaCollectionViewController: UICollectionViewController {
         case .katakana:
             element = elementByIndex(array: katakana, index: indexPath.row)
         case .kanjiN1:
-            element = elementByIndex(array: kanji, index: indexPath.row)
+            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
         case .kanjiN2:
-            element = elementByIndex(array: kanji, index: indexPath.row)
+            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
         case .kanjiN3:
-            element = elementByIndex(array: kanji, index: indexPath.row)
+            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
         case .kanjiN4:
-            element = elementByIndex(array: kanji, index: indexPath.row)
+            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
         case .kanjiN5:
+            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+        case .kanjiAll:
             element = elementByIndex(array: kanji, index: indexPath.row)
         default: break
         }

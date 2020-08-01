@@ -20,23 +20,41 @@ struct Kana {
 enum TypeOfCollectionItem {
     case hiragana
     case katakana
-    case kanji
+    case kanjiAll
+    case kanjiN1
+    case kanjiN2
+    case kanjiN3
+    case kanjiN4
+    case kanjiN5
 }
-enum DifficultLevel {
-    case n1
-    case n2
-    case n3
-    case n4
-    case n5
-}
+
 
 func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
     switch typeOf {
         case .hiragana: return hiragana
-        case .kanji: return kanji
-        case .katakana: return katakana 
+        case .katakana: return katakana
+        case .kanjiAll: return kanji
+        case .kanjiN1: return selectLevelFromArray(difficultLevel: 1)
+        case .kanjiN2: return selectLevelFromArray(difficultLevel: 2)
+        case .kanjiN3: return selectLevelFromArray(difficultLevel: 3)
+        case .kanjiN4: return selectLevelFromArray(difficultLevel: 4)
+        case .kanjiN5: return selectLevelFromArray(difficultLevel: 5)
     }
+
 }
+
+func selectLevelFromArray (difficultLevel: Int) -> [Any] {
+    var newArray = [Any]()
+    for item in kanji {
+        if item.level == difficultLevel {
+            newArray.append(item)
+        }
+    }
+    return newArray
+}
+
+
+
 
 //func getArray<T>( typeOf: TypeOfCollectionItem) -> [T]? {
 //    switch typeOf {

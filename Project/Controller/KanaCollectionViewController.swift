@@ -17,7 +17,6 @@ class KanaCollectionViewController: UICollectionViewController {
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     var typeOfCollection: TypeOfCollectionItem?
-    var difficaultLevel: DifficultLevel?
 
     var arrayOfElements = [Any]()
     
@@ -47,11 +46,19 @@ class KanaCollectionViewController: UICollectionViewController {
             element = elementByIndex(array: hiragana, index: indexPath.row)
         case .katakana:
             element = elementByIndex(array: katakana, index: indexPath.row)
-        case .kanji: 
+        case .kanjiN1:
+            element = elementByIndex(array: kanji, index: indexPath.row)
+        case .kanjiN2:
+            element = elementByIndex(array: kanji, index: indexPath.row)
+        case .kanjiN3:
+            element = elementByIndex(array: kanji, index: indexPath.row)
+        case .kanjiN4:
+            element = elementByIndex(array: kanji, index: indexPath.row)
+        case .kanjiN5:
             element = elementByIndex(array: kanji, index: indexPath.row)
         default: break
         }
-        pushToNextViewController(element: element as Any) // требует так или !
+        pushToNextViewController(element: element as Any) 
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,7 +76,7 @@ class KanaCollectionViewController: UICollectionViewController {
         case .hiragana, .katakana:
             let element = arrayOfElements[indexPath.item] as? Kana
             cell.labelKana.text = element?.kana ?? "-"
-        case .kanji:
+        case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             let element = arrayOfElements[indexPath.item] as? Kanji
             cell.labelKana.text = element?.body ?? "-"
         case .none: break

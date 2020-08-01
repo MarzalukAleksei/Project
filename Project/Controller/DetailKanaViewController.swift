@@ -44,8 +44,9 @@ class DetailKanaViewController: UIViewController {
             array = hiragana
         case .katakana:
             array = katakana
-        case .kanji:
+        case .kanjiN1:
             array = kanji
+        
         default: break
         }
     }

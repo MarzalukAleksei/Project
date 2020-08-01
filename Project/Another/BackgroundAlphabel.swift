@@ -34,7 +34,7 @@ func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
     switch typeOf {
         case .hiragana: return hiragana
         case .katakana: return katakana
-        case .kanjiAll: return kanji
+        case .kanjiAll: return selectLevelFromArray(difficultLevel: 0)
         case .kanjiN1: return selectLevelFromArray(difficultLevel: 1)
         case .kanjiN2: return selectLevelFromArray(difficultLevel: 2)
         case .kanjiN3: return selectLevelFromArray(difficultLevel: 3)
@@ -50,7 +50,9 @@ private func selectLevelFromArray (difficultLevel: Int) -> [Any] {
         if element.level == difficultLevel {
             element.id = newKanjiArray.count + 1
             newKanjiArray.append(element)
-            
+        } else if difficultLevel == 0 {
+            element.id = element.number
+            newKanjiArray.append(element)
         }
     }
     return newKanjiArray

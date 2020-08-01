@@ -57,7 +57,7 @@ class KanaCollectionViewController: UICollectionViewController {
         case .kanjiN5:
             element = elementByIndex(array: newKanjiArray, index: indexPath.row)
         case .kanjiAll:
-            element = elementByIndex(array: kanji, index: indexPath.row)
+            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
         default: break
         }
         pushToNextViewController(element: element as Any)

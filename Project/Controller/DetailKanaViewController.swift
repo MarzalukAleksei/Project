@@ -46,6 +46,8 @@ class DetailKanaViewController: UIViewController {
             array = katakana
         case .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             array = newKanjiArray
+        case .kanjiAll:
+            array = newKanjiArray
         default: break
         }
     }
@@ -148,28 +150,27 @@ class DetailKanaViewController: UIViewController {
                 reading = currentElement.reading
                 previous = ""
             }
-            
         case is Kanji:
             guard var currentElement = element as? Kanji else { return }
             guard let currentArray = array as? [Kanji] else { return }
             guard var preElement = previousElement as? Kanji else { return }
-            if preElement.number != currentArray.first?.number && previousElement != nil {
+            if preElement.id != currentArray.first?.id && previousElement != nil {
                 next = currentElement.body
                 currentElement = preElement
                 startElement = currentElement
-                preElement = currentArray[currentElement.number - 2]
+                preElement = currentArray[currentElement.id - 2]
                 previousElement = preElement
-                nextElement = currentArray[currentElement.number]
+                nextElement = currentArray[currentElement.id]
                 detail = currentElement.body
                 hiragana = currentElement.readingHiragana
                 katakana = currentElement.readingKatakana
                 previous = preElement.body
-            } else if preElement.number == currentArray.first?.number {
+            } else if preElement.id == currentArray.first?.id {
                 next = currentElement.body
                 currentElement = preElement
                 startElement = currentElement
                 previousElement = nil
-                nextElement = currentArray[currentElement.number]
+                nextElement = currentArray[currentElement.id]
                 detail = currentElement.body
                 hiragana = currentElement.readingHiragana
                 katakana = currentElement.readingKatakana
@@ -202,7 +203,7 @@ class DetailKanaViewController: UIViewController {
                 previousElement = currentElement
                 currentElement = nexElement
                 startElement = currentElement
-                nexElement = currentArray[currentElement.id]
+                nexElement = currentArray[currentElement.id + 1]
                 nextElement = nexElement
                 detail = currentElement.kana
                 reading = currentElement.reading
@@ -217,22 +218,22 @@ class DetailKanaViewController: UIViewController {
                 reading = currentElement.reading
                 next = ""
             }
-            
         case is Kanji:
             guard var currentElement = element as? Kanji else { return }
             guard let currentArray = array as? [Kanji] else { return }
             guard var nexElement = nextElement as? Kanji else { return }
-            if nexElement.number != currentArray.last?.number && nextElement != nil {
+            if nexElement.id != currentArray.last?.id && nextElement != nil {
                 previous = currentElement.body
                 previousElement = currentElement
                 currentElement = nexElement
                 startElement = currentElement
-                nexElement = currentArray[currentElement.number]
+                nexElement = currentArray[currentElement.id]
                 nextElement = nexElement
+                next = nexElement.body
                 detail = currentElement.body
                 hiragana = currentElement.readingHiragana
                 katakana = currentElement.readingKatakana
-            } else if nexElement.number == currentArray.last?.number {
+            } else if nexElement.id == currentArray.last?.id {
                 previous = currentElement.body
                 previousElement = currentElement
                 currentElement = nexElement

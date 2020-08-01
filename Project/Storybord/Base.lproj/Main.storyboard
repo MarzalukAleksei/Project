@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-gD-URT">
-                                <rect key="frame" x="84" y="133" width="246" height="88"/>
+                                <rect key="frame" x="84" y="64" width="246" height="88"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="9gx-xX-1f8"/>
@@ -209,7 +209,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-zH-6XL">
-                                <rect key="frame" x="84" y="255" width="246" height="88"/>
+                                <rect key="frame" x="84" y="186" width="246" height="88"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="N 2">
@@ -220,7 +220,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrl-UI-Bz6">
-                                <rect key="frame" x="84" y="372" width="246" height="88"/>
+                                <rect key="frame" x="84" y="303" width="246" height="88"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="N 3">
@@ -231,7 +231,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-SS-PiB">
-                                <rect key="frame" x="84" y="484" width="246" height="88"/>
+                                <rect key="frame" x="84" y="415" width="246" height="88"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="N 4">
@@ -242,7 +242,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-od-7tV">
-                                <rect key="frame" x="84" y="596" width="246" height="88"/>
+                                <rect key="frame" x="84" y="527" width="246" height="88"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="N 5">
@@ -252,10 +252,26 @@
                                     <segue destination="FpQ-62-Edf" kind="show" identifier="n5Segue" id="J2y-Np-xBf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyO-zi-ECZ" userLabel="All">
+                                <rect key="frame" x="123" y="633" width="168" height="57"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="1WZ-ca-nen"/>
+                                    <constraint firstAttribute="width" constant="168" id="L6d-rU-sIr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="All">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FpQ-62-Edf" kind="show" identifier="AllSegue" id="EIA-PL-4qz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fUE-zH-6XL" firstAttribute="leading" secondItem="EMj-gD-URT" secondAttribute="leading" id="1Ou-tX-WLH"/>
+                            <constraint firstItem="pyO-zi-ECZ" firstAttribute="leading" secondItem="CA0-dh-3dx" secondAttribute="leading" constant="123" id="1ng-en-h32"/>
                             <constraint firstItem="jrl-UI-Bz6" firstAttribute="top" secondItem="fUE-zH-6XL" secondAttribute="bottom" constant="29" id="Cvn-8h-Wig"/>
                             <constraint firstItem="gzV-SS-PiB" firstAttribute="height" secondItem="jrl-UI-Bz6" secondAttribute="height" id="HVa-fJ-0y8"/>
                             <constraint firstItem="EMj-gD-URT" firstAttribute="leading" secondItem="CA0-dh-3dx" secondAttribute="leading" constant="84" id="Ihm-GB-EXy"/>
@@ -272,7 +288,8 @@
                             <constraint firstItem="fUE-zH-6XL" firstAttribute="width" secondItem="EMj-gD-URT" secondAttribute="width" id="gcO-FM-E6v"/>
                             <constraint firstItem="gzV-SS-PiB" firstAttribute="top" secondItem="jrl-UI-Bz6" secondAttribute="bottom" constant="24" id="jSF-ji-pkc"/>
                             <constraint firstItem="gzV-SS-PiB" firstAttribute="leading" secondItem="jrl-UI-Bz6" secondAttribute="leading" id="kvJ-DU-K6o"/>
-                            <constraint firstItem="EMj-gD-URT" firstAttribute="top" secondItem="CA0-dh-3dx" secondAttribute="top" constant="89" id="qpg-9W-Qh8"/>
+                            <constraint firstItem="EMj-gD-URT" firstAttribute="top" secondItem="CA0-dh-3dx" secondAttribute="top" constant="20" id="qpg-9W-Qh8"/>
+                            <constraint firstItem="pyO-zi-ECZ" firstAttribute="top" secondItem="gFc-od-7tV" secondAttribute="bottom" constant="18" id="zvo-Za-be2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CA0-dh-3dx"/>
                     </view>
@@ -403,7 +420,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J2y-Np-xBf"/>
+        <segue reference="EIA-PL-4qz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="speaker.3.fill" catalog="system" width="128" height="90"/>

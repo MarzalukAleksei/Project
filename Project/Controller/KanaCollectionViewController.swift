@@ -58,7 +58,7 @@ class KanaCollectionViewController: UICollectionViewController {
             element = elementByIndex(array: kanji, index: indexPath.row)
         default: break
         }
-        pushToNextViewController(element: element as Any) 
+        pushToNextViewController(element: element as Any)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

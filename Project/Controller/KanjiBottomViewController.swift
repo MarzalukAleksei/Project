@@ -33,6 +33,9 @@ class KanjiBottomViewController: UIViewController {
         case "n5Segue":
             guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
             destinasion.typeOfCollection = TypeOfCollectionItem.kanjiN5
+        case "AllSegue":
+            guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
+            destinasion.typeOfCollection = TypeOfCollectionItem.kanjiAll
         default: break
             
         }

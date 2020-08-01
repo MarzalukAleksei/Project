@@ -28,6 +28,7 @@ enum TypeOfCollectionItem {
     case kanjiN5
 }
 
+var newKanjiArray = [Any]()
 
 func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
     switch typeOf {
@@ -43,14 +44,14 @@ func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
 
 }
 
-func selectLevelFromArray (difficultLevel: Int) -> [Any] {
-    var newArray = [Any]()
-    for item in kanji {
-        if item.level == difficultLevel {
-            newArray.append(item)
+private func selectLevelFromArray (difficultLevel: Int) -> [Any] {
+    newKanjiArray.removeAll()
+    for element in kanji {
+        if element.level == difficultLevel {
+            newKanjiArray.append(element)
         }
     }
-    return newArray
+    return newKanjiArray
 }
 
 

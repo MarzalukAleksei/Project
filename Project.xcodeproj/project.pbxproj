@@ -52,6 +52,7 @@
 		CF857BD724C1B25A0084DCE9 /* Kanji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanji.swift; sourceTree = "<group>"; };
 		CFAA1D4424B79123004F9260 /* KanaXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KanaXib.xib; sourceTree = "<group>"; };
 		CFAA1D4624B79292004F9260 /* KanaXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaXib.swift; sourceTree = "<group>"; };
+		CFC72E1824DEFCCE006A9C19 /* Project.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; name = Project.numbers; path = "../../../../../Library/Mobile Documents/com~apple~Numbers/Documents/Project.numbers"; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +150,7 @@
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
 				CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */,
+				CFC72E1824DEFCCE006A9C19 /* Project.numbers */,
 			);
 			path = Another;
 			sourceTree = "<group>";

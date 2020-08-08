@@ -51,7 +51,7 @@ private func selectLevelFromArray (difficultLevel: Int) -> [Any] {
             element.id = newKanjiArray.count + 1
             newKanjiArray.append(element)
         } else if difficultLevel == 0 {
-            element.id = element.number
+            element.id = newKanjiArray.count + 1
             newKanjiArray.append(element)
         }
     }

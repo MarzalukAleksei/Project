@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF0E5B6A24DFE9A800851627 /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF0E5B6924DFE9A700851627 /* Kanji.csv */; };
+		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD532472CD1C005B09F4 /* AppDelegate.swift */; };
 		CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */; };
 		CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD572472CD1C005B09F4 /* MainViewController.swift */; };
@@ -35,6 +36,7 @@
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0E5B6824DF2D6A00851627 /* DetailView.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = DetailView.sketch; sourceTree = "<group>"; };
 		CF0E5B6924DFE9A700851627 /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
+		CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		CF30CD502472CD1C005B09F4 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF30CD532472CD1C005B09F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */,
 				CF857BD724C1B25A0084DCE9 /* Kanji.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
+				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
 				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				CFAA1D4724B79292004F9260 /* KanaXib.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
+				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,

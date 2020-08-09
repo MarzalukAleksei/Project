@@ -8,7 +8,16 @@
 
 import UIKit
 
-class DetailKanaViewController: UIViewController {
+class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        return
+    }
+    
     
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
@@ -17,10 +26,13 @@ class DetailKanaViewController: UIViewController {
     @IBOutlet weak var hiraganaReading: UILabel!
     @IBOutlet weak var katakanaReading: UILabel!
     @IBOutlet weak var translateLabel: UILabel!
+
     
-    enum SideButtom {
-        case rightButtom, leftButtom, none
-    }
+    
+    
+//    enum SideButtom {
+//        case rightButtom, leftButtom, none
+//    }
     
     var startElement: Any?
     
@@ -278,9 +290,7 @@ class DetailKanaViewController: UIViewController {
         rightButtomAction(element: element)
     }
     
-    @IBAction func spekerButtom(_ sender: UIButton) {
-        
-    }
+
     
     
     

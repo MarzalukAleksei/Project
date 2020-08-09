@@ -16,6 +16,7 @@ class DetailKanaViewController: UIViewController {
     @IBOutlet weak var nextButtonOutlet: UIButton!
     @IBOutlet weak var hiraganaReading: UILabel!
     @IBOutlet weak var katakanaReading: UILabel!
+    @IBOutlet weak var translateLabel: UILabel!
     
     enum SideButtom {
         case rightButtom, leftButtom, none
@@ -31,7 +32,9 @@ class DetailKanaViewController: UIViewController {
     var previousElement: Any?
     var nextElement: Any?
     
-
+    let kunLabel = "訓: "
+    let onLabel = "音: "
+    let imiLabel = "意味: "
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +70,7 @@ class DetailKanaViewController: UIViewController {
         var next = ""
         var hiragana = ""
         var katakana = ""
+        var translate = ""
         switch element {
         case is Kana:
             guard let currentElement = element as? Kana else { return }
@@ -105,8 +109,9 @@ class DetailKanaViewController: UIViewController {
                 nextElement = currentArray[currentElement.id]
             }
             detail = currentElement.body
-            hiragana = currentElement.readingHiragana
-            katakana = currentElement.readingKatakana
+            hiragana = kunLabel + currentElement.readingHiragana
+            katakana = onLabel + currentElement.readingKatakana
+            translate = imiLabel + currentElement.translate
             startElement = currentArray[currentElement.id - 1]
         default: break
         }
@@ -114,6 +119,7 @@ class DetailKanaViewController: UIViewController {
         readingLabel.text = reading
         hiraganaReading.text = hiragana
         katakanaReading.text = katakana
+        translateLabel.text = translate
         previousButtonOutlet.setTitle(previous, for: .normal)
         nextButtonOutlet.setTitle(next, for: .normal)
     }
@@ -125,6 +131,7 @@ class DetailKanaViewController: UIViewController {
         var next: String?
         var hiragana: String?
         var katakana: String?
+        var translate: String?
         switch element {
         case is Kana:
             guard var currentElement = element as? Kana else { return }
@@ -162,8 +169,9 @@ class DetailKanaViewController: UIViewController {
                 previousElement = preElement
                 nextElement = currentArray[currentElement.id]
                 detail = currentElement.body
-                hiragana = currentElement.readingHiragana
-                katakana = currentElement.readingKatakana
+                hiragana = kunLabel + currentElement.readingHiragana
+                katakana = onLabel + currentElement.readingKatakana
+                translate = imiLabel + currentElement.translate
                 previous = preElement.body
             } else if preElement.id == currentArray.first?.id {
                 next = currentElement.body
@@ -172,8 +180,9 @@ class DetailKanaViewController: UIViewController {
                 previousElement = nil
                 nextElement = currentArray[currentElement.id]
                 detail = currentElement.body
-                hiragana = currentElement.readingHiragana
-                katakana = currentElement.readingKatakana
+                hiragana = kunLabel + currentElement.readingHiragana
+                katakana = onLabel + currentElement.readingKatakana
+                translate = imiLabel + currentElement.translate
                 previous = ""
             }
         default: break
@@ -182,6 +191,7 @@ class DetailKanaViewController: UIViewController {
         readingLabel.text = reading
         hiraganaReading.text = hiragana
         katakanaReading.text = katakana
+        translateLabel.text = translate
         previousButtonOutlet.setTitle(previous, for: .normal)
         nextButtonOutlet.setTitle(next, for: .normal)
     }
@@ -193,6 +203,7 @@ class DetailKanaViewController: UIViewController {
         var next: String?
         var hiragana: String?
         var katakana: String?
+        var translate: String?
         switch element {
         case is Kana:
             guard var currentElement = element as? Kana else { return }
@@ -231,8 +242,9 @@ class DetailKanaViewController: UIViewController {
                 nextElement = nexElement
                 next = nexElement.body
                 detail = currentElement.body
-                hiragana = currentElement.readingHiragana
-                katakana = currentElement.readingKatakana
+                hiragana = kunLabel + currentElement.readingHiragana
+                katakana = onLabel + currentElement.readingKatakana
+                translate = imiLabel + currentElement.translate
             } else if nexElement.id == currentArray.last?.id {
                 previous = currentElement.body
                 previousElement = currentElement
@@ -240,8 +252,9 @@ class DetailKanaViewController: UIViewController {
                 startElement = currentElement
                 nextElement = nil
                 detail = currentElement.body
-                hiragana = currentElement.readingHiragana
-                katakana = currentElement.readingKatakana
+                hiragana = kunLabel + currentElement.readingHiragana
+                katakana = onLabel + currentElement.readingKatakana
+                translate = imiLabel + currentElement.translate
                 next = ""
             }
         default: break
@@ -250,6 +263,7 @@ class DetailKanaViewController: UIViewController {
         readingLabel.text = reading
         hiraganaReading.text = hiragana
         katakanaReading.text = katakana
+        translateLabel.text = translate
         previousButtonOutlet.setTitle(previous, for: .normal)
         nextButtonOutlet.setTitle(next, for: .normal)
     }

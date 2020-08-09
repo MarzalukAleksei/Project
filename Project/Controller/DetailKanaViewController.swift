@@ -271,13 +271,11 @@ class DetailKanaViewController: UIViewController {
     @IBAction func previousButtom(_ sender: UIButton) {
         guard let element = startElement else { return }
         leftButtomAction(element: element)
-     //   changeKana(buttom: SideButtom.leftButtom)
     }
     
     @IBAction func nextButtom(_ sender: UIButton) {
         guard let element = startElement else { return }
         rightButtomAction(element: element)
-      //  changeKana(buttom: SideButtom.rightButtom)
     }
     
     @IBAction func spekerButtom(_ sender: UIButton) {

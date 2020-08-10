@@ -136,7 +136,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    private func leftButtomAction(element: Any) {
+    private func leftButtonAction(element: Any) {
         var detail: String?
         var reading: String?
         var previous: String?
@@ -208,7 +208,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    private func rightButtomAction(element: Any) {
+    private func rightButtonAction(element: Any) {
         var detail: String?
         var reading: String?
         var previous: String?
@@ -280,14 +280,14 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    @IBAction func previousButtom(_ sender: UIButton) {
+    @IBAction func previousButton(_ sender: UIButton) {
         guard let element = startElement else { return }
-        leftButtomAction(element: element)
+        leftButtonAction(element: element)
     }
     
-    @IBAction func nextButtom(_ sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         guard let element = startElement else { return }
-        rightButtomAction(element: element)
+        rightButtonAction(element: element)
     }
     
 

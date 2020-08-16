@@ -31,13 +31,15 @@ func transformToKanji() -> [Kanji] {
         element.translate = item["Значение"] ?? ""
         element.readingKatakana = item["On"] ?? ""
         element.readingHiragana = item["Kun"] ?? ""
-        element.number = Int(item["Номер"]!) ?? 0
-        element.example.append(item["例"] ?? "")
-        element.level = Int(item["Level"]!) ?? 0
+        element.number = Int(item["Номер"] ?? "") ?? 0
+        element.example = item["例"]?.components(separatedBy: "、") ?? []
+        element.level = Int(item["Level"] ?? "") ?? 0
         array.append(element)
     }
     return array
 }
+
+
 
 let kanji = transformToKanji()
 

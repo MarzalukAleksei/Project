@@ -12,12 +12,6 @@ class MainViewController: BackgroundViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(readFile())
-//        print(cleanCSV(File: readFile()))
-//        print(getArrayCSV()) // MARK: Test print
-//        print(separateStringToArray(string: cleanCSV(File: readFile())))
-        convertCSV(file: readFile())
-        print(titles)
-        print(data.first)
+    
 }
 }

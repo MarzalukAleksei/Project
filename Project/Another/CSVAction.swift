@@ -8,12 +8,18 @@
 
 import Foundation
 
-
-
+func getArrayFromCSV(fileName: String, fileType: String) -> [[String: String]] {
+    convertCSV(file: readFile(fileName: fileName, fileType: fileType))
+    return data
+}
+func getTitleFromCSV(fileName: String, fileType: String) -> [String] {
+    convertCSV(file: readFile(fileName: fileName, fileType: fileType))
+    return titles
+}
     var titles = [String]()
     var data: [[String: String]] = []
     
-func convertCSV(file: String) {
+private func convertCSV(file: String) {
     let rows = cleanCSV(File: file).components(separatedBy: "\n")
     if rows.count > 0 {
         data = []
@@ -31,11 +37,11 @@ func convertCSV(file: String) {
     }
 }
 
-func separateStringToArray(string: String) -> [String] {
+private func separateStringToArray(string: String) -> [String] {
     return string.components(separatedBy: ",")
 }
 
-func cleanCSV(File file: String) -> String { // убирает \r в конце строки
+private func cleanCSV(File file: String) -> String { // убирает \r в конце строки
     var cleanFile = file
 //    cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
 //    cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
@@ -43,8 +49,8 @@ func cleanCSV(File file: String) -> String { // убирает \r в конце 
     return cleanFile
 }
 
-func readFile() -> String {
-    let fileUrl = Bundle.main.path(forResource: "Kanji", ofType: "csv")
+private func readFile(fileName: String, fileType: String) -> String {
+    let fileUrl = Bundle.main.path(forResource: fileName, ofType: fileType)
     var csvString = ""
     do {
         guard let url = fileUrl else { return "" }
@@ -72,3 +78,4 @@ func readFile() -> String {
 //    }
 //    return array
 //}
+

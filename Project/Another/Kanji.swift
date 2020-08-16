@@ -29,11 +29,14 @@ func transformToKanji() -> [Kanji] {
     for item in kanjiData {
         element.body = item["Кандзи"] ?? ""
         element.translate = item["Значение"] ?? ""
-        element.readingKatakana = item["On"] ?? ""
-        element.readingHiragana = item["Kun"] ?? ""
+        element.readingKatakana = item["On"] ?? "ー"
+        element.readingHiragana = item["Kun"] ?? "ー"
         element.number = Int(item["Номер"] ?? "") ?? 0
         element.example = item["例"]?.components(separatedBy: "、") ?? []
         element.level = Int(item["Level"] ?? "") ?? 0
+        if element.body == "" || element.translate == "" || element.number == 0 || element.level == 0 {
+            continue
+        }
         array.append(element)
     }
     return array

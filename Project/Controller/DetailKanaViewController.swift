@@ -10,7 +10,16 @@ import UIKit
 
 class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        switch startElement {
+        case is Kanji:
+            guard let element = startElement as? Kanji else { return 0 }
+            return element.example.count
+        case is Kana:
+//            guard let element = startElement as? Kana else { return 0 }
+            return 0
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -27,7 +36,6 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var katakanaReading: UILabel!
     @IBOutlet weak var translateLabel: UILabel!
 
-    
     
     
 //    enum SideButtom {

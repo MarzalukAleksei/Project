@@ -26,7 +26,7 @@
 		CFAA1D4524B79124004F9260 /* KanaXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAA1D4424B79123004F9260 /* KanaXib.xib */; };
 		CFAA1D4724B79292004F9260 /* KanaXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA1D4624B79292004F9260 /* KanaXib.swift */; };
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
-		CFD012D124E92C61001F0032 /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFD012D024E92C61001F0032 /* Kanji.csv */; };
+		CFD012D824E969C4001F0032 /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFD012D724E969C3001F0032 /* Kanji.csv */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,7 @@
 		CFAA1D4424B79123004F9260 /* KanaXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KanaXib.xib; sourceTree = "<group>"; };
 		CFAA1D4624B79292004F9260 /* KanaXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaXib.swift; sourceTree = "<group>"; };
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
-		CFD012D024E92C61001F0032 /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
+		CFD012D724E969C3001F0032 /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +157,7 @@
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
 				CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */,
-				CFD012D024E92C61001F0032 /* Kanji.csv */,
+				CFD012D724E969C3001F0032 /* Kanji.csv */,
 			);
 			path = Another;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			files = (
 				CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */,
 				CFAA1D4524B79124004F9260 /* KanaXib.xib in Resources */,
-				CFD012D124E92C61001F0032 /* Kanji.csv in Resources */,
+				CFD012D824E969C4001F0032 /* Kanji.csv in Resources */,
 				CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */,
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,

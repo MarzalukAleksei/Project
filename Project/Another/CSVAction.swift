@@ -12,10 +12,7 @@ func getArrayFromCSV(fileName: String, fileType: String) -> [[String: String]] {
     convertCSV(file: readFile(fileName: fileName, fileType: fileType))
     return data
 }
-func getTitleFromCSV(fileName: String, fileType: String) -> [String] {
-    convertCSV(file: readFile(fileName: fileName, fileType: fileType))
-    return titles
-}
+
     var titles = [String]()
     var data: [[String: String]] = []
     

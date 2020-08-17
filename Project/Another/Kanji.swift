@@ -31,10 +31,9 @@ private func transformToKanji() -> [Kanji] {
         element.number = Int(item["Номер"] ?? "") ?? 0
         element.example = item["例"]?.components(separatedBy: "、") ?? []
         element.level = Int(item["Level"] ?? "") ?? 0
-        if element.body == "" || element.translate == "" || element.number == 0 || element.level == 0 {
-            continue
+        if element.body != "" || element.translate != "" || element.number != 0 || element.level != 0 {
+            array.append(element)
         }
-        array.append(element)
     }
     return array
 }

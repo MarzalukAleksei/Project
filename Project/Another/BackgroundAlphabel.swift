@@ -14,6 +14,7 @@ struct Kana {
     let kana: String
     let reading: String
     let id: Int
+    let example: [String] = []
 //    var mistake: Bool
 }
 

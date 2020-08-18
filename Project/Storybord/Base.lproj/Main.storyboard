@@ -386,15 +386,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="29.666666030883789"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="漢字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-9B-PcP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-9B-PcP">
                                                     <rect key="frame" x="10" y="7.3333333333333712" width="32.666666666666664" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かんじ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRy-S7-vXX">
-                                                    <rect key="frame" x="10" y="-3.6666666666666665" width="32.666666666666664" height="10"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -404,16 +398,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かんじ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRy-S7-vXX">
+                                                    <rect key="frame" x="10" y="0.0" width="32.666666666666664" height="10"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="tBY-9B-PcP" firstAttribute="leading" secondItem="UXH-xa-zWt" secondAttribute="leading" constant="10" id="3oh-k1-qgi"/>
                                                 <constraint firstItem="mRy-S7-vXX" firstAttribute="leading" secondItem="tBY-9B-PcP" secondAttribute="leading" id="IBV-8R-t5j"/>
                                                 <constraint firstAttribute="bottom" secondItem="ujw-Qd-svr" secondAttribute="bottom" constant="5" id="Lrf-f8-BPy"/>
-                                                <constraint firstItem="tBY-9B-PcP" firstAttribute="centerY" secondItem="ujw-Qd-svr" secondAttribute="centerY" id="OsW-EI-aBO"/>
+                                                <constraint firstItem="tBY-9B-PcP" firstAttribute="centerY" secondItem="ujw-Qd-svr" secondAttribute="centerY" constant="2.1666666666667016" id="OsW-EI-aBO"/>
                                                 <constraint firstAttribute="trailing" secondItem="ujw-Qd-svr" secondAttribute="trailing" constant="15" id="QZ1-yr-JCa"/>
                                                 <constraint firstItem="ujw-Qd-svr" firstAttribute="top" secondItem="UXH-xa-zWt" secondAttribute="top" constant="5" id="T0d-VK-61L"/>
                                                 <constraint firstItem="mRy-S7-vXX" firstAttribute="trailing" secondItem="tBY-9B-PcP" secondAttribute="trailing" id="T1x-wn-ycm"/>
-                                                <constraint firstItem="tBY-9B-PcP" firstAttribute="top" secondItem="mRy-S7-vXX" secondAttribute="bottom" constant="-1" id="jQT-zU-77b"/>
+                                                <constraint firstItem="tBY-9B-PcP" firstAttribute="top" secondItem="mRy-S7-vXX" secondAttribute="bottom" constant="-2.6666666666666288" id="jQT-zU-77b"/>
                                                 <constraint firstItem="ujw-Qd-svr" firstAttribute="leading" secondItem="tBY-9B-PcP" secondAttribute="trailing" constant="10" id="zSE-7F-izZ"/>
                                             </constraints>
                                         </tableViewCellContentView>

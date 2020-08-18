@@ -10,23 +10,30 @@ import UIKit
 
 class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch startElement {
-        case is Kanji:
-            guard let element = startElement as? Kanji else { return 0 }
-            return element.example.count
-        case is Kana:
+        
+        let elements = getExamplesFromStartElement()
+        
+//        switch startElement {
+//        case is Kanji:
+//            guard let element = startElement as? Kanji else { return 0 }
+//            return element.example.count
+//        case is Kana:
 //            guard let element = startElement as? Kana else { return 0 }
-            return 0
-        default:
-            return 0
-        }
+//            return element.example.count
+//        default:
+//            return 0
+//        }
+        return elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
-        cell.kanjiReadingTableViewCell.text = "1"
-        cell.kanjiReadingTableViewCell.text = "1"
-        cell.translateTableViewCell.text = "1"
+        let elements = getExamplesFromStartElement()
+        
+        cell.kanjiReadingTableViewCell.text = elements[indexPath.item]
+        cell.kanjiReadingTableViewCell.text = "ー"
+        cell.translateTableViewCell.text = "ー"
+        
         return cell
     }
     
@@ -84,7 +91,17 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         setupElement(element: element)
     }
     
-    
+    private func getExamplesFromStartElement() -> [String] {
+        switch startElement {
+        case is Kanji:
+            guard let element = startElement as? Kanji else { return [] }
+            return element.example
+        case is Kana:
+            guard let element = startElement as? Kana else { return [] }
+            return element.example
+        default: return []
+        }
+    }
     
     private func setupElement(element: Any) {
         var detail = ""

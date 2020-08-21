@@ -10,8 +10,8 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var kanjiTableViewCell: UILabel!
-    @IBOutlet weak var kanjiReadingTableViewCell: UILabel!
+    @IBOutlet weak var kanjiBody: UILabel!
+    @IBOutlet weak var kanjiReading: UILabel!
     @IBOutlet weak var translateTableViewCell: UILabel!
 
 }

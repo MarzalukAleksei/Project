@@ -23,7 +23,8 @@ struct Kanji {
 private func transformToKanji() -> [Kanji] {
     var element = Kanji(number: 0, level: 0, body: "", readingHiragana: "", readingKatakana: "", translate: "")
     var array: [Kanji] = []
-    for item in getArrayFromCSV(fileName: "Kanji", fileType: "csv") {
+    let CSVArray = getArrayFromCSV(fileName: "Kanji", fileType: "csv")
+    for item in CSVArray {
         element.body = item["Кандзи"] ?? ""
         element.translate = item["Значение"] ?? ""
         element.readingKatakana = item["On"] ?? "ー"

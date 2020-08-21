@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSc-ix-vbl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSc-ix-vbl">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -387,7 +387,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-9B-PcP">
-                                                    <rect key="frame" x="10" y="7.3333333333333712" width="32.666666666666664" height="19.333333333333329"/>
+                                                    <rect key="frame" x="10" y="7.3333333333333339" width="32.666666666666664" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -399,7 +399,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かんじ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRy-S7-vXX">
-                                                    <rect key="frame" x="10" y="0.0" width="32.666666666666664" height="10"/>
+                                                    <rect key="frame" x="10" y="0.33333333333333304" width="32.666666666666664" height="9.6666666666666679"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -418,12 +418,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="kanjiReadingTableViewCell" destination="mRy-S7-vXX" id="iYT-7l-B0P"/>
-                                            <outlet property="kanjiTableViewCell" destination="tBY-9B-PcP" id="6s9-AP-Vca"/>
+                                            <outlet property="kanjiBody" destination="tBY-9B-PcP" id="6s9-AP-Vca"/>
+                                            <outlet property="kanjiReading" destination="mRy-S7-vXX" id="iYT-7l-B0P"/>
                                             <outlet property="translateTableViewCell" destination="ujw-Qd-svr" id="C9j-HP-yLv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l8d-ht-EgW" id="Ajd-Gg-AEZ"/>
+                                    <outlet property="delegate" destination="l8d-ht-EgW" id="Gd7-CZ-sQ4"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYJ-rk-bcl">
                                 <rect key="frame" x="349" y="671" width="50" height="50"/>

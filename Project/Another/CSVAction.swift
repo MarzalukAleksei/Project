@@ -13,8 +13,8 @@ func getArrayFromCSV(fileName: String, fileType: String) -> [[String: String]] {
     return data
 }
 
-    var titles = [String]()
-    var data: [[String: String]] = []
+   private var titles = [String]()
+   private var data: [[String: String]] = []
     
 private func convertCSV(file: String) {
     let rows = cleanCSV(File: file).components(separatedBy: "\n")

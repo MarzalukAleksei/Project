@@ -9,29 +9,16 @@
 import UIKit
 
 class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        let elements = getExamplesFromStartElement()
-        
-//        switch startElement {
-//        case is Kanji:
-//            guard let element = startElement as? Kanji else { return 0 }
-//            return element.example.count
-//        case is Kana:
-//            guard let element = startElement as? Kana else { return 0 }
-//            return element.example.count
-//        default:
-//            return 0
-//        }
         return elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
-        let elements = getExamplesFromStartElement()
         
-        cell.kanjiReadingTableViewCell.text = elements[indexPath.item]
-        cell.kanjiReadingTableViewCell.text = "ー"
+        cell.kanjiBody.text = elements[indexPath.item]
+        cell.kanjiReading.text = "ー"
         cell.translateTableViewCell.text = "ー"
         
         return cell
@@ -54,6 +41,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var startElement: Any?
     
+    var elements: [String] = []
     
     var typeOfColletion: TypeOfCollectionItem?
     
@@ -69,6 +57,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         changeCollectionArray()
+        elements = getExamplesFromStartElement()
     }
     
     func changeCollectionArray() {

@@ -25,6 +25,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
     @IBOutlet weak var previousButtonOutlet: UIButton!
@@ -300,11 +303,15 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func previousButton(_ sender: UIButton) {
         guard let element = startElement else { return }
         leftButtonAction(element: element)
+        elements = getExamplesFromStartElement()
+        tableView.reloadData()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
         guard let element = startElement else { return }
         rightButtonAction(element: element)
+        elements = getExamplesFromStartElement()
+        tableView.reloadData()
     }
     
 

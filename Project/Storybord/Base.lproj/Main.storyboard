@@ -386,13 +386,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="29.666666030883789"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-9B-PcP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="漢字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-9B-PcP">
                                                     <rect key="frame" x="10" y="7.3333333333333339" width="32.666666666666664" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кандзи, название японских иероглифов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujw-Qd-svr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Кандзи, название японских иероглифов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujw-Qd-svr">
                                                     <rect key="frame" x="52.666666666666657" y="5" width="316.33333333333337" height="19.666666666666668"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -467,6 +467,7 @@
                         <outlet property="nextButtonOutlet" destination="UYJ-rk-bcl" id="1lu-WF-LM2"/>
                         <outlet property="previousButtonOutlet" destination="6Hc-5K-mD5" id="cVk-yb-l7c"/>
                         <outlet property="readingLabel" destination="42c-iH-Fa7" id="5b9-ff-1lw"/>
+                        <outlet property="tableView" destination="Dbf-8q-gtw" id="zd7-kd-Qn0"/>
                         <outlet property="translateLabel" destination="atB-Kp-yBr" id="IOj-3Y-1z5"/>
                     </connections>
                 </viewController>

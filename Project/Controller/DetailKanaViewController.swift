@@ -18,8 +18,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
         cell.kanjiBody.text = elements[indexPath.item]
-        cell.kanjiReading.text = "ー"
-        cell.translateTableViewCell.text = "ー"
+        cell.kanjiReading.text = searchReadingInVocabularyForKanji(elements[indexPath.item])
+        cell.translateTableViewCell.text = searchTranslateInVacabularyForKanji(elements[indexPath.item])
         
         return cell
     }

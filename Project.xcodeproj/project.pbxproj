@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
+		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
+		CF2BCC5624F40397003859FD /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF2BCC5424F40397003859FD /* Vocabulary.csv */; };
+		CF2BCC5724F40397003859FD /* Kana.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF2BCC5524F40397003859FD /* Kana.csv */; };
 		CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD532472CD1C005B09F4 /* AppDelegate.swift */; };
 		CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */; };
 		CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD572472CD1C005B09F4 /* MainViewController.swift */; };
@@ -36,6 +39,9 @@
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		CF2BCC5224F40386003859FD /* Vokabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vokabulary.swift; sourceTree = "<group>"; };
+		CF2BCC5424F40397003859FD /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
+		CF2BCC5524F40397003859FD /* Kana.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kana.csv; sourceTree = "<group>"; };
 		CF30CD502472CD1C005B09F4 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF30CD532472CD1C005B09F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,12 +158,15 @@
 				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
 				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */,
+				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
 				CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */,
 				CFD012D724E969C3001F0032 /* Kanji.csv */,
+				CF2BCC5524F40397003859FD /* Kana.csv */,
+				CF2BCC5424F40397003859FD /* Vocabulary.csv */,
 			);
 			path = Another;
 			sourceTree = "<group>";
@@ -227,7 +236,9 @@
 				CFD012D824E969C4001F0032 /* Kanji.csv in Resources */,
 				CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */,
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
+				CF2BCC5724F40397003859FD /* Kana.csv in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,
+				CF2BCC5624F40397003859FD /* Vocabulary.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +302,7 @@
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
+				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
 				CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,

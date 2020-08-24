@@ -8,10 +8,10 @@
 
 import Foundation
 
-private let CVS = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
+private let CSV = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
 
 func searchReadingInVocabularyForKanji(_ string: String) -> String {
-    for item in CVS {
+    for item in CSV {
         guard let element = item["Слово"] else { return " " }
         guard let reading = item["Чтение"] else { return " " }
         if string == element {
@@ -22,7 +22,7 @@ func searchReadingInVocabularyForKanji(_ string: String) -> String {
 }
 
 func searchTranslateInVacabularyForKanji(_ string: String) -> String {
-    for item in CVS {
+    for item in CSV {
         guard let element = item["Слово"] else { return " " }
         guard let translate = item["Перевод"] else { return " " }
         if string == element {

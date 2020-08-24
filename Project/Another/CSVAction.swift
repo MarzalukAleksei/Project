@@ -57,22 +57,3 @@ private func readFile(fileName: String, fileType: String) -> String {
     }
     return csvString
 }
-   
-// MARK: Test actiom with array
-//
-//func getArrayCSV() -> [String] {
-//    let csv = cleanCSV(File: readFile())
-////    let csv = readFile()
-//    var array: [String] = []
-//    var stringToArray = ""
-//    for character in csv {
-//        if character != "," {
-//            stringToArray += String(character)
-//        } else if character == "," && stringToArray != "" {
-//            array.append(stringToArray)
-//            stringToArray = ""
-//        }
-//    }
-//    return array
-//}
-

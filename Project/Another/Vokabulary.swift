@@ -12,24 +12,24 @@ private let CVS = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
 
 func searchReadingInVocabularyForKanji(_ string: String) -> String {
     for item in CVS {
-        guard let element = item["Слово"] else { return "" }
-        guard let reading = item["Чтение"] else { return "" }
+        guard let element = item["Слово"] else { return " " }
+        guard let reading = item["Чтение"] else { return " " }
         if string == element {
             return reading
         }
     }
-    return ""
+    return " "
 }
 
 func searchTranslateInVacabularyForKanji(_ string: String) -> String {
     for item in CVS {
-        guard let element = item["Слово"] else { return "" }
-        guard let translate = item["Перевод"] else { return "" }
+        guard let element = item["Слово"] else { return " " }
+        guard let translate = item["Перевод"] else { return " " }
         if string == element {
             return translate
         }
     }
-    return ""
+    return " "
 }
 
 //func searchReadingForKana() {

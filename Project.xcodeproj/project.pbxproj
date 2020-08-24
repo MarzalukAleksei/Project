@@ -18,7 +18,7 @@
 		CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */; };
 		CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */; };
 		CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */; };
-		CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */; };
+		CF4B81FE24AA429600A2CBA8 /* Kana.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81FD24AA429600A2CBA8 /* Kana.swift */; };
 		CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */; };
 		CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */; };
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
@@ -51,7 +51,7 @@
 		CF30CD5F2472CD1F005B09F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF30CD612472CD1F005B09F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
-		CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAlphabel.swift; sourceTree = "<group>"; };
+		CF4B81FD24AA429600A2CBA8 /* Kana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kana.swift; sourceTree = "<group>"; };
 		CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
 		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
 				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
 				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
-				CF4B81FD24AA429600A2CBA8 /* BackgroundAlphabel.swift */,
+				CF4B81FD24AA429600A2CBA8 /* Kana.swift */,
 				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
@@ -295,7 +295,7 @@
 				CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
-				CF4B81FE24AA429600A2CBA8 /* BackgroundAlphabel.swift in Sources */,
+				CF4B81FE24AA429600A2CBA8 /* Kana.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */,

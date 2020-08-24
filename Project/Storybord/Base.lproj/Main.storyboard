@@ -393,7 +393,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кандзи, название японских иероглифов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujw-Qd-svr">
-                                                    <rect key="frame" x="52.666666666666657" y="5" width="316.33333333333337" height="19.666666666666668"/>
+                                                    <rect key="frame" x="47.666666666666657" y="5" width="321.33333333333337" height="19.666666666666668"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -414,7 +414,7 @@
                                                 <constraint firstItem="ujw-Qd-svr" firstAttribute="top" secondItem="UXH-xa-zWt" secondAttribute="top" constant="5" id="T0d-VK-61L"/>
                                                 <constraint firstItem="mRy-S7-vXX" firstAttribute="trailing" secondItem="tBY-9B-PcP" secondAttribute="trailing" id="T1x-wn-ycm"/>
                                                 <constraint firstItem="tBY-9B-PcP" firstAttribute="top" secondItem="mRy-S7-vXX" secondAttribute="bottom" constant="-2.6666666666666288" id="jQT-zU-77b"/>
-                                                <constraint firstItem="ujw-Qd-svr" firstAttribute="leading" secondItem="tBY-9B-PcP" secondAttribute="trailing" constant="10" id="zSE-7F-izZ"/>
+                                                <constraint firstItem="ujw-Qd-svr" firstAttribute="leading" secondItem="tBY-9B-PcP" secondAttribute="trailing" constant="5" id="zSE-7F-izZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

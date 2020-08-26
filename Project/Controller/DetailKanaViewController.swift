@@ -25,7 +25,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        "  Примеры"
+//        return "  Примеры"
 //    }
     
     @IBOutlet weak var tableView: UITableView!

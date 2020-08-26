@@ -13,7 +13,7 @@ import UIKit
 
 class KanaCollectionViewController: UICollectionViewController {
 
-    let itemsAtRow: CGFloat = 3
+    let itemsAtRow: CGFloat = 5
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     var typeOfCollection: TypeOfCollectionItem?
@@ -24,6 +24,7 @@ class KanaCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         guard let type = typeOfCollection else { return }
         arrayOfElements = getArray(typeOf: type)
+        collectionView.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
     }
     
     func pushToNextViewController(element: Any) {
@@ -75,15 +76,20 @@ class KanaCollectionViewController: UICollectionViewController {
         switch typeOfCollection {
         case .hiragana, .katakana:
             let element = arrayOfElements[indexPath.item] as? Kana
-            cell.labelKana.text = element?.kana ?? "-"
+            cell.label.text = element?.kana ?? "-"
+            if element?.mistake == true {
+                cell.label.textColor = .red
+            }
         case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             let element = arrayOfElements[indexPath.item] as? Kanji
-            cell.labelKana.text = element?.body ?? "-"
+            cell.label.text = element?.body ?? "-"
+            if element?.mistake == true {
+                cell.label.textColor = .red
+            }
         case .none: break
         }
-    
-        cell.backgroundColor = .blue
-    
+        cell.layer.cornerRadius = cell.bounds.width * 0.2
+        cell.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
         return cell
     }
 }

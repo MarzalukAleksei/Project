@@ -20,14 +20,12 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.kanjiBody.text = elements[indexPath.item]
         cell.kanjiReading.text = searchReadingInVocabularyForKanji(elements[indexPath.item])
         cell.translateTableViewCell.text = searchTranslateInVacabularyForKanji(elements[indexPath.item])
-        
+        cell.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
         return cell
     }
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readingLabel: UILabel!
     @IBOutlet weak var previousButtonOutlet: UIButton!
@@ -59,8 +57,16 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.allowsSelection = false
+        tableView.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
+        tableView.separatorColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+//        tableView.isScrollEnabled = false
         changeCollectionArray()
         elements = getExamplesFromStartElement()
+        previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * 0.2
+        previousButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
+        nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * 0.2
+        nextButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
     }
     
     func changeCollectionArray() {

@@ -10,7 +10,7 @@ import UIKit
 
 class KanaCollectionViewCell: UICollectionViewCell {
         
-    @IBOutlet weak var labelKana: UILabel!
+    @IBOutlet weak var label: UILabel!
     
     
     

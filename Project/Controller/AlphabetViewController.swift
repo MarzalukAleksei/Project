@@ -12,7 +12,7 @@ class AlphabetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         kanaBackgroundLabel()
     }
     
@@ -27,8 +27,8 @@ class AlphabetViewController: UIViewController {
         }
     
     func kanaBackgroundLabel(){
-        let labelWidth: CGFloat = 60
-        let labelHeigth: CGFloat = 60
+        let labelWidth: CGFloat = 30
+        let labelHeigth: CGFloat = 30
         
         
         
@@ -42,12 +42,16 @@ class AlphabetViewController: UIViewController {
                     }
                     let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
                     view.addSubview(label)
+                    view.sendSubviewToBack(label)
                 }else{
                     guard let object = randomKana(objectArray: hiragana) else {
                         return
                     }
                     let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
-                    view.addSubview(newLabel)}
+                    view.addSubview(newLabel)
+                    view.sendSubviewToBack(newLabel)
+                }
+                    
             }
         }
         

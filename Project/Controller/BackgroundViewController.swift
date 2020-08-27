@@ -10,13 +10,11 @@ import UIKit
 
 class BackgroundViewController: UIViewController {
 
+    @IBOutlet weak var alphabelButtom: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
- 
-                createLabel()
-                
-        
+        createLabel()
+        view.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         }
             
             
@@ -24,30 +22,23 @@ class BackgroundViewController: UIViewController {
               
 
             func createLabel() {
-                    let widthOfLabel: CGFloat = 50
-                    let heightOfLabel: CGFloat = 50
-        //            let xCordinate: CGFloat = -50
+                    let widthOfLabel: CGFloat = 30
+                    let heightOfLabel: CGFloat = 30
+//                    let xCordinate: CGFloat = -50
                 
                     
                 
                     let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
                     // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
-                   
-                
-                
-        //        let countXLabels = countXCorLabels(widthLabel: widthLabel)
-                
-                
-                  //  var labelArray: [UILabel] = []
-                    
-                    
+            
                     for value in 0...countOfLabels {
-                        let arrayItem = randomBackgroundKanji()
+                        guard let arrayItem = kanji.randomElement()?.body else { return }
                         let y = heightOfLabel * CGFloat(value)
                         let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: -50, to: UIScreen.main.bounds.width))
                      //   labelArray.append(newLabel)
                         view.addSubview(newLabel)
-                        animateLabel(label: newLabel,duration: Double(randomFloat(from: 20, to: 100)) )// добавили сюда, массив в принципе не особо нужен как оказалось
+                        view.sendSubviewToBack(newLabel)
+                        animateLabel(label: newLabel,duration: Double(randomFloat(from: 10, to: 30)) )// добавили сюда, массив в принципе не особо нужен как оказалось
                     }
                    
                 
@@ -70,9 +61,6 @@ class BackgroundViewController: UIViewController {
                     let count = Int( UIScreen.main.bounds.height / heightOfLabel ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
                     return count
                 }
-                
-           
-
                 
                 func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
                     let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))

@@ -30,7 +30,7 @@ class KanaCollectionViewController: UICollectionViewController {
     func pushToNextViewController(element: Any) {
         let nameOfStoryboard: String = "Main"
         
-        let vc = UIStoryboard(name: nameOfStoryboard, bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as! DetailKanaViewController
+        guard let vc = UIStoryboard(name: nameOfStoryboard, bundle: nil).instantiateViewController(withIdentifier: "DetailKanaViewController") as? DetailKanaViewController else { return }
         vc.startElement = element
         vc.typeOfColletion = typeOfCollection
         self.navigationController?.pushViewController(vc, animated: true)

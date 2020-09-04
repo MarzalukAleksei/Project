@@ -15,22 +15,22 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return elements.count
+        return elementsInTableView.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
-        cell.kanjiBody.text = elements[indexPath.item]
-        cell.kanjiReading.text = searchReadingInVocabularyForKanji(elements[indexPath.item])
-        cell.translateTableViewCell.text = searchTranslateInVacabularyForKanji(elements[indexPath.item])
+        cell.kanjiBody.text = elementsInTableView[indexPath.row]
+        cell.kanjiReading.text = searchReadingInVocabularyForKanji(elementsInTableView[indexPath.row])
+        cell.translateTableViewCell.text = searchTranslateInVacabularyForKanji(elementsInTableView[indexPath.row])
         cell.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
+        print(cell.kanjiBody.text)
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "  Примеры"
-//    }
+    // Баг, с отображением данных в таблице, можно проверить на N5 日, второй баг в отображении перевода
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var detailLabel: UILabel!
@@ -49,7 +49,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var startElement: Any?
     
-    var elements: [String] = []
+    var elementsInTableView: [String] = []
     
     var typeOfColletion: TypeOfCollectionItem?
     
@@ -69,11 +69,22 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.separatorColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
 //        tableView.isScrollEnabled = false
         changeCollectionArray()
-        elements = getExamplesFromStartElement()
+//        elementsInTableView = getExamplesFromStartElement()
+        elementsInTableView = elementsForTableView()
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * 0.2
         previousButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
         nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * 0.2
         nextButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
+       
+    }
+    
+    func elementsForTableView() -> [String] {
+        var exampleInTableView = [String]()
+//        let containsExapmles = getExamplesFromStartElement()
+        guard let mainElement = startElement as? Kanji else { return [] }
+//        exampleInTableView += containsExapmles
+        exampleInTableView = findExampleInVocablary(mainElement.body)
+        return exampleInTableView
     }
     
     func changeCollectionArray() {
@@ -316,14 +327,14 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func previousButton(_ sender: UIButton) {
         guard let element = startElement else { return }
         leftButtonAction(element: element)
-        elements = getExamplesFromStartElement()
+        elementsInTableView = getExamplesFromStartElement()
         tableView.reloadData()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
         guard let element = startElement else { return }
         rightButtonAction(element: element)
-        elements = getExamplesFromStartElement()
+        elementsInTableView = getExamplesFromStartElement()
         tableView.reloadData()
     }
     

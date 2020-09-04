@@ -12,9 +12,9 @@ private let CSV = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
 
 func searchReadingInVocabularyForKanji(_ string: String) -> String {
     for item in CSV {
-        guard let element = item["Слово"] else { return " " }
-        guard let reading = item["Чтение"] else { return " " }
-        if string == element {
+        guard let element = item["Кандзи"] else { return " " }
+        guard let reading = item["Кана"] else { return " " }
+        if element.contains(string) {
             return reading
         }
     }
@@ -23,17 +23,24 @@ func searchReadingInVocabularyForKanji(_ string: String) -> String {
 
 func searchTranslateInVacabularyForKanji(_ string: String) -> String {
     for item in CSV {
-        guard let element = item["Слово"] else { return " " }
-        guard let translate = item["Перевод"] else { return " " }
-        if string == element {
-            return translate
+        guard let element = item["Кандзи"] else { return " " }
+//        guard let translate = item["Перевод"] else { return " " }
+        if element.contains(string) {
+//            return translate
+            return item["Перевод"]!
         }
     }
     return " "
 }
 
-//func searchReadingForKana() {
-//    for item in CSV {
-//
-//    }
-//}
+func findExampleInVocablary(_ string: String) -> [String] {
+    var array = [String]()
+    for item in CSV {
+        guard let element = item["Кандзи"] else { return []}
+//        guard let element = item[""] else { return }
+        if element.contains(string) {
+            array.append(element)
+        }
+    }
+    return array
+}

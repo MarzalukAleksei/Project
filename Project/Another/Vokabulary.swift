@@ -10,24 +10,27 @@ import Foundation
 
 private let CSV = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
 
-func searchReadingInVocabularyForKanji(_ string: String) -> String {
+func readingTableViewCell(_ string: String) -> String {
     for item in CSV {
         guard let element = item["Кандзи"] else { return " " }
         guard let reading = item["Кана"] else { return " " }
-        if element.contains(string) {
+        if element == string {
             return reading
         }
     }
     return " "
 }
 
-func searchTranslateInVacabularyForKanji(_ string: String) -> String {
+// почему гуард работает неправильно??
+
+func translateTableVIewCell(_ string: String) -> String {
     for item in CSV {
         guard let element = item["Кандзи"] else { return " " }
-//        guard let translate = item["Перевод"] else { return " " }
-        if element.contains(string) {
+//        guard let translate = item["Перевод"] else { return "баг" }
+        if element == string {
 //            return translate
             return item["Перевод"]!
+
         }
     }
     return " "
@@ -36,8 +39,7 @@ func searchTranslateInVacabularyForKanji(_ string: String) -> String {
 func findExampleInVocablary(_ string: String) -> [String] {
     var array = [String]()
     for item in CSV {
-        guard let element = item["Кандзи"] else { return []}
-//        guard let element = item[""] else { return }
+        guard let element = item["Кандзи"] else { return [] }
         if element.contains(string) {
             array.append(element)
         }

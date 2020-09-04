@@ -22,14 +22,12 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
         cell.kanjiBody.text = elementsInTableView[indexPath.row]
-        cell.kanjiReading.text = searchReadingInVocabularyForKanji(elementsInTableView[indexPath.row])
-        cell.translateTableViewCell.text = searchTranslateInVacabularyForKanji(elementsInTableView[indexPath.row])
+        cell.kanjiReading.text = readingTableViewCell(elementsInTableView[indexPath.row])
+        cell.translateTableViewCell.text = translateTableVIewCell(elementsInTableView[indexPath.row])
         cell.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
-        print(cell.kanjiBody.text)
         return cell
     }
     
-    // Баг, с отображением данных в таблице, можно проверить на N5 日, второй баг в отображении перевода
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -41,11 +39,6 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var katakanaReading: UILabel!
     @IBOutlet weak var translateLabel: UILabel!
 
-    
-    
-//    enum SideButtom {
-//        case rightButtom, leftButtom, none
-//    }
     
     var startElement: Any?
     
@@ -67,9 +60,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.allowsSelection = false
         tableView.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
         tableView.separatorColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-//        tableView.isScrollEnabled = false
         changeCollectionArray()
-//        elementsInTableView = getExamplesFromStartElement()
         elementsInTableView = elementsForTableView()
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * 0.2
         previousButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
@@ -80,9 +71,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func elementsForTableView() -> [String] {
         var exampleInTableView = [String]()
-//        let containsExapmles = getExamplesFromStartElement()
         guard let mainElement = startElement as? Kanji else { return [] }
-//        exampleInTableView += containsExapmles
         exampleInTableView = findExampleInVocablary(mainElement.body)
         return exampleInTableView
     }

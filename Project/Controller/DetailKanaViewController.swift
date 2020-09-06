@@ -10,9 +10,9 @@ import UIKit
 
 class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
+    enum Sections {
+        case readings, examples
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return elementsInTableView.count
@@ -316,14 +316,16 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func previousButton(_ sender: UIButton) {
         guard let element = startElement else { return }
         leftButtonAction(element: element)
-        elementsInTableView = getExamplesFromStartElement()
+//        elementsInTableView = getExamplesFromStartElement()
+        elementsInTableView = elementsForTableView()
         tableView.reloadData()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
         guard let element = startElement else { return }
         rightButtonAction(element: element)
-        elementsInTableView = getExamplesFromStartElement()
+//        elementsInTableView = getExamplesFromStartElement()
+        elementsInTableView = elementsForTableView()
         tableView.reloadData()
     }
     

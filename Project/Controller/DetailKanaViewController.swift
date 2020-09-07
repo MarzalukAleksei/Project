@@ -9,8 +9,27 @@
 import UIKit
 
 class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    enum Sections {
+  
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var readingLabel: UILabel!
+    @IBOutlet weak var previousButtonOutlet: UIButton!
+    @IBOutlet weak var nextButtonOutlet: UIButton!
+    @IBOutlet weak var hiraganaReading: UILabel!
+    @IBOutlet weak var katakanaReading: UILabel!
+    @IBOutlet weak var translateLabel: UILabel!
+
+    var startElement: Any?
+    var elementsInTableView: [String] = []
+    var typeOfColletion: TypeOfCollectionItem?
+    var array: [Any]?
+    var previousElement: Any?
+    var nextElement: Any?
+    let kunLabel = "訓: "
+    let onLabel = "音: "
+    let imiLabel = "意味: "
+
+    enum TableSections {
         case readings, examples
     }
     
@@ -24,49 +43,26 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.kanjiBody.text = elementsInTableView[indexPath.row]
         cell.kanjiReading.text = readingTableViewCell(elementsInTableView[indexPath.row])
         cell.translateTableViewCell.text = translateTableVIewCell(elementsInTableView[indexPath.row])
-        cell.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
+        cell.backgroundColor = designElementColor
         return cell
     }
-    
-    
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var readingLabel: UILabel!
-    @IBOutlet weak var previousButtonOutlet: UIButton!
-    @IBOutlet weak var nextButtonOutlet: UIButton!
-    @IBOutlet weak var hiraganaReading: UILabel!
-    @IBOutlet weak var katakanaReading: UILabel!
-    @IBOutlet weak var translateLabel: UILabel!
-
-    
-    var startElement: Any?
-    
-    var elementsInTableView: [String] = []
-    
-    var typeOfColletion: TypeOfCollectionItem?
-    
-    var array: [Any]?
-    
-    var previousElement: Any?
-    var nextElement: Any?
-    
-    let kunLabel = "訓: "
-    let onLabel = "音: "
-    let imiLabel = "意味: "
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.allowsSelection = false
-        tableView.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
-        tableView.separatorColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        viewParameters()
         changeCollectionArray()
         elementsInTableView = elementsForTableView()
-        previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * 0.2
-        previousButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
-        nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * 0.2
-        nextButtonOutlet.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
-       
+    }
+    
+    func viewParameters() {
+        view.backgroundColor = designBackGroundColor
+        tableView.allowsSelection = false
+        tableView.backgroundColor = designElementColor
+        tableView.separatorColor = designSeparatorColor
+        previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * designElementCornerRadius
+        previousButtonOutlet.backgroundColor = designElementColor
+        nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * designElementCornerRadius
+        nextButtonOutlet.backgroundColor = designElementColor
     }
     
     func elementsForTableView() -> [String] {
@@ -96,7 +92,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         setupElement(element: element)
     }
     
-    private func getExamplesFromStartElement() -> [String] {
+    func getExamplesFromStartElement() -> [String] {
         switch startElement {
         case is Kanji:
             guard let element = startElement as? Kanji else { return [] }
@@ -108,7 +104,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    private func setupElement(element: Any) {
+    func setupElement(element: Any) {
         var detail = ""
         var reading = ""
         var previous = ""
@@ -169,7 +165,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    private func leftButtonAction(element: Any) {
+    func leftButtonAction(element: Any) {
         var detail: String?
         var reading: String?
         var previous: String?
@@ -241,7 +237,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    private func rightButtonAction(element: Any) {
+    func rightButtonAction(element: Any) {
         var detail: String?
         var reading: String?
         var previous: String?

@@ -10,9 +10,16 @@ import UIKit
 
 class KanjiBottomViewController: UIViewController {
 
+    @IBOutlet weak var allKanjiButtom: UIButton!
+    @IBOutlet weak var n1KanjiButtom: UIButton!
+    @IBOutlet weak var n2KanjiButtom: UIButton!
+    @IBOutlet weak var n3KanjiButtom: UIButton!
+    @IBOutlet weak var n4KanjiButtom: UIButton!
+    @IBOutlet weak var n5KanjiButtom: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        view.backgroundColor = designBackGroundColor
         background()
     }
     
@@ -20,6 +27,13 @@ class KanjiBottomViewController: UIViewController {
         let labelWidth: CGFloat = 35
         let labelHeigh: CGFloat = 35
         let bounds = view.bounds.height
+        
+        n5KanjiButtom.backgroundColor = designElementColor
+        n4KanjiButtom.backgroundColor = designElementColor
+        n3KanjiButtom.backgroundColor = designElementColor
+        n2KanjiButtom.backgroundColor = designElementColor
+        n1KanjiButtom.backgroundColor = designElementColor
+        allKanjiButtom.backgroundColor = designElementColor
         
         for horizontal in 0...backgroundHorizontalElementsCount(elementHeight: labelWidth) {
             for vertical in 0...backgroungVerticalElementsCount(elementWidth: labelHeigh) {
@@ -40,6 +54,7 @@ class KanjiBottomViewController: UIViewController {
         let count = view.bounds.width / elementHeight
         return Int(count)
     }
+    
     func backgroungVerticalElementsCount(elementWidth: CGFloat) -> Int {
         let count = view.bounds.height / elementWidth
         return Int(count)
@@ -66,7 +81,6 @@ class KanjiBottomViewController: UIViewController {
             guard let destinasion = segue.destination as? KanaCollectionViewController else { return }
             destinasion.typeOfCollection = TypeOfCollectionItem.kanjiAll
         default: break
-            
         }
     }
 }

@@ -10,9 +10,12 @@ import UIKit
 
 class AlphabetViewController: UIViewController {
 
+    @IBOutlet weak var hiraganaButtom: UIButton!
+    @IBOutlet weak var katakanaButtom: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        view.backgroundColor = designBackGroundColor
         kanaBackgroundLabel()
     }
     
@@ -30,7 +33,8 @@ class AlphabetViewController: UIViewController {
         let labelWidth: CGFloat = 30
         let labelHeigth: CGFloat = 30
         
-        
+        hiraganaButtom.backgroundColor = designElementColor
+        katakanaButtom.backgroundColor = designElementColor
         
         for horizontalItem in 0...horizontalCount(labelWidth: labelWidth){
             for verticalItem in 0...verticalCount(labelheigh: labelHeigth){

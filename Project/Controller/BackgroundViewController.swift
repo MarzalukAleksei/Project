@@ -41,7 +41,7 @@ class BackgroundViewController: UIViewController {
                      //   labelArray.append(newLabel)
                         view.addSubview(newLabel)
                         view.sendSubviewToBack(newLabel)
-                        animateLabel(label: newLabel,duration: Double(randomFloat(from: 10, to: 30)) )// добавили сюда, массив в принципе не особо нужен как оказалось
+                        animateLabel(label: newLabel,duration: Double(randomFloat(from: backgroundAnimateDurationFrom, to: backgroundAnimateDurationTo)) )// добавили сюда, массив в принципе не особо нужен как оказалось
                     }
                    
                 

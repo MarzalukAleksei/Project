@@ -51,11 +51,18 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
-        
-        cell.kanjiBody.text = elementsInTableView[indexPath.row].kanji
-        cell.kanjiReading.text = elementsInTableView[indexPath.row].kana
-        cell.translateTableViewCell.text = elementsInTableView[indexPath.row].translate
-        cell.backgroundColor = designElementColor
+        switch startElement {
+        case is Kanji:
+            cell.kanjiBody.text = elementsInTableView[indexPath.row].kanji
+            cell.kanjiReading.text = elementsInTableView[indexPath.row].kana
+            cell.translateTableViewCell.text = elementsInTableView[indexPath.row].translate
+            cell.backgroundColor = designElementColor
+            return cell
+        case is Kana:
+            break
+        case _:
+            break
+        }
         return cell
     }
 

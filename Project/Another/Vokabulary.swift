@@ -16,20 +16,28 @@ struct Vocabulary {
 }
 
 private let CSV = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
+let vocabulary = transformToVocabulary()
 
 func findElementsInVocabulary(_ string: String) -> [Vocabulary] {
+    var array: [Vocabulary] = []
+    for item in vocabulary {
+        if item.kanji.contains(string) {
+            array.append(item)
+        }
+    }
+    return array
+}
+
+private func transformToVocabulary() -> [Vocabulary] {
     var array = [Vocabulary]()
     var element = Vocabulary(kanji: "", kana: "", translate: "", level: 0)
     for item in CSV {
-        guard let seachElement = item["Кандзи"] else { return [] }
-        if seachElement.contains(string) {
-            element.kanji = item["Кандзи"] ?? ""
-            element.kana = item["Кана"] ?? ""
-            element.translate = item["Перевод"] ?? ""
-            element.level = Int(item["Уровень"] ?? "") ?? 0
-            if element.kanji != "" && element.kana != "" && element.translate != "" && element.level != 0 {
-                array.append(element)
-            }
+        element.kanji = item["Кандзи"] ?? ""
+        element.kana = item["Кана"] ?? ""
+        element.translate = item["Перевод"] ?? ""
+        element.level = Int(item["Уровень"] ?? "") ?? 0
+        if element.kanji != "" && element.kana != "" && element.translate != "" && element.level != 0 {
+            array.append(element)
         }
     }
     return array

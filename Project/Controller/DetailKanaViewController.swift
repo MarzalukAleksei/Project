@@ -20,7 +20,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var translateLabel: UILabel!
 
     var startElement: Any?
-    var elementsInTableView: [String] = []
+    var elementsInTableView: [Vocabulary] = []
     var typeOfColletion: TypeOfCollectionItem?
     var array: [Any]?
     var previousElement: Any?
@@ -52,9 +52,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
-        cell.kanjiBody.text = elementsInTableView[indexPath.row]
-        cell.kanjiReading.text = readingTableViewCell(elementsInTableView[indexPath.row])
-        cell.translateTableViewCell.text = translateTableVIewCell(elementsInTableView[indexPath.row])
+        cell.kanjiBody.text = elementsInTableView[indexPath.row].kanji
+        cell.kanjiReading.text = elementsInTableView[indexPath.row].kana
+        cell.translateTableViewCell.text = elementsInTableView[indexPath.row].translate
         cell.backgroundColor = designElementColor
         return cell
     }
@@ -63,7 +63,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         viewParameters()
         changeCollectionArray()
-        elementsInTableView = elementsForTableView()
+        elementsForTableView()
     }
     
     func sectionsNames(typeOf: TableSections) -> String {
@@ -84,11 +84,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         nextButtonOutlet.backgroundColor = designElementColor
     }
     
-    func elementsForTableView() -> [String] {
-        var exampleInTableView = [String]()
-        guard let mainElement = startElement as? Kanji else { return [] }
-        exampleInTableView = findExampleInVocablary(mainElement.body)
-        return exampleInTableView
+    func elementsForTableView() {
+        guard let mainElement = startElement as? Kanji else { return }
+        elementsInTableView = findElementsInVocabulary(mainElement.body)
     }
     
     func changeCollectionArray() {
@@ -332,7 +330,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let element = startElement else { return }
         leftButtonAction(element: element)
 //        elementsInTableView = getExamplesFromStartElement()
-        elementsInTableView = elementsForTableView()
+        elementsForTableView()
         tableView.reloadData()
     }
     
@@ -340,7 +338,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let element = startElement else { return }
         rightButtonAction(element: element)
 //        elementsInTableView = getExamplesFromStartElement()
-        elementsInTableView = elementsForTableView()
+        elementsForTableView()
         tableView.reloadData()
     }
     

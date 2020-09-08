@@ -73,13 +73,6 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         elementsForTableView()
     }
     
-    func sectionsNames(typeOf: TableSections) -> String {
-        switch typeOf {
-        case .examples: return "Примеры"
-        case .readings: return "Чтение"
-        }
-    }
-    
     func viewParameters() {
         view.backgroundColor = designBackGroundColor
         tableView.allowsSelection = false

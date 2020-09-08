@@ -1,0 +1,69 @@
+
+/* Class = "UIButton"; normalTitle = "-1"; ObjectID = "6Hc-5K-mD5"; */
+"6Hc-5K-mD5.normalTitle" = "-1";
+
+/* Class = "UILabel"; text = "HiraganaReading"; ObjectID = "AKW-Ze-Ab3"; */
+"AKW-Ze-Ab3.text" = "HiraganaReading";
+
+/* Class = "UIButton"; normalTitle = "N 1"; ObjectID = "EMj-gD-URT"; */
+"EMj-gD-URT.normalTitle" = "N 1";
+
+/* Class = "UIButton"; normalTitle = "КАТАКАНА"; ObjectID = "J7U-Qa-d7m"; */
+"J7U-Qa-d7m.normalTitle" = "КАТАКАНА";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "MaT-TL-2SP"; */
+"MaT-TL-2SP.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Kana"; ObjectID = "Nvl-bI-YOh"; */
+"Nvl-bI-YOh.title" = "Kana";
+
+/* Class = "UIButton"; normalTitle = "+1"; ObjectID = "UYJ-rk-bcl"; */
+"UYJ-rk-bcl.normalTitle" = "+1";
+
+/* Class = "UILabel"; text = "Перевод"; ObjectID = "atB-Kp-yBr"; */
+"atB-Kp-yBr.text" = "Перевод";
+
+/* Class = "UILabel"; text = "漢"; ObjectID = "bUq-p2-AoA"; */
+"bUq-p2-AoA.text" = "漢";
+
+/* Class = "UINavigationItem"; title = "Kanji"; ObjectID = "cFe-8Y-aLK"; */
+"cFe-8Y-aLK.title" = "Kanji";
+
+/* Class = "UIButton"; normalTitle = "N 2"; ObjectID = "fUE-zH-6XL"; */
+"fUE-zH-6XL.normalTitle" = "N 2";
+
+/* Class = "UIButton"; normalTitle = "N 5"; ObjectID = "gFc-od-7tV"; */
+"gFc-od-7tV.normalTitle" = "N 5";
+
+/* Class = "UIButton"; normalTitle = "N 4"; ObjectID = "gzV-SS-PiB"; */
+"gzV-SS-PiB.normalTitle" = "N 4";
+
+/* Class = "UIButton"; normalTitle = "АЛФАВИТ"; ObjectID = "h8A-2Z-XrN"; */
+"h8A-2Z-XrN.normalTitle" = "АЛФАВИТ";
+
+/* Class = "UIButton"; normalTitle = "ХИРАГАНА"; ObjectID = "hhx-ld-xxC"; */
+"hhx-ld-xxC.normalTitle" = "ХИРАГАНА";
+
+/* Class = "UIButton"; normalTitle = "N 3"; ObjectID = "jrl-UI-Bz6"; */
+"jrl-UI-Bz6.normalTitle" = "N 3";
+
+/* Class = "UILabel"; text = "かんじ"; ObjectID = "mRy-S7-vXX"; */
+"mRy-S7-vXX.text" = "かんじ";
+
+/* Class = "UIButton"; normalTitle = "All"; ObjectID = "pyO-zi-ECZ"; */
+"pyO-zi-ECZ.normalTitle" = "All";
+
+/* Class = "UINavigationItem"; title = "Main"; ObjectID = "qEi-dE-zwh"; */
+"qEi-dE-zwh.title" = "Main";
+
+/* Class = "UILabel"; text = "KatakanaReading"; ObjectID = "s7W-5v-fVu"; */
+"s7W-5v-fVu.text" = "KatakanaReading";
+
+/* Class = "UIButton"; normalTitle = "ИЕРОГЛИФЫ"; ObjectID = "sGu-vW-tDK"; */
+"sGu-vW-tDK.normalTitle" = "ИЕРОГЛИФЫ";
+
+/* Class = "UILabel"; text = "漢字"; ObjectID = "tBY-9B-PcP"; */
+"tBY-9B-PcP.text" = "漢字";
+
+/* Class = "UILabel"; text = "Кандзи, название японских иероглифов"; ObjectID = "ujw-Qd-svr"; */
+"ujw-Qd-svr.text" = "Кандзи, название японских иероглифов";

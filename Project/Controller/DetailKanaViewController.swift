@@ -33,6 +33,18 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         case readings, examples
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return " Example"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 23
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return elementsInTableView.count
     }
@@ -52,6 +64,13 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         viewParameters()
         changeCollectionArray()
         elementsInTableView = elementsForTableView()
+    }
+    
+    func sectionsNames(typeOf: TableSections) -> String {
+        switch typeOf {
+        case .examples: return "Примеры"
+        case .readings: return "Чтение"
+        }
     }
     
     func viewParameters() {

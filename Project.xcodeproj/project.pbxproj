@@ -39,6 +39,8 @@
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		CF0EAC6F2507C7B800293613 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		CF0EAC702507C7BA00293613 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CF2BCC5224F40386003859FD /* Vokabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vokabulary.swift; sourceTree = "<group>"; };
 		CF2BCC5524F40397003859FD /* Kana.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kana.csv; sourceTree = "<group>"; };
 		CF30CD502472CD1C005B09F4 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +217,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = CF30CD472472CD1C005B09F4;
 			productRefGroup = CF30CD512472CD1C005B09F4 /* Products */;
@@ -317,6 +320,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF30CD5A2472CD1C005B09F4 /* Base */,
+				CF0EAC6F2507C7B800293613 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -325,6 +329,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF30CD5F2472CD1F005B09F4 /* Base */,
+				CF0EAC702507C7BA00293613 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -396,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

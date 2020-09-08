@@ -11,20 +11,23 @@ import UIKit
 class BackgroundViewController: UIViewController {
 
     @IBOutlet weak var alphabelButtom: UIButton!
+    
+    let widthOfLabel = backgroundlabelwidth
+    let heightOfLabel = backgroundlabelHeight
+    let firstCordinate = backgoundStartConrdinate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createLabel()
         view.backgroundColor = designBackGroundColor
         }
-            
+    
             
                     
               
 
             func createLabel() {
-                    let widthOfLabel: CGFloat = 30
-                    let heightOfLabel: CGFloat = 30
-//                    let xCordinate: CGFloat = -50
+                    
                 
                     
                 
@@ -34,7 +37,7 @@ class BackgroundViewController: UIViewController {
                     for value in 0...countOfLabels {
                         guard let arrayItem = kanji.randomElement()?.body else { return }
                         let y = heightOfLabel * CGFloat(value)
-                        let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: -50, to: UIScreen.main.bounds.width))
+                        let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: firstCordinate, to: UIScreen.main.bounds.width))
                      //   labelArray.append(newLabel)
                         view.addSubview(newLabel)
                         view.sendSubviewToBack(newLabel)
@@ -51,7 +54,7 @@ class BackgroundViewController: UIViewController {
                     label.frame.origin.x = self.view.frame.width // те указали что Х = ширине(длинне) экрана, не путай с высотой - height
                 }) { (_) in
                     // здесь будет выполняться то, когда закончится анимация
-                    label.frame.origin.x = -50
+                    label.frame.origin.x = self.firstCordinate
                     self.animateLabel(label: label, duration: duration)
                 }
             }

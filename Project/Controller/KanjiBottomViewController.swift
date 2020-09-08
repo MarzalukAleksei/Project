@@ -24,8 +24,8 @@ class KanjiBottomViewController: UIViewController {
     }
     
     private func background() {
-        let labelWidth: CGFloat = 35
-        let labelHeigh: CGFloat = 35
+        let labelWidth = backgroundlabelwidth
+        let labelHeigh = backgroundlabelHeight
         let bounds = view.bounds.height
         
         n5KanjiButtom.backgroundColor = designElementColor

@@ -13,8 +13,8 @@ import UIKit
 
 class KanaCollectionViewController: UICollectionViewController {
 
-    let itemsAtRow: CGFloat = 5
-    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    let itemsAtRow = itemsInCollectionView
+    let sectionInsets = UIEdgeInsets(top: edgeInCollectionViewTop, left: edgeInCollectionViewLeft, bottom: edgeInCollectionViewBottom, right: edgeInCollectionViewRight)
     
     var typeOfCollection: TypeOfCollectionItem?
 

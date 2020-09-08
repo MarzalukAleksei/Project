@@ -30,8 +30,8 @@ class AlphabetViewController: UIViewController {
         }
     
     func kanaBackgroundLabel(){
-        let labelWidth: CGFloat = 30
-        let labelHeigth: CGFloat = 30
+        let labelWidth = backgroundlabelwidth
+        let labelHeigth = backgroundlabelHeight
         
         hiraganaButtom.backgroundColor = designElementColor
         katakanaButtom.backgroundColor = designElementColor

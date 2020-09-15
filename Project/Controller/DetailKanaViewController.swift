@@ -66,8 +66,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return twoDemensionalArray[DetailKanaViewController.TableSections(rawValue: section)!]!.count
+        guard let array = twoDemensionalArray[DetailKanaViewController.TableSections(rawValue: section)!] else { return 0 }
+//        return twoDemensionalArray[DetailKanaViewController.TableSections(rawValue: section)!]!.count
+        return array.count
     } // как убрать два ! 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

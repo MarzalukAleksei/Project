@@ -30,8 +30,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     let onLabel = "音: "
     let imiLabel = "意味: "
 
-    enum TableSections {
-        case main, examples
+    enum TableSections: Int {
+        case main = 0, examples
     }
     
     func setupTwoDemensionalArray() {
@@ -67,8 +67,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return twoDemensionalArray[section].count
-    }
+        return twoDemensionalArray[DetailKanaViewController.TableSections(rawValue: section)!]!.count
+    } // как убрать два ! 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }

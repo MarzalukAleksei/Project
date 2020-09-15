@@ -22,6 +22,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     var startElement: Any?
     var elementsInTableView: [Vocabulary] = []
     var typeOfColletion: TypeOfCollectionItem?
+    var twoDemensionalArray: [TableSections: [String]] = [:]
     var array: [Any]?
     var previousElement: Any?
     var nextElement: Any?
@@ -30,7 +31,26 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     let imiLabel = "意味: "
 
     enum TableSections {
-        case readings, examples
+        case main, examples
+    }
+    
+    func setupTwoDemensionalArray() {
+        var array: [String] = []
+        switch startElement {
+        case is Kanji:
+            guard let element = startElement as? Kanji else { return }
+            array.append(element.readingHiragana)
+            array.append(element.readingKatakana)
+            array.append(element.translate)
+            twoDemensionalArray[.main] = array
+        case is Kana: break
+        default: break
+        }
+        array.removeAll()
+        for item in elementsInTableView {
+            array.append(item.kanji)
+        }
+        twoDemensionalArray[.examples] = array
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -87,6 +107,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     func elementsForTableView() {
         guard let mainElement = startElement as? Kanji else { return }
         elementsInTableView = findElementsInVocabulary(mainElement.body)
+        setupTwoDemensionalArray()
     }
     
     func changeCollectionArray() {

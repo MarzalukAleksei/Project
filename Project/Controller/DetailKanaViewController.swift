@@ -29,7 +29,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         case main = 0, examples
     }
     
-    func setupTwoDemensionalArray() {
+    func setTwoDemensionalArray() {
         switch startElement {
         case is Kanji:
             guard let element = startElement as? Kanji else { return }
@@ -83,19 +83,26 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
                 switch tableSection {
                 case .examples:
-                    guard let kanjiName = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? Vocabulary else { return UITableViewCell() }
-                    cell.kanjiBody.text = kanjiName.kanji
-                    cell.kanjiReading.text = kanjiName.kana
-                    cell.translateTableViewCell.text = kanjiName.translate
+                    guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? Vocabulary else { return UITableViewCell() }
+                    cell.kanjiBody.text = row.kanji
+                    cell.kanjiReading.text = row.kana
+                    cell.translateTableViewCell.text = row.translate
                 case .main:
-                    guard let kanjiName = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
-                    cell.kanjiBody.text = kanjiName
+                    guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+                    cell.kanjiBody.text = row
                     cell.kanjiReading.text = ""
                     cell.translateTableViewCell.text = ""
                 }
             }
         case is Kana:
-            break
+        if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
+            switch tableSection {
+            case .examples: break
+                
+            case .main: break
+                
+            }
+            }
         default: break
         }
         cell.backgroundColor = designElementColor
@@ -106,7 +113,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         viewParameters()
         changeCollectionArray()
-        setupTwoDemensionalArray()
+        setTwoDemensionalArray()
     }
     
     func viewParameters() {
@@ -138,18 +145,6 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewWillAppear(animated)
         guard let element = startElement else { return }
         setupElement(element: element)
-    }
-    
-    func getExamplesFromStartElement() -> [String] {
-        switch startElement {
-        case is Kanji:
-            guard let element = startElement as? Kanji else { return [] }
-            return element.example
-        case is Kana:
-            guard let element = startElement as? Kana else { return [] }
-            return element.example
-        default: return []
-        }
     }
     
     func setupElement(element: Any) {
@@ -218,6 +213,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                 previousElement = preElement
                 nextElement = currentArray[currentElement.id]
                 detail = currentElement.kana
+                previous = preElement.kana
             } else if preElement.id == currentArray.first?.id {
                 next = currentElement.kana
                 currentElement = preElement
@@ -316,7 +312,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let element = startElement else { return }
         leftButtonAction(element: element)
 //        elementsInTableView = getExamplesFromStartElement()
-        setupTwoDemensionalArray()
+        setTwoDemensionalArray()
         tableView.reloadData()
     }
     
@@ -324,13 +320,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let element = startElement else { return }
         rightButtonAction(element: element)
 //        elementsInTableView = getExamplesFromStartElement()
-        setupTwoDemensionalArray()
+        setTwoDemensionalArray()
         tableView.reloadData()
     }
-    
-
-    
-    
     
 }
 

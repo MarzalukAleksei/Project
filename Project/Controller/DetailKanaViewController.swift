@@ -48,7 +48,6 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             twoDemensionalArray[.main] = array
         default: break
         }
-        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

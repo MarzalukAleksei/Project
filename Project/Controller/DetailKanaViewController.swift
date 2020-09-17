@@ -16,7 +16,6 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var nextButtonOutlet: UIButton!
 
     var startElement: Any?
-    var elementsInTableView: [Vocabulary] = []
     var typeOfColletion: TypeOfCollectionItem?
     var twoDemensionalArray: [SectionsInTableView: [Any]] = [:]
     var array: [Any]?

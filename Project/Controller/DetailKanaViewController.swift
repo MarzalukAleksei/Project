@@ -45,6 +45,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             var array = [Any]()
             array.append(element.reading)
             twoDemensionalArray[.main] = array
+//            twoDemensionalArray[.examples] =
         default: break
         }
     }

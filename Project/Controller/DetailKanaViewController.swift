@@ -98,14 +98,17 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
             switch tableSection {
             case .examples: break
-                
-            case .main: break
-                
+//               guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+            case .main:
+            guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+            cell.kanjiBody.text = row
+            cell.kanjiReading.text = ""
+            cell.translateTableViewCell.text = ""
             }
             }
         default: break
         }
-        cell.backgroundColor = designElementColor
+            cell.backgroundColor = designElementColor
             return cell
     }
     

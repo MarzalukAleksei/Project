@@ -54,7 +54,15 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return " Example"
+        if let tableviewSection = SectionsInTableView(rawValue: section) {
+            switch tableviewSection {
+            case .examples:
+                return " Примеры"
+            case .main:
+                return " Чтение и Значение"
+            }
+        }
+        return "Error"
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -86,7 +94,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func something(string: String) -> Vocabulary {
-        var element: Vocabulary = Vocabulary(kanji: "", kana: " ", translate: " ", level: 0)
+        var element: Vocabulary = Vocabulary(kanji: "", kana: "", translate: "", level: 0)
         for item in elementsInTableView {
             if string == item.kanji {
                 element = item

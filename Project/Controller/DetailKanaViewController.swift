@@ -22,7 +22,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     var startElement: Any?
     var elementsInTableView: [Vocabulary] = []
     var typeOfColletion: TypeOfCollectionItem?
-    var twoDemensionalArray: [TableSections: [String]] = [:]
+    var twoDemensionalArray: [SectionsInTableView: [Any]] = [:]
     var array: [Any]?
     var previousElement: Any?
     var nextElement: Any?
@@ -30,7 +30,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     let onLabel = "音: "
     let imiLabel = "意味: "
 
-    enum TableSections: Int {
+    enum SectionsInTableView: Int {
         case main = 0, examples
     }
     
@@ -66,8 +66,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let array = twoDemensionalArray[DetailKanaViewController.TableSections(rawValue: section)!] else { return 0 }
-//        return twoDemensionalArray[DetailKanaViewController.TableSections(rawValue: section)!]!.count
+        guard let array = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!] else { return 0 }
+//        return twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!]!.count
         return array.count
     } // как убрать два ! 
     

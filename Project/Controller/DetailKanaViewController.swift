@@ -22,7 +22,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     var startElement: Any?
     var elementsInTableView: [Vocabulary] = []
     var typeOfColletion: TypeOfCollectionItem?
-    var twoDemensionalArray: [SectionsInTableView: [Any]] = [:]
+    var twoDemensionalArray: [SectionsInTableView: [String]] = [:]
     var array: [Any]?
     var previousElement: Any?
     var nextElement: Any?
@@ -73,21 +73,28 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
-        switch startElement {
-        case is Kanji:
-            cell.kanjiBody.text = elementsInTableView[indexPath.row].kanji
-            cell.kanjiReading.text = elementsInTableView[indexPath.row].kana
-            cell.translateTableViewCell.text = elementsInTableView[indexPath.row].translate
+        
+        let kanjiName = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row]
+        let kanjiInserts = something(string: kanjiName!)
+            cell.kanjiBody.text = kanjiName
+    
+        cell.kanjiReading.text = kanjiInserts.kana
+        cell.translateTableViewCell.text = kanjiInserts.translate
             cell.backgroundColor = designElementColor
             return cell
-        case is Kana:
-            break
-        case _:
-            break
-        }
-        return cell
+        
     }
 
+    func something(string: String) -> Vocabulary {
+        var element: Vocabulary = Vocabulary(kanji: "", kana: " ", translate: " ", level: 0)
+        for item in elementsInTableView {
+            if string == item.kanji {
+                element = item
+            }
+        }
+        return element
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewParameters()

@@ -24,7 +24,7 @@ class KanaCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         guard let type = typeOfCollection else { return }
         arrayOfElements = getArray(typeOf: type)
-        collectionView.backgroundColor = designBackGroundColor
+        collectionView.backgroundColor = designBackgroundColor
     }
     
     func pushToNextViewController(element: Any) {

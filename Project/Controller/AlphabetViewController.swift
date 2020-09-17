@@ -15,7 +15,7 @@ class AlphabetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = designBackGroundColor
+        view.backgroundColor = designBackgroundColor
         kanaBackgroundLabel()
     }
     

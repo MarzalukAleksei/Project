@@ -19,6 +19,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     var elementsInTableView: [Vocabulary] = []
     var typeOfColletion: TypeOfCollectionItem?
     var twoDemensionalArray: [SectionsInTableView: [String]] = [:]
+    var twoDemensionalTestArray: [SectionsInTableView: [Any]] = [:]
     var array: [Any]?
     var previousElement: Any?
     var nextElement: Any?
@@ -47,6 +48,14 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             array.append(item.kanji)
         }
         twoDemensionalArray[.examples] = array
+        
+        guard let element = startElement as? Kanji else { return }
+        twoDemensionalTestArray[.examples] = elementsInTableView
+        var arrays = [Any]()
+        arrays.append(element.readingHiragana)
+        arrays.append(element.readingKatakana)
+        arrays.append(element.translate)
+        twoDemensionalTestArray[.main] = arrays
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -70,7 +79,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let array = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!] else { return 0 }
+        guard let array = twoDemensionalTestArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!] else { return 0 }
 //        return twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!]!.count
         return array.count
     } // как убрать два ! 
@@ -78,15 +87,28 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
-        guard let kanjiName = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] else { return UITableViewCell() }
-        let kanjiInserts = something(string: kanjiName)
-            cell.kanjiBody.text = kanjiName
-    
-        cell.kanjiReading.text = kanjiInserts.kana
-        cell.translateTableViewCell.text = kanjiInserts.translate
-            cell.backgroundColor = designElementColor
+        switch startElement {
+        case is Kanji:
+            if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
+                switch tableSection {
+                case .examples:
+                    guard let kanjiName = twoDemensionalTestArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? Vocabulary else { return UITableViewCell() }
+                    cell.kanjiBody.text = kanjiName.kanji
+                    cell.kanjiReading.text = kanjiName.kana
+                    cell.translateTableViewCell.text = kanjiName.translate
+                case .main:
+                    guard let kanjiName = twoDemensionalTestArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+                    cell.kanjiBody.text = kanjiName
+                    cell.kanjiReading.text = ""
+                    cell.translateTableViewCell.text = ""
+                }
+            }
+        case is Kana:
+            break
+        default: break
+        }
+        cell.backgroundColor = designElementColor
             return cell
-        
     }
 
     func something(string: String) -> Vocabulary {
@@ -107,7 +129,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func viewParameters() {
-        view.backgroundColor = designBackGroundColor
+        view.backgroundColor = designBackgroundColor
         tableView.allowsSelection = false
         tableView.backgroundColor = designElementColor
         tableView.separatorColor = designSeparatorColor

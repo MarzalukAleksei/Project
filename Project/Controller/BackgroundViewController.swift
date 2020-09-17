@@ -19,7 +19,7 @@ class BackgroundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createLabel()
-        view.backgroundColor = designBackGroundColor
+        view.backgroundColor = designBackgroundColor
         }
     
             

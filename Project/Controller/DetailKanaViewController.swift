@@ -78,8 +78,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
-        let kanjiName = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row]
-        let kanjiInserts = something(string: kanjiName!)
+        guard let kanjiName = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] else { return UITableViewCell() }
+        let kanjiInserts = something(string: kanjiName)
             cell.kanjiBody.text = kanjiName
     
         cell.kanjiReading.text = kanjiInserts.kana

@@ -15,14 +15,34 @@ struct Vocabulary {
     var level: Int
 }
 
+enum TypeOfElementForSearchInArray {
+    case kanji
+    case kana
+}
+
 private let CSV = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
 let vocabulary = transformToVocabulary()
 
-func findElementsInVocabulary(_ string: String) -> [Vocabulary] {
+func findElementsInVocabulary(_ string: String, typeOf: TypeOfElementForSearchInArray) -> [Vocabulary] {
+    var n5n4levelExamples: [Vocabulary] = []
     var array: [Vocabulary] = []
-    for item in vocabulary {
-        if item.kanji.contains(string) {
-            array.append(item)
+    switch typeOf {
+    case .kanji:
+        for item in vocabulary {
+            if item.kanji.contains(string) {
+                array.append(item)
+            }
+        }
+    case .kana:
+        for item in vocabulary {
+            if item.level == 5 || item.level == 4 {
+                n5n4levelExamples.append(item)
+            }
+        }
+        for item in n5n4levelExamples {
+            if item.kana.hasPrefix(string) {
+                array.append(item)
+            }
         }
     }
     return array

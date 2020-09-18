@@ -33,7 +33,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         switch startElement {
         case is Kanji:
             guard let element = startElement as? Kanji else { return }
-            let examplesSection = findElementsInVocabulary(element.body)
+            let examplesSection = findElementsInVocabulary(element.body, typeOf: .kanji)
             var array = [Any]()
             array.append(kunLabel + element.readingHiragana)
             array.append(onLabel + element.readingKatakana)
@@ -45,7 +45,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             var array = [Any]()
             array.append(element.reading)
             twoDemensionalArray[.main] = array
-//            twoDemensionalArray[.examples] =
+            twoDemensionalArray[.examples] = findElementsInVocabulary(element.kana, typeOf: .kana)
         default: break
         }
     }
@@ -102,8 +102,11 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         case is Kana:
         if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
             switch tableSection {
-            case .examples: break
-//               guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+            case .examples:
+            guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? Vocabulary else { return UITableViewCell() }
+            cell.kanjiBody.text = row.kana
+            cell.translateTableViewCell.text = row.translate
+            cell.kanjiReading.text = ""
             case .main:
             guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
             cell.kanjiBody.text = row
@@ -274,7 +277,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                 previousElement = currentElement
                 currentElement = nexElement
                 startElement = currentElement
-                nexElement = currentArray[currentElement.id + 1]
+                nexElement = currentArray[currentElement.id]
                 nextElement = nexElement
                 detail = currentElement.kana
                 next = nexElement.kana

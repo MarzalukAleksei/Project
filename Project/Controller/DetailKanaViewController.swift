@@ -34,12 +34,12 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         case is Kanji:
             guard let element = startElement as? Kanji else { return }
             let examplesSection = findElementsInVocabulary(element.body)
-            twoDemensionalArray[.examples] = examplesSection
             var array = [Any]()
-            array.append(element.readingHiragana)
-            array.append(element.readingKatakana)
-            array.append(element.translate)
+            array.append(kunLabel + element.readingHiragana)
+            array.append(onLabel + element.readingKatakana)
+            array.append(imiLabel + element.translate)
             twoDemensionalArray[.main] = array
+            twoDemensionalArray[.examples] = examplesSection
         case is Kana:
             guard let element = startElement as? Kana else { return }
             var array = [Any]()
@@ -52,13 +52,13 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
-        let label = UILabel(frame: CGRect(x: 2.5, y: 1.5, width: tableView.bounds.width, height: 20))
+        let label = UILabel(frame: CGRect(x: 10, y: 1.5, width: tableView.bounds.width, height: headerVIew.bounds.height - 5))
         if let tableviewSection = SectionsInTableView(rawValue: section) {
             switch tableviewSection {
             case .examples:
-                label.text = " Примеры"
+                label.text = "Примеры"
             case .main:
-                label.text = " Чтение и Значение"
+                label.text = "Чтение и Значение"
             }
         }
         headerVIew.backgroundColor = designHeaderInSectionColor

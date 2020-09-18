@@ -61,7 +61,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                 label.text = " Чтение и Значение"
             }
         }
-        headerVIew.backgroundColor = designHeaderInSection
+        headerVIew.backgroundColor = designHeaderInSectionColor
         headerVIew.addSubview(label)
         return headerVIew
     }

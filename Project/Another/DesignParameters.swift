@@ -13,7 +13,7 @@ let designBackgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865
 let designElementColor = #colorLiteral(red: 0.9803921569, green: 0.9098039216, blue: 0.8705882353, alpha: 1)
 let designElementCornerRadius: CGFloat = 0.2
 let designSeparatorColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-let designHeaderInSection = #colorLiteral(red: 0.9921568627, green: 0.4862745098, blue: 0.3803921569, alpha: 1)
+let designHeaderInSectionColor = #colorLiteral(red: 0.9921568627, green: 0.4862745098, blue: 0.3803921569, alpha: 1)
 
 let backgroundlabelwidth: CGFloat = 30
 let backgroundlabelHeight: CGFloat = 30

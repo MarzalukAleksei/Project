@@ -50,16 +50,20 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
+        let label = UILabel(frame: CGRect(x: 2.5, y: 1.5, width: tableView.bounds.width, height: 20))
         if let tableviewSection = SectionsInTableView(rawValue: section) {
             switch tableviewSection {
             case .examples:
-                return " Примеры"
+                label.text = " Примеры"
             case .main:
-                return " Чтение и Значение"
+                label.text = " Чтение и Значение"
             }
         }
-        return "Error"
+        headerVIew.backgroundColor = designHeaderInSection
+        headerVIew.addSubview(label)
+        return headerVIew
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

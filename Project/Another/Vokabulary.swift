@@ -44,6 +44,9 @@ func findElementsInVocabulary(_ string: String, typeOf: TypeOfElementForSearchIn
                 array.append(item)
             }
         }
+        if string == "ん" || string == "ン" {
+            array.append(Vocabulary(kanji: "", kana: "Слово не может начинаться на \(string)", translate: "", level: 0))
+        }
     }
     return array
 }

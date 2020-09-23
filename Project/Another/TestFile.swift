@@ -27,12 +27,13 @@ func printTestArray() {
         }
     }
 //    print(printing)
-    for item in kanji {
-        if item.level == 5 {
-            printing.append(item)
-        }
-    }
-    print(printing.count)
+//    for item in kanji {
+//        if item.level == 5 {
+//            printing.append(item)
+//        }
+//    }
+//    print(printing.count)
+//    print(kanji.count)
 }
 
 func setIdToTestArray() {

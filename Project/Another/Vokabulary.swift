@@ -55,11 +55,11 @@ private func transformToVocabulary() -> [Vocabulary] {
     var array = [Vocabulary]()
     var element = Vocabulary(kanji: "", kana: "", translate: "", level: 0)
     for item in CSV {
-        element.kanji = item["Кандзи"] ?? ""
+        element.kanji = item["Кандзи"] ?? " "
         element.kana = item["Кана"] ?? ""
         element.translate = item["Перевод"] ?? ""
         element.level = Int(item["Уровень"] ?? "") ?? 0
-        if element.kanji != "" && element.kana != "" && element.translate != "" && element.level != 0 {
+        if element.kanji != " " && element.kana != "" && element.translate != "" && element.level != 0 {
             array.append(element)
         }
     }

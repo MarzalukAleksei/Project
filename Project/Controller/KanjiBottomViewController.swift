@@ -21,6 +21,7 @@ class KanjiBottomViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = designBackgroundColor
         background()
+        printTestArray()
     }
     
     private func background() {

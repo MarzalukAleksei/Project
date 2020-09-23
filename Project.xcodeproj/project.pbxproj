@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF074485251BB906001ADD9C /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF074484251BB906001ADD9C /* Kanji.csv */; };
+		CF074487251BBB3E001ADD9C /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF074486251BBB3E001ADD9C /* TestFile.swift */; };
+		CF074489251BBB79001ADD9C /* AllKanjiList.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF074488251BBB78001ADD9C /* AllKanjiList.csv */; };
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
 		CF2BCC5724F40397003859FD /* Kana.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF2BCC5524F40397003859FD /* Kana.csv */; };
@@ -38,6 +40,8 @@
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CF074484251BB906001ADD9C /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
+		CF074486251BBB3E001ADD9C /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		CF074488251BBB78001ADD9C /* AllKanjiList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllKanjiList.csv; sourceTree = "<group>"; };
 		CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		CF0EAC6F2507C7B800293613 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		CF0EAC702507C7BA00293613 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -159,12 +163,14 @@
 				CF857BD724C1B25A0084DCE9 /* Kanji.swift */,
 				CF69657E25063F4000FCE031 /* DesignParameters.swift */,
 				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
+				CF074486251BBB3E001ADD9C /* TestFile.swift */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
 				CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */,
 				CF074484251BB906001ADD9C /* Kanji.csv */,
 				CF2BCC5524F40397003859FD /* Kana.csv */,
+				CF074488251BBB78001ADD9C /* AllKanjiList.csv */,
 				CF9A631D250244CE00D07CBF /* Vocabulary.csv */,
 			);
 			path = Another;
@@ -235,6 +241,7 @@
 				CF9A631E250244CE00D07CBF /* Vocabulary.csv in Resources */,
 				CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */,
 				CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */,
+				CF074489251BBB79001ADD9C /* AllKanjiList.csv in Resources */,
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
 				CF2BCC5724F40397003859FD /* Kana.csv in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,
@@ -293,6 +300,7 @@
 				CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */,
 				CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
+				CF074487251BBB3E001ADD9C /* TestFile.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* Kana.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,

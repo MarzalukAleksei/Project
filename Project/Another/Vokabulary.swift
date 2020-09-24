@@ -19,8 +19,9 @@ enum TypeOfElementForSearchInArray {
     case kanji
     case kana
 }
+let fileReader = FileReader()
 
-private let CSV = getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
+private let CSV = fileReader.getArrayFromCSV(fileName: "Vocabulary", fileType: "csv")
 let vocabulary = transformToVocabulary()
 
 func findElementsInVocabulary(_ string: String, typeOf: TypeOfElementForSearchInArray) -> [Vocabulary] {

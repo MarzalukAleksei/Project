@@ -31,8 +31,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func setTwoDemensionalArray() {
         switch startElement {
-        case is Kanji:
-            guard let element = startElement as? Kanji else { return }
+        case is KanjiModel:
+            guard let element = startElement as? KanjiModel else { return }
             let examplesSection = findElementsInVocabulary(element.body, typeOf: .kanji)
             var array = [Any]()
             array.append(kunLabel + element.readingHiragana)
@@ -87,7 +87,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
         switch startElement {
-        case is Kanji:
+        case is KanjiModel:
             if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
                 switch tableSection {
                 case .examples:
@@ -183,9 +183,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             detail = currentElement.kana
             startElement = currentArray[currentElement.id - 1]
-        case is Kanji:
-            guard let currentElement = element as? Kanji else { return }
-            guard let currentArray = array as? [Kanji] else { return }
+        case is KanjiModel:
+            guard let currentElement = element as? KanjiModel else { return }
+            guard let currentArray = array as? [KanjiModel] else { return }
             if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
                 previous = currentArray[currentElement.id - 2].body
                 previousElement = currentArray[currentElement.id - 2]
@@ -237,10 +237,10 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                 detail = currentElement.kana
                 previous = ""
             }
-        case is Kanji:
-            guard var currentElement = element as? Kanji else { return }
-            guard let currentArray = array as? [Kanji] else { return }
-            guard var preElement = previousElement as? Kanji else { return }
+        case is KanjiModel:
+            guard var currentElement = element as? KanjiModel else { return }
+            guard let currentArray = array as? [KanjiModel] else { return }
+            guard var preElement = previousElement as? KanjiModel else { return }
             if preElement.id != currentArray.first?.id && previousElement != nil {
                 next = currentElement.body
                 currentElement = preElement
@@ -293,10 +293,10 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                 detail = currentElement.kana
                 next = ""
             }
-        case is Kanji:
-            guard var currentElement = element as? Kanji else { return }
-            guard let currentArray = array as? [Kanji] else { return }
-            guard var nexElement = nextElement as? Kanji else { return }
+        case is KanjiModel:
+            guard var currentElement = element as? KanjiModel else { return }
+            guard let currentArray = array as? [KanjiModel] else { return }
+            guard var nexElement = nextElement as? KanjiModel else { return }
             if nexElement.id != currentArray.last?.id && nextElement != nil {
                 previous = currentElement.body
                 previousElement = currentElement

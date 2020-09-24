@@ -59,10 +59,8 @@ class AlphabetViewController: UIViewController {
             }
         }
         
-        
-        
-        
     }
+    
     func verticalCount(labelheigh: CGFloat) -> Int {
         let count = UIScreen.main.bounds.height / labelheigh
         return Int(count)

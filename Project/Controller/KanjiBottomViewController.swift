@@ -10,12 +10,7 @@ import UIKit
 
 class KanjiBottomViewController: UIViewController {
 
-    @IBOutlet weak var allKanjiButtom: UIButton!
-    @IBOutlet weak var n1KanjiButtom: UIButton!
-    @IBOutlet weak var n2KanjiButtom: UIButton!
-    @IBOutlet weak var n3KanjiButtom: UIButton!
-    @IBOutlet weak var n4KanjiButtom: UIButton!
-    @IBOutlet weak var n5KanjiButtom: UIButton!
+    @IBOutlet private var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +23,11 @@ class KanjiBottomViewController: UIViewController {
         let labelHeigh = backgroundlabelHeight
         let bounds = view.bounds.height
         
-        n5KanjiButtom.backgroundColor = designElementColor
-        n4KanjiButtom.backgroundColor = designElementColor
-        n3KanjiButtom.backgroundColor = designElementColor
-        n2KanjiButtom.backgroundColor = designElementColor
-        n1KanjiButtom.backgroundColor = designElementColor
-        allKanjiButtom.backgroundColor = designElementColor
+        
+        buttons.forEach { (button) in
+            button.backgroundColor = designElementColor
+            
+        }
         
         for horizontal in 0...backgroundHorizontalElementsCount(elementHeight: labelWidth) {
             for vertical in 0...backgroungVerticalElementsCount(elementWidth: labelHeigh) {
@@ -49,6 +43,9 @@ class KanjiBottomViewController: UIViewController {
             }
         }
     }
+    
+    
+    func someFunc() { }
     
     func backgroundHorizontalElementsCount(elementHeight: CGFloat) -> Int{
         let count = view.bounds.width / elementHeight

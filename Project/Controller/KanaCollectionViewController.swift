@@ -81,7 +81,7 @@ class KanaCollectionViewController: UICollectionViewController {
                 cell.label.textColor = .red
             }
         case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
-            let element = arrayOfElements[indexPath.item] as? Kanji
+            let element = arrayOfElements[indexPath.item] as? KanjiModel
             cell.label.text = element?.body ?? "-"
             if element?.mistake == true {
                 cell.label.textColor = .red

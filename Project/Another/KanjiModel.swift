@@ -46,6 +46,3 @@ private func transformToKanji() -> [KanjiModel] {
 let kanji = transformToKanji()
 
 
-class <#name#>: <#super class#> {
-    <#code#>
-}

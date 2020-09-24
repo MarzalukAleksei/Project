@@ -9,9 +9,15 @@
 import UIKit
 
 class MainViewController: BackgroundViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    }
 }
+
+class First {
+    func run() { }
+}
+
+class Second: First {
+    func fly() { }
 }

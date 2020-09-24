@@ -19,12 +19,13 @@ struct Kana {
 }
 
 private func transformToKana(_ typeOf: TypeOfCollectionItem) -> [Kana] {
+    let fileReader = FileReader()
     var element = Kana(kana: "", reading: "")
     var array = [Kana]()
-    let CSV = getArrayFromCSV(fileName: "Kana", fileType: "csv")
+    let fileCSV = fileReader.getArrayFromCSV(fileName: "Kana", fileType: "csv")
     switch typeOf {
     case .hiragana:
-        for item in CSV {
+        for item in fileCSV {
             element.kana = item["Хирагана"] ?? ""
             element.reading = item["Звук"] ?? ""
             element.example = item["Пример хирагана"]?.components(separatedBy: "・") ?? []
@@ -34,7 +35,7 @@ private func transformToKana(_ typeOf: TypeOfCollectionItem) -> [Kana] {
             }
         }
     case .katakana:
-        for item in CSV {
+        for item in fileCSV {
             element.kana = item["Катакана"] ?? ""
             element.reading = item["Звук"] ?? ""
             element.example = item["Пример катакана"]?.components(separatedBy: "・") ?? []

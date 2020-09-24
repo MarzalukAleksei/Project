@@ -16,24 +16,43 @@ var printing = [Kanji]()
 
 func printTestArray() {
     setIdToTestArray()
+    var stringElementKanji = ""
+    var stringElementTest = ""
     var count = 0
     for newTestArrayElement in newTestArray {
         for item in kanji {
             if newTestArrayElement.body == item.body && newTestArrayElement.level != item.level {
                 count = count + 1
                 print("kanji \(item.body), \(item.level) || TestArray \(newTestArrayElement.body), \(newTestArrayElement.level) \(count)")
-//                printing.append(item)
             }
         }
     }
-//    print(printing)
-//    for item in kanji {
-//        if item.level == 5 {
-//            printing.append(item)
-//        }
-//    }
-//    print(printing.count)
+    
+    for item in kanji {
+        stringElementKanji += item.body
+    }
+    for item in mainTestArrray {
+        stringElementTest += item.body
+    }
+    var finalElements = stringElementTest
+    for item in stringElementKanji {
+        if stringElementTest.contains(item) {
+            finalElements = finalElements.replacingOccurrences(of: "\(item)", with: "")
+        }
+    }
+    var oneMore = ""
+    for item in finalElements {
+        var transform: String = String(item)
+        for element in mainTestArrray {
+            if transform == element.body {
+                oneMore += transform
+            }
+        }
+    }
+    
+    print(finalElements)
 //    print(kanji.count)
+    print(stringElementKanji)
 }
 
 func setIdToTestArray() {

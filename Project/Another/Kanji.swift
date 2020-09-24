@@ -34,6 +34,8 @@ private func transformToKanji() -> [Kanji] {
         element.level = Int(item["Level"] ?? "") ?? 0
         if element.body != "" && element.translate != "" && element.number != 0 {
             array.append(element)
+        } else {
+            print(element)
         }
     }
     return array

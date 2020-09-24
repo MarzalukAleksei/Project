@@ -1,0 +1,44 @@
+//
+//  DifficultLevel.swift
+//  Project
+//
+//  Created by ブラック狼 on 25.09.2020.
+//  Copyright © 2020 ブラック狼. All rights reserved.
+//
+
+import Foundation
+
+class DifficultLevel {
+    
+   var kanjiArray = [Any]()
+    
+func selectLevelFromArray (difficultLevel: Int) -> [Any] {
+    let kanji = KanjiSetter()
+    kanjiArray.removeAll()
+    for var element in kanji.setKanji() {
+        if element.level == difficultLevel {
+            element.id = kanjiArray.count + 1
+            kanjiArray.append(element)
+        } else if difficultLevel == 0 {
+            element.id = kanjiArray.count + 1
+            kanjiArray.append(element)
+        }
+    }
+    return kanjiArray
+}
+func getArray(typeOf: TypeOfCollectionItem) -> [Any] {
+    let kana = KanaSetter()
+    let difficult = DifficultLevel()
+    switch typeOf {
+    case .hiragana: return kana.transformToKana(.hiragana)
+    case .katakana: return kana.transformToKana(.katakana)
+    case .kanjiAll: return difficult.selectLevelFromArray(difficultLevel: 0)
+    case .kanjiN1: return difficult.selectLevelFromArray(difficultLevel: 1)
+    case .kanjiN2: return difficult.selectLevelFromArray(difficultLevel: 2)
+    case .kanjiN3: return difficult.selectLevelFromArray(difficultLevel: 3)
+    case .kanjiN4: return difficult.selectLevelFromArray(difficultLevel: 4)
+    case .kanjiN5: return difficult.selectLevelFromArray(difficultLevel: 5)
+    }
+    
+    }
+}

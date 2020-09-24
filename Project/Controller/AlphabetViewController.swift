@@ -32,6 +32,7 @@ class AlphabetViewController: UIViewController {
     func kanaBackgroundLabel(){
         let labelWidth = backgroundlabelwidth
         let labelHeigth = backgroundlabelHeight
+        let kana = KanaSetter()
         
         hiraganaButtom.backgroundColor = designElementColor
         katakanaButtom.backgroundColor = designElementColor
@@ -41,14 +42,14 @@ class AlphabetViewController: UIViewController {
                 let x = labelWidth * CGFloat(horizontalItem)
                 let y = labelHeigth * CGFloat(verticalItem)
                 if verticalItem % 2 == 0 {
-                    guard let object = randomKana(objectArray: katakana) else {
+                    guard let object = kana.randomKana(objectArray: kana.transformToKana(.katakana)) else {
                         return
                     }
                     let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
                     view.addSubview(label)
                     view.sendSubviewToBack(label)
-                }else{
-                    guard let object = randomKana(objectArray: hiragana) else {
+                } else {
+                    guard let object = kana.randomKana(objectArray: kana.transformToKana(.hiragana)) else {
                         return
                     }
                     let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)

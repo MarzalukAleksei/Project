@@ -27,6 +27,7 @@
 		CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CF857BD824C1B25A0084DCE9 /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */; };
+		CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF956740251D47B300AB7F3E /* DifficultLevel.swift */; };
 		CF9A631E250244CE00D07CBF /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF9A631D250244CE00D07CBF /* Vocabulary.csv */; };
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
@@ -62,6 +63,7 @@
 		CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiBottomViewController.swift; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
 		CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
+		CF956740251D47B300AB7F3E /* DifficultLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultLevel.swift; sourceTree = "<group>"; };
 		CF9A631D250244CE00D07CBF /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF4B81FD24AA429600A2CBA8 /* Kana.swift */,
+				CF956740251D47B300AB7F3E /* DifficultLevel.swift */,
 				CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */,
 				CF69657E25063F4000FCE031 /* DesignParameters.swift */,
 				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
@@ -302,6 +305,7 @@
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
+				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
 				CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,

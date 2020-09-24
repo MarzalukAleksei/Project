@@ -143,15 +143,17 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func changeCollectionArray() {
+        let kana = KanaSetter()
+        let difficult = DifficultLevel()
         switch typeOfColletion {
         case .hiragana:
-            array = hiragana
+            array = kana.transformToKana(.hiragana)
         case .katakana:
-            array = katakana
+            array = kana.transformToKana(.katakana)
         case .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
-            array = newKanjiArray
+            array = difficult.kanjiArray
         case .kanjiAll:
-            array = newKanjiArray
+            array = difficult.kanjiArray
         default: break
         }
     }

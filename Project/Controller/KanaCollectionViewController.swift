@@ -20,10 +20,12 @@ class KanaCollectionViewController: UICollectionViewController {
 
     var arrayOfElements = [Any]()
     
+    let difficult = DifficultLevel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let type = typeOfCollection else { return }
-        arrayOfElements = getArray(typeOf: type)
+        arrayOfElements = difficult.getArray(typeOf: type)
         collectionView.backgroundColor = designBackgroundColor
     }
     
@@ -44,21 +46,21 @@ class KanaCollectionViewController: UICollectionViewController {
         var element: Any?
         switch typeOfCollection {
         case .hiragana:
-            element = elementByIndex(array: hiragana, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .hiragana), index: indexPath.row)
         case .katakana:
-            element = elementByIndex(array: katakana, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .katakana), index: indexPath.row)
         case .kanjiN1:
-            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN1), index: indexPath.row)
         case .kanjiN2:
-            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN2), index: indexPath.row)
         case .kanjiN3:
-            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN3), index: indexPath.row)
         case .kanjiN4:
-            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN4), index: indexPath.row)
         case .kanjiN5:
-            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN5), index: indexPath.row)
         case .kanjiAll:
-            element = elementByIndex(array: newKanjiArray, index: indexPath.row)
+            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiAll), index: indexPath.row)
         default: break
         }
         pushToNextViewController(element: element as Any)

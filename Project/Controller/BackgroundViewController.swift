@@ -24,9 +24,9 @@ class BackgroundViewController: UIViewController {
     private func createLabel() {
         let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
                 // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
-            
+        let kanji = KanjiSetter()
         for value in 0...countOfLabels {
-            guard let arrayItem = kanji.randomElement()?.body else { return }
+            guard let arrayItem = kanji.setKanji().randomElement()?.body else { return }
             let y = heightOfLabel * CGFloat(value)
             let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: firstCordinate, to: UIScreen.main.bounds.width))
                      //   labelArray.append(newLabel)

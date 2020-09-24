@@ -20,7 +20,9 @@ struct KanjiModel {
     var id: Int = 0
 }
 
-private func transformToKanji() -> [KanjiModel] {
+class KanjiSetter {
+
+    func setKanji() -> [KanjiModel] {
     var element = KanjiModel(number: 0, level: 0, body: "", readingHiragana: "", readingKatakana: "", translate: "")
     var array: [KanjiModel] = []
     let fileReader = FileReader()
@@ -40,9 +42,4 @@ private func transformToKanji() -> [KanjiModel] {
     }
     return array
 }
-
-
-
-let kanji = transformToKanji()
-
-
+}

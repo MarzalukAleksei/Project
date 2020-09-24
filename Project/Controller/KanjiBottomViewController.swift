@@ -12,6 +12,8 @@ class KanjiBottomViewController: UIViewController {
 
     @IBOutlet private var buttons: [UIButton]!
     
+    let kanji = KanjiSetter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = designBackgroundColor
@@ -22,7 +24,7 @@ class KanjiBottomViewController: UIViewController {
         let labelWidth = backgroundlabelwidth
         let labelHeigh = backgroundlabelHeight
         let bounds = view.bounds.height
-        
+        let kanjiArray = kanji.setKanji() // Создал, тк была ошибка при прямой загрузке
         
         buttons.forEach { (button) in
             button.backgroundColor = designElementColor
@@ -34,7 +36,7 @@ class KanjiBottomViewController: UIViewController {
                 let x = labelWidth * CGFloat(horizontal)
                 let y = labelHeigh * CGFloat(vertical)
                 let label = UILabel(frame: CGRect(x: x, y: y, width: labelWidth, height: labelHeigh))
-                label.text = kanji.randomElement()?.body
+                label.text = kanjiArray.randomElement()?.body
                 label.textAlignment = .center
                 if bounds >= y + labelHeigh {
                     view.addSubview(label)

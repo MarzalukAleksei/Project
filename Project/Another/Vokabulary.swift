@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct VocabularyType {
+struct VocabularyModel {
     var kanji: String
     var kana: String
     var translate: String
     var level: Int
 }
 
-class Vocabulary {
+class VocabularySetter {
     enum TypeOfElementForSearchInArray {
         case kanji
         case kana
@@ -23,9 +23,9 @@ class Vocabulary {
 
    private let fileReader = FileReader()
         
-    func findElementsInVocabulary(_ string: String, typeOf: TypeOfElementForSearchInArray) -> [VocabularyType] {
-        var n5n4levelExamples: [VocabularyType] = []
-        var array: [VocabularyType] = []
+    func findElementsInVocabulary(_ string: String, typeOf: TypeOfElementForSearchInArray) -> [VocabularyModel] {
+        var n5n4levelExamples: [VocabularyModel] = []
+        var array: [VocabularyModel] = []
         let vocabulary = transformToVocabulary()
         switch typeOf {
         case .kanji:
@@ -46,15 +46,15 @@ class Vocabulary {
                 }
             }
             if string == "ん" || string == "ン" {
-                array.append(VocabularyType(kanji: "", kana: "Слово не может начинаться на \(string)", translate: "", level: 0))
+                array.append(VocabularyModel(kanji: "", kana: "Слово не может начинаться на \(string)", translate: "", level: 0))
             }
         }
         return array
     }
 
-    private func transformToVocabulary() -> [VocabularyType] {
-        var array = [VocabularyType]()
-        var element = VocabularyType(kanji: "", kana: "", translate: "", level: 0)
+    private func transformToVocabulary() -> [VocabularyModel] {
+        var array = [VocabularyModel]()
+        var element = VocabularyModel(kanji: "", kana: "", translate: "", level: 0)
         for item in fileReader.getArrayFromCSV(fileName: "Vocabulary", fileType: "csv") {
             element.kanji = item["Кандзи"] ?? " "
             element.kana = item["Кана"] ?? ""

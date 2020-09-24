@@ -26,7 +26,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     let imiLabel = "意味: "
 
     enum SectionsInTableView: Int {
-        case main = 0, examples
+        case main = 0, examples = 1
     }
     
     func setTwoDemensionalArray() {
@@ -75,11 +75,14 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let array = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!] else { return 0 }
-//        return twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: section)!]!.count
-        return array.count
-    } // как убрать два ! 
+       
+        guard let indexOfSection = DetailKanaViewController.SectionsInTableView(rawValue: section), let count = twoDemensionalArray[indexOfSection]?.count else {
+            return 0
+        }
+        return count
+    }
     
+  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         

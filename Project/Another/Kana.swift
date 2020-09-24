@@ -48,15 +48,15 @@ private func transformToKana(_ typeOf: TypeOfCollectionItem) -> [Kana] {
     return array
 }
 
-enum TypeOfCollectionItem {
-    case hiragana
-    case katakana
-    case kanjiAll
-    case kanjiN1
-    case kanjiN2
-    case kanjiN3
-    case kanjiN4
-    case kanjiN5
+enum TypeOfCollectionItem: String {
+    case hiragana = "hiragana"
+    case katakana = "katakana"
+    case kanjiAll = "AllSegue"
+    case kanjiN1 = "n1Segue"
+    case kanjiN2 = "n2Segue"
+    case kanjiN3 = "n3Segue"
+    case kanjiN4 = "n4Segue"
+    case kanjiN5 = "n5Segue"
 }
 
 var newKanjiArray = [Any]()
@@ -72,7 +72,6 @@ func getArray( typeOf: TypeOfCollectionItem) -> [Any] {
         case .kanjiN4: return selectLevelFromArray(difficultLevel: 4)
         case .kanjiN5: return selectLevelFromArray(difficultLevel: 5)
     }
-
 }
 
 private func selectLevelFromArray (difficultLevel: Int) -> [Any] {

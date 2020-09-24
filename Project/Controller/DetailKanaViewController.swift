@@ -30,10 +30,11 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func setTwoDemensionalArray() {
+        let vocabulary = Vocabulary()
         switch startElement {
         case is KanjiModel:
             guard let element = startElement as? KanjiModel else { return }
-            let examplesSection = findElementsInVocabulary(element.body, typeOf: .kanji)
+            let examplesSection = vocabulary.findElementsInVocabulary(element.body, typeOf: .kanji)
             var array = [Any]()
             array.append(kunLabel + element.readingHiragana)
             array.append(onLabel + element.readingKatakana)
@@ -45,7 +46,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             var array = [Any]()
             array.append(element.reading)
             twoDemensionalArray[.main] = array
-            twoDemensionalArray[.examples] = findElementsInVocabulary(element.kana, typeOf: .kana)
+            twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(element.kana, typeOf: .kana)
         default: break
         }
     }
@@ -91,7 +92,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
                 switch tableSection {
                 case .examples:
-                    guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? Vocabulary else { return UITableViewCell() }
+                    guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyType else { return UITableViewCell() }
                     cell.kanjiBody.text = row.kanji
                     cell.kanjiReading.text = row.kana
                     cell.translateTableViewCell.text = row.translate
@@ -106,7 +107,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
             switch tableSection {
             case .examples:
-            guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? Vocabulary else { return UITableViewCell() }
+            guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyType else { return UITableViewCell() }
             cell.kanjiBody.text = row.kana
             cell.translateTableViewCell.text = row.translate
             cell.kanjiReading.text = ""

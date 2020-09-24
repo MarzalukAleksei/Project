@@ -41,8 +41,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             array.append(imiLabel + element.translate)
             twoDemensionalArray[.main] = array
             twoDemensionalArray[.examples] = examplesSection
-        case is Kana:
-            guard let element = startElement as? Kana else { return }
+        case is KanaModel:
+            guard let element = startElement as? KanaModel else { return }
             var array = [Any]()
             array.append(element.reading)
             twoDemensionalArray[.main] = array
@@ -54,6 +54,8 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
         let label = UILabel(frame: CGRect(x: 10, y: 1.5, width: tableView.bounds.width, height: headerVIew.bounds.height - 5))
+//        guard let tableviewSection = SectionsInTableView(rawValue: section) else { return UIView() }
+        
         if let tableviewSection = SectionsInTableView(rawValue: section) {
             switch tableviewSection {
             case .examples:
@@ -103,7 +105,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                     cell.translateTableViewCell.text = ""
                 }
             }
-        case is Kana:
+        case is KanaModel:
         if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
             switch tableSection {
             case .examples:
@@ -169,9 +171,9 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         var previous = ""
         var next = ""
         switch element {
-        case is Kana:
-            guard let currentElement = element as? Kana else { return }
-            guard let currentArray = array as? [Kana] else { return }
+        case is KanaModel:
+            guard let currentElement = element as? KanaModel else { return }
+            guard let currentArray = array as? [KanaModel] else { return }
             if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
                 previous = currentArray[currentElement.id - 2].kana
                 previousElement = currentArray[currentElement.id - 2]
@@ -190,10 +192,11 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             guard let currentElement = element as? KanjiModel else { return }
             guard let currentArray = array as? [KanjiModel] else { return }
             if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
+                // MARK: КАКОГО ХЕРА Массив ПУСТОЙ?!
                 previous = currentArray[currentElement.id - 2].body
-                previousElement = currentArray[currentElement.id - 2]
-                next = currentArray[currentElement.id].body
-                nextElement = currentArray[currentElement.id]
+//                previousElement = currentArray[currentElement.id - 2]
+//                next = currentArray[currentElement.id].body
+//                nextElement = currentArray[currentElement.id]
             } else if currentElement.id == currentArray.first?.id && currentElement.id == currentArray.last?.id {
                 nextElement = nil
                 previousElement = nil
@@ -205,7 +208,7 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
                 nextElement = currentArray[currentElement.id]
             }
             detail = currentElement.body
-            startElement = currentArray[currentElement.id - 1]
+            print(currentElement.id)
         default: break
         }
         detailLabel.text = detail
@@ -218,10 +221,10 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         var previous: String?
         var next: String?
         switch element {
-        case is Kana:
-            guard var currentElement = element as? Kana else { return }
-            guard let currentArray = array as? [Kana] else { return }
-            guard var preElement = previousElement as? Kana else { return }
+        case is KanaModel:
+            guard var currentElement = element as? KanaModel else { return }
+            guard let currentArray = array as? [KanaModel] else { return }
+            guard var preElement = previousElement as? KanaModel else { return }
             if preElement.id != currentArray.first?.id && previousElement != nil {
                 next = currentElement.kana
                 currentElement = preElement
@@ -274,10 +277,10 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         var previous: String?
         var next: String?
         switch element {
-        case is Kana:
-            guard var currentElement = element as? Kana else { return }
-            guard let currentArray = array as? [Kana] else { return }
-            guard var nexElement = nextElement as? Kana else { return }
+        case is KanaModel:
+            guard var currentElement = element as? KanaModel else { return }
+            guard let currentArray = array as? [KanaModel] else { return }
+            guard var nexElement = nextElement as? KanaModel else { return }
             if nexElement.id != currentArray.last?.id && nextElement != nil {
                 previous = currentElement.kana
                 previousElement = currentElement

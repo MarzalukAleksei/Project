@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-struct Kana {
+struct KanaModel {
     var kana: String
     var reading: String
     var id: Int = 0
@@ -20,10 +20,10 @@ struct Kana {
 
 class KanaSetter {
 
-func transformToKana(_ typeOf: TypeOfCollectionItem) -> [Kana] {
+func transformToKana(_ typeOf: TypeOfCollectionItem) -> [KanaModel] {
     let fileReader = FileReader()
-    var element = Kana(kana: "", reading: "")
-    var array = [Kana]()
+    var element = KanaModel(kana: "", reading: "")
+    var array = [KanaModel]()
     let fileCSV = fileReader.getArrayFromCSV(fileName: "Kana", fileType: "csv")
     switch typeOf {
     case .hiragana:

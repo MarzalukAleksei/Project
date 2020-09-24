@@ -77,7 +77,7 @@ class KanaCollectionViewController: UICollectionViewController {
         
         switch typeOfCollection {
         case .hiragana, .katakana:
-            let element = arrayOfElements[indexPath.item] as? Kana
+            let element = arrayOfElements[indexPath.item] as? KanaModel
             cell.label.text = element?.kana ?? "-"
             if element?.mistake == true {
                 cell.label.textColor = .red

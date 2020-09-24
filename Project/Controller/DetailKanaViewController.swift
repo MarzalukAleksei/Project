@@ -153,9 +153,10 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
         case .katakana:
             array = kana.transformToKana(.katakana)
         case .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
-            array = difficult.kanjiArray
+            guard let element = startElement as? KanjiModel else { return }
+            array = difficult.selectLevelFromArray(difficultLevel: element.level)
         case .kanjiAll:
-            array = difficult.kanjiArray
+            array = difficult.selectLevelFromArray(difficultLevel: 0)
         default: break
         }
     }
@@ -192,11 +193,10 @@ class DetailKanaViewController: UIViewController, UITableViewDelegate, UITableVi
             guard let currentElement = element as? KanjiModel else { return }
             guard let currentArray = array as? [KanjiModel] else { return }
             if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
-                // MARK: КАКОГО ХЕРА Массив ПУСТОЙ?!
                 previous = currentArray[currentElement.id - 2].body
-//                previousElement = currentArray[currentElement.id - 2]
-//                next = currentArray[currentElement.id].body
-//                nextElement = currentArray[currentElement.id]
+                previousElement = currentArray[currentElement.id - 2]
+                next = currentArray[currentElement.id].body
+                nextElement = currentArray[currentElement.id]
             } else if currentElement.id == currentArray.first?.id && currentElement.id == currentArray.last?.id {
                 nextElement = nil
                 previousElement = nil

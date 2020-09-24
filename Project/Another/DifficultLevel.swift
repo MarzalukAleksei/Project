@@ -10,11 +10,9 @@ import Foundation
 
 class DifficultLevel {
     
-   var kanjiArray = [Any]()
-    
 func selectLevelFromArray (difficultLevel: Int) -> [Any] {
     let kanji = KanjiSetter()
-    kanjiArray.removeAll()
+    var kanjiArray = [Any]()
     for var element in kanji.setKanji() {
         if element.level == difficultLevel {
             element.id = kanjiArray.count + 1

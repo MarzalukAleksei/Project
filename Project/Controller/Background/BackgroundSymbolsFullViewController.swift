@@ -20,7 +20,6 @@ class BackgroundSymbolsFullViewController: UIViewController {
         let labelHeigth = backgroundlabelHeight
         let kana = KanaSetter()
 
-        
         let horizontal = horizontalCount(labelWidth: labelWidth)
         let vertical = verticalCount(labelheigh: labelHeigth)
         let katakana = kana.transformToKana(.katakana)

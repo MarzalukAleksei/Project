@@ -33,7 +33,6 @@ class BackgroundAnimatedViewController: UIViewController {
             animateLabel(label: newLabel,duration: Double(randomFloat(from: backgroundAnimateDurationFrom, to: backgroundAnimateDurationTo)) )// добавили сюда, массив в принципе не особо нужен как оказалось
         }
     }
-                
             
     private func animateLabel(label: UILabel, duration: Double){
         UIView.animate(withDuration: duration, animations: {

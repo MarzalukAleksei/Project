@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
+		103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */; };
 		CF074485251BB906001ADD9C /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF074484251BB906001ADD9C /* Kanji.csv */; };
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
+		103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailKanaViewController + Extensions.swift"; sourceTree = "<group>"; };
 		2703ADBE244F9602DB16AFE2 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,15 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
+		103D477D251E09F900F0BE92 /* DetailKana */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */,
+				103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */,
+			);
+			path = DetailKana;
+			sourceTree = "<group>";
+		};
 		1B54F71BD980E63E9BE213F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,12 +151,12 @@
 		CF4B820824AD1FFF00A2CBA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				103D477D251E09F900F0BE92 /* DetailKana */,
 				103D475F251E047400F0BE92 /* Background */,
 				CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */,
 				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
 				CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */,
 				CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */,
-				CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +318,7 @@
 				CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */,
 				CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
+				103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaModel.swift in Sources */,
 				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,

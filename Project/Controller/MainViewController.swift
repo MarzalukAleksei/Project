@@ -8,16 +8,9 @@
 
 import UIKit
 
-class MainViewController: BackgroundViewController {
+class MainViewController: BackgroundAnimatedViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-}
-
-class First {
-    func run() { }
-}
-
-class Second: First {
-    func fly() { }
 }

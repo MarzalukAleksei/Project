@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class KanaCollectionViewController: UICollectionViewController {
 
     let itemsAtRow = itemsInCollectionView
@@ -96,8 +93,7 @@ class KanaCollectionViewController: UICollectionViewController {
         return cell
     }
 }
-    extension KanaCollectionViewController: UICollectionViewDelegateFlowLayout{
-        
+extension KanaCollectionViewController: UICollectionViewDelegateFlowLayout{
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
             let paddingWidth = sectionInsets.left * (itemsAtRow + 1.000001)
@@ -114,8 +110,7 @@ class KanaCollectionViewController: UICollectionViewController {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             return sectionInsets.left
         }
-        
-    }
+}
     
    
 

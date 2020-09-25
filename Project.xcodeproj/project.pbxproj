@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
 		CF074485251BB906001ADD9C /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF074484251BB906001ADD9C /* Kanji.csv */; };
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
@@ -19,7 +20,7 @@
 		CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */; };
 		CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */; };
 		CF4B81FE24AA429600A2CBA8 /* KanaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B81FD24AA429600A2CBA8 /* KanaModel.swift */; };
-		CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */; };
+		CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820024AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift */; };
 		CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */; };
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
 		CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
 		2703ADBE244F9602DB16AFE2 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		CF30CD612472CD1F005B09F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
 		CF4B81FD24AA429600A2CBA8 /* KanaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaModel.swift; sourceTree = "<group>"; };
-		CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		CF4B820024AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimatedViewController.swift; sourceTree = "<group>"; };
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
 		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanaViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103D475F251E047400F0BE92 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */,
+				CF4B820024AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
 		1B54F71BD980E63E9BE213F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +140,9 @@
 		CF4B820824AD1FFF00A2CBA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				103D475F251E047400F0BE92 /* Background */,
 				CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */,
 				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
-				CF4B820024AC6B2100A2CBA8 /* BackgroundViewController.swift */,
 				CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */,
 				CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */,
 				CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */,
@@ -298,6 +309,7 @@
 				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaModel.swift in Sources */,
+				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */,
@@ -307,7 +319,7 @@
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
 				CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */,
-				CF4B820124AC6B2100A2CBA8 /* BackgroundViewController.swift in Sources */,
+				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
 				CF857BD824C1B25A0084DCE9 /* KanjiModel.swift in Sources */,
 			);

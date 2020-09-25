@@ -1,5 +1,5 @@
 //
-//  BackgroundViewController.swift
+//  BackgroundAnimatedViewController.swift
 //  Project
 //
 //  Created by ブラック狼 on 01.07.2020.
@@ -8,17 +8,15 @@
 
 import UIKit
 
-class BackgroundViewController: UIViewController {
-
-    @IBOutlet private weak var alphabelButtom: UIButton!
+class BackgroundAnimatedViewController: UIViewController {
+    
     private let widthOfLabel = backgroundlabelwidth
     private let heightOfLabel = backgroundlabelHeight
     private let firstCordinate = backgoundStartConrdinate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            createLabel()
-            view.backgroundColor = designBackgroundColor
+        createLabel()
     }
     
     private func createLabel() {
@@ -29,7 +27,7 @@ class BackgroundViewController: UIViewController {
             guard let arrayItem = kanji.setKanji().randomElement()?.body else { return }
             let y = heightOfLabel * CGFloat(value)
             let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: firstCordinate, to: UIScreen.main.bounds.width))
-                     //   labelArray.append(newLabel)
+           
             view.addSubview(newLabel)
             view.sendSubviewToBack(newLabel)
             animateLabel(label: newLabel,duration: Double(randomFloat(from: backgroundAnimateDurationFrom, to: backgroundAnimateDurationTo)) )// добавили сюда, массив в принципе не особо нужен как оказалось

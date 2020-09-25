@@ -8,81 +8,29 @@
 
 import UIKit
 
-class AlphabetViewController: UIViewController {
+class AlphabetViewController: BackgroundSymbolsFullViewController {
 
     @IBOutlet weak var hiraganaButtom: UIButton!
     @IBOutlet weak var katakanaButtom: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = designBackgroundColor
-        kanaBackgroundLabel()
+        loadDesign()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "hiraganaSegue"{
-                guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
+        if segue.identifier == "hiraganaSegue" {
+            guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
                 destitantion.typeOfCollection = TypeOfCollectionItem.hiragana
-            }else if segue.identifier == "katakanaSegue"{
-                guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
-                destitantion.typeOfCollection = TypeOfCollectionItem.katakana
-            }
+        } else if segue.identifier == "katakanaSegue" {
+            guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
+            destitantion.typeOfCollection = TypeOfCollectionItem.katakana
         }
+    }
     
-    func kanaBackgroundLabel(){
-        let labelWidth = backgroundlabelwidth
-        let labelHeigth = backgroundlabelHeight
-        let kana = KanaSetter()
-        
+    private func loadDesign() {
+        view.backgroundColor = designBackgroundColor
         hiraganaButtom.backgroundColor = designElementColor
         katakanaButtom.backgroundColor = designElementColor
-        
-        for horizontalItem in 0...horizontalCount(labelWidth: labelWidth){
-            for verticalItem in 0...verticalCount(labelheigh: labelHeigth){
-                let x = labelWidth * CGFloat(horizontalItem)
-                let y = labelHeigth * CGFloat(verticalItem)
-                if verticalItem % 2 == 0 {
-                    guard let object = kana.randomKana(objectArray: kana.transformToKana(.katakana)) else {
-                        return
-                    }
-                    let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
-                    view.addSubview(label)
-                    view.sendSubviewToBack(label)
-                } else {
-                    guard let object = kana.randomKana(objectArray: kana.transformToKana(.hiragana)) else {
-                        return
-                    }
-                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
-                    view.addSubview(newLabel)
-                    view.sendSubviewToBack(newLabel)
-                }
-                    
-            }
-        }
-        
     }
-    
-    func verticalCount(labelheigh: CGFloat) -> Int {
-        let count = UIScreen.main.bounds.height / labelheigh
-        return Int(count)
-    }
-    
-    func horizontalCount(labelWidth: CGFloat) -> Int {
-        let count = UIScreen.main.bounds.width / labelWidth
-        return Int(count)
-    }
-    
-    func createLabel(xCor: CGFloat,yCor: CGFloat,width: CGFloat,height: CGFloat, text: String) -> UILabel {
-        let label = UILabel(frame: CGRect(x: xCor, y: yCor, width: width, height: height))
-        label.text = text
-        label.textAlignment = .center
-        
-        
-        return label
-    }
-    
-    
-    
-    
-    
 }

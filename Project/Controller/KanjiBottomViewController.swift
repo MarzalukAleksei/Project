@@ -8,55 +8,20 @@
 
 import UIKit
 
-class KanjiBottomViewController: UIViewController {
+class KanjiBottomViewController: BackgroundSymbolsFullViewController {
 
     @IBOutlet private var buttons: [UIButton]!
-    
-    let kanji = KanjiSetter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = designBackgroundColor
-        background()
+        loadDesign()
     }
     
-    private func background() {
-        let labelWidth = backgroundlabelwidth
-        let labelHeigh = backgroundlabelHeight
-        let bounds = view.bounds.height
-        let kanjiArray = kanji.setKanji() // Создал, тк была ошибка при прямой загрузке
-        
+    private func loadDesign() {
         buttons.forEach { (button) in
             button.backgroundColor = designElementColor
-            
         }
-        
-        for horizontal in 0...backgroundHorizontalElementsCount(elementHeight: labelWidth) {
-            for vertical in 0...backgroungVerticalElementsCount(elementWidth: labelHeigh) {
-                let x = labelWidth * CGFloat(horizontal)
-                let y = labelHeigh * CGFloat(vertical)
-                let label = UILabel(frame: CGRect(x: x, y: y, width: labelWidth, height: labelHeigh))
-                label.text = kanjiArray.randomElement()?.body
-                label.textAlignment = .center
-                if bounds >= y + labelHeigh {
-                    view.addSubview(label)
-                    view.sendSubviewToBack(label)
-                }
-            }
-        }
-    }
-    
-    
-    func someFunc() { }
-    
-    func backgroundHorizontalElementsCount(elementHeight: CGFloat) -> Int{
-        let count = view.bounds.width / elementHeight
-        return Int(count)
-    }
-    
-    func backgroungVerticalElementsCount(elementWidth: CGFloat) -> Int {
-        let count = view.bounds.height / elementWidth
-        return Int(count)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -57,20 +57,5 @@ class SearchTableViewController: UITableViewController {
 
         return cell
     }
-    
-
-    
-
 }
 
-extension SearchTableViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text ?? "")
-    }
-    func filterContentForSearchText(_ searchText: String) {
-        searchArray = array.filter({ (array: VocabularyModel) -> Bool in
-            return array.kanji.lowercased().contains(searchText.lowercased())
-        })
-        tableView.reloadData()
-    }
-}

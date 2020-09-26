@@ -24,6 +24,7 @@ func selectLevelFromArray (difficultLevel: Int) -> [Any] {
     }
     return kanjiArray
 }
+    
 func getArray(typeOf: TypeOfCollectionItem) -> [Any] {
     let kana = KanaSetter()
     let difficult = DifficultLevel()

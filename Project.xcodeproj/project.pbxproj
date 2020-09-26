@@ -10,6 +10,7 @@
 		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
 		103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */; };
 		10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FE3251FCCFC00F39215 /* UILabel.swift */; };
+		10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */; };
 		CF074485251BB906001ADD9C /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF074484251BB906001ADD9C /* Kanji.csv */; };
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
@@ -43,6 +44,7 @@
 		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
 		103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailKanaViewController + Extensions.swift"; sourceTree = "<group>"; };
 		10734FE3251FCCFC00F39215 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController + Extensions.swift"; sourceTree = "<group>"; };
 		2703ADBE244F9602DB16AFE2 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +68,6 @@
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
 		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanaViewController.swift; sourceTree = "<group>"; };
-		CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyProgram.sketch; sourceTree = "<group>"; };
 		CF69657E25063F4000FCE031 /* DesignParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignParameters.swift; sourceTree = "<group>"; };
 		CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiBottomViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				CFAD1AF5251E7C370025EB6A /* SearchTableViewController.swift */,
+				10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -228,6 +230,33 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		10734FE7251FDA2B00F39215 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10734FE8251FDA5700F39215 /* Files */,
+				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10734FE8251FDA5700F39215 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				10734FE9251FDA6000F39215 /* CSV */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		10734FE9251FDA6000F39215 /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				CF074484251BB906001ADD9C /* Kanji.csv */,
+				CF2BCC5524F40397003859FD /* Kana.csv */,
+				CF9A631D250244CE00D07CBF /* Vocabulary.csv */,
+			);
+			path = CSV;
+			sourceTree = "<group>";
+		};
 		1B54F71BD980E63E9BE213F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +295,7 @@
 		CF30CD522472CD1C005B09F4 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				10734FE7251FDA2B00F39215 /* Resources */,
 				10734FA7251FC43F00F39215 /* Source */,
 				CF4B820A24AD201F00A2CBA8 /* Storybord */,
 				CF4B820B24AD208600A2CBA8 /* Another */,
@@ -297,13 +327,8 @@
 				CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */,
 				CF69657E25063F4000FCE031 /* DesignParameters.swift */,
 				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
-				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
-				CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */,
-				CF074484251BB906001ADD9C /* Kanji.csv */,
-				CF2BCC5524F40397003859FD /* Kana.csv */,
-				CF9A631D250244CE00D07CBF /* Vocabulary.csv */,
 			);
 			path = Another;
 			sourceTree = "<group>";
@@ -446,6 +471,7 @@
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
+				10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */,
 				CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,

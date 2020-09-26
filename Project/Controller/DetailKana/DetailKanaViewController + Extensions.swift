@@ -53,11 +53,17 @@ extension DetailKanaViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.kanjiBody.text = row.kanji
                     cell.kanjiReading.text = row.kana
                     cell.translateTableViewCell.text = row.translate
+                    cell.kanjiBody.textColor = designTextColor
+                    cell.kanjiReading.textColor = designTextColor
+                    cell.translateTableViewCell.textColor = designTextColor
                 case .main:
                     guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
                     cell.kanjiBody.text = row
                     cell.kanjiReading.text = ""
                     cell.translateTableViewCell.text = ""
+                    cell.kanjiBody.textColor = designTextColor
+                    cell.kanjiReading.textColor = designTextColor
+                    cell.translateTableViewCell.textColor = designTextColor
                 }
             }
         case is KanaModel:

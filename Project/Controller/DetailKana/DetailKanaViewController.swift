@@ -65,14 +65,17 @@ class DetailKanaViewController: UIViewController {
     }
     
     func viewParameters() {
+        detailLabel.textColor = designTextColor
         view.backgroundColor = designBackgroundColor
         tableView.allowsSelection = false
         tableView.backgroundColor = designElementColor
         tableView.separatorColor = designSeparatorColor
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * designElementCornerRadius
         previousButtonOutlet.backgroundColor = designElementColor
+        previousButtonOutlet.setTitleColor(designTextColor, for: .normal)
         nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * designElementCornerRadius
         nextButtonOutlet.backgroundColor = designElementColor
+        nextButtonOutlet.setTitleColor(designTextColor, for: .normal)
     }
     
     func changeCollectionArray() {

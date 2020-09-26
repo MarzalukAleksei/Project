@@ -90,6 +90,7 @@ class KanaCollectionViewController: UICollectionViewController {
         cell.layer.cornerRadius = cell.bounds.width * designElementCornerRadius
         cell.backgroundColor = designElementColor
         cell.label.textAlignment = .center
+        cell.label.textColor = designTextColor
         return cell
     }
 }

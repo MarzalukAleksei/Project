@@ -10,13 +10,26 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
+    let searchController = UISearchController(searchResultsController: nil)
     let vocablary = VocabularySetter()
-    var searchArray: [VocabularyModel] = []
+    var array: [VocabularyModel] = []
+    var searchArray = [VocabularyModel]()
+    var seachBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchArray = vocablary.transformToVocabulary()
+        array = vocablary.transformToVocabulary()
         
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Поиск"
+        searchController.searchBar.isHidden = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = false
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +37,6 @@ class SearchTableViewController: UITableViewController {
         return searchArray.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         cell.kanjiBody.text = searchArray[indexPath.row].kanji
@@ -37,4 +49,15 @@ class SearchTableViewController: UITableViewController {
 
     
 
+}
+
+extension SearchTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text ?? "")
+    }
+    func filterContentForSearchText(_ searchText: String) {
+        searchArray = array.filter({ (array: VocabularyModel) -> Bool in
+            return array.kanji.lowercased().contains(searchText.lowercased())
+        })
+    }
 }

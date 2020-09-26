@@ -26,13 +26,12 @@ class SearchTableViewController: UITableViewController {
         super.viewDidLoad()
         array = vocablary.transformToVocabulary()
         
-        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.searchBar.placeholder = "Поиск"
-//        searchController.searchBar.isHidden = false
         navigationItem.searchController = searchController
         definesPresentationContext = false
+        tableView.allowsSelection = false
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

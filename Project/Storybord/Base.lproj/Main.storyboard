@@ -132,7 +132,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="wEH-dt-b2O" kind="relationship" relationship="rootViewController" id="QeY-ap-T1a"/>
+                        <segue destination="wEH-dt-b2O" kind="relationship" relationship="rootViewController" id="z8d-G6-Lb0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulz-pN-cmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -391,6 +391,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass" catalog="system" id="skq-Xg-6XC"/>
+                    <navigationItem key="navigationItem" id="AhO-Ba-SZX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsp-WJ-Czg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

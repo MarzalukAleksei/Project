@@ -18,6 +18,9 @@ class SearchTableViewController: UITableViewController {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
+    var isFiltering: Bool {
+        return searchController.isActive && !seachBarIsEmpty
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +28,33 @@ class SearchTableViewController: UITableViewController {
         
         
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = true
         searchController.searchBar.placeholder = "Поиск"
-        searchController.searchBar.isHidden = false
+//        searchController.searchBar.isHidden = false
         navigationItem.searchController = searchController
         definesPresentationContext = false
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return searchArray.count
+        if isFiltering {
+            return searchArray.count
+        }
+        return array.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
-        cell.kanjiBody.text = searchArray[indexPath.row].kanji
-        cell.kanjiReading.text = searchArray[indexPath.row].kana
-        cell.kanjiTranslate.text = searchArray[indexPath.row].translate
+        let searchElement: VocabularyModel
+        
+        if isFiltering {
+            searchElement = searchArray[indexPath.row]
+        } else {
+            searchElement = array[indexPath.row]
+        }
+        
+        cell.kanjiBody.text = searchElement.kanji
+        cell.kanjiReading.text = searchElement.kana
+        cell.kanjiTranslate.text = searchElement.translate
 
         return cell
     }
@@ -59,5 +72,6 @@ extension SearchTableViewController: UISearchResultsUpdating {
         searchArray = array.filter({ (array: VocabularyModel) -> Bool in
             return array.kanji.lowercased().contains(searchText.lowercased())
         })
+        tableView.reloadData()
     }
 }

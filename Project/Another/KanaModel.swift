@@ -6,9 +6,7 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-import Foundation
 import UIKit
-
 
 struct KanaModel {
     var kana: String

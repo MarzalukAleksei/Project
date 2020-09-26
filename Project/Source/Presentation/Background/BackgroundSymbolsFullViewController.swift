@@ -28,21 +28,13 @@ class BackgroundSymbolsFullViewController: UIViewController {
             for verticalItem in 0...vertical {
                 let x = labelWidth * CGFloat(horizontalItem)
                 let y = labelHeigth * CGFloat(verticalItem)
-                if verticalItem % 2 == 0 {
-                    guard let object = kana.randomKana(objectArray: katakana) else {
-                        return
-                    }
-                    let label = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
-                    view.addSubview(label)
-                    view.sendSubviewToBack(label)
-                } else {
-                    guard let object = kana.randomKana(objectArray: hiragana) else {
-                        return
-                    }
-                    let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
-                    view.addSubview(newLabel)
-                    view.sendSubviewToBack(newLabel)
+                let arrayOfItems = verticalItem % 2 == 0 ? katakana : hiragana
+                guard let object = kana.randomKana(objectArray: arrayOfItems ) else {
+                    return
                 }
+                let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
+                view.addSubview(newLabel)
+                view.sendSubviewToBack(newLabel)
             }
         }
     }

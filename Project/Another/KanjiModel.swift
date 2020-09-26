@@ -23,23 +23,23 @@ struct KanjiModel {
 class KanjiSetter {
 
     func setKanji() -> [KanjiModel] {
-    var element = KanjiModel(number: 0, level: 0, body: "", readingHiragana: "", readingKatakana: "", translate: "")
-    var array: [KanjiModel] = []
-    let fileReader = FileReader()
+        var element = KanjiModel(number: 0, level: 0, body: "", readingHiragana: "", readingKatakana: "", translate: "")
+        var array: [KanjiModel] = []
+        let fileReader = FileReader()
         
-    let CSVArray = fileReader.getArrayFromCSV(fileName: "Kanji", fileType: "csv")
-    for item in CSVArray {
-        element.body = item["Кандзи"] ?? ""
-        element.translate = item["Значение"] ?? ""
-        element.readingKatakana = item["On"] ?? "ー"
-        element.readingHiragana = item["Kun"] ?? "ー"
-        element.number = Int(item["Номер"] ?? "") ?? 0
-        element.example = item["例"]?.components(separatedBy: "・") ?? []
-        element.level = Int(item["Level"] ?? "") ?? 0
-        if element.body != "" && element.translate != "" && element.number != 0 && element.level != 0 {
-            array.append(element)
+        let CSVArray = fileReader.getArrayFromCSV(fileName: "Kanji", fileType: "csv")
+        for item in CSVArray {
+            element.body = item["Кандзи"] ?? ""
+            element.translate = item["Значение"] ?? ""
+            element.readingKatakana = item["On"] ?? "ー"
+            element.readingHiragana = item["Kun"] ?? "ー"
+            element.number = Int(item["Номер"] ?? "") ?? 0
+            element.example = item["例"]?.components(separatedBy: "・") ?? []
+            element.level = Int(item["Level"] ?? "") ?? 0
+            if element.body != "" && element.translate != "" && element.number != 0 && element.level != 0 {
+                array.append(element)
+            }
         }
+        return array
     }
-    return array
-}
 }

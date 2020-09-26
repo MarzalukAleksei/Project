@@ -103,9 +103,102 @@
 			children = (
 				CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */,
 				103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */,
-				CFAD1AF5251E7C370025EB6A /* SearchTableViewController.swift */,
 			);
 			path = DetailKana;
+			sourceTree = "<group>";
+		};
+		10734FA7251FC43F00F39215 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				10734FCA251FC4EC00F39215 /* Presentation */,
+				10734FC9251FC4D800F39215 /* Interactors */,
+				10734FC8251FC4C900F39215 /* Models */,
+				10734FC7251FC4B900F39215 /* Mappers */,
+				10734FC6251FC48B00F39215 /* Managers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		10734FC6251FC48B00F39215 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		10734FC7251FC4B900F39215 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		10734FC8251FC4C900F39215 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		10734FC9251FC4D800F39215 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		10734FCA251FC4EC00F39215 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				10734FD0251FC57A00F39215 /* Kanji */,
+				10734FCE251FC55300F39215 /* Alphabet */,
+				10734FCD251FC54900F39215 /* Main */,
+				10734FCC251FC53A00F39215 /* KanaCollection */,
+				103D475F251E047400F0BE92 /* Background */,
+				10734FCB251FC52500F39215 /* Search */,
+				103D477D251E09F900F0BE92 /* DetailKana */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		10734FCB251FC52500F39215 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD1AF5251E7C370025EB6A /* SearchTableViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		10734FCC251FC53A00F39215 /* KanaCollection */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */,
+			);
+			path = KanaCollection;
+			sourceTree = "<group>";
+		};
+		10734FCD251FC54900F39215 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		10734FCE251FC55300F39215 /* Alphabet */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */,
+			);
+			path = Alphabet;
+			sourceTree = "<group>";
+		};
+		10734FD0251FC57A00F39215 /* Kanji */ = {
+			isa = PBXGroup;
+			children = (
+				CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */,
+			);
+			path = Kanji;
 			sourceTree = "<group>";
 		};
 		1B54F71BD980E63E9BE213F2 /* Frameworks */ = {
@@ -146,24 +239,11 @@
 		CF30CD522472CD1C005B09F4 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				10734FA7251FC43F00F39215 /* Source */,
 				CF4B820A24AD201F00A2CBA8 /* Storybord */,
-				CF4B820824AD1FFF00A2CBA8 /* Controller */,
 				CF4B820B24AD208600A2CBA8 /* Another */,
 			);
 			path = Project;
-			sourceTree = "<group>";
-		};
-		CF4B820824AD1FFF00A2CBA8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				103D477D251E09F900F0BE92 /* DetailKana */,
-				103D475F251E047400F0BE92 /* Background */,
-				CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */,
-				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
-				CF4B81F524AA338200A2CBA8 /* AlphabetViewController.swift */,
-				CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		CF4B820A24AD201F00A2CBA8 /* Storybord */ = {

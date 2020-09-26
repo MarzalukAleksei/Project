@@ -14,9 +14,15 @@ class BackgroundAnimatedViewController: UIViewController {
     private let heightOfLabel = backgroundlabelHeight
     private let firstCordinate = backgoundStartConrdinate
     
+    private var labels = [UILabel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     private func createLabel() {
@@ -27,7 +33,7 @@ class BackgroundAnimatedViewController: UIViewController {
             guard let arrayItem = kanji.setKanji().randomElement()?.body else { return }
             let y = heightOfLabel * CGFloat(value)
             let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: firstCordinate, to: UIScreen.main.bounds.width))
-           
+            labels.append(newLabel)
             view.addSubview(newLabel)
             view.sendSubviewToBack(newLabel)
             animateLabel(label: newLabel,duration: Double(randomFloat(from: backgroundAnimateDurationFrom, to: backgroundAnimateDurationTo)) )// добавили сюда, массив в принципе не особо нужен как оказалось
@@ -50,7 +56,7 @@ class BackgroundAnimatedViewController: UIViewController {
         return count
     }
                 
-    private func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel{
+    private func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel {
         let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
         label.textAlignment = .center
         label.text = labelText

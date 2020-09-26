@@ -10,14 +10,17 @@ import UIKit
 
 class BackgroundSymbolsFullViewController: UIViewController {
     
+    private let widthOfLabel: CGFloat = 30
+    private let heightOfLabel: CGFloat = 30
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         kanaBackgroundLabel()
     }
     
     func kanaBackgroundLabel() {
-        let labelWidth = backgroundlabelwidth
-        let labelHeigth = backgroundlabelHeight
+        let labelWidth = widthOfLabel
+        let labelHeigth = heightOfLabel
         let kana = KanaSetter()
 
         let horizontal = horizontalCount(labelWidth: labelWidth)

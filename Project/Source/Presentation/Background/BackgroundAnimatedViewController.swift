@@ -10,58 +10,67 @@ import UIKit
 
 class BackgroundAnimatedViewController: UIViewController {
     
-    private let widthOfLabel = backgroundlabelwidth
-    private let heightOfLabel = backgroundlabelHeight
-    private let firstCordinate = backgoundStartConrdinate
-    
+    private let backgroundAnimateDurationFrom: CGFloat = 10
+    private let backgroundAnimateDurationTo: CGFloat = 30
+    private let widthOfLabel: CGFloat = 30
+    private let heightOfLabel: CGFloat = 30
+    private let firstCordinate: CGFloat = 0
     private var labels = [UILabel]()
+    private var onDisplay = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createLabel()
+        createLabels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        onDisplay = true
+        setupStartPlaceOfLabelsAndAnimateIt()
     }
     
-    private func createLabel() {
-        let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel) // теперь тут количество лейблов на экране
-                // необходимо сейчас поместить ихз всех на экарн, для этого в функцию label добавь ещё один параметр - Y, чтобы можно было регулировать координату начала
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.layer.removeAllAnimations()
+        onDisplay = false
+    }
+    
+    private func setupStartPlaceOfLabelsAndAnimateIt() {
+        labels.forEach { (label) in
+            label.frame.origin.x = randomFloat(from: firstCordinate, to: UIScreen.main.bounds.width)
+            animateLabel(label: label, duration: Double(randomFloat(from: backgroundAnimateDurationFrom, to: backgroundAnimateDurationTo)))
+        }
+    }
+    
+    private func createLabels() {
+        let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel)
         let kanji = KanjiSetter()
+        let arrayItem = kanji.setKanji()
         for value in 0...countOfLabels {
-            guard let arrayItem = kanji.setKanji().randomElement()?.body else { return }
+            guard let randomText = arrayItem.randomElement()?.body else { return }
+            let alpha = randomFloat(from: 0.40, to: 0.85)
+            let widthSize = randomFloat(from: 15, to: 49)
             let y = heightOfLabel * CGFloat(value)
-            let newLabel = label(labelText: arrayItem, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: randomFloat(from: firstCordinate, to: UIScreen.main.bounds.width))
+            let newLabel = UILabel(labelText: randomText, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: 0, widthSize: widthSize, alpha: alpha)
             labels.append(newLabel)
             view.addSubview(newLabel)
             view.sendSubviewToBack(newLabel)
-            animateLabel(label: newLabel,duration: Double(randomFloat(from: backgroundAnimateDurationFrom, to: backgroundAnimateDurationTo)) )// добавили сюда, массив в принципе не особо нужен как оказалось
         }
     }
-            
-    private func animateLabel(label: UILabel, duration: Double){
+    
+    private func animateLabel(label: UILabel, duration: Double) {
         UIView.animate(withDuration: duration, animations: {
-            label.frame.origin.x = self.view.frame.width // те указали что Х = ширине(длинне) экрана, не путай с высотой - height
-        }) { (_) in
-                // здесь будет выполняться то, когда закончится анимация
-            label.frame.origin.x = self.firstCordinate
-            self.animateLabel(label: label, duration: duration)
+            label.frame.origin.x = self.view.frame.width
+        }) { [weak self] (_) in
+            guard let weakSelf = self else { return }
+            if weakSelf.onDisplay {
+                label.frame.origin.x = weakSelf.firstCordinate
+                weakSelf.animateLabel(label: label, duration: duration)
+            }
         }
     }
     
     private func getCountOfLabels(heightOfLabel: CGFloat) -> Int {
-            //UIScreen.main.bounds.height - высота всей вьюхи
-        let count = Int( UIScreen.main.bounds.height / heightOfLabel ) // высота общей делить на высоту элемента ты получишь количество элементов которые влазят в экран перевести в инт, тк нужно целое количество
-        return count
-    }
-                
-    private func label(labelText: String, labelWidth: CGFloat,labelHeight: CGFloat,yCordinate: CGFloat, xCordinate: CGFloat) -> UILabel {
-        let label = UILabel(frame: CGRect(x: xCordinate,y: yCordinate, width: labelWidth, height: labelHeight))
-        label.textAlignment = .center
-        label.text = labelText
-        label.alpha = randomFloat(from: 0.40, to: 0.85)
-        label.font.withSize(randomFloat(from: 15, to: 49))
-        return label
+        return Int( UIScreen.main.bounds.height / heightOfLabel)
     }
 }

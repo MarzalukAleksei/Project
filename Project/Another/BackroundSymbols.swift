@@ -8,9 +8,8 @@
 
 import UIKit
 
-func randomFloat(from: CGFloat, to: CGFloat) -> CGFloat{
-    let random = CGFloat.random(in: from...to)
-    return random
+func randomFloat(from: CGFloat, to: CGFloat) -> CGFloat {
+    return CGFloat.random(in: from...to)
 }
 
 enum TypeOfCollectionItem: String {

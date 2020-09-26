@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
 		103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */; };
+		10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FE3251FCCFC00F39215 /* UILabel.swift */; };
 		CF074485251BB906001ADD9C /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF074484251BB906001ADD9C /* Kanji.csv */; };
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
 		103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailKanaViewController + Extensions.swift"; sourceTree = "<group>"; };
+		10734FE3251FCCFC00F39215 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		2703ADBE244F9602DB16AFE2 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		10734FA7251FC43F00F39215 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				10734FE0251FCCD800F39215 /* Core */,
 				10734FCA251FC4EC00F39215 /* Presentation */,
 				10734FC9251FC4D800F39215 /* Interactors */,
 				10734FC8251FC4C900F39215 /* Models */,
@@ -199,6 +202,30 @@
 				CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */,
 			);
 			path = Kanji;
+			sourceTree = "<group>";
+		};
+		10734FE0251FCCD800F39215 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				10734FE1251FCCDD00F39215 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		10734FE1251FCCDD00F39215 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10734FE2251FCCEB00F39215 /* UILabel */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		10734FE2251FCCEB00F39215 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				10734FE3251FCCFC00F39215 /* UILabel.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		1B54F71BD980E63E9BE213F2 /* Frameworks */ = {
@@ -415,6 +442,7 @@
 				CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
+				10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */,
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,

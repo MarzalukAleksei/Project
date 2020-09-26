@@ -52,7 +52,7 @@ class VocabularySetter {
         return array
     }
 
-    private func transformToVocabulary() -> [VocabularyModel] {
+    func transformToVocabulary() -> [VocabularyModel] {
         var array = [VocabularyModel]()
         var element = VocabularyModel(kanji: "", kana: "", translate: "", level: 0)
         for item in fileReader.getArrayFromCSV(fileName: "Vocabulary", fileType: "csv") {

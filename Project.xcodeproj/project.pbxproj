@@ -26,6 +26,7 @@
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
 		CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */; };
 		CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69657E25063F4000FCE031 /* DesignParameters.swift */; };
+		CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */; };
 		CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CF857BD824C1B25A0084DCE9 /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */; };
@@ -65,6 +66,7 @@
 		CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanaViewController.swift; sourceTree = "<group>"; };
 		CF4B820D24AD213E00A2CBA8 /* MyProgram.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyProgram.sketch; sourceTree = "<group>"; };
 		CF69657E25063F4000FCE031 /* DesignParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignParameters.swift; sourceTree = "<group>"; };
+		CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiBottomViewController.swift; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
 		CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				CFD012CE24E723DB001F0032 /* CSVAction.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
 				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
+				CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */,
 				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF4B81FD24AA429600A2CBA8 /* KanaModel.swift */,
@@ -324,6 +327,7 @@
 				103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaModel.swift in Sources */,
+				CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */,
 				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,
 				CFAD1AF6251E7C370025EB6A /* SearchTableViewController.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,

@@ -8,7 +8,11 @@
 
 import UIKit
 
-extension SearchTableViewController: UISearchResultsUpdating {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
+}
+
+extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text ?? "")
     }

@@ -1,14 +1,16 @@
 //
-//  SearchTableViewController.swift
+//  ViewController.swift
 //  Project
 //
-//  Created by ブラック狼 on 25.09.2020.
+//  Created by ブラック狼 on 27.09.2020.
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class SearchViewController: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
     let vocablary = VocabularySetter()
@@ -34,14 +36,14 @@ class SearchTableViewController: UITableViewController {
         tableView.allowsSelection = false
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return searchArray.count
         }
         return array.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         let searchElement: VocabularyModel
         
@@ -58,4 +60,3 @@ class SearchTableViewController: UITableViewController {
         return cell
     }
 }
-

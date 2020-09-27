@@ -1,5 +1,5 @@
 //
-//  KanjiBottomViewController.swift
+//  KanjiViewController.swift
 //  Project
 //
 //  Created by ブラック狼 on 24.07.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KanjiBottomViewController: BackgroundSymbolsFullViewController {
+class KanjiViewController: BackgroundSymbolsFullViewController {
 
     @IBOutlet private var buttons: [UIButton]!
     

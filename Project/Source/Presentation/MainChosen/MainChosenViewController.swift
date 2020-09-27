@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainChosenController.swift
 //  Project
 //
 //  Created by ブラック狼 on 18.05.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: BackgroundAnimatedViewController {
+class MainChosenViewController: BackgroundAnimatedViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

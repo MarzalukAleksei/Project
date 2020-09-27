@@ -27,7 +27,7 @@ class KanaCollectionViewController: UICollectionViewController {
     }
     
     func pushToNextViewController(element: Any) {
-        guard let vc = ViewControllers.detail as? DetailKanaViewController else { return }
+        guard let vc = ViewControllers.detail as? DetailViewController else { return }
         vc.startElement = element
         vc.typeOfColletion = typeOfCollection
         self.navigationController?.pushViewController(vc, animated: true)

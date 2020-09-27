@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
-		103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */; };
+		103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */; };
 		10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FE3251FCCFC00F39215 /* UILabel.swift */; };
 		10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */; };
 		108735922521023900926E6E /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735912521023900926E6E /* ViewControllers.swift */; };
@@ -25,7 +25,7 @@
 		CF2BCC5724F40397003859FD /* Kana.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF2BCC5524F40397003859FD /* Kana.csv */; };
 		CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD532472CD1C005B09F4 /* AppDelegate.swift */; };
 		CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */; };
-		CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD572472CD1C005B09F4 /* MainViewController.swift */; };
+		CF30CD582472CD1C005B09F4 /* MainChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CD572472CD1C005B09F4 /* MainChosenViewController.swift */; };
 		CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD592472CD1C005B09F4 /* Main.storyboard */; };
 		CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */; };
 		CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30CD5E2472CD1F005B09F4 /* LaunchScreen.storyboard */; };
@@ -34,11 +34,11 @@
 		CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820024AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift */; };
 		CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */; };
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
-		CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */; };
+		CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */; };
 		CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69657E25063F4000FCE031 /* DesignParameters.swift */; };
 		CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */; };
 		CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7192D2251FE44100F285CC /* SearchViewController.swift */; };
-		CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */; };
+		CF78EC0324CA3AE40098424F /* KanjiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78EC0224CA3AE40098424F /* KanjiViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
 		CF857BD824C1B25A0084DCE9 /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */; };
 		CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF956740251D47B300AB7F3E /* DifficultLevel.swift */; };
@@ -50,7 +50,7 @@
 
 /* Begin PBXFileReference section */
 		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
-		103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailKanaViewController + Extensions.swift"; sourceTree = "<group>"; };
+		103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController + Extensions.swift"; sourceTree = "<group>"; };
 		10734FE3251FCCFC00F39215 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController + Extensions.swift"; sourceTree = "<group>"; };
 		108735912521023900926E6E /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		CF30CD502472CD1C005B09F4 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF30CD532472CD1C005B09F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF30CD572472CD1C005B09F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CF30CD572472CD1C005B09F4 /* MainChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChosenViewController.swift; sourceTree = "<group>"; };
 		CF30CD5A2472CD1C005B09F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF30CD5F2472CD1F005B09F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,11 +83,11 @@
 		CF4B820024AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimatedViewController.swift; sourceTree = "<group>"; };
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
 		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
-		CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanaViewController.swift; sourceTree = "<group>"; };
+		CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CF69657E25063F4000FCE031 /* DesignParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignParameters.swift; sourceTree = "<group>"; };
 		CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		CF7192D2251FE44100F285CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiBottomViewController.swift; sourceTree = "<group>"; };
+		CF78EC0224CA3AE40098424F /* KanjiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewController.swift; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
 		CF857BD724C1B25A0084DCE9 /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
 		CF956740251D47B300AB7F3E /* DifficultLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultLevel.swift; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 		103D477D251E09F900F0BE92 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				CF4B820624ACDC5C00A2CBA8 /* DetailKanaViewController.swift */,
-				103D477E251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift */,
+				CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */,
+				103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */,
 				108736162521179500926E6E /* Detail.storyboard */,
 			);
 			path = Detail;
@@ -207,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				108735B625210B6700926E6E /* MainChosen.storyboard */,
-				CF30CD572472CD1C005B09F4 /* MainViewController.swift */,
+				CF30CD572472CD1C005B09F4 /* MainChosenViewController.swift */,
 			);
 			path = MainChosen;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 		10734FD0251FC57A00F39215 /* Kanji */ = {
 			isa = PBXGroup;
 			children = (
-				CF78EC0224CA3AE40098424F /* KanjiBottomViewController.swift */,
+				CF78EC0224CA3AE40098424F /* KanjiViewController.swift */,
 				1087361B252118CE00926E6E /* Kanji.storyboard */,
 			);
 			path = Kanji;
@@ -502,8 +502,8 @@
 				CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */,
 				CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */,
 				108735922521023900926E6E /* ViewControllers.swift in Sources */,
-				CF30CD582472CD1C005B09F4 /* MainViewController.swift in Sources */,
-				103D477F251E0A3100F0BE92 /* DetailKanaViewController + Extensions.swift in Sources */,
+				CF30CD582472CD1C005B09F4 /* MainChosenViewController.swift in Sources */,
+				103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaModel.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
@@ -512,7 +512,7 @@
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				108735952521030F00926E6E /* Storyboards.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
-				CF78EC0324CA3AE40098424F /* KanjiBottomViewController.swift in Sources */,
+				CF78EC0324CA3AE40098424F /* KanjiViewController.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
 				10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */,
@@ -520,7 +520,7 @@
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
 				10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */,
-				CF4B820724ACDC5C00A2CBA8 /* DetailKanaViewController.swift in Sources */,
+				CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
 				CF857BD824C1B25A0084DCE9 /* KanjiModel.swift in Sources */,

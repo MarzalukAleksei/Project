@@ -1,5 +1,5 @@
 //
-//  DetailKana.swift
+//  DetailViewController.swift
 //  Project
 //
 //  Created by ブラック狼 on 01.07.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailKanaViewController: UIViewController {
+class DetailViewController: UIViewController {
   
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var detailLabel: UILabel!

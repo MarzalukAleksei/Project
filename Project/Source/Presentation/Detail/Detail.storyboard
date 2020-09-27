@@ -9,11 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail Kana View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="KYj-78-4R4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8DI-Ar-kfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="DetailKanaViewController" id="0AH-cy-9cY" customClass="DetailKanaViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="0AH-cy-9cY" customClass="DetailViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLu-G7-6hZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +146,7 @@
                         <outlet property="tableView" destination="ONO-uc-fXm" id="EPY-fb-Ldu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DI-Ar-kfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3129" y="-638"/>
         </scene>

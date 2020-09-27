@@ -13,7 +13,7 @@
         <scene sceneID="hbE-IZ-5B9">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>
-                <viewController id="ABA-iP-ymh" customClass="MainViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ABA-iP-ymh" customClass="MainChosenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YNr-UU-hp2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YIk-zb-wLk" kind="show" id="5vH-XK-hpc"/>
+                                    <segue destination="YIk-zb-wLk" kind="show" id="iCj-fu-J3q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,7 +76,7 @@
         <scene sceneID="Dgc-79-Kom">
             <objects>
                 <viewControllerPlaceholder storyboardName="Kanji" id="YIk-zb-wLk" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ZXn-sY-z4g"/>
+                    <navigationItem key="navigationItem" id="0fa-G2-aNz"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFa-yE-IeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,5 +1,5 @@
 //
-//  DetailKanaViewController + Extensions.swift
+//  DetailViewController + Extensions.swift
 //  Project
 //
 //  Created by Cyril Romanovsky on 9/25/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension DetailKanaViewController: UITableViewDelegate, UITableViewDataSource {
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
         let label = UILabel(frame: CGRect(x: 10, y: 1.5, width: tableView.bounds.width, height: headerVIew.bounds.height - 5))
@@ -34,7 +34,7 @@ extension DetailKanaViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        guard let indexOfSection = DetailKanaViewController.SectionsInTableView(rawValue: section), let count = twoDemensionalArray[indexOfSection]?.count else {
+        guard let indexOfSection = DetailViewController.SectionsInTableView(rawValue: section), let count = twoDemensionalArray[indexOfSection]?.count else {
             return 0
         }
         return count
@@ -49,7 +49,7 @@ extension DetailKanaViewController: UITableViewDelegate, UITableViewDataSource {
             if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
                 switch tableSection {
                 case .examples:
-                    guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyModel else { return UITableViewCell() }
+                    guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyModel else { return UITableViewCell() }
                     cell.kanjiBody.text = row.kanji
                     cell.kanjiReading.text = row.kana
                     cell.translateTableViewCell.text = row.translate
@@ -57,7 +57,7 @@ extension DetailKanaViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.kanjiReading.textColor = designTextColor
                     cell.translateTableViewCell.textColor = designTextColor
                 case .main:
-                    guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+                    guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
                     cell.kanjiBody.text = row
                     cell.kanjiReading.text = ""
                     cell.translateTableViewCell.text = ""
@@ -70,12 +70,12 @@ extension DetailKanaViewController: UITableViewDelegate, UITableViewDataSource {
         if let tableSection = SectionsInTableView(rawValue: indexPath.section) {
             switch tableSection {
             case .examples:
-            guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyModel else { return UITableViewCell() }
+            guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyModel else { return UITableViewCell() }
             cell.kanjiBody.text = row.kana
             cell.translateTableViewCell.text = row.translate
             cell.kanjiReading.text = ""
             case .main:
-            guard let row = twoDemensionalArray[DetailKanaViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
+            guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
             cell.kanjiBody.text = row
             cell.kanjiReading.text = ""
             cell.translateTableViewCell.text = ""

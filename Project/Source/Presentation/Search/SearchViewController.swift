@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  Project
 //
 //  Created by ブラック狼 on 27.09.2020.

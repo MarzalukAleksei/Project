@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  Project
 //
 //  Created by ブラック狼 on 27.09.2020.
@@ -36,27 +36,4 @@ class SearchViewController: UIViewController {
         tableView.allowsSelection = false
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering {
-            return searchArray.count
-        }
-        return array.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
-        let searchElement: VocabularyModel
-        
-        if isFiltering {
-            searchElement = searchArray[indexPath.row]
-        } else {
-            searchElement = array[indexPath.row]
-        }
-        
-        cell.kanjiBody.text = searchElement.kanji
-        cell.kanjiReading.text = searchElement.kana
-        cell.kanjiTranslate.text = searchElement.translate
-
-        return cell
-    }
 }

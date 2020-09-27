@@ -270,6 +270,3 @@ class DetailKanaViewController: UIViewController {
         tableView.reloadData()
     }
 }
-
-
-

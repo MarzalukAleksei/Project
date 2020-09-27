@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JWA-qd-vtB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Поиск-->
+        <scene sceneID="MuU-4e-0Ua">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="JWA-qd-vtB" customClass="SearchViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nED-0K-9u1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-Mg-abl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="VhR-Yg-omE" customClass="SearchTableViewCell" customModule="Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="31"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VhR-Yg-omE" id="VqB-4C-3m6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="漢字" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-kd-GDi">
+                                                    <rect key="frame" x="10" y="8" width="33" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кандзи, название японских иероглифов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-vM-kcU">
+                                                    <rect key="frame" x="48" y="5" width="351" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かんじ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSI-Cs-6rx">
+                                                    <rect key="frame" x="10" y="0.5" width="33" height="10"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="9x2-vM-kcU" secondAttribute="trailing" constant="15" id="5pD-FA-Cjz"/>
+                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="leading" secondItem="VqB-4C-3m6" secondAttribute="leading" constant="10" id="DcI-5S-7Cl"/>
+                                                <constraint firstItem="9x2-vM-kcU" firstAttribute="top" secondItem="VqB-4C-3m6" secondAttribute="top" constant="5" id="F9I-8j-Rtp"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EeL-kd-GDi" secondAttribute="bottom" constant="2.9999993642171248" id="KkL-rY-8BY"/>
+                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VqB-4C-3m6" secondAttribute="top" constant="7.6666666666666661" id="T6y-zg-iKG"/>
+                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="top" secondItem="hSI-Cs-6rx" secondAttribute="bottom" constant="-2.6666666666666288" id="agm-ea-O9p"/>
+                                                <constraint firstItem="9x2-vM-kcU" firstAttribute="leading" secondItem="EeL-kd-GDi" secondAttribute="trailing" constant="5" id="hg8-vI-neQ"/>
+                                                <constraint firstItem="hSI-Cs-6rx" firstAttribute="trailing" secondItem="EeL-kd-GDi" secondAttribute="trailing" id="jKS-rq-CsR"/>
+                                                <constraint firstItem="hSI-Cs-6rx" firstAttribute="leading" secondItem="EeL-kd-GDi" secondAttribute="leading" id="l0c-xn-KyA"/>
+                                                <constraint firstAttribute="bottom" secondItem="9x2-vM-kcU" secondAttribute="bottom" constant="5" id="sJe-EV-3fF"/>
+                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="centerY" secondItem="9x2-vM-kcU" secondAttribute="centerY" constant="2.1666666666667016" id="u53-Ci-STb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="kanjiBody" destination="EeL-kd-GDi" id="hY8-r2-lF5"/>
+                                            <outlet property="kanjiReading" destination="hSI-Cs-6rx" id="L2d-0e-rwi"/>
+                                            <outlet property="kanjiTranslate" destination="9x2-vM-kcU" id="HTL-6U-YDZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JWA-qd-vtB" id="nRb-Jw-AN4"/>
+                                    <outlet property="delegate" destination="JWA-qd-vtB" id="7NF-wW-6qQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gD6-IK-jRh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass" catalog="system" id="nTS-S2-z9N"/>
+                    <navigationItem key="navigationItem" id="Zue-hG-cWh"/>
+                    <connections>
+                        <outlet property="tableView" destination="8uQ-Mg-abl" id="Su2-lE-WGF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0j-Cg-rmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="800.54347826086962"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

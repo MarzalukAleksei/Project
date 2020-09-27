@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Jx-Qk-7Zs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kanji-->
+        <scene sceneID="Pvj-Rq-9Ge">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ys2-MJ-4wl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="0Jx-Qk-7Zs" customClass="KanjiBottomViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NQr-yD-oRC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-5h-f42">
+                                <rect key="frame" x="32" y="144" width="350" height="48"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="N 1">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RzG-Vh-9x5" kind="show" identifier="n1Segue" id="p7x-IC-bM3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gON-sL-XUh">
+                                <rect key="frame" x="32" y="212" width="350" height="48"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="N 2">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RzG-Vh-9x5" kind="show" identifier="n2Segue" id="QlP-5L-PF7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-8l-rPh">
+                                <rect key="frame" x="32" y="280" width="350" height="48"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="N 3">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RzG-Vh-9x5" kind="show" identifier="n3Segue" id="F0m-FC-xSX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heN-ay-Vwl">
+                                <rect key="frame" x="32" y="348" width="350" height="48"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="N 4">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RzG-Vh-9x5" kind="show" identifier="n4Segue" id="i7a-sh-neg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-sA-OsA" userLabel="All">
+                                <rect key="frame" x="32" y="76" width="350" height="48"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="All">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RzG-Vh-9x5" kind="show" identifier="AllSegue" id="8BO-eb-thP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgR-dc-pac">
+                                <rect key="frame" x="32" y="416" width="350" height="48"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="N 5">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RzG-Vh-9x5" kind="show" identifier="n5Segue" id="kXI-V8-kkD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UoB-Ew-0H7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gON-sL-XUh" firstAttribute="trailing" secondItem="Ccj-5h-f42" secondAttribute="trailing" id="6Up-ZG-Ypq"/>
+                            <constraint firstItem="2LI-sA-OsA" firstAttribute="leading" secondItem="UoB-Ew-0H7" secondAttribute="leading" constant="32" id="DAc-qN-fc9"/>
+                            <constraint firstItem="gON-sL-XUh" firstAttribute="top" secondItem="Ccj-5h-f42" secondAttribute="bottom" constant="20" id="El5-IH-DJ4"/>
+                            <constraint firstItem="Ccj-5h-f42" firstAttribute="top" secondItem="2LI-sA-OsA" secondAttribute="bottom" constant="20" id="Jhk-dl-xaF"/>
+                            <constraint firstItem="lgR-dc-pac" firstAttribute="height" secondItem="heN-ay-Vwl" secondAttribute="height" id="L9i-n3-tel"/>
+                            <constraint firstItem="lgR-dc-pac" firstAttribute="leading" secondItem="heN-ay-Vwl" secondAttribute="leading" id="LmD-xd-XaG"/>
+                            <constraint firstItem="gON-sL-XUh" firstAttribute="height" secondItem="Ccj-5h-f42" secondAttribute="height" id="R8s-Lh-aVs"/>
+                            <constraint firstItem="5s7-8l-rPh" firstAttribute="height" secondItem="gON-sL-XUh" secondAttribute="height" id="T6u-Uy-A5C"/>
+                            <constraint firstItem="gON-sL-XUh" firstAttribute="leading" secondItem="Ccj-5h-f42" secondAttribute="leading" id="WNl-tW-DfP"/>
+                            <constraint firstItem="heN-ay-Vwl" firstAttribute="leading" secondItem="5s7-8l-rPh" secondAttribute="leading" id="Yhd-cN-CWj"/>
+                            <constraint firstItem="heN-ay-Vwl" firstAttribute="height" secondItem="5s7-8l-rPh" secondAttribute="height" id="Zjl-No-yZb"/>
+                            <constraint firstItem="Ccj-5h-f42" firstAttribute="leading" secondItem="2LI-sA-OsA" secondAttribute="leading" id="c5s-nr-2EI"/>
+                            <constraint firstItem="heN-ay-Vwl" firstAttribute="top" secondItem="5s7-8l-rPh" secondAttribute="bottom" constant="20" id="clg-Q4-wJd"/>
+                            <constraint firstItem="5s7-8l-rPh" firstAttribute="trailing" secondItem="gON-sL-XUh" secondAttribute="trailing" id="daB-SL-MX1"/>
+                            <constraint firstItem="5s7-8l-rPh" firstAttribute="leading" secondItem="gON-sL-XUh" secondAttribute="leading" id="h4I-pw-eGY"/>
+                            <constraint firstItem="heN-ay-Vwl" firstAttribute="trailing" secondItem="5s7-8l-rPh" secondAttribute="trailing" id="iya-JN-NRM"/>
+                            <constraint firstItem="UoB-Ew-0H7" firstAttribute="trailing" secondItem="2LI-sA-OsA" secondAttribute="trailing" constant="32" id="j91-WE-CfD"/>
+                            <constraint firstItem="lgR-dc-pac" firstAttribute="trailing" secondItem="heN-ay-Vwl" secondAttribute="trailing" id="kj9-uJ-vOx"/>
+                            <constraint firstItem="lgR-dc-pac" firstAttribute="top" secondItem="heN-ay-Vwl" secondAttribute="bottom" constant="20" id="kjo-Sf-Sst"/>
+                            <constraint firstItem="Ccj-5h-f42" firstAttribute="height" secondItem="2LI-sA-OsA" secondAttribute="height" id="lO1-it-OI1"/>
+                            <constraint firstItem="5s7-8l-rPh" firstAttribute="top" secondItem="gON-sL-XUh" secondAttribute="bottom" constant="20" id="ray-UQ-wnF"/>
+                            <constraint firstItem="Ccj-5h-f42" firstAttribute="trailing" secondItem="2LI-sA-OsA" secondAttribute="trailing" id="tw2-Rc-6s6"/>
+                            <constraint firstItem="2LI-sA-OsA" firstAttribute="top" secondItem="UoB-Ew-0H7" secondAttribute="top" constant="32" id="ymb-ZE-PgM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="hNu-1c-Scq"/>
+                    <navigationItem key="navigationItem" title="Kanji" id="jTy-OR-HUC"/>
+                    <connections>
+                        <outletCollection property="buttons" destination="2LI-sA-OsA" collectionClass="NSMutableArray" id="Ykj-oq-qVU"/>
+                        <outletCollection property="buttons" destination="Ccj-5h-f42" collectionClass="NSMutableArray" id="ltE-Cu-Fcc"/>
+                        <outletCollection property="buttons" destination="gON-sL-XUh" collectionClass="NSMutableArray" id="aEi-c0-z1f"/>
+                        <outletCollection property="buttons" destination="5s7-8l-rPh" collectionClass="NSMutableArray" id="KsR-8s-zgK"/>
+                        <outletCollection property="buttons" destination="heN-ay-Vwl" collectionClass="NSMutableArray" id="gN4-78-Iyt"/>
+                        <outletCollection property="buttons" destination="lgR-dc-pac" collectionClass="NSMutableArray" id="oig-Eh-UzH"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1352" y="554"/>
+        </scene>
+        <!--Kana-->
+        <scene sceneID="2LB-K6-w0B">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Kana" id="RzG-Vh-9x5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vrQ-5D-edw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5AE-g2-iUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="538"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kXI-V8-kkD"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

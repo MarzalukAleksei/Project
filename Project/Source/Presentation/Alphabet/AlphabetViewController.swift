@@ -29,7 +29,7 @@ class AlphabetViewController: BackgroundSymbolsFullViewController {
     }
     
     private func loadDesign() {
-        view.backgroundColor = designBackgroundColor
+//        view.backgroundColor = designBackgroundColor
         hiraganaButtom.backgroundColor = designElementColor
         katakanaButtom.backgroundColor = designElementColor
     }

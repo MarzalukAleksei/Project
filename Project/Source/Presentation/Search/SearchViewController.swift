@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
+    
     var isFiltering: Bool {
         return searchController.isActive && !seachBarIsEmpty
     }
@@ -34,29 +35,5 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = false
         tableView.allowsSelection = false
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering {
-            return searchArray.count
-        }
-        return array.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
-        let searchElement: VocabularyModel
-        
-        if isFiltering {
-            searchElement = searchArray[indexPath.row]
-        } else {
-            searchElement = array[indexPath.row]
-        }
-        
-        cell.kanjiBody.text = searchElement.kanji
-        cell.kanjiReading.text = searchElement.kana
-        cell.kanjiTranslate.text = searchElement.translate
-
-        return cell
     }
 }

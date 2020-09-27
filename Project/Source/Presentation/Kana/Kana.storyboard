@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f2t-z5-USH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kana Collection View Controller-->
+        <scene sceneID="RXf-Hn-V5P">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCK-I3-LDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <collectionViewController id="f2t-z5-USH" customClass="KanaCollectionViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zHT-iS-ART">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uWP-ee-LeE">
+                            <size key="itemSize" width="110" height="110"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kanaCell" id="imx-bT-F7C" customClass="KanaCollectionViewCell" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="g3n-je-sCO">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-Uz-gNs">
+                                            <rect key="frame" x="4" y="4" width="102" height="102"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cb0-Uz-gNs" secondAttribute="trailing" constant="4" id="P9C-l1-phe"/>
+                                        <constraint firstItem="cb0-Uz-gNs" firstAttribute="top" secondItem="g3n-je-sCO" secondAttribute="top" constant="4" id="VPx-gP-MOA"/>
+                                        <constraint firstItem="cb0-Uz-gNs" firstAttribute="leading" secondItem="g3n-je-sCO" secondAttribute="leading" constant="4" id="k7X-Sn-hcg"/>
+                                        <constraint firstAttribute="bottom" secondItem="cb0-Uz-gNs" secondAttribute="bottom" constant="4" id="tWh-p2-e7i"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="110" height="110"/>
+                                <connections>
+                                    <outlet property="label" destination="cb0-Uz-gNs" id="2j7-bu-SX5"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="f2t-z5-USH" id="HCZ-oE-fiq"/>
+                            <outlet property="delegate" destination="f2t-z5-USH" id="O7A-oz-zjd"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="CDD-kP-tb3"/>
+                </collectionViewController>
+            </objects>
+            <point key="canvasLocation" x="3468" y="554"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

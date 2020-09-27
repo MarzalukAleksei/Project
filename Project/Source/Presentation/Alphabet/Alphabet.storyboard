@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h86-cs-elo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kana-->
+        <scene sceneID="oGj-8d-ECq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2r-rx-iAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="h86-cs-elo" customClass="AlphabetViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uda-lg-dmv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnY-co-m0d">
+                                <rect key="frame" x="32" y="151" width="350" height="85"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="egF-j9-2iU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="ХИРАГАНА">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tpj-Ct-T9c" kind="show" identifier="hiraganaSegue" id="Cov-pY-Mau"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-QC-xvO">
+                                <rect key="frame" x="32" y="296" width="350" height="85"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <state key="normal" title="КАТАКАНА">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tpj-Ct-T9c" kind="show" identifier="katakanaSegue" id="fW5-cO-NKo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eZ2-qg-mfS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g6v-QC-xvO" firstAttribute="height" secondItem="AnY-co-m0d" secondAttribute="height" id="A1s-SD-j82"/>
+                            <constraint firstItem="g6v-QC-xvO" firstAttribute="centerX" secondItem="eZ2-qg-mfS" secondAttribute="centerX" id="C18-cZ-Tl0"/>
+                            <constraint firstItem="AnY-co-m0d" firstAttribute="top" secondItem="eZ2-qg-mfS" secondAttribute="top" constant="107" id="IbS-E3-rui"/>
+                            <constraint firstItem="g6v-QC-xvO" firstAttribute="width" secondItem="AnY-co-m0d" secondAttribute="width" id="JCm-ah-ljy"/>
+                            <constraint firstItem="AnY-co-m0d" firstAttribute="leading" secondItem="eZ2-qg-mfS" secondAttribute="leading" constant="32" id="YjY-Vb-qwY"/>
+                            <constraint firstItem="g6v-QC-xvO" firstAttribute="top" secondItem="AnY-co-m0d" secondAttribute="bottom" constant="60" id="sBH-xI-1T3"/>
+                            <constraint firstItem="AnY-co-m0d" firstAttribute="centerX" secondItem="eZ2-qg-mfS" secondAttribute="centerX" id="sVg-1S-l0S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kana" id="3WA-Mf-ohr"/>
+                    <connections>
+                        <outlet property="hiraganaButtom" destination="AnY-co-m0d" id="Q0J-sd-ItV"/>
+                        <outlet property="katakanaButtom" destination="g6v-QC-xvO" id="qiI-64-Wrp"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-364"/>
+        </scene>
+        <!--Kana-->
+        <scene sceneID="P1x-mb-gUq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Kana" id="tpj-Ct-T9c" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kke-pf-Vpg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBE-dt-NK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="-486"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fW5-cO-NKo"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

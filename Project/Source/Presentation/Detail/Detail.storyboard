@@ -108,8 +108,7 @@
                                 <rect key="frame" x="15" y="84" width="75" height="75"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="0r8-gI-UJO"/>
-                                    <constraint firstAttribute="width" constant="75" id="8FV-EH-P9b"/>
+                                    <constraint firstAttribute="width" secondItem="MWZ-9p-r1I" secondAttribute="height" multiplier="1:1" id="jI4-Rr-pso"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="-1">
@@ -127,13 +126,14 @@
                             <constraint firstItem="6nu-iO-HBu" firstAttribute="trailing" secondItem="ONO-uc-fXm" secondAttribute="trailing" constant="15" id="7se-hL-saS"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="top" secondItem="6nu-iO-HBu" secondAttribute="top" constant="40" id="9QI-W9-4fa"/>
                             <constraint firstItem="ONO-uc-fXm" firstAttribute="centerX" secondItem="6nu-iO-HBu" secondAttribute="centerX" id="Gsz-nU-5CS"/>
+                            <constraint firstItem="6nu-iO-HBu" firstAttribute="trailing" secondItem="MSx-w0-upU" secondAttribute="trailing" constant="15" id="GwZ-1t-28a"/>
                             <constraint firstItem="6nu-iO-HBu" firstAttribute="bottom" secondItem="ONO-uc-fXm" secondAttribute="bottom" constant="15" id="KtS-mq-ilb"/>
-                            <constraint firstItem="MSx-w0-upU" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" constant="324" id="Xge-bD-TUX"/>
+                            <constraint firstItem="Rok-rW-dKG" firstAttribute="leading" secondItem="MWZ-9p-r1I" secondAttribute="trailing" constant="67" id="Pp7-lh-Z0e"/>
                             <constraint firstItem="ONO-uc-fXm" firstAttribute="top" secondItem="Rok-rW-dKG" secondAttribute="bottom" constant="45" id="b1y-xH-cL4"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="height" secondItem="MSx-w0-upU" secondAttribute="height" id="cTr-Nh-tg6"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" constant="15" id="did-hR-nYN"/>
                             <constraint firstItem="Rok-rW-dKG" firstAttribute="top" secondItem="6nu-iO-HBu" secondAttribute="top" constant="15" id="eYS-JI-Pc7"/>
-                            <constraint firstItem="Rok-rW-dKG" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" constant="157" id="jSR-1u-RuT"/>
+                            <constraint firstItem="Rok-rW-dKG" firstAttribute="centerX" secondItem="xLu-G7-6hZ" secondAttribute="centerX" id="hDF-54-NUS"/>
                             <constraint firstItem="ONO-uc-fXm" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" constant="15" id="tJo-W2-jIq"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="width" secondItem="MSx-w0-upU" secondAttribute="width" id="wWn-gF-jOA"/>
                         </constraints>

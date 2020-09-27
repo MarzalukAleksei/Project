@@ -12,7 +12,6 @@
         <!--Kanji-->
         <scene sceneID="Pvj-Rq-9Ge">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ys2-MJ-4wl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="0Jx-Qk-7Zs" customClass="KanjiViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NQr-yD-oRC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -124,6 +123,7 @@
                         <outletCollection property="buttons" destination="lgR-dc-pac" collectionClass="NSMutableArray" id="oig-Eh-UzH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ys2-MJ-4wl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1352" y="554"/>
         </scene>

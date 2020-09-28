@@ -30,10 +30,13 @@ class SearchViewController: UIViewController {
         array = vocablary.transformToVocabulary()
         
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.searchBar.sizeToFit()
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Поиск"
-        navigationItem.searchController = searchController
-        definesPresentationContext = false
+//        navigationItem.searchController = searchController
+        searchController.hidesNavigationBarDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
         tableView.allowsSelection = false
     }
 }

@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-Mg-abl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-Mg-abl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="VhR-Yg-omE" customClass="SearchTableViewCell" customModule="Project" customModuleProvider="target">
@@ -77,6 +76,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gD6-IK-jRh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8uQ-Mg-abl" firstAttribute="top" secondItem="gD6-IK-jRh" secondAttribute="top" id="4wM-d2-KvA"/>
+                            <constraint firstItem="8uQ-Mg-abl" firstAttribute="trailing" secondItem="gD6-IK-jRh" secondAttribute="trailing" id="Bxq-ch-wAf"/>
+                            <constraint firstItem="8uQ-Mg-abl" firstAttribute="leading" secondItem="gD6-IK-jRh" secondAttribute="leading" id="Fnk-w4-jnw"/>
+                            <constraint firstItem="8uQ-Mg-abl" firstAttribute="bottom" secondItem="gD6-IK-jRh" secondAttribute="bottom" id="WrW-o3-CMJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass" catalog="system" id="nTS-S2-z9N"/>
                     <navigationItem key="navigationItem" id="Zue-hG-cWh"/>

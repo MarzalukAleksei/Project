@@ -27,8 +27,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             searchElement = array[indexPath.row]
         }
         
-        cell.kanjiBody.text = searchElement.kanji
-        cell.kanjiReading.text = searchElement.kana
+        if searchElement.kanji == ""{
+            cell.kanjiBody.text = searchElement.kana
+            cell.kanjiReading.text = ""
+        } else {
+            cell.kanjiBody.text = searchElement.kanji
+            cell.kanjiReading.text = searchElement.kana
+        }
         cell.kanjiTranslate.text = searchElement.translate
 
         return cell
@@ -41,9 +46,16 @@ extension SearchViewController: UISearchResultsUpdating {
     }
     
     func filterContentForSearchText(_ searchText: String) {
+        let alpabet = "акхблцвмчгншдощепъёрыжсьзтэиуюйфя"
+        if alpabet.contains(searchText.prefix(1).lowercased()){
+            searchArray = array.filter({ (array: VocabularyModel) -> Bool in
+                return array.translate.lowercased().contains(searchText.lowercased())
+            })
+        } else {
         searchArray = array.filter({ (array: VocabularyModel) -> Bool in
             return array.kanji.lowercased().contains(searchText.lowercased())
         })
+        }
         tableView.reloadData()
     }
 }

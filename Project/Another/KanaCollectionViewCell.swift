@@ -12,6 +12,4 @@ class KanaCollectionViewCell: UICollectionViewCell {
         
     @IBOutlet weak var label: UILabel!
     
-    
-    
 }

@@ -8,20 +8,13 @@
 
 import Foundation
 
-struct VocabularyModel {
-    var kanji: String
-    var kana: String
-    var translate: String
-    var level: Int
-}
-
 class VocabularySetter {
     enum TypeOfElementForSearchInArray {
         case kanji
         case kana
     }
 
-   private let fileReader = FileReader()
+    private let fileReader = FileReader()
         
     func findElementsInVocabulary(_ string: String, typeOf: TypeOfElementForSearchInArray) -> [VocabularyModel] {
         var n5n4levelExamples: [VocabularyModel] = []

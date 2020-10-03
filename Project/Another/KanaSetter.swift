@@ -8,14 +8,6 @@
 
 import UIKit
 
-struct KanaModel {
-    var kana: String
-    var reading: String
-    var id: Int = 0
-    var example: [String] = []
-    var mistake: Bool = false
-}
-
 class KanaSetter {
 
 func transformToKana(_ typeOf: TypeOfCollectionItem) -> [KanaModel] {

@@ -12,7 +12,6 @@
         <!--Main-->
         <scene sceneID="hbE-IZ-5B9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>
                 <viewController id="ABA-iP-ymh" customClass="MainChosenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YNr-UU-hp2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -59,16 +58,17 @@
                     <tabBarItem key="tabBarItem" title="Главная" image="book" catalog="system" id="fs6-Dx-Xgo"/>
                     <navigationItem key="navigationItem" title="Main" id="mr8-s0-U6Z"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="386"/>
         </scene>
         <!--Alphabet-->
         <scene sceneID="qcn-pZ-yUt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WiX-Eo-Mhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Alphabet" id="CYv-Lx-rH6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9tw-nD-Fsd"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WiX-Eo-Mhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="368"/>
         </scene>

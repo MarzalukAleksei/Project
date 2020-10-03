@@ -42,8 +42,6 @@ class FileReader {
 
     private func cleanCSV(File file: String) -> String { // убирает \r в конце строки
         var cleanFile = file
-    //    cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
-    //    cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
         cleanFile = cleanFile.replacingOccurrences(of: "\r\n", with: "\n")
         return cleanFile
     }

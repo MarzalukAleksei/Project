@@ -8,18 +8,6 @@
 
 import Foundation
 
-struct KanjiModel {
-    var number: Int
-    var level: Int
-    var body: String
-    var readingHiragana: String
-    var readingKatakana: String
-    var translate: String
-    var example: [String] = []
-    var mistake: Bool = false
-    var id: Int = 0
-}
-
 class KanjiSetter {
 
     func setKanji() -> [KanjiModel] {

@@ -14,7 +14,6 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var kanjiReading: UILabel!
     @IBOutlet weak var kanjiTranslate: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

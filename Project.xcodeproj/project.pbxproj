@@ -12,6 +12,14 @@
 		1038B60E2528D9CE00C4539A /* VocabularyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B60D2528D9CE00C4539A /* VocabularyModel.swift */; };
 		1038B6122528DB1700C4539A /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6112528DB1700C4539A /* CSVManager.swift */; };
 		1038B6172528DB5D00C4539A /* ICSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6162528DB5D00C4539A /* ICSVManager.swift */; };
+		1038B61A2528DD4B00C4539A /* CSVMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6192528DD4B00C4539A /* CSVMapper.swift */; };
+		1038B61D2528DD5800C4539A /* ICSVMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B61C2528DD5800C4539A /* ICSVMapper.swift */; };
+		1038B6242528E07D00C4539A /* CSVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6232528E07D00C4539A /* CSVRepository.swift */; };
+		1038B6272528E09200C4539A /* ICSVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6262528E09200C4539A /* ICSVRepository.swift */; };
+		1038B62D2528E28100C4539A /* LaunchScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B62C2528E28100C4539A /* LaunchScreenInteractor.swift */; };
+		1038B6302528E29700C4539A /* ILaunchScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B62F2528E29700C4539A /* ILaunchScreenInteractor.swift */; };
+		1038B6332528E36A00C4539A /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6322528E36A00C4539A /* LaunchViewController.swift */; };
+		1038B6362528E3A300C4539A /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1038B6352528E3A300C4539A /* Launch.storyboard */; };
 		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
 		103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */; };
 		10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FE3251FCCFC00F39215 /* UILabel.swift */; };
@@ -59,6 +67,14 @@
 		1038B60D2528D9CE00C4539A /* VocabularyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyModel.swift; sourceTree = "<group>"; };
 		1038B6112528DB1700C4539A /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 		1038B6162528DB5D00C4539A /* ICSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICSVManager.swift; sourceTree = "<group>"; };
+		1038B6192528DD4B00C4539A /* CSVMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVMapper.swift; sourceTree = "<group>"; };
+		1038B61C2528DD5800C4539A /* ICSVMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICSVMapper.swift; sourceTree = "<group>"; };
+		1038B6232528E07D00C4539A /* CSVRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVRepository.swift; sourceTree = "<group>"; };
+		1038B6262528E09200C4539A /* ICSVRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICSVRepository.swift; sourceTree = "<group>"; };
+		1038B62C2528E28100C4539A /* LaunchScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenInteractor.swift; sourceTree = "<group>"; };
+		1038B62F2528E29700C4539A /* ILaunchScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILaunchScreenInteractor.swift; sourceTree = "<group>"; };
+		1038B6322528E36A00C4539A /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		1038B6352528E3A300C4539A /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
 		103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController + Extensions.swift"; sourceTree = "<group>"; };
 		10734FE3251FCCFC00F39215 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -127,6 +143,41 @@
 			path = CSVManager;
 			sourceTree = "<group>";
 		};
+		1038B61F2528DD5F00C4539A /* CSVMapper */ = {
+			isa = PBXGroup;
+			children = (
+				1038B6192528DD4B00C4539A /* CSVMapper.swift */,
+				1038B61C2528DD5800C4539A /* ICSVMapper.swift */,
+			);
+			path = CSVMapper;
+			sourceTree = "<group>";
+		};
+		1038B6222528E06600C4539A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1038B6292528E23000C4539A /* CSV */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1038B6292528E23000C4539A /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				1038B6232528E07D00C4539A /* CSVRepository.swift */,
+				1038B6262528E09200C4539A /* ICSVRepository.swift */,
+			);
+			path = CSV;
+			sourceTree = "<group>";
+		};
+		1038B6392528E3B200C4539A /* LaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				1038B6322528E36A00C4539A /* LaunchViewController.swift */,
+				1038B6352528E3A300C4539A /* Launch.storyboard */,
+			);
+			path = LaunchView;
+			sourceTree = "<group>";
+		};
 		103D475F251E047400F0BE92 /* Background */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +200,7 @@
 		10734FA7251FC43F00F39215 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1038B6222528E06600C4539A /* Repositories */,
 				10734FE0251FCCD800F39215 /* Core */,
 				10734FCA251FC4EC00F39215 /* Presentation */,
 				10734FC9251FC4D800F39215 /* Interactors */,
@@ -170,6 +222,7 @@
 		10734FC7251FC4B900F39215 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				1038B61F2528DD5F00C4539A /* CSVMapper */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -187,6 +240,8 @@
 		10734FC9251FC4D800F39215 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				1038B62C2528E28100C4539A /* LaunchScreenInteractor.swift */,
+				1038B62F2528E29700C4539A /* ILaunchScreenInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -194,6 +249,7 @@
 		10734FCA251FC4EC00F39215 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1038B6392528E3B200C4539A /* LaunchView */,
 				1087361A252118A800926E6E /* LaunchScreen */,
 				108736192521189900926E6E /* Main */,
 				10734FD0251FC57A00F39215 /* Kanji */,
@@ -468,6 +524,7 @@
 				CF2BCC5724F40397003859FD /* Kana.csv in Resources */,
 				CFE931C52528D4CF0097E02B /* Kanji.csv in Resources */,
 				108735982521069D00926E6E /* Search.storyboard in Resources */,
+				1038B6362528E3A300C4539A /* Launch.storyboard in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,
 				108736172521179500926E6E /* Detail.storyboard in Resources */,
 			);
@@ -522,14 +579,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1038B6332528E36A00C4539A /* LaunchViewController.swift in Sources */,
 				CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */,
 				CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */,
 				1038B6082528D99300C4539A /* KanaModel.swift in Sources */,
+				1038B6302528E29700C4539A /* ILaunchScreenInteractor.swift in Sources */,
 				108735922521023900926E6E /* ViewControllers.swift in Sources */,
+				1038B6242528E07D00C4539A /* CSVRepository.swift in Sources */,
 				CF30CD582472CD1C005B09F4 /* MainChosenViewController.swift in Sources */,
+				1038B61D2528DD5800C4539A /* ICSVMapper.swift in Sources */,
 				103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaSetter.swift in Sources */,
+				1038B6272528E09200C4539A /* ICSVRepository.swift in Sources */,
 				1038B60B2528D9B700C4539A /* KanjiModel.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
 				CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */,
@@ -544,6 +606,7 @@
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				1038B6122528DB1700C4539A /* CSVManager.swift in Sources */,
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
+				1038B61A2528DD4B00C4539A /* CSVMapper.swift in Sources */,
 				1038B6172528DB5D00C4539A /* ICSVManager.swift in Sources */,
 				1038B60E2528D9CE00C4539A /* VocabularyModel.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
@@ -552,6 +615,7 @@
 				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
 				CF857BD824C1B25A0084DCE9 /* KanjiSetter.swift in Sources */,
+				1038B62D2528E28100C4539A /* LaunchScreenInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

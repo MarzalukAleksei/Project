@@ -1,5 +1,5 @@
 //
-//  ICSVManager.swift
+//  ILaunchScreenInteractor.swift
 //  Project
 //
 //  Created by Cyril Romanovsky on 10/3/20.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ICSVManager {
-    func readFile(fileName: String) throws -> String
+protocol ILaunchScreenInteractor {
+    
 }

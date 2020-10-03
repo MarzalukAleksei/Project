@@ -8,6 +8,17 @@
 
 import Foundation
 
-class CSVManager {
+class CSVManager: ICSVManager {
     
+    func readFile(fileName: String) throws -> String {
+        let fileType = "csv"
+        let fileUrl = Bundle.main.path(forResource: fileName, ofType: fileType)
+      
+        do {
+            guard let url = fileUrl else { return "" }
+            return try String(contentsOfFile: url)
+        } catch {
+            throw error
+        }
+    }
 }

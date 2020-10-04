@@ -9,8 +9,11 @@
 import UIKit
 
 class LaunchViewController: UIViewController {
+
+    let launchScreenInteractor = LaunchScreenInteractor(csvMapper: CSVMapper(), csvRepository: CSVRepository(manager: CSVManager()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        launchScreenInteractor?
     }
 }

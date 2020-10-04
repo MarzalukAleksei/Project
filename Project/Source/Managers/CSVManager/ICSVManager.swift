@@ -6,8 +6,6 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-import Foundation
-
 protocol ICSVManager {
     func readFile(fileName: String) throws -> String
 }

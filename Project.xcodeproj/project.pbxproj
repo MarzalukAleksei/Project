@@ -57,6 +57,8 @@
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
 		CFE931C52528D4CF0097E02B /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931C32528D4CF0097E02B /* Kanji.csv */; };
 		CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931D22529CFB60097E02B /* Vocabulary.csv */; };
+		CFE931D7252A54750097E02B /* Control.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE931D6252A54750097E02B /* Control.xib */; };
+		CFE931DA252A54F30097E02B /* TestUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE931D9252A54F30097E02B /* TestUIControl.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
 		CFE931C32528D4CF0097E02B /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
 		CFE931D22529CFB60097E02B /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
+		CFE931D6252A54750097E02B /* Control.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Control.xib; sourceTree = "<group>"; };
+		CFE931D9252A54F30097E02B /* TestUIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIControl.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,7 +289,9 @@
 			isa = PBXGroup;
 			children = (
 				108735B625210B6700926E6E /* MainChosen.storyboard */,
+				CFE931D6252A54750097E02B /* Control.xib */,
 				CF30CD572472CD1C005B09F4 /* MainChosenViewController.swift */,
+				CFE931D9252A54F30097E02B /* TestUIControl.swift */,
 			);
 			path = MainChosen;
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 				108736112521153500926E6E /* Alphabet.storyboard in Resources */,
 				1087361C252118CE00926E6E /* Kanji.storyboard in Resources */,
 				CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */,
+				CFE931D7252A54750097E02B /* Control.xib in Resources */,
 				CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */,
 				CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */,
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
@@ -595,6 +602,7 @@
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
 				CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */,
 				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,
+				CFE931DA252A54F30097E02B /* TestUIControl.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				108735952521030F00926E6E /* Storyboards.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,

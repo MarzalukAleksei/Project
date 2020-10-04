@@ -8,36 +8,10 @@
 
 import UIKit
 
-protocol TestControl {
-    func touchUp()
-    func touchDown()
-}
-
-extension UIControl {
-    
-}
 
 class MainChosenViewController: BackgroundAnimatedViewController {
-    
-    @IBOutlet weak var controlButton: UIButton!
-    
-    @IBOutlet var labels: [UILabel]!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        controlButton.addTarget(self, action: #selector(control), for: .touchUpInside)
-        controlButton.addTarget(self, action: #selector(touchDown), for: .touchDown)
-        
-    }
-    
-    @objc func control(_ buttom: UIButton) {
-        
-    }
-    
-    @objc func touchDown(_ bottom: UIButton) {
         
     }
 }

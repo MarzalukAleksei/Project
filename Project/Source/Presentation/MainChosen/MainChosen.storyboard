@@ -42,6 +42,39 @@
                                     <segue destination="YIk-zb-wLk" kind="show" id="iCj-fu-J3q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-FG-UMY">
+                                <rect key="frame" x="48" y="473" width="332" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CONTROL BUTTON"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-1y-YyB">
+                                <rect key="frame" x="48" y="435" width="42" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMg-Vw-9DQ">
+                                <rect key="frame" x="98" y="435" width="42" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naM-Cf-vDx">
+                                <rect key="frame" x="148" y="435" width="42" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCH-oY-yxF">
+                                <rect key="frame" x="198" y="434" width="42" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WZN-bL-nVc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,10 +90,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="book" catalog="system" id="fs6-Dx-Xgo"/>
                     <navigationItem key="navigationItem" title="Main" id="mr8-s0-U6Z"/>
+                    <connections>
+                        <outlet property="controlButton" destination="Yfe-FG-UMY" id="Ox1-dr-hFH"/>
+                        <outletCollection property="labels" destination="m2O-1y-YyB" collectionClass="NSMutableArray" id="JPx-GH-w7u"/>
+                        <outletCollection property="labels" destination="qMg-Vw-9DQ" collectionClass="NSMutableArray" id="fnu-dW-XtO"/>
+                        <outletCollection property="labels" destination="naM-Cf-vDx" collectionClass="NSMutableArray" id="TNT-KV-DoK"/>
+                        <outletCollection property="labels" destination="sCH-oY-yxF" collectionClass="NSMutableArray" id="BLf-0O-7n6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="386"/>
+            <point key="canvasLocation" x="105.79710144927537" y="385.71428571428572"/>
         </scene>
         <!--Alphabet-->
         <scene sceneID="qcn-pZ-yUt">

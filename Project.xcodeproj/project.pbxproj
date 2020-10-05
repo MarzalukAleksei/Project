@@ -58,11 +58,10 @@
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
 		CFE931C52528D4CF0097E02B /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931C32528D4CF0097E02B /* Kanji.csv */; };
 		CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931D22529CFB60097E02B /* Vocabulary.csv */; };
-		CFE93200252B38960097E02B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE931FC252B38950097E02B /* TestViewController.swift */; };
 		CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE931FD252B38950097E02B /* MainChosenViewController.swift */; };
-		CFE93202252B38960097E02B /* TestControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE931FE252B38950097E02B /* TestControl.swift */; };
 		CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE931FF252B38960097E02B /* MainChosen.storyboard */; };
 		CFE93206252B4E5B0097E02B /* TestControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE93205252B4E5B0097E02B /* TestControl.xib */; };
+		CFE9320A252B4FF50097E02B /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93209252B4FF50097E02B /* TestUIView.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
 /* End PBXBuildFile section */
@@ -125,11 +124,10 @@
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
 		CFE931C32528D4CF0097E02B /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
 		CFE931D22529CFB60097E02B /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
-		CFE931FC252B38950097E02B /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CFE931FD252B38950097E02B /* MainChosenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainChosenViewController.swift; sourceTree = "<group>"; };
-		CFE931FE252B38950097E02B /* TestControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestControl.swift; sourceTree = "<group>"; };
 		CFE931FF252B38960097E02B /* MainChosen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChosen.storyboard; sourceTree = "<group>"; };
 		CFE93205252B4E5B0097E02B /* TestControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestControl.xib; sourceTree = "<group>"; };
+		CFE93209252B4FF50097E02B /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,8 +314,7 @@
 				CFE931FF252B38960097E02B /* MainChosen.storyboard */,
 				CFE93205252B4E5B0097E02B /* TestControl.xib */,
 				CFE931FD252B38950097E02B /* MainChosenViewController.swift */,
-				CFE931FE252B38950097E02B /* TestControl.swift */,
-				CFE931FC252B38950097E02B /* TestViewController.swift */,
+				CFE93209252B4FF50097E02B /* TestUIView.swift */,
 			);
 			path = MainChosen;
 			sourceTree = "<group>";
@@ -623,7 +620,6 @@
 				1038B6242528E07D00C4539A /* CSVRepository.swift in Sources */,
 				103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
-				CFE93200252B38960097E02B /* TestViewController.swift in Sources */,
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaSetter.swift in Sources */,
 				1038B6272528E09200C4539A /* ICSVRepository.swift in Sources */,
@@ -632,6 +628,7 @@
 				104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
 				CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */,
+				CFE9320A252B4FF50097E02B /* TestUIView.swift in Sources */,
 				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				104187AA2529D61800812AE4 /* IMapper.swift in Sources */,
@@ -652,7 +649,6 @@
 				CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
-				CFE93202252B38960097E02B /* TestControl.swift in Sources */,
 				CF857BD824C1B25A0084DCE9 /* KanjiSetter.swift in Sources */,
 				1038B62D2528E28100C4539A /* LaunchScreenInteractor.swift in Sources */,
 			);

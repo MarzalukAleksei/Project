@@ -72,6 +72,56 @@
             </objects>
             <point key="canvasLocation" x="820" y="368"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="kes-b9-qhk">
+            <objects>
+                <viewController id="gmq-M3-JIL" customClass="TestViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XIN-SJ-cT6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acp-TD-EXy">
+                                <rect key="frame" x="69" y="619" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3z-KJ-JZc">
+                                <rect key="frame" x="69" y="731" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knJ-Ai-XUa">
+                                <rect key="frame" x="269" y="731" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Haf-IY-71O"/>
+                                    <constraint firstAttribute="height" constant="100" id="RUa-jf-qhd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ehz-nB-MSL"/>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.58823529411764708" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B3z-KJ-JZc" firstAttribute="leading" secondItem="ehz-nB-MSL" secondAttribute="leading" constant="69" id="1gf-lz-7Kg"/>
+                            <constraint firstItem="B3z-KJ-JZc" firstAttribute="top" secondItem="acp-TD-EXy" secondAttribute="bottom" constant="91" id="GCg-KK-d1O"/>
+                            <constraint firstItem="ehz-nB-MSL" firstAttribute="trailing" secondItem="knJ-Ai-XUa" secondAttribute="trailing" constant="45" id="HcP-Bk-7TE"/>
+                            <constraint firstItem="ehz-nB-MSL" firstAttribute="bottom" secondItem="B3z-KJ-JZc" secondAttribute="bottom" constant="110" id="OcO-fv-th9"/>
+                            <constraint firstItem="ehz-nB-MSL" firstAttribute="bottom" secondItem="knJ-Ai-XUa" secondAttribute="bottom" constant="31" id="UKN-NT-zw9"/>
+                            <constraint firstItem="acp-TD-EXy" firstAttribute="leading" secondItem="ehz-nB-MSL" secondAttribute="leading" constant="69" id="vZ9-eG-WKA"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="image" destination="knJ-Ai-XUa" id="Lsh-Wf-Qva"/>
+                        <outlet property="label" destination="acp-TD-EXy" id="LMW-KE-Kkw"/>
+                        <outlet property="labeltwo" destination="B3z-KJ-JZc" id="VpF-5c-aRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APj-rj-OZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="797"/>
+        </scene>
         <!--Kanji-->
         <scene sceneID="Dgc-79-Kom">
             <objects>

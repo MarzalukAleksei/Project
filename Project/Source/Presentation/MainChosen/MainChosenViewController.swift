@@ -10,8 +10,12 @@ import UIKit
 
 
 class MainChosenViewController: BackgroundAnimatedViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
+    
 }

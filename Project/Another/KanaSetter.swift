@@ -41,17 +41,6 @@ func transformToKana(_ typeOf: TypeOfCollectionItem) -> [KanaModel] {
     return array
 }
 
-//func getArray<T>( typeOf: TypeOfCollectionItem) -> [T]? {
-//    switch typeOf {
-//        case .hiragana: return hiragana as? [T]
-//        case .kanji: return kanji as? [T]
-//        case .katakana: return katakana as? [T]
-//    }
-//}
-
-//let hiragana = transformToKana(.hiragana)
-//let katakana = transformToKana(.katakana)
-
 func randomKana<T>(objectArray: [T]) -> (T?) { // крч, это пример джинериков, суть в том, что эта функция работает с любым типом объекта будь то маассив строк или массив цифр, насрать. НО есть проблема в том, что массив  объектов и возвращаемый объект должны быть одного типа в данном случае.
     //ВАЖНО:
     //Не парься, это не лёгкое дерьмо и объясню тебе всё потом, пока рано. Просто чтобы ты знал что такое есть, я написал тебе пример

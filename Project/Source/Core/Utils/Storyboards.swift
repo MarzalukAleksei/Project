@@ -12,8 +12,13 @@ class Storyboards {
     class var detail: UIStoryboard {
         return UIStoryboard(name: StoryboardsName.detail.rawValue, bundle: nil)
     }
+    
+    class var main: UIStoryboard {
+        return UIStoryboard(name: StoryboardsName.main.rawValue, bundle: nil)
+    }
 }
 
 private enum StoryboardsName: String {
     case detail = "Detail"
+    case main = "Main"
 }

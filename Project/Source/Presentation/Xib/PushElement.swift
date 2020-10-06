@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class PushElement: UIView {
+class PushElement: UIView {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var sideView: UIImageView!

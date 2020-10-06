@@ -11,12 +11,13 @@ import UIKit
 
 class MainChosenViewController: BackgroundAnimatedViewController {
     
-    let xibFile = PushElement()
-    
+    @IBOutlet weak var customButtom: PushElement!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customButtom.firstLabel.text = "label1"
+        customButtom.secondLabel.text = "label2"
     }
     
 }

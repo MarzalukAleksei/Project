@@ -60,8 +60,6 @@
 		CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931D22529CFB60097E02B /* Vocabulary.csv */; };
 		CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE931FD252B38950097E02B /* MainChosenViewController.swift */; };
 		CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE931FF252B38960097E02B /* MainChosen.storyboard */; };
-		CFE93206252B4E5B0097E02B /* TestControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE93205252B4E5B0097E02B /* TestControl.xib */; };
-		CFE9320A252B4FF50097E02B /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93209252B4FF50097E02B /* TestUIView.swift */; };
 		CFE9320E252C7A290097E02B /* PushElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9320D252C7A280097E02B /* PushElement.xib */; };
 		CFE93211252C7AD60097E02B /* PushElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93210252C7AD60097E02B /* PushElement.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
@@ -128,8 +126,6 @@
 		CFE931D22529CFB60097E02B /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
 		CFE931FD252B38950097E02B /* MainChosenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainChosenViewController.swift; sourceTree = "<group>"; };
 		CFE931FF252B38960097E02B /* MainChosen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChosen.storyboard; sourceTree = "<group>"; };
-		CFE93205252B4E5B0097E02B /* TestControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestControl.xib; sourceTree = "<group>"; };
-		CFE93209252B4FF50097E02B /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		CFE9320D252C7A280097E02B /* PushElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushElement.xib; sourceTree = "<group>"; };
 		CFE93210252C7AD60097E02B /* PushElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushElement.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -284,6 +280,7 @@
 				108736192521189900926E6E /* Main */,
 				10734FD0251FC57A00F39215 /* Kanji */,
 				10734FCE251FC55300F39215 /* Alphabet */,
+				CFE93215252C8BE90097E02B /* Xib */,
 				10734FCD251FC54900F39215 /* MainChosen */,
 				10734FCC251FC53A00F39215 /* Kana */,
 				103D475F251E047400F0BE92 /* Background */,
@@ -316,11 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE931FF252B38960097E02B /* MainChosen.storyboard */,
-				CFE93205252B4E5B0097E02B /* TestControl.xib */,
 				CFE931FD252B38950097E02B /* MainChosenViewController.swift */,
-				CFE93209252B4FF50097E02B /* TestUIView.swift */,
-				CFE9320D252C7A280097E02B /* PushElement.xib */,
-				CFE93210252C7AD60097E02B /* PushElement.swift */,
 			);
 			path = MainChosen;
 			sourceTree = "<group>";
@@ -488,6 +481,15 @@
 			path = Another;
 			sourceTree = "<group>";
 		};
+		CFE93215252C8BE90097E02B /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				CFE9320D252C7A280097E02B /* PushElement.xib */,
+				CFE93210252C7AD60097E02B /* PushElement.swift */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,7 +555,6 @@
 				108736112521153500926E6E /* Alphabet.storyboard in Resources */,
 				1087361C252118CE00926E6E /* Kanji.storyboard in Resources */,
 				CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */,
-				CFE93206252B4E5B0097E02B /* TestControl.xib in Resources */,
 				CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */,
 				CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */,
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
@@ -635,7 +636,6 @@
 				104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
 				CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */,
-				CFE9320A252B4FF50097E02B /* TestUIView.swift in Sources */,
 				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				104187AA2529D61800812AE4 /* IMapper.swift in Sources */,

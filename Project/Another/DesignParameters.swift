@@ -14,6 +14,7 @@ let designElementCornerRadius: CGFloat = 0.2
 let designSeparatorColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
 let designHeaderInSectionColor = #colorLiteral(red: 0.9921568627, green: 0.4862745098, blue: 0.3803921569, alpha: 1)
 let designTextColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+let designNewColor = #colorLiteral(red: 0.1098039216, green: 0.5882352941, blue: 0.4156862745, alpha: 1)
 
 let backgroundAlfaFrom: CGFloat = 0.40
 let backgroundAlfaTo: CGFloat = 0.85

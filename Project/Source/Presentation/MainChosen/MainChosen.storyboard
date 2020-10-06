@@ -42,10 +42,9 @@
                                     <segue destination="YIk-zb-wLk" kind="show" id="iCj-fu-J3q"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="34" y="438" width="346" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="34" y="447" width="346" height="91"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WZN-bL-nVc"/>
@@ -53,15 +52,23 @@
                         <constraints>
                             <constraint firstItem="Ms9-ay-6QQ" firstAttribute="top" secondItem="WZN-bL-nVc" secondAttribute="top" constant="107" id="EVS-Qe-nv7"/>
                             <constraint firstItem="T6M-TW-zT1" firstAttribute="top" secondItem="Ms9-ay-6QQ" secondAttribute="bottom" constant="60" id="G4V-4p-gqw"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="width" secondItem="T6M-TW-zT1" secondAttribute="width" id="IUq-9M-BGz"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="top" secondItem="T6M-TW-zT1" secondAttribute="bottom" constant="60" id="Nhd-aD-73f"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="leading" secondItem="T6M-TW-zT1" secondAttribute="leading" id="Nuv-tz-Uw0"/>
                             <constraint firstItem="T6M-TW-zT1" firstAttribute="height" secondItem="Ms9-ay-6QQ" secondAttribute="height" multiplier="1.07059" id="P2z-hq-e3a"/>
                             <constraint firstItem="T6M-TW-zT1" firstAttribute="centerX" secondItem="WZN-bL-nVc" secondAttribute="centerX" id="Pd8-Db-LVh"/>
                             <constraint firstItem="T6M-TW-zT1" firstAttribute="width" secondItem="Ms9-ay-6QQ" secondAttribute="width" multiplier="0.960938" constant="10" id="VFA-QX-c65"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="height" secondItem="T6M-TW-zT1" secondAttribute="height" id="aoU-VH-YnC"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="centerX" secondItem="WZN-bL-nVc" secondAttribute="centerX" id="igS-fX-Pwa"/>
                             <constraint firstItem="Ms9-ay-6QQ" firstAttribute="centerX" secondItem="WZN-bL-nVc" secondAttribute="centerX" id="kws-xr-hpO"/>
                             <constraint firstItem="Ms9-ay-6QQ" firstAttribute="leading" secondItem="WZN-bL-nVc" secondAttribute="leading" constant="32" id="wyr-J9-0gh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="book" catalog="system" id="fs6-Dx-Xgo"/>
                     <navigationItem key="navigationItem" title="Main" id="mr8-s0-U6Z"/>
+                    <connections>
+                        <outlet property="customButtom" destination="jaC-Hv-TcP" id="mEq-p0-aiQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,11 +103,11 @@
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

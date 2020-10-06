@@ -13,11 +13,21 @@ class MainChosenViewController: BackgroundAnimatedViewController {
     
     @IBOutlet weak var customButtom: PushElement!
     
+    let recogniser = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recogniser.addTarget(self, action: #selector(test))
+        
         customButtom.firstLabel.text = "label1"
-        customButtom.secondLabel.text = "label2"
+        customButtom.secondLabel.text = "label1"
+        customButtom.addGestureRecognizer(recogniser)
     }
     
+    @objc func test() {
+        print("Yes")
+    }
+    
+    
 }
+

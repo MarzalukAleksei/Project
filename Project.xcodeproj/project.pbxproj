@@ -312,6 +312,8 @@
 		10734FCD251FC54900F39215 /* MainChosen */ = {
 			isa = PBXGroup;
 			children = (
+				CFE9320D252C7A280097E02B /* PushElement.xib */,
+				CFE93210252C7AD60097E02B /* PushElement.swift */,
 				CFE931FF252B38960097E02B /* MainChosen.storyboard */,
 				CFE931FD252B38950097E02B /* MainChosenViewController.swift */,
 			);
@@ -484,8 +486,6 @@
 		CFE93215252C8BE90097E02B /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				CFE9320D252C7A280097E02B /* PushElement.xib */,
-				CFE93210252C7AD60097E02B /* PushElement.swift */,
 			);
 			path = Xib;
 			sourceTree = "<group>";

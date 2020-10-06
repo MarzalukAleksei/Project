@@ -42,6 +42,11 @@
                                     <segue destination="YIk-zb-wLk" kind="show" id="iCj-fu-J3q"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="34" y="438" width="346" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WZN-bL-nVc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,6 +98,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

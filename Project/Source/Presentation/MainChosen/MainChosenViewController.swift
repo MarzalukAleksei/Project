@@ -11,11 +11,12 @@ import UIKit
 
 class MainChosenViewController: BackgroundAnimatedViewController {
     
+    let xibFile = PushElement()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
 }

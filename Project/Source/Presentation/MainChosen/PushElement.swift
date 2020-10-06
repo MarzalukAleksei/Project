@@ -1,21 +1,20 @@
 //
-//  TestUIView.swift
+//  PushElement.swift
 //  Project
 //
-//  Created by ブラック狼 on 05.10.2020.
+//  Created by ブラック狼 on 06.10.2020.
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
 import UIKit
 
-class TestUIView: UIView {
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var labelOne: UILabel!
-    @IBOutlet weak var labelTwo: UILabel!
-    @IBOutlet weak var labelThree: UILabel!
+@IBDesignable class PushElement: UIView {
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var sideView: UIImageView!
     
     var view: UIView!
-    var nibName = "TestControl"
+    var nibName = "PushElement"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,4 +40,6 @@ class TestUIView: UIView {
         addSubview(view)
     }
     
+    
 }
+

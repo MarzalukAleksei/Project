@@ -62,6 +62,8 @@
 		CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE931FF252B38960097E02B /* MainChosen.storyboard */; };
 		CFE93206252B4E5B0097E02B /* TestControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE93205252B4E5B0097E02B /* TestControl.xib */; };
 		CFE9320A252B4FF50097E02B /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93209252B4FF50097E02B /* TestUIView.swift */; };
+		CFE9320E252C7A290097E02B /* PushElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9320D252C7A280097E02B /* PushElement.xib */; };
+		CFE93211252C7AD60097E02B /* PushElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93210252C7AD60097E02B /* PushElement.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
 /* End PBXBuildFile section */
@@ -128,6 +130,8 @@
 		CFE931FF252B38960097E02B /* MainChosen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChosen.storyboard; sourceTree = "<group>"; };
 		CFE93205252B4E5B0097E02B /* TestControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestControl.xib; sourceTree = "<group>"; };
 		CFE93209252B4FF50097E02B /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
+		CFE9320D252C7A280097E02B /* PushElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushElement.xib; sourceTree = "<group>"; };
+		CFE93210252C7AD60097E02B /* PushElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushElement.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +319,8 @@
 				CFE93205252B4E5B0097E02B /* TestControl.xib */,
 				CFE931FD252B38950097E02B /* MainChosenViewController.swift */,
 				CFE93209252B4FF50097E02B /* TestUIView.swift */,
+				CFE9320D252C7A280097E02B /* PushElement.xib */,
+				CFE93210252C7AD60097E02B /* PushElement.swift */,
 			);
 			path = MainChosen;
 			sourceTree = "<group>";
@@ -553,6 +559,7 @@
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
 				CF2BCC5724F40397003859FD /* Kana.csv in Resources */,
 				CFE931C52528D4CF0097E02B /* Kanji.csv in Resources */,
+				CFE9320E252C7A290097E02B /* PushElement.xib in Resources */,
 				108735982521069D00926E6E /* Search.storyboard in Resources */,
 				1038B6362528E3A300C4539A /* Launch.storyboard in Resources */,
 				CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */,
@@ -638,6 +645,7 @@
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
 				10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */,
+				CFE93211252C7AD60097E02B /* PushElement.swift in Sources */,
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				1038B6122528DB1700C4539A /* CSVManager.swift in Sources */,
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,

@@ -12,4 +12,12 @@ struct KanaModel {
     var id: Int = 0
     var example: [String] = []
     var mistake: Bool = false
+    
+    init(kana: String, reading: String, id: Int , example: [String], mistake: Bool = false) {
+        self.kana = kana
+        self.reading = reading
+        self.id = id
+        self.example = example
+        self.mistake = mistake
+    }
 }

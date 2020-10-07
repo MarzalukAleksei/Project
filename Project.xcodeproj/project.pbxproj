@@ -27,6 +27,8 @@
 		104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104187B92529EB0700812AE4 /* MainBarViewController.swift */; };
 		10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FE3251FCCFC00F39215 /* UILabel.swift */; };
 		10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */; };
+		1077167D252E5EEE0001ABA2 /* VocabularyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */; };
+		10771681252E5F100001ABA2 /* KanjiMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10771680252E5F100001ABA2 /* KanjiMapper.swift */; };
 		108735922521023900926E6E /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735912521023900926E6E /* ViewControllers.swift */; };
 		108735952521030F00926E6E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735942521030F00926E6E /* Storyboards.swift */; };
 		108735982521069D00926E6E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108735972521069D00926E6E /* Search.storyboard */; };
@@ -87,6 +89,8 @@
 		104187B92529EB0700812AE4 /* MainBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarViewController.swift; sourceTree = "<group>"; };
 		10734FE3251FCCFC00F39215 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController + Extensions.swift"; sourceTree = "<group>"; };
+		1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMapper.swift; sourceTree = "<group>"; };
+		10771680252E5F100001ABA2 /* KanjiMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiMapper.swift; sourceTree = "<group>"; };
 		108735912521023900926E6E /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		108735942521030F00926E6E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		108735972521069D00926E6E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		10734FA7251FC43F00F39215 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				10771688252E5FCA0001ABA2 /* ReusableViews */,
 				1038B6222528E06600C4539A /* Repositories */,
 				10734FE0251FCCD800F39215 /* Core */,
 				10734FCA251FC4EC00F39215 /* Presentation */,
@@ -247,6 +252,8 @@
 		10734FC7251FC4B900F39215 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				1077167F252E5F060001ABA2 /* Kanji */,
+				1077167A252E5E5D0001ABA2 /* Vocabulary */,
 				104187B22529E02C00812AE4 /* Kana */,
 				1038B61F2528DD5F00C4539A /* CSV */,
 			);
@@ -280,7 +287,6 @@
 				108736192521189900926E6E /* Main */,
 				10734FD0251FC57A00F39215 /* Kanji */,
 				10734FCE251FC55300F39215 /* Alphabet */,
-				CFE93215252C8BE90097E02B /* Xib */,
 				10734FCD251FC54900F39215 /* MainChosen */,
 				10734FCC251FC53A00F39215 /* Kana */,
 				103D475F251E047400F0BE92 /* Background */,
@@ -312,8 +318,6 @@
 		10734FCD251FC54900F39215 /* MainChosen */ = {
 			isa = PBXGroup;
 			children = (
-				CFE9320D252C7A280097E02B /* PushElement.xib */,
-				CFE93210252C7AD60097E02B /* PushElement.swift */,
 				CFE931FF252B38960097E02B /* MainChosen.storyboard */,
 				CFE931FD252B38950097E02B /* MainChosenViewController.swift */,
 			);
@@ -389,6 +393,55 @@
 				CFE931D22529CFB60097E02B /* Vocabulary.csv */,
 			);
 			path = CSV;
+			sourceTree = "<group>";
+		};
+		1077167A252E5E5D0001ABA2 /* Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */,
+			);
+			path = Vocabulary;
+			sourceTree = "<group>";
+		};
+		1077167F252E5F060001ABA2 /* Kanji */ = {
+			isa = PBXGroup;
+			children = (
+				10771680252E5F100001ABA2 /* KanjiMapper.swift */,
+			);
+			path = Kanji;
+			sourceTree = "<group>";
+		};
+		10771688252E5FCA0001ABA2 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				1077168A252E5FE10001ABA2 /* Cells */,
+				10771689252E5FDD0001ABA2 /* Views */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		10771689252E5FDD0001ABA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1077168B252E5FEC0001ABA2 /* PushElements */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1077168A252E5FE10001ABA2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1077168B252E5FEC0001ABA2 /* PushElements */ = {
+			isa = PBXGroup;
+			children = (
+				CFE9320D252C7A280097E02B /* PushElement.xib */,
+				CFE93210252C7AD60097E02B /* PushElement.swift */,
+			);
+			path = PushElements;
 			sourceTree = "<group>";
 		};
 		108736192521189900926E6E /* Main */ = {
@@ -481,13 +534,6 @@
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
 			);
 			path = Another;
-			sourceTree = "<group>";
-		};
-		CFE93215252C8BE90097E02B /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,6 +686,7 @@
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				104187AA2529D61800812AE4 /* IMapper.swift in Sources */,
 				108735952521030F00926E6E /* Storyboards.swift in Sources */,
+				10771681252E5F100001ABA2 /* KanjiMapper.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF78EC0324CA3AE40098424F /* KanjiViewController.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
@@ -654,6 +701,7 @@
 				1038B60E2528D9CE00C4539A /* VocabularyModel.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
 				10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */,
+				1077167D252E5EEE0001ABA2 /* VocabularyMapper.swift in Sources */,
 				CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,

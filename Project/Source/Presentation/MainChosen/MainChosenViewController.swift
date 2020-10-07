@@ -13,21 +13,41 @@ class MainChosenViewController: BackgroundAnimatedViewController {
     
     @IBOutlet weak var customButtom: PushElement!
     
-    let recogniser = UITapGestureRecognizer()
+    private let recogniser = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recogniser.addTarget(self, action: #selector(test))
-        
+        setupButtons()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadDesign()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        disappearView()
+    }
+    
+    private func disappearView() {
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func setupButtons() {
         customButtom.firstLabel.text = "label1"
         customButtom.secondLabel.text = "label1"
+        recogniser.addTarget(self, action: #selector(test))
         customButtom.addGestureRecognizer(recogniser)
     }
-    
-    @objc func test() {
-        print("Yes")
+  
+    private func loadDesign() {
+        navigationController?.navigationBar.isHidden = true
     }
     
-    
+    @objc private func test() {
+        print("Yes")
+    }
 }
+
 

@@ -12,7 +12,7 @@ class KanaSetter {
 
 func transformToKana(_ typeOf: TypeOfCollectionItem) -> [KanaModel] {
     let fileReader = FileReader()
-    var element = KanaModel(kana: "", reading: "")
+    var element = KanaModel(kana: "", reading: "",id: 0, example: [])
     var array = [KanaModel]()
     let fileCSV = fileReader.getArrayFromCSV(fileName: "Kana", fileType: "csv")
     switch typeOf {

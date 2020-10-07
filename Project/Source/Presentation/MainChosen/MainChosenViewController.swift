@@ -10,6 +10,8 @@ import UIKit
 
 
 class MainChosenViewController: BackgroundAnimatedViewController {
+    @IBOutlet weak var alphabetButtom: UIButton!
+    @IBOutlet weak var kanjiButtom: UIButton!
     
     @IBOutlet weak var customButtom: PushElement!
     
@@ -35,6 +37,8 @@ class MainChosenViewController: BackgroundAnimatedViewController {
     }
     
     private func setupButtons() {
+        alphabetButtom.backgroundColor = designNewColor
+        kanjiButtom.backgroundColor = designNewColor
         customButtom.firstLabel.text = "label1"
         customButtom.secondLabel.text = "label1"
         recogniser.addTarget(self, action: #selector(test))

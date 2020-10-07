@@ -67,7 +67,9 @@
                     <tabBarItem key="tabBarItem" title="Главная" image="book" catalog="system" id="fs6-Dx-Xgo"/>
                     <navigationItem key="navigationItem" title="Main" id="mr8-s0-U6Z"/>
                     <connections>
+                        <outlet property="alphabetButtom" destination="Ms9-ay-6QQ" id="qwL-kc-1Nu"/>
                         <outlet property="customButtom" destination="jaC-Hv-TcP" id="mEq-p0-aiQ"/>
+                        <outlet property="kanjiButtom" destination="T6M-TW-zT1" id="bU0-Sz-8as"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>

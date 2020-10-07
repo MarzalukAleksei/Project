@@ -9,7 +9,7 @@
 class KanjiMapper: IMapper {
     
     typealias Entity = String
-    typealias Result = [KanaModel]
+    typealias Result = [KanjiModel]
     
     private let csvMapper: CSVMapper
     
@@ -18,15 +18,15 @@ class KanjiMapper: IMapper {
     }
     
     func transform(entity: Entity) -> Result {
-        var result = [KanaModel]()
+        var result = [KanjiModel]()
         var stringArray = csvMapper.transform(entity: entity)
         guard stringArray.count != 0 else { return result }
         stringArray.removeFirst()
         for (index, row) in stringArray.enumerated() {
             let rowData = row.split(separator: ",")
-            guard rowData.count > 3 else { continue }
-            let model = KanaModel(kana: String(rowData[0]), reading: String(rowData[1]), id: index, example: [])
-            result.append(model)
+            guard rowData.count < 3 else { continue }
+           // let model = KanjiModel(number: <#Int#>, level: <#Int#>, body: <#String#>, readingHiragana: <#String#>, readingKatakana: <#String#>, translate: <#String#>)
+           // result.append(model)
         }
         return result
     }

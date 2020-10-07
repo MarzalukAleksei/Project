@@ -24,7 +24,7 @@ class VocabularyMapper: IMapper {
         stringArray.removeFirst()
         for (index, row) in stringArray.enumerated() {
             let rowData = row.split(separator: ",")
-            guard rowData.count > 3 else { continue }
+            guard rowData.count < 3 else { continue }
             let model = KanaModel(kana: String(rowData[0]), reading: String(rowData[1]), id: index, example: [])
             result.append(model)
         }

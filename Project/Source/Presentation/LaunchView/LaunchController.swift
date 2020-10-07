@@ -10,8 +10,8 @@ import UIKit
 
 class LaunchController: UIViewController {
 
-    let launchScreenInteractor = LaunchScreenInteractor(kanaMapper: KanaMapper(csvMapper: CSVMapper()), csvRepository: CSVRepository(manager: CSVManager()))
-    
+    private let launchScreenInteractor = LaunchScreenInteractor(kanaMapper: KanaMapper(csvMapper: CSVMapper()), kanjiMapper: KanjiMapper(csvMapper: CSVMapper()), vocabularyMapper: VocabularyMapper(csvMapper: CSVMapper()), csvRepository: CSVRepository(manager: CSVManager()))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         launchScreenInteractor.readFiles(completion: { [weak self] value in

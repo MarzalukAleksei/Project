@@ -6,11 +6,22 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
+private enum Files: String {
+    case kana = "Kana"
+    case kanji = "Kanji"
+    case vocabulary = "Vocabulary"
+}
+
 class LaunchScreenInteractor: ILaunchScreenInteractor {
+    
     private let csvRepository: ICSVRepository
     private let kanaMapper: KanaMapper
+    private let kanjiMapper: KanjiMapper
+    private let vocabularyMapper: VocabularyMapper
     
-    init(kanaMapper: KanaMapper, csvRepository: ICSVRepository) {
+    init(kanaMapper: KanaMapper, kanjiMapper: KanjiMapper, vocabularyMapper: VocabularyMapper, csvRepository: ICSVRepository) {
+        self.kanjiMapper = kanjiMapper
+        self.vocabularyMapper = vocabularyMapper
         self.kanaMapper = kanaMapper
         self.csvRepository = csvRepository
     }
@@ -22,25 +33,13 @@ class LaunchScreenInteractor: ILaunchScreenInteractor {
        
         
         guard let kanjiValues = try? csvRepository.readFile(fileName: Files.kanji.rawValue) else { return }
-        let kanjiArray = kanaMapper.transform(entity: kanjiValues)
+        let kanjiArray = kanjiMapper.transform(entity: kanjiValues)
         print(kanjiArray)
         
         
         guard let vocabulary = try? csvRepository.readFile(fileName: Files.vocabulary.rawValue) else { return }
-        let vocabularyArray = kanaMapper.transform(entity: vocabulary)
+        let vocabularyArray = vocabularyMapper.transform(entity: vocabulary)
         print(vocabularyArray)
         completion(true)
     }
-    
-    private func cleanString(input: String) -> [String] {
-        let newStr = input.replacingOccurrences(of: "\r", with: "", options: .literal, range: nil)
-        return Array(newStr.split(separator: "\n")).map { String($0) }
-    }
 }
-
-private enum Files: String {
-    case kana = "Kana"
-    case kanji = "Kanji"
-    case vocabulary = "Vocabulary"
-}
-    

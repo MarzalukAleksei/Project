@@ -273,8 +273,7 @@
 		10734FC9251FC4D800F39215 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				1038B62C2528E28100C4539A /* LaunchScreenInteractor.swift */,
-				1038B62F2528E29700C4539A /* ILaunchScreenInteractor.swift */,
+				1077168D252E61910001ABA2 /* Launch */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -442,6 +441,15 @@
 				CFE93210252C7AD60097E02B /* PushElement.swift */,
 			);
 			path = PushElements;
+			sourceTree = "<group>";
+		};
+		1077168D252E61910001ABA2 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1038B62C2528E28100C4539A /* LaunchScreenInteractor.swift */,
+				1038B62F2528E29700C4539A /* ILaunchScreenInteractor.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		108736192521189900926E6E /* Main */ = {

@@ -12,24 +12,16 @@ import UIKit
 class MainChosenViewController: BackgroundAnimatedViewController {
     
     @IBOutlet weak var customButtom: PushElement!
-    @IBOutlet weak var image: UIImageView!
-    
-    
-    
     
     let recogniser = UITapGestureRecognizer()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         recogniser.addTarget(self, action: #selector(test))
         
-        
         customButtom.firstLabel.text = "label1"
         customButtom.secondLabel.text = "label1"
-        image.layer.cornerRadius = image.bounds.width * 0.2
-        
-        
+        customButtom.addGestureRecognizer(recogniser)
     }
     
     @objc func test() {

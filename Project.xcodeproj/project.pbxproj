@@ -29,6 +29,7 @@
 		10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */; };
 		1077167D252E5EEE0001ABA2 /* VocabularyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */; };
 		10771681252E5F100001ABA2 /* KanjiMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10771680252E5F100001ABA2 /* KanjiMapper.swift */; };
+		10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10780CC2252EFEAF0022C517 /* Colors.xcassets */; };
 		108735922521023900926E6E /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735912521023900926E6E /* ViewControllers.swift */; };
 		108735952521030F00926E6E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735942521030F00926E6E /* Storyboards.swift */; };
 		108735982521069D00926E6E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108735972521069D00926E6E /* Search.storyboard */; };
@@ -91,6 +92,7 @@
 		10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController + Extensions.swift"; sourceTree = "<group>"; };
 		1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMapper.swift; sourceTree = "<group>"; };
 		10771680252E5F100001ABA2 /* KanjiMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiMapper.swift; sourceTree = "<group>"; };
+		10780CC2252EFEAF0022C517 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		108735912521023900926E6E /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		108735942521030F00926E6E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		108735972521069D00926E6E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				10734FE8251FDA5700F39215 /* Files */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
+				10780CC2252EFEAF0022C517 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				108735982521069D00926E6E /* Search.storyboard in Resources */,
 				1038B6362528E3A300C4539A /* Launch.storyboard in Resources */,
 				CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */,
+				10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,
 				108736172521179500926E6E /* Detail.storyboard in Resources */,
 			);

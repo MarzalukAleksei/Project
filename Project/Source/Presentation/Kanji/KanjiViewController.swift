@@ -14,13 +14,13 @@ class KanjiViewController: BackgroundSymbolsFullViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = designBackgroundColor
+        view.backgroundColor = UIColor.init(named: "backgroundColor")
         loadDesign()
     }
     
     private func loadDesign() {
         buttons.forEach { (button) in
-            button.backgroundColor = designElementColor
+            button.backgroundColor = UIColor.init(named: "buttomColor")
         }
     }
     

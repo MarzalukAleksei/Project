@@ -23,7 +23,7 @@ class KanaCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         guard let type = typeOfCollection else { return }
         arrayOfElements = difficult.getArray(typeOf: type)
-        collectionView.backgroundColor = designBackgroundColor
+        collectionView.backgroundColor = UIColor.init(named: "backgroundColor")
     }
     
     func pushToNextViewController(element: Any) {
@@ -86,9 +86,9 @@ class KanaCollectionViewController: UICollectionViewController {
         case .none: break
         }
         cell.layer.cornerRadius = cell.bounds.width * designElementCornerRadius
-        cell.backgroundColor = designElementColor
+        cell.backgroundColor = UIColor.init(named: "buttomColor")
         cell.label.textAlignment = .center
-        cell.label.textColor = designTextColor
+        cell.label.textColor = UIColor.init(named: "textColor")
         return cell
     }
 }

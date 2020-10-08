@@ -16,6 +16,23 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return array.count
     }
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let element: VocabularyModel
+        if !searchArray.isEmpty {
+            element = searchArray[indexPath.row]
+        } else {
+            element = array[indexPath.row]
+        }
+        pushToDetailViewController(element: element)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func pushToDetailViewController(element: Any) {
+        guard let vc = ViewControllers.detail as? DetailViewController else { return }
+        vc.startElement = element
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
@@ -27,7 +44,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             searchElement = array[indexPath.row]
         }
         
-        if searchElement.kanji == ""{
+        if searchElement.kanji == "" {
             cell.kanjiBody.text = searchElement.kana
             cell.kanjiReading.text = ""
         } else {

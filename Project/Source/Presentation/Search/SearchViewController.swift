@@ -33,10 +33,9 @@ class SearchViewController: UIViewController {
         searchController.searchBar.sizeToFit()
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Поиск"
-//        navigationItem.searchController = searchController
         searchController.hidesNavigationBarDuringPresentation = false
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
-        tableView.allowsSelection = false
+//        tableView.allowsSelection = false
     }
 }

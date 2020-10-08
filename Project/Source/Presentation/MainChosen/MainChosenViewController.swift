@@ -37,8 +37,8 @@ class MainChosenViewController: BackgroundAnimatedViewController {
     }
     
     private func setupButtons() {
-        alphabetButtom.backgroundColor = designNewColor
-        kanjiButtom.backgroundColor = designNewColor
+        alphabetButtom.backgroundColor = UIColor.init(named: "backgroundColor")
+        kanjiButtom.backgroundColor = UIColor.init(named: "buttomColor")
         customButtom.firstLabel.text = "label1"
         customButtom.secondLabel.text = "label1"
         recogniser.addTarget(self, action: #selector(test))

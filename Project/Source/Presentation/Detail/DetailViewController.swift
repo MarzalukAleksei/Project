@@ -65,17 +65,17 @@ class DetailViewController: UIViewController {
     }
     
     func viewParameters() {
-        detailLabel.textColor = designTextColor
-        view.backgroundColor = designBackgroundColor
+        detailLabel.textColor = UIColor.init(named: "textColor")
+        view.backgroundColor = UIColor.init(named: "backgroundColor")
         tableView.allowsSelection = false
-        tableView.backgroundColor = designElementColor
-        tableView.separatorColor = designSeparatorColor
+        tableView.backgroundColor = UIColor.init(named: "buttomColor")
+        tableView.separatorColor = UIColor.init(named: "separatorColor")
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * designElementCornerRadius
-        previousButtonOutlet.backgroundColor = designElementColor
-        previousButtonOutlet.setTitleColor(designTextColor, for: .normal)
+        previousButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
+        previousButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
         nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * designElementCornerRadius
-        nextButtonOutlet.backgroundColor = designElementColor
-        nextButtonOutlet.setTitleColor(designTextColor, for: .normal)
+        nextButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
+        nextButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
     }
     
     func changeCollectionArray() {
@@ -136,7 +136,6 @@ class DetailViewController: UIViewController {
                 nextElement = currentArray[currentElement.id]
             }
             detail = currentElement.body
-            print(currentElement.id)
         default: break
         }
         detailLabel.text = detail

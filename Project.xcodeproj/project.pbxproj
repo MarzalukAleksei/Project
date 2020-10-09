@@ -65,6 +65,8 @@
 		CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE931FF252B38960097E02B /* MainChosen.storyboard */; };
 		CFE9320E252C7A290097E02B /* PushElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9320D252C7A280097E02B /* PushElement.xib */; };
 		CFE93211252C7AD60097E02B /* PushElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93210252C7AD60097E02B /* PushElement.swift */; };
+		CFE9321E253053B50097E02B /* FourButtom.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE9321D253053B20097E02B /* FourButtom.xib */; };
+		CFE93222253053C40097E02B /* FourButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE93221253053C40097E02B /* FourButtom.swift */; };
 		CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF1237E249B848600323497 /* GoogleService-Info.plist */; };
 		DDE619AB901B8A3F30257548 /* libPods-Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB3B4574642CAF2AB66A54 /* libPods-Project.a */; };
 /* End PBXBuildFile section */
@@ -134,6 +136,8 @@
 		CFE931FF252B38960097E02B /* MainChosen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChosen.storyboard; sourceTree = "<group>"; };
 		CFE9320D252C7A280097E02B /* PushElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushElement.xib; sourceTree = "<group>"; };
 		CFE93210252C7AD60097E02B /* PushElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushElement.swift; sourceTree = "<group>"; };
+		CFE9321D253053B20097E02B /* FourButtom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourButtom.xib; sourceTree = "<group>"; };
+		CFE93221253053C40097E02B /* FourButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourButtom.swift; sourceTree = "<group>"; };
 		CFF1237E249B848600323497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -425,6 +429,7 @@
 		10771689252E5FDD0001ABA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CFE9321C2530536B0097E02B /* fourButtoms */,
 				1077168B252E5FEC0001ABA2 /* PushElements */,
 			);
 			path = Views;
@@ -547,6 +552,15 @@
 			path = Another;
 			sourceTree = "<group>";
 		};
+		CFE9321C2530536B0097E02B /* fourButtoms */ = {
+			isa = PBXGroup;
+			children = (
+				CFE9321D253053B20097E02B /* FourButtom.xib */,
+				CFE93221253053C40097E02B /* FourButtom.swift */,
+			);
+			path = fourButtoms;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -622,6 +636,7 @@
 				1038B6362528E3A300C4539A /* Launch.storyboard in Resources */,
 				CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */,
 				10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */,
+				CFE9321E253053B50097E02B /* FourButtom.xib in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,
 				108736172521179500926E6E /* Detail.storyboard in Resources */,
 			);
@@ -685,6 +700,7 @@
 				108735922521023900926E6E /* ViewControllers.swift in Sources */,
 				1038B6242528E07D00C4539A /* CSVRepository.swift in Sources */,
 				103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */,
+				CFE93222253053C40097E02B /* FourButtom.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaSetter.swift in Sources */,

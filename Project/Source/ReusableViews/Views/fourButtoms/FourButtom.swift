@@ -15,6 +15,7 @@ class FourButtom: UIView {
     @IBOutlet weak var thirdButtom: UIButton!
     @IBOutlet weak var fourthButtom: UIButton!
     
+    var view: UIView!
     let nibName = "FourButtom"
     
     override init(frame: CGRect) {
@@ -28,9 +29,10 @@ class FourButtom: UIView {
     
     
     func setup() {
-        let view = loadNib()
+        view = loadNib()
         view.frame = bounds
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(view)
     }
     
     func loadNib() -> UIView {

@@ -14,6 +14,7 @@ class MainChosenViewController: BackgroundAnimatedViewController {
     @IBOutlet weak var kanjiButtom: UIButton!
     
     @IBOutlet weak var customButtom: PushElement!
+    @IBOutlet weak var newXib: FourButtom!
     
     private let recogniser = UITapGestureRecognizer()
     
@@ -43,6 +44,9 @@ class MainChosenViewController: BackgroundAnimatedViewController {
         customButtom.secondLabel.text = "label1"
         recogniser.addTarget(self, action: #selector(test))
         customButtom.addGestureRecognizer(recogniser)
+        
+        newXib.layer.cornerRadius = newXib.bounds.width * 0.05
+        newXib.view.layer.backgroundColor = .none
     }
   
     private func loadDesign() {

@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,53 +14,67 @@
                 <outlet property="firstButtom" destination="Kbk-Vo-4nS" id="GnL-CN-Kk0"/>
                 <outlet property="fourthButtom" destination="FUj-Py-dDA" id="XxB-lE-Kyy"/>
                 <outlet property="secondButtom" destination="Bpz-ZD-y92" id="sjF-cY-P2h"/>
-                <outlet property="thirdButtom" destination="NdI-mP-kri" id="knm-EN-dW6"/>
+                <outlet property="thirdButtom" destination="NdI-mP-kri" id="uzW-24-3JI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="348" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpz-ZD-y92">
-                    <rect key="frame" x="118" y="13" width="76" height="75"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-Vo-4nS">
+                    <rect key="frame" x="16" y="17" width="66" height="66"/>
+                    <color key="backgroundColor" name="separatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="MgL-O9-qsn"/>
+                        <constraint firstAttribute="width" constant="66" id="O0Z-hu-XaZ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpz-ZD-y92">
+                    <rect key="frame" x="102" y="17" width="66" height="66"/>
                     <color key="backgroundColor" name="separatorColor"/>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdI-mP-kri">
-                    <rect key="frame" x="220" y="13" width="75" height="75"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdI-mP-kri">
+                    <rect key="frame" x="187" y="17" width="66" height="66"/>
                     <color key="backgroundColor" name="separatorColor"/>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-Py-dDA">
-                    <rect key="frame" x="319" y="13" width="75" height="75"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" name="separatorColor"/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-Vo-4nS">
-                    <rect key="frame" x="20" y="13" width="76" height="75"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-Py-dDA">
+                    <rect key="frame" x="266" y="17" width="66" height="66"/>
                     <color key="backgroundColor" name="separatorColor"/>
                     <state key="normal" title="Button"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="Kbk-Vo-4nS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gPq-JR-Osf"/>
+                <constraint firstItem="NdI-mP-kri" firstAttribute="height" secondItem="Bpz-ZD-y92" secondAttribute="height" id="Dwp-ax-ax3"/>
+                <constraint firstItem="Bpz-ZD-y92" firstAttribute="height" secondItem="Kbk-Vo-4nS" secondAttribute="height" id="E4U-cF-cMs"/>
+                <constraint firstItem="Kbk-Vo-4nS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="GBf-PA-tRV"/>
+                <constraint firstAttribute="top" secondItem="NdI-mP-kri" secondAttribute="top" constant="-17" id="LcL-Ul-LXZ"/>
+                <constraint firstItem="Bpz-ZD-y92" firstAttribute="width" secondItem="Kbk-Vo-4nS" secondAttribute="width" id="NJ1-Rv-iAG"/>
+                <constraint firstItem="NdI-mP-kri" firstAttribute="leading" secondItem="Bpz-ZD-y92" secondAttribute="trailing" constant="19" id="NMA-Cm-mSl"/>
+                <constraint firstItem="FUj-Py-dDA" firstAttribute="leading" secondItem="NdI-mP-kri" secondAttribute="trailing" constant="13" id="Sev-0R-5m9"/>
+                <constraint firstAttribute="top" secondItem="FUj-Py-dDA" secondAttribute="top" constant="-17" id="VPG-Yo-Lod"/>
+                <constraint firstItem="FUj-Py-dDA" firstAttribute="height" secondItem="NdI-mP-kri" secondAttribute="height" id="b0f-3d-eRF"/>
+                <constraint firstAttribute="top" secondItem="Kbk-Vo-4nS" secondAttribute="top" constant="-17" id="maa-26-JHw"/>
+                <constraint firstAttribute="top" secondItem="Bpz-ZD-y92" secondAttribute="top" constant="-17" id="q63-WR-3LO"/>
+                <constraint firstItem="NdI-mP-kri" firstAttribute="width" secondItem="Bpz-ZD-y92" secondAttribute="width" id="qDu-jO-auf"/>
+                <constraint firstItem="Bpz-ZD-y92" firstAttribute="leading" secondItem="Kbk-Vo-4nS" secondAttribute="trailing" constant="20" id="t85-PC-Iio"/>
+                <constraint firstItem="FUj-Py-dDA" firstAttribute="width" secondItem="NdI-mP-kri" secondAttribute="width" id="u07-z9-MGQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-39.130434782608695" y="315.40178571428572"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="separatorColor">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

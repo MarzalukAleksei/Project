@@ -22,48 +22,49 @@
             <rect key="frame" x="0.0" y="0.0" width="348" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-Vo-4nS">
-                    <rect key="frame" x="16" y="17" width="66" height="66"/>
-                    <color key="backgroundColor" name="separatorColor"/>
+                <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kPZ-n4-f3s">
+                    <rect key="frame" x="20" y="20" width="308" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-Vo-4nS">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="60"/>
+                            <color key="backgroundColor" name="separatorColor"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpz-ZD-y92">
+                            <rect key="frame" x="82" y="0.0" width="62" height="60"/>
+                            <color key="backgroundColor" name="separatorColor"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdI-mP-kri">
+                            <rect key="frame" x="164" y="0.0" width="62" height="60"/>
+                            <color key="backgroundColor" name="separatorColor"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-Py-dDA">
+                            <rect key="frame" x="246" y="0.0" width="62" height="60"/>
+                            <color key="backgroundColor" name="separatorColor"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="66" id="MgL-O9-qsn"/>
-                        <constraint firstAttribute="width" constant="66" id="O0Z-hu-XaZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Bpz-ZD-y92" secondAttribute="bottom" id="8RI-Hu-hgx"/>
+                        <constraint firstAttribute="bottom" secondItem="Kbk-Vo-4nS" secondAttribute="bottom" id="DxW-jM-17a"/>
+                        <constraint firstAttribute="bottom" secondItem="NdI-mP-kri" secondAttribute="bottom" id="EFR-xq-qYC"/>
+                        <constraint firstItem="NdI-mP-kri" firstAttribute="top" secondItem="kPZ-n4-f3s" secondAttribute="top" id="MeW-Qa-Hvi"/>
+                        <constraint firstItem="FUj-Py-dDA" firstAttribute="top" secondItem="kPZ-n4-f3s" secondAttribute="top" id="p1p-Qz-Ucg"/>
+                        <constraint firstItem="Kbk-Vo-4nS" firstAttribute="top" secondItem="kPZ-n4-f3s" secondAttribute="top" id="tLX-ad-j09"/>
+                        <constraint firstItem="Bpz-ZD-y92" firstAttribute="top" secondItem="kPZ-n4-f3s" secondAttribute="top" id="w07-Qp-FZv"/>
+                        <constraint firstAttribute="bottom" secondItem="FUj-Py-dDA" secondAttribute="bottom" id="y41-Vf-sKj"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpz-ZD-y92">
-                    <rect key="frame" x="102" y="17" width="66" height="66"/>
-                    <color key="backgroundColor" name="separatorColor"/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdI-mP-kri">
-                    <rect key="frame" x="187" y="17" width="66" height="66"/>
-                    <color key="backgroundColor" name="separatorColor"/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-Py-dDA">
-                    <rect key="frame" x="266" y="17" width="66" height="66"/>
-                    <color key="backgroundColor" name="separatorColor"/>
-                    <state key="normal" title="Button"/>
-                </button>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="NdI-mP-kri" firstAttribute="height" secondItem="Bpz-ZD-y92" secondAttribute="height" id="Dwp-ax-ax3"/>
-                <constraint firstItem="Bpz-ZD-y92" firstAttribute="height" secondItem="Kbk-Vo-4nS" secondAttribute="height" id="E4U-cF-cMs"/>
-                <constraint firstItem="Kbk-Vo-4nS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="GBf-PA-tRV"/>
-                <constraint firstAttribute="top" secondItem="NdI-mP-kri" secondAttribute="top" constant="-17" id="LcL-Ul-LXZ"/>
-                <constraint firstItem="Bpz-ZD-y92" firstAttribute="width" secondItem="Kbk-Vo-4nS" secondAttribute="width" id="NJ1-Rv-iAG"/>
-                <constraint firstItem="NdI-mP-kri" firstAttribute="leading" secondItem="Bpz-ZD-y92" secondAttribute="trailing" constant="19" id="NMA-Cm-mSl"/>
-                <constraint firstItem="FUj-Py-dDA" firstAttribute="leading" secondItem="NdI-mP-kri" secondAttribute="trailing" constant="13" id="Sev-0R-5m9"/>
-                <constraint firstAttribute="top" secondItem="FUj-Py-dDA" secondAttribute="top" constant="-17" id="VPG-Yo-Lod"/>
-                <constraint firstItem="FUj-Py-dDA" firstAttribute="height" secondItem="NdI-mP-kri" secondAttribute="height" id="b0f-3d-eRF"/>
-                <constraint firstAttribute="top" secondItem="Kbk-Vo-4nS" secondAttribute="top" constant="-17" id="maa-26-JHw"/>
-                <constraint firstAttribute="top" secondItem="Bpz-ZD-y92" secondAttribute="top" constant="-17" id="q63-WR-3LO"/>
-                <constraint firstItem="NdI-mP-kri" firstAttribute="width" secondItem="Bpz-ZD-y92" secondAttribute="width" id="qDu-jO-auf"/>
-                <constraint firstItem="Bpz-ZD-y92" firstAttribute="leading" secondItem="Kbk-Vo-4nS" secondAttribute="trailing" constant="20" id="t85-PC-Iio"/>
-                <constraint firstItem="FUj-Py-dDA" firstAttribute="width" secondItem="NdI-mP-kri" secondAttribute="width" id="u07-z9-MGQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kPZ-n4-f3s" secondAttribute="bottom" constant="20" id="5Xx-Sp-SAs"/>
+                <constraint firstItem="kPZ-n4-f3s" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="CPw-2Q-KQJ"/>
+                <constraint firstItem="kPZ-n4-f3s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="THQ-AX-MWd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kPZ-n4-f3s" secondAttribute="trailing" constant="20" id="gWe-D5-cBB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-39.130434782608695" y="315.40178571428572"/>

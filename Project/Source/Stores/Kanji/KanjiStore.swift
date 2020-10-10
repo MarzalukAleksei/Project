@@ -14,6 +14,10 @@ class KanjiStore: IKanjiStore {
         self.data = data
     }
     
+    func getData() -> [KanjiModel] {
+        return data
+    }
+    
     func clear() {
         data.removeAll()
     }

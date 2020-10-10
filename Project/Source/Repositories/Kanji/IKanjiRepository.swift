@@ -6,4 +6,14 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-import Foundation
+protocol IKanjiRepository {
+    
+    func toKanji(data: String) -> [KanjiModel]
+    
+    func storeData(data: [KanjiModel])
+    
+    func getData() -> [KanjiModel]
+    
+    func clear()
+
+}

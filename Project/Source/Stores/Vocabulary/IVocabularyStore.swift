@@ -6,9 +6,11 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-protocol IVocabulary {
+protocol IVocabularyStore {
     
     func storeDat(data: [VocabularyModel])
     
-    func clearData()
+    func getData() -> [VocabularyModel]
+    
+    func clear()
 }

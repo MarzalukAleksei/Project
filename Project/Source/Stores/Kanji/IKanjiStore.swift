@@ -9,6 +9,9 @@
 protocol IKanjiStore {
     
     func storeData(data: [KanjiModel])
-
+    
+    func getData() -> [KanjiModel]
+    
     func clear()
+
 }

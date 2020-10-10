@@ -6,4 +6,13 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-import Foundation
+protocol IVocabularyRepository {
+    
+    func toVocabulary(data: String) -> [VocabularyModel]
+    
+    func storeData(data: [VocabularyModel])
+    
+    func getData() -> [VocabularyModel]
+    
+    func clear()
+}

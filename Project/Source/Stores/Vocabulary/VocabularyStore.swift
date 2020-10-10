@@ -6,7 +6,7 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-class Vocabulary: IVocabulary {
+class VocabularyStore: IVocabularyStore {
  
     private var data = [VocabularyModel]()
     
@@ -14,7 +14,12 @@ class Vocabulary: IVocabulary {
         self.data = data
     }
     
-    func clearData() {
+    func getData() -> [VocabularyModel] {
+        return data
+    }
+    
+    func clear() {
         data.removeAll()
     }
+
 }

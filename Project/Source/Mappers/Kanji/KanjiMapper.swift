@@ -24,9 +24,13 @@ class KanjiMapper: IMapper {
         stringArray.removeFirst()
         for (index, row) in stringArray.enumerated() {
             let rowData = row.split(separator: ",")
-            guard rowData.count < 3 else { continue }
-           // let model = KanjiModel(number: <#Int#>, level: <#Int#>, body: <#String#>, readingHiragana: <#String#>, readingKatakana: <#String#>, translate: <#String#>)
-           // result.append(model)
+
+            guard let level = rowData.last, level != "0" && level != "1", let body = rowData.first else { continue }
+            let translate = rowData[1]
+            let readingKatakana = rowData[2]
+            let readingHiragana = rowData[3]
+//           let model = KanjiModel(level: level, body: body, readingHiragana: readingHiragana, readingKatakana: readingKatakana, translate: translate, mistake: false, id: 0)
+//            result.append(model)
         }
         return result
     }

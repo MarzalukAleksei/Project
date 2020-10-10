@@ -10,5 +10,7 @@ protocol IKanaStore {
    
     func storeData(data: [KanaModel])
     
+    func getData() -> [KanaModel]
+    
     func clear()
 }

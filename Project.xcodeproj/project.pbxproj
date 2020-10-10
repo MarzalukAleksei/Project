@@ -42,6 +42,7 @@
 		1078AC6425322AC9004124CD /* IKanaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC6325322AC9004124CD /* IKanaRepository.swift */; };
 		1078AC6725322ADB004124CD /* IVocabularyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC6625322ADB004124CD /* IVocabularyRepository.swift */; };
 		1078AC6A25322AE7004124CD /* VocabularyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC6925322AE7004124CD /* VocabularyRepository.swift */; };
+		1078AC6F2532360F004124CD /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC6E2532360F004124CD /* Stores.swift */; };
 		108735922521023900926E6E /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735912521023900926E6E /* ViewControllers.swift */; };
 		108735952521030F00926E6E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735942521030F00926E6E /* Storyboards.swift */; };
 		108735982521069D00926E6E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108735972521069D00926E6E /* Search.storyboard */; };
@@ -121,6 +122,7 @@
 		1078AC6325322AC9004124CD /* IKanaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKanaRepository.swift; sourceTree = "<group>"; };
 		1078AC6625322ADB004124CD /* IVocabularyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVocabularyRepository.swift; sourceTree = "<group>"; };
 		1078AC6925322AE7004124CD /* VocabularyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyRepository.swift; sourceTree = "<group>"; };
+		1078AC6E2532360F004124CD /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
 		108735912521023900926E6E /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		108735942521030F00926E6E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		108735972521069D00926E6E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -453,7 +455,6 @@
 		10771688252E5FCA0001ABA2 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				1077168A252E5FE10001ABA2 /* Cells */,
 				10771689252E5FDD0001ABA2 /* Views */,
 			);
 			path = ReusableViews;
@@ -462,17 +463,10 @@
 		10771689252E5FDD0001ABA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CFE9321C2530536B0097E02B /* fourButtoms */,
+				CFE9321C2530536B0097E02B /* FourButtoms */,
 				1077168B252E5FEC0001ABA2 /* PushElements */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1077168A252E5FE10001ABA2 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		1077168B252E5FEC0001ABA2 /* PushElements */ = {
@@ -645,17 +639,18 @@
 				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
+				1078AC6E2532360F004124CD /* Stores.swift */,
 			);
 			path = Another;
 			sourceTree = "<group>";
 		};
-		CFE9321C2530536B0097E02B /* fourButtoms */ = {
+		CFE9321C2530536B0097E02B /* FourButtoms */ = {
 			isa = PBXGroup;
 			children = (
 				CFE9321D253053B20097E02B /* FourButtom.xib */,
 				CFE93221253053C40097E02B /* FourButtom.swift */,
 			);
-			path = fourButtoms;
+			path = FourButtoms;
 			sourceTree = "<group>";
 		};
 		CFE932302530F0720097E02B /* NewViewController */ = {
@@ -809,6 +804,7 @@
 				1038B6242528E07D00C4539A /* CSVRepository.swift in Sources */,
 				103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */,
 				CFE93222253053C40097E02B /* FourButtom.swift in Sources */,
+				1078AC6F2532360F004124CD /* Stores.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
 				1078AC5425322620004124CD /* KanaStore.swift in Sources */,

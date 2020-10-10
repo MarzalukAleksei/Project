@@ -17,6 +17,11 @@ class KanaStore: IKanaStore {
     func clear() {
         data.removeAll()
     }
+    
+    func getData() -> [KanaModel] {
+        return data
+    }
+    
 }
 
 

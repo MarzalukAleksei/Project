@@ -10,7 +10,7 @@ import UIKit
 
 class LaunchController: UIViewController {
 
-    private let launchScreenInteractor = LaunchScreenInteractor(kanaMapper: KanaMapper(csvMapper: CSVMapper()), kanjiMapper: KanjiMapper(csvMapper: CSVMapper()), vocabularyMapper: VocabularyMapper(csvMapper: CSVMapper()), csvRepository: CSVRepository(manager: CSVManager()))
+    private let launchScreenInteractor = LaunchScreenInteractor(csvRepository: CSVRepository(manager: CSVManager()), kanaRepository: KanaRepository(store: Stores.shared.kanaStore, mapper: KanaMapper(csvMapper: CSVMapper())), kanjiRepository: KanjiRepository(kanjiMapper: KanjiMapper(csvMapper: CSVMapper()), kanjiStore: Stores.shared.kanjiStore), vocabularyRepository: VocabularyRepository(store: Stores.shared.vocabularyStore, mapper: VocabularyMapper(csvMapper: CSVMapper())))
 
     override func viewDidLoad() {
         super.viewDidLoad()

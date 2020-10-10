@@ -6,4 +6,13 @@
 //  Copyright © 2020 ブラック狼. All rights reserved.
 //
 
-import Foundation
+protocol IKanaRepository {
+    
+    func toKana(data: String) -> [KanaModel]
+    
+    func storeData(data: [KanaModel])
+    
+    func getData() -> [KanaModel]
+    
+    func clear()
+}

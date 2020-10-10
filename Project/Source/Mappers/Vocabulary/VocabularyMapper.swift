@@ -9,7 +9,7 @@
 class VocabularyMapper: IMapper {
     
     typealias Entity = String
-    typealias Result = [KanaModel]
+    typealias Result = [VocabularyModel]
     
     private let csvMapper: CSVMapper
     
@@ -18,14 +18,20 @@ class VocabularyMapper: IMapper {
     }
     
     func transform(entity: Entity) -> Result {
-        var result = [KanaModel]()
+        var result = [VocabularyModel]()
         var stringArray = csvMapper.transform(entity: entity)
         guard stringArray.count != 0 else { return result }
         stringArray.removeFirst()
-        for (index, row) in stringArray.enumerated() {
-            let rowData = row.split(separator: ",")
-            guard rowData.count < 3 else { continue }
-            let model = KanaModel(kana: String(rowData[0]), reading: String(rowData[1]), id: index, example: [])
+        for row in stringArray {
+            let rowData = row.components(separatedBy: ",")
+            guard rowData.count == 4 else { continue }
+            let kanji = String(rowData[0])
+            let kana = String(rowData[1])
+            let translate = String(rowData[2])
+            let levelStr = rowData[3] 
+            guard let level = Int(levelStr)else { continue }
+            let model = VocabularyModel(kanji: kanji, kana: kana, translate: translate, level: level)
+            
             result.append(model)
         }
         return result

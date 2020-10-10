@@ -30,6 +30,12 @@
 		1077167D252E5EEE0001ABA2 /* VocabularyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */; };
 		10771681252E5F100001ABA2 /* KanjiMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10771680252E5F100001ABA2 /* KanjiMapper.swift */; };
 		10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10780CC2252EFEAF0022C517 /* Colors.xcassets */; };
+		1078AC42253225DF004124CD /* IVocabularyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC41253225DF004124CD /* IVocabularyStore.swift */; };
+		1078AC46253225E5004124CD /* VocabularyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC45253225E5004124CD /* VocabularyStore.swift */; };
+		1078AC4B253225FF004124CD /* KanjiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC4A253225FF004124CD /* KanjiStore.swift */; };
+		1078AC4E2532260C004124CD /* IKanjiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC4D2532260C004124CD /* IKanjiStore.swift */; };
+		1078AC5125322618004124CD /* IKanaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC5025322618004124CD /* IKanaStore.swift */; };
+		1078AC5425322620004124CD /* KanaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC5325322620004124CD /* KanaStore.swift */; };
 		108735922521023900926E6E /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735912521023900926E6E /* ViewControllers.swift */; };
 		108735952521030F00926E6E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735942521030F00926E6E /* Storyboards.swift */; };
 		108735982521069D00926E6E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108735972521069D00926E6E /* Search.storyboard */; };
@@ -97,6 +103,12 @@
 		1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMapper.swift; sourceTree = "<group>"; };
 		10771680252E5F100001ABA2 /* KanjiMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiMapper.swift; sourceTree = "<group>"; };
 		10780CC2252EFEAF0022C517 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1078AC41253225DF004124CD /* IVocabularyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVocabularyStore.swift; sourceTree = "<group>"; };
+		1078AC45253225E5004124CD /* VocabularyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyStore.swift; sourceTree = "<group>"; };
+		1078AC4A253225FF004124CD /* KanjiStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiStore.swift; sourceTree = "<group>"; };
+		1078AC4D2532260C004124CD /* IKanjiStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKanjiStore.swift; sourceTree = "<group>"; };
+		1078AC5025322618004124CD /* IKanaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKanaStore.swift; sourceTree = "<group>"; };
+		1078AC5325322620004124CD /* KanaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaStore.swift; sourceTree = "<group>"; };
 		108735912521023900926E6E /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		108735942521030F00926E6E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		108735972521069D00926E6E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -239,6 +251,7 @@
 		10734FA7251FC43F00F39215 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1078AC3D253225A8004124CD /* Stores */,
 				10771688252E5FCA0001ABA2 /* ReusableViews */,
 				1038B6222528E06600C4539A /* Repositories */,
 				10734FE0251FCCD800F39215 /* Core */,
@@ -463,6 +476,43 @@
 				1038B62F2528E29700C4539A /* ILaunchScreenInteractor.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		1078AC3D253225A8004124CD /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				1078AC40253225B7004124CD /* Vocabulary */,
+				1078AC3F253225B2004124CD /* Kanji */,
+				1078AC3E253225AE004124CD /* Kana */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		1078AC3E253225AE004124CD /* Kana */ = {
+			isa = PBXGroup;
+			children = (
+				1078AC5025322618004124CD /* IKanaStore.swift */,
+				1078AC5325322620004124CD /* KanaStore.swift */,
+			);
+			path = Kana;
+			sourceTree = "<group>";
+		};
+		1078AC3F253225B2004124CD /* Kanji */ = {
+			isa = PBXGroup;
+			children = (
+				1078AC4A253225FF004124CD /* KanjiStore.swift */,
+				1078AC4D2532260C004124CD /* IKanjiStore.swift */,
+			);
+			path = Kanji;
+			sourceTree = "<group>";
+		};
+		1078AC40253225B7004124CD /* Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				1078AC41253225DF004124CD /* IVocabularyStore.swift */,
+				1078AC45253225E5004124CD /* VocabularyStore.swift */,
+			);
+			path = Vocabulary;
 			sourceTree = "<group>";
 		};
 		108736192521189900926E6E /* Main */ = {
@@ -718,14 +768,18 @@
 				CFE93222253053C40097E02B /* FourButtom.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
+				1078AC5425322620004124CD /* KanaStore.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaSetter.swift in Sources */,
 				1038B6272528E09200C4539A /* ICSVRepository.swift in Sources */,
 				104187AF2529D64D00812AE4 /* IMapper + Extension.swift in Sources */,
 				1038B60B2528D9B700C4539A /* KanjiModel.swift in Sources */,
 				104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
+				1078AC5125322618004124CD /* IKanaStore.swift in Sources */,
 				CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */,
 				103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */,
+				1078AC46253225E5004124CD /* VocabularyStore.swift in Sources */,
+				1078AC4B253225FF004124CD /* KanjiStore.swift in Sources */,
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				104187AA2529D61800812AE4 /* IMapper.swift in Sources */,
 				108735952521030F00926E6E /* Storyboards.swift in Sources */,
@@ -741,12 +795,14 @@
 				CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */,
 				1038B61A2528DD4B00C4539A /* CSVMapper.swift in Sources */,
 				1038B6172528DB5D00C4539A /* ICSVManager.swift in Sources */,
+				1078AC4E2532260C004124CD /* IKanjiStore.swift in Sources */,
 				1038B60E2528D9CE00C4539A /* VocabularyModel.swift in Sources */,
 				CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */,
 				10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */,
 				1077167D252E5EEE0001ABA2 /* VocabularyMapper.swift in Sources */,
 				CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */,
 				CF4B820124AC6B2100A2CBA8 /* BackgroundAnimatedViewController.swift in Sources */,
+				1078AC42253225DF004124CD /* IVocabularyStore.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
 				CFE932362530F1720097E02B /* NewViewController.swift in Sources */,
 				CF857BD824C1B25A0084DCE9 /* KanjiSetter.swift in Sources */,

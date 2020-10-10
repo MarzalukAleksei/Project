@@ -32,7 +32,7 @@ class BackgroundSymbolsFullViewController: UIViewController {
                 let x = labelWidth * CGFloat(horizontalItem)
                 let y = labelHeigth * CGFloat(verticalItem)
                 let arrayOfItems = verticalItem % 2 == 0 ? katakana : hiragana
-                guard let object = kana.randomKana(objectArray: arrayOfItems ) else {
+                guard let object = arrayOfItems.randomElement() else {
                     return
                 }
                 let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)

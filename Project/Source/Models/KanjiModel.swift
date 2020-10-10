@@ -14,4 +14,14 @@ struct KanjiModel {
     var translate: String
     var mistake: Bool = false
     var id: Int = 0
+    
+    init( level: Int, body: String, readingHiragana: String, readingKatakana: String, translate: String, mistake: Bool, id: Int  ) {
+        self.level = level
+        self.body = body
+        self.readingHiragana = readingHiragana
+        self.readingKatakana = readingKatakana
+        self.translate = translate
+        self.mistake = mistake
+        self.id = id
+    }
 }

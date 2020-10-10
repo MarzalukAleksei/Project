@@ -22,15 +22,16 @@ class KanjiMapper: IMapper {
         var stringArray = csvMapper.transform(entity: entity)
         guard stringArray.count != 0 else { return result }
         stringArray.removeFirst()
-        for (index, row) in stringArray.enumerated() {
-            let rowData = row.split(separator: ",")
-
-            guard let level = rowData.last, level != "0" && level != "1", let body = rowData.first else { continue }
-            let translate = rowData[1]
-            let readingKatakana = rowData[2]
-            let readingHiragana = rowData[3]
-//           let model = KanjiModel(level: level, body: body, readingHiragana: readingHiragana, readingKatakana: readingKatakana, translate: translate, mistake: false, id: 0)
-//            result.append(model)
+        for row in stringArray {
+            let rowData = row.components(separatedBy: ",")
+            guard let levelStr = rowData.last, let level = Int(levelStr), level > 1 , let bodyFirst = rowData.first else { continue }
+            let body = String(bodyFirst)
+            let translate = String(rowData[1])
+            let readingKatakana = String(rowData[2])
+            let readingHiragana = String(rowData[3])
+            let index = result.count
+            let model = KanjiModel( level: level, body: body, readingHiragana: readingHiragana, readingKatakana: readingKatakana, translate: translate, mistake: false, id: index)
+            result.append(model)
         }
         return result
     }

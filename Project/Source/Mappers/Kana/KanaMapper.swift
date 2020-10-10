@@ -23,7 +23,7 @@ class KanaMapper: IMapper {
         guard stringArray.count != 0 else { return result }
         stringArray.removeFirst()
         for (index, row) in stringArray.enumerated() {
-            let rowData = row.split(separator: ",")
+            let rowData = row.components(separatedBy:  ",")
             guard rowData.count > 2 else { continue }
             let model = KanaModel(kana: String(rowData[0]), reading: String(rowData[1]), id: index, example: [])
             result.append(model)

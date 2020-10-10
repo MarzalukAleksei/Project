@@ -8,4 +8,7 @@
 
 protocol IVocabulary {
     
+    func storeDat(data: [VocabularyModel])
+    
+    func clearData()
 }

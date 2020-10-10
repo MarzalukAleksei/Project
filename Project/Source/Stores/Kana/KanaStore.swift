@@ -8,6 +8,15 @@
 
 class KanaStore: IKanaStore {
     
+    private var data = [KanaModel]()
+    
+    func storeData(data: [KanaModel]) {
+        self.data = data
+    }
+    
+    func clear() {
+        data.removeAll()
+    }
 }
 
 

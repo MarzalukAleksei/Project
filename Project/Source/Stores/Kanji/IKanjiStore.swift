@@ -8,4 +8,7 @@
 
 protocol IKanjiStore {
     
+    func storeData(data: [KanjiModel])
+
+    func clear()
 }

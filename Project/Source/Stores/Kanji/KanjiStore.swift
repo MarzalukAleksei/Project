@@ -8,4 +8,13 @@
 
 class KanjiStore: IKanjiStore {
     
+    private var data = [KanjiModel]()
+    
+    func storeData(data: [KanjiModel]) {
+        self.data = data
+    }
+    
+    func clear() {
+        data.removeAll()
+    }
 }

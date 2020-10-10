@@ -7,5 +7,14 @@
 //
 
 class Vocabulary: IVocabulary {
+ 
+    private var data = [VocabularyModel]()
     
+    func storeDat(data: [VocabularyModel]) {
+        self.data = data
+    }
+    
+    func clearData() {
+        data.removeAll()
+    }
 }

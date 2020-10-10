@@ -65,17 +65,17 @@ class DetailViewController: UIViewController {
     }
     
     func viewParameters() {
-        detailLabel.textColor = UIColor.init(named: "textColor")
-        view.backgroundColor = UIColor.init(named: "backgroundColor")
+       // detailLabel.textColor = UIColor.init(named: "textColor")
+      //  view.backgroundColor = UIColor.init(named: "backgroundColor")
         tableView.allowsSelection = false
-        tableView.backgroundColor = UIColor.init(named: "buttomColor")
-        tableView.separatorColor = UIColor.init(named: "separatorColor")
+     //   tableView.backgroundColor = UIColor.init(named: "buttomColor")
+      //  tableView.separatorColor = UIColor.init(named: "separatorColor")
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * designElementCornerRadius
-        previousButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
-        previousButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
+       // previousButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
+       // previousButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
         nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * designElementCornerRadius
-        nextButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
-        nextButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
+      //  nextButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
+       // nextButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
     }
     
     func changeCollectionArray() {

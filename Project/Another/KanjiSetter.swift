@@ -11,21 +11,21 @@ import Foundation
 class KanjiSetter {
 
     func setKanji() -> [KanjiModel] {
-     //   var element = KanjiModel(level: 0, body: "", readingHiragana: "", readingKatakana: "", translate: "")
+        var element = KanjiModel(level: 0, body: "", readingHiragana: "", readingKatakana: "", translate: "", mistake: false, id: 0)
         var array: [KanjiModel] = []
-//        let fileReader = FileReader()
-//
-//        let CSVArray = fileReader.getArrayFromCSV(fileName: "Kanji", fileType: "csv")
-//        for item in CSVArray {
-//            element.body = item["Кандзи"] ?? ""
-//            element.translate = item["Значение"] ?? ""
-//            element.readingKatakana = item["On"] ?? "ー"
-//            element.readingHiragana = item["Kun"] ?? "ー"
-//            element.level = Int(item["Level"] ?? "") ?? 0
-//            if element.body != "" && element.translate != "" && element.level != 0 {
-//                array.append(element)
-//            }
-//        }
+        let fileReader = FileReader()
+        
+        let CSVArray = fileReader.getArrayFromCSV(fileName: "Kanji", fileType: "csv")
+        for item in CSVArray {
+            element.body = item["Кандзи"] ?? ""
+            element.translate = item["Значение"] ?? ""
+            element.readingKatakana = item["On"] ?? "ー"
+            element.readingHiragana = item["Kun"] ?? "ー"
+            element.level = Int(item["Level"] ?? "") ?? 0
+            if element.body != "" && element.translate != "" && element.level != 0 {
+                array.append(element)
+            }
+        }
         return array
     }
 }

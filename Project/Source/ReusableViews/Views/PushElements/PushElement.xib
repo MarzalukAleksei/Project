@@ -24,7 +24,7 @@
                         <fragment content="漢字">
                             <attributes>
                                 <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <font key="NSFont" size="89" name=".HiraKakuInterface-W3"/>
+                                <font key="NSFont" metaFont="system" size="89"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="rightToLeft" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>

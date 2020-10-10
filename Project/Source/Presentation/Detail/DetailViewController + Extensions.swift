@@ -81,6 +81,21 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             cell.translateTableViewCell.text = ""
             }
             }
+        case is VocabularyModel:
+            guard let tableSection = SectionsInTableView(rawValue: indexPath.section) else { return UITableViewCell() }
+            switch tableSection {
+            case .main:
+                guard let element = startElement as? VocabularyModel else { return UITableViewCell() }
+                if element.kanji == "" {
+                    cell.kanjiBody.text = element.kana
+                    cell.kanjiReading.text = ""
+                } else {
+                    cell.kanjiBody.text = element.kanji
+                    cell.kanjiReading.text = element.kana
+                }
+                cell.translateTableViewCell.text = element.translate
+            default: break
+            }
         default: break
         }
         //    cell.backgroundColor = UIColor.init(named: "buttomColor")

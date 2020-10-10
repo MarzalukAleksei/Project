@@ -8,41 +8,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushElement" customModule="Project" customModuleProvider="target">
-            <connections>
-                <outlet property="firstLabel" destination="DcO-s8-vce" id="YLS-c0-TIE"/>
-                <outlet property="secondLabel" destination="7jm-lh-zcb" id="bN6-VC-5Zk"/>
-                <outlet property="sideView" destination="xpG-Hi-xWE" id="cOK-Pu-GNI"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushElement" customModule="Project" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="jl0-5p-TS5">
-            <rect key="frame" x="0.0" y="0.0" width="346" height="91"/>
+            <rect key="frame" x="0.0" y="0.0" width="225" height="380"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcO-s8-vce">
-                    <rect key="frame" x="16" y="15" width="82" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WUt-yl-euW">
+                    <rect key="frame" x="125" y="16" width="84" height="211"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="211" id="Gbx-g1-Kwh"/>
+                        <constraint firstAttribute="width" constant="84" id="Gr9-6B-bpM"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="漢字">
+                            <attributes>
+                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <font key="NSFont" size="89" name=".HiraKakuInterface-W3"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="rightToLeft" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jm-lh-zcb">
-                    <rect key="frame" x="16" y="50" width="82" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-30-71E">
+                    <rect key="frame" x="16" y="318" width="193" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpG-Hi-xWE">
-                    <rect key="frame" x="106" y="15" width="224" height="56"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-ul-Blp">
+                    <rect key="frame" x="16" y="333" width="193" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="US1-Ac-LcI"/>
             <color key="backgroundColor" red="0.10980392160000001" green="0.58823529409999997" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dxl-ul-Blp" firstAttribute="leading" secondItem="US1-Ac-LcI" secondAttribute="leading" constant="16" id="9Pu-Bc-HWy"/>
+                <constraint firstItem="US1-Ac-LcI" firstAttribute="trailing" secondItem="WUt-yl-euW" secondAttribute="trailing" constant="16" id="Fs5-mY-VMU"/>
+                <constraint firstItem="US1-Ac-LcI" firstAttribute="trailing" secondItem="Dxl-ul-Blp" secondAttribute="trailing" constant="16" id="Idm-Gj-zLC"/>
+                <constraint firstItem="US1-Ac-LcI" firstAttribute="trailing" secondItem="nRh-30-71E" secondAttribute="trailing" constant="16" id="L6I-ka-mYZ"/>
+                <constraint firstItem="WUt-yl-euW" firstAttribute="top" secondItem="jl0-5p-TS5" secondAttribute="top" constant="16" id="q6W-VM-F1z"/>
+                <constraint firstItem="nRh-30-71E" firstAttribute="leading" secondItem="US1-Ac-LcI" secondAttribute="leading" constant="16" id="vR0-Bl-zdk"/>
+                <constraint firstItem="Dxl-ul-Blp" firstAttribute="top" secondItem="nRh-30-71E" secondAttribute="bottom" constant="-1" id="xgE-SQ-fYp"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="124.6376811594203" y="59.933035714285708"/>
+            <point key="canvasLocation" x="-32.608695652173914" y="96.428571428571431"/>
         </view>
     </objects>
 </document>

@@ -17,27 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-g0-AN2">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9v-Og-4OW" customClass="FourButtom" customModule="Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="734" width="414" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y9v-Og-4OW" secondAttribute="height" multiplier="207:64" id="7P3-XW-i19"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreen" translatesAutoresizingMaskIntoConstraints="NO" id="rw6-QT-KWG">
+                                <rect key="frame" x="82" y="350" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="A8d-oF-FG8"/>
+                                    <constraint firstAttribute="height" constant="250" id="hH2-7x-hX1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QxI-Qa-HM0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="FIt-g0-AN2" firstAttribute="centerX" secondItem="G2x-Kv-uLF" secondAttribute="centerX" id="5es-es-h0w"/>
-                            <constraint firstItem="FIt-g0-AN2" firstAttribute="centerY" secondItem="G2x-Kv-uLF" secondAttribute="centerY" id="DvG-1K-5aS"/>
                             <constraint firstItem="Y9v-Og-4OW" firstAttribute="leading" secondItem="QxI-Qa-HM0" secondAttribute="leading" id="UHu-ge-mX8"/>
+                            <constraint firstItem="rw6-QT-KWG" firstAttribute="centerY" secondItem="QxI-Qa-HM0" secondAttribute="centerY" id="UWi-HI-7jS"/>
                             <constraint firstItem="QxI-Qa-HM0" firstAttribute="trailing" secondItem="Y9v-Og-4OW" secondAttribute="trailing" id="V14-aN-Bjp"/>
                             <constraint firstItem="QxI-Qa-HM0" firstAttribute="bottom" secondItem="Y9v-Og-4OW" secondAttribute="bottom" id="t3M-jW-fjb"/>
+                            <constraint firstItem="rw6-QT-KWG" firstAttribute="centerX" secondItem="QxI-Qa-HM0" secondAttribute="centerX" id="v6g-sy-WBU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a0q-KI-VpH"/>
@@ -66,8 +67,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="LoginScreen" width="1536" height="1536"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

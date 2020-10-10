@@ -17,12 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms9-ay-6QQ">
-                                <rect key="frame" x="32" y="107" width="350" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms9-ay-6QQ">
+                                <rect key="frame" x="267" y="325" width="113" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="f56-9K-E6J"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="АЛФАВИТ">
                                     <color key="titleColor" systemColor="darkTextColor"/>
@@ -31,8 +29,9 @@
                                     <segue destination="CYv-Lx-rH6" kind="show" id="Lbq-pq-n2F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-TW-zT1">
-                                <rect key="frame" x="34" y="252" width="346" height="91"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-TW-zT1">
+                                <rect key="frame" x="267" y="430" width="111" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="ИЕРОГЛИФЫ">
@@ -42,37 +41,19 @@
                                     <segue destination="YIk-zb-wLk" kind="show" id="iCj-fu-J3q"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="34" y="403" width="346" height="91"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="32" y="92" width="225" height="380"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-40-EQl" customClass="FourButtom" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="32" y="527" width="348" height="100"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-40-EQl" customClass="FourButtom" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="32" y="545" width="348" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Nfp-AY-YC8"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WZN-bL-nVc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Ms9-ay-6QQ" firstAttribute="top" secondItem="WZN-bL-nVc" secondAttribute="top" constant="107" id="EVS-Qe-nv7"/>
-                            <constraint firstItem="T6M-TW-zT1" firstAttribute="top" secondItem="Ms9-ay-6QQ" secondAttribute="bottom" constant="60" id="G4V-4p-gqw"/>
-                            <constraint firstItem="yhz-40-EQl" firstAttribute="top" secondItem="jaC-Hv-TcP" secondAttribute="bottom" constant="33" id="HJg-Na-wQ6"/>
-                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="width" secondItem="T6M-TW-zT1" secondAttribute="width" id="IUq-9M-BGz"/>
-                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="top" secondItem="T6M-TW-zT1" secondAttribute="bottom" constant="60" id="Nhd-aD-73f"/>
-                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="leading" secondItem="T6M-TW-zT1" secondAttribute="leading" id="Nuv-tz-Uw0"/>
-                            <constraint firstItem="T6M-TW-zT1" firstAttribute="height" secondItem="Ms9-ay-6QQ" secondAttribute="height" multiplier="1.07059" id="P2z-hq-e3a"/>
-                            <constraint firstItem="yhz-40-EQl" firstAttribute="leading" secondItem="WZN-bL-nVc" secondAttribute="leading" constant="32" id="PFE-Gl-z2I"/>
-                            <constraint firstItem="T6M-TW-zT1" firstAttribute="centerX" secondItem="WZN-bL-nVc" secondAttribute="centerX" id="Pd8-Db-LVh"/>
-                            <constraint firstItem="T6M-TW-zT1" firstAttribute="width" secondItem="Ms9-ay-6QQ" secondAttribute="width" multiplier="0.960938" constant="10" id="VFA-QX-c65"/>
-                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="height" secondItem="T6M-TW-zT1" secondAttribute="height" id="aoU-VH-YnC"/>
-                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="centerX" secondItem="WZN-bL-nVc" secondAttribute="centerX" id="igS-fX-Pwa"/>
-                            <constraint firstItem="Ms9-ay-6QQ" firstAttribute="centerX" secondItem="WZN-bL-nVc" secondAttribute="centerX" id="kws-xr-hpO"/>
-                            <constraint firstItem="Ms9-ay-6QQ" firstAttribute="leading" secondItem="WZN-bL-nVc" secondAttribute="leading" constant="32" id="wyr-J9-0gh"/>
-                            <constraint firstItem="WZN-bL-nVc" firstAttribute="trailing" secondItem="yhz-40-EQl" secondAttribute="trailing" constant="34" id="ywU-hc-Mgu"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="book" catalog="system" id="fs6-Dx-Xgo"/>
                     <navigationItem key="navigationItem" title="Main" id="mr8-s0-U6Z"/>

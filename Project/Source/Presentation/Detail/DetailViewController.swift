@@ -42,7 +42,7 @@ class DetailViewController: UIViewController {
         setupElement(element: element)
     }
     
-    func setTwoDemensionalArray() {
+    func setTwoDemensionalArray() { // отображение данных в таблице
         let vocabulary = VocabularySetter()
         switch startElement {
         case is KanjiModel:
@@ -60,6 +60,8 @@ class DetailViewController: UIViewController {
             array.append(element.reading)
             twoDemensionalArray[.main] = array
             twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(element.kana, typeOf: .kana)
+        case is VocabularyModel:
+            twoDemensionalArray[.main] = [startElement as Any]
         default: break
         }
     }
@@ -95,7 +97,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    func setupElement(element: Any) {
+    func setupElement(element: Any) { // устрановка стартовых значений экрана
         var detail = ""
         var previous = ""
         var next = ""
@@ -136,6 +138,9 @@ class DetailViewController: UIViewController {
                 nextElement = currentArray[currentElement.id]
             }
             detail = currentElement.body
+        case is VocabularyModel: break
+//            guard let currentElement = startElement as? VocabularyModel else { return }
+            
         default: break
         }
         detailLabel.text = detail

@@ -63,6 +63,7 @@
 		CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */; };
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
 		CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */; };
+		CF681C1025322B320088AF0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF681C0F25322B320088AF0B /* Images.xcassets */; };
 		CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69657E25063F4000FCE031 /* DesignParameters.swift */; };
 		CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */; };
 		CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7192D2251FE44100F285CC /* SearchViewController.swift */; };
@@ -148,6 +149,7 @@
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
 		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CF681C0F25322B320088AF0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF69657E25063F4000FCE031 /* DesignParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignParameters.swift; sourceTree = "<group>"; };
 		CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		CF7192D2251FE44100F285CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				10734FE8251FDA5700F39215 /* Files */,
 				CF30CD5C2472CD1F005B09F4 /* Assets.xcassets */,
+				CF681C0F25322B320088AF0B /* Images.xcassets */,
 				10780CC2252EFEAF0022C517 /* Colors.xcassets */,
 			);
 			path = Resources;
@@ -743,6 +746,7 @@
 				CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */,
 				10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */,
 				CFE9321E253053B50097E02B /* FourButtom.xib in Resources */,
+				CF681C1025322B320088AF0B /* Images.xcassets in Resources */,
 				CF30CD5B2472CD1C005B09F4 /* Main.storyboard in Resources */,
 				CFE932322530F0840097E02B /* NewViewController.storyboard in Resources */,
 				108736172521179500926E6E /* Detail.storyboard in Resources */,

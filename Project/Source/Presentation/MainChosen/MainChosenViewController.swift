@@ -31,10 +31,12 @@ class MainChosenViewController: BackgroundAnimatedViewController {
     private func setupButtons() {
      //   alphabetButtom.backgroundColor = UIColor.init(named: "backgroundColor")
      //   kanjiButtom.backgroundColor = UIColor.init(named: "buttomColor")
-        customButtom.firstLabel.text = "label1"
-        customButtom.secondLabel.text = "label1"
+//        customButtom.firstLabel.text = "label1"
+//        customButtom.secondLabel.text = "label1"
         recogniser.addTarget(self, action: #selector(test))
         customButtom.addGestureRecognizer(recogniser)
+        customButtom.layer.backgroundColor = .none
+        customButtom.view.layer.cornerRadius = customButtom.bounds.width * 0.15
         
         newXib.layer.cornerRadius = newXib.bounds.width * 0.05
         newXib.view.layer.backgroundColor = .none

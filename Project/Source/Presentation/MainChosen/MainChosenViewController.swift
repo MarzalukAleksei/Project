@@ -28,15 +28,6 @@ class MainChosenViewController: BackgroundAnimatedViewController {
         loadDesign()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        disappearView()
-    }
-    
-    private func disappearView() {
-        navigationController?.navigationBar.isHidden = false
-    }
-    
     private func setupButtons() {
         alphabetButtom.backgroundColor = UIColor.init(named: "backgroundColor")
         kanjiButtom.backgroundColor = UIColor.init(named: "buttomColor")

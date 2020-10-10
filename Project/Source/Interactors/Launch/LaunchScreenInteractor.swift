@@ -26,7 +26,7 @@ class LaunchScreenInteractor: ILaunchScreenInteractor {
         self.vocabularyRepository = vocabularyRepository
     }
     
-    func readFiles(completion: @escaping(Bool) -> Void ) {
+    func readFiles(completion: @escaping(Bool) -> Void) {
         
         guard let kanaValues = try? csvRepository.readFile(fileName: Files.kana.rawValue) else { return }
         let kanaData = kanaRepository.toKana(data: kanaValues)

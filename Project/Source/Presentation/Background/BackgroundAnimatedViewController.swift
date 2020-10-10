@@ -10,6 +10,8 @@ import UIKit
 
 class BackgroundAnimatedViewController: UIViewController {
     
+    private let backgroundInteractor: IBackgroundInteractor = BackgroundInteractor(kanjiRepository: KanjiRepository(kanjiMapper: KanjiMapper(csvMapper: CSVMapper()), kanjiStore: Stores.shared.kanjiStore))
+    
     private let backgroundAnimateDurationFrom: CGFloat = 10
     private let backgroundAnimateDurationTo: CGFloat = 30
     private let widthOfLabel: CGFloat = 30
@@ -44,8 +46,8 @@ class BackgroundAnimatedViewController: UIViewController {
     
     private func createLabels() {
         let countOfLabels = getCountOfLabels(heightOfLabel: heightOfLabel)
-        let kanji = KanjiSetter()
-        let arrayItem = kanji.setKanji()
+        
+        let arrayItem = backgroundInteractor.getKanji()
         for value in 0...countOfLabels {
             guard let randomText = arrayItem.randomElement()?.body else { return }
             let alpha = randomFloat(from: 0.40, to: 0.85)

@@ -7,5 +7,5 @@
 //
 
 protocol ILaunchScreenInteractor {
-    
+    func readFiles(completion: @escaping(Bool) -> Void)
 }

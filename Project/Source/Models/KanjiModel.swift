@@ -15,7 +15,7 @@ struct KanjiModel {
     var mistake: Bool = false
     var id: Int = 0
     
-    init( level: Int, body: String, readingHiragana: String, readingKatakana: String, translate: String, mistake: Bool, id: Int  ) {
+    init(level: Int, body: String, readingHiragana: String, readingKatakana: String, translate: String, mistake: Bool, id: Int) {
         self.level = level
         self.body = body
         self.readingHiragana = readingHiragana

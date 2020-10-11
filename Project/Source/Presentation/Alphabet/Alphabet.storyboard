@@ -12,8 +12,7 @@
         <!--Kana-->
         <scene sceneID="oGj-8d-ECq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i2r-rx-iAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="h86-cs-elo" customClass="AlphabetViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetViewController" id="h86-cs-elo" customClass="AlphabetViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uda-lg-dmv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +61,7 @@
                         <outlet property="katakanaButtom" destination="g6v-QC-xvO" id="qiI-64-Wrp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2r-rx-iAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1351" y="-364"/>
         </scene>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ABA-iP-ymh">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -14,59 +14,41 @@
             <objects>
                 <viewController id="ABA-iP-ymh" customClass="MainChosenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YNr-UU-hp2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms9-ay-6QQ">
-                                <rect key="frame" x="267" y="325" width="113" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="АЛФАВИТ">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="CYv-Lx-rH6" kind="show" id="Lbq-pq-n2F"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-TW-zT1">
-                                <rect key="frame" x="267" y="430" width="111" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="ИЕРОГЛИФЫ">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YIk-zb-wLk" kind="show" id="iCj-fu-J3q"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="32" y="92" width="225" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvH-of-PfW" customClass="PushElement" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="170.5" y="452.5" width="198.5" height="364.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-40-EQl" customClass="FourButtom" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="32" y="545" width="348" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-Hv-TcP" customClass="PushElement" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="45" y="89" width="181" height="332.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WZN-bL-nVc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bvH-of-PfW" firstAttribute="top" secondItem="jaC-Hv-TcP" secondAttribute="bottom" constant="31" id="57u-60-e0k"/>
+                            <constraint firstItem="WZN-bL-nVc" firstAttribute="bottom" secondItem="bvH-of-PfW" secondAttribute="bottom" constant="45" id="UmZ-FR-XRK"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="top" secondItem="WZN-bL-nVc" secondAttribute="top" constant="45" id="XEg-ha-IJc"/>
+                            <constraint firstItem="jaC-Hv-TcP" firstAttribute="leading" secondItem="WZN-bL-nVc" secondAttribute="leading" constant="45" id="eXr-K6-zoe"/>
+                            <constraint firstItem="bvH-of-PfW" firstAttribute="height" secondItem="jaC-Hv-TcP" secondAttribute="height" multiplier="1.09597" id="huV-Wg-PcE"/>
+                            <constraint firstItem="WZN-bL-nVc" firstAttribute="trailing" secondItem="bvH-of-PfW" secondAttribute="trailing" constant="45" id="hw9-3R-Er3"/>
+                            <constraint firstItem="WZN-bL-nVc" firstAttribute="trailing" secondItem="jaC-Hv-TcP" secondAttribute="trailing" constant="188" id="hwE-Fj-PLn"/>
+                            <constraint firstItem="bvH-of-PfW" firstAttribute="width" secondItem="jaC-Hv-TcP" secondAttribute="width" multiplier="1.09649" id="ziu-q5-GyA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="book" catalog="system" id="fs6-Dx-Xgo"/>
                     <navigationItem key="navigationItem" title="Main" id="mr8-s0-U6Z"/>
                     <connections>
-                        <outlet property="alphabetButtom" destination="Ms9-ay-6QQ" id="qwL-kc-1Nu"/>
-                        <outlet property="customButtom" destination="jaC-Hv-TcP" id="mEq-p0-aiQ"/>
-                        <outlet property="kanjiButtom" destination="T6M-TW-zT1" id="bU0-Sz-8as"/>
-                        <outlet property="newXib" destination="yhz-40-EQl" id="8ui-29-r5j"/>
+                        <outlet property="alphabetButtom" destination="jaC-Hv-TcP" id="QwC-zB-F8b"/>
+                        <outlet property="kanjiButtom" destination="bvH-of-PfW" id="GOM-JP-hd0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo0-9E-rFq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105.79710144927537" y="385.59782608695656"/>
+            <point key="canvasLocation" x="105.79710144927537" y="385.04464285714283"/>
         </scene>
         <!--Alphabet-->
         <scene sceneID="qcn-pZ-yUt">
@@ -91,20 +73,8 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

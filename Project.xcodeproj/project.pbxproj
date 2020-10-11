@@ -45,6 +45,7 @@
 		1078AC6F2532360F004124CD /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC6E2532360F004124CD /* Stores.swift */; };
 		1078AC752532420C004124CD /* BackgroundInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC742532420C004124CD /* BackgroundInteractor.swift */; };
 		1078AC782532421A004124CD /* IBackgroundInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC772532421A004124CD /* IBackgroundInteractor.swift */; };
+		1078AC7C253386A6004124CD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078AC7B253386A6004124CD /* UIView.swift */; };
 		108735922521023900926E6E /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735912521023900926E6E /* ViewControllers.swift */; };
 		108735952521030F00926E6E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108735942521030F00926E6E /* Storyboards.swift */; };
 		108735982521069D00926E6E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108735972521069D00926E6E /* Search.storyboard */; };
@@ -128,6 +129,7 @@
 		1078AC6E2532360F004124CD /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
 		1078AC742532420C004124CD /* BackgroundInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundInteractor.swift; sourceTree = "<group>"; };
 		1078AC772532421A004124CD /* IBackgroundInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBackgroundInteractor.swift; sourceTree = "<group>"; };
+		1078AC7B253386A6004124CD /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		108735912521023900926E6E /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		108735942521030F00926E6E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		108735972521069D00926E6E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		10734FE1251FCCDD00F39215 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1078AC7A25338695004124CD /* UIView */,
 				10734FE2251FCCEB00F39215 /* UILabel */,
 			);
 			path = Extensions;
@@ -574,6 +577,14 @@
 				1078AC772532421A004124CD /* IBackgroundInteractor.swift */,
 			);
 			path = Background;
+			sourceTree = "<group>";
+		};
+		1078AC7A25338695004124CD /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				1078AC7B253386A6004124CD /* UIView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		108736192521189900926E6E /* Main */ = {
@@ -835,6 +846,7 @@
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
 				1078AC5425322620004124CD /* KanaStore.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaSetter.swift in Sources */,
+				1078AC7C253386A6004124CD /* UIView.swift in Sources */,
 				1038B6272528E09200C4539A /* ICSVRepository.swift in Sources */,
 				104187AF2529D64D00812AE4 /* IMapper + Extension.swift in Sources */,
 				1038B60B2528D9B700C4539A /* KanjiModel.swift in Sources */,

@@ -16,7 +16,7 @@ class BackgroundAnimatedViewController: UIViewController {
     private let backgroundAnimateDurationTo: CGFloat = 30
     private let widthOfLabel: CGFloat = 30
     private let heightOfLabel: CGFloat = 30
-    private let firstCordinate: CGFloat = 0
+    private let firstCordinate: CGFloat = -30
     private var labels = [UILabel]()
     private var onDisplay = true
     

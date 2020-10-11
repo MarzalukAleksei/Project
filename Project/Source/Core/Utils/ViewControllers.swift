@@ -9,15 +9,25 @@
 import UIKit
 
 class ViewControllers {
-    class var detail: UIViewController {
+    class var detail: DetailViewController {
         return Storyboards.detail.instantiateViewController(withIdentifier: ViewControllersName.detail.rawValue) as! DetailViewController
     }
-    class var main: UIViewController {
+    class var main: MainBarViewController {
         return Storyboards.main.instantiateViewController(withIdentifier: ViewControllersName.mainBar.rawValue) as! MainBarViewController
+    }
+    
+    class var kanji: KanjiViewController {
+        return Storyboards.kanji.instantiateViewController(withIdentifier: ViewControllersName.kanji.rawValue) as! KanjiViewController
+    }
+    
+    class var alphabet: AlphabetViewController {
+        return Storyboards.alphabet.instantiateViewController(withIdentifier: ViewControllersName.alphabet.rawValue) as! AlphabetViewController
     }
 }
 
 private enum ViewControllersName: String {
     case detail = "DetailViewController"
     case mainBar = "MainBarViewController"
+    case alphabet = "AlphabetViewController"
+    case kanji = "KanjiViewController"
 }

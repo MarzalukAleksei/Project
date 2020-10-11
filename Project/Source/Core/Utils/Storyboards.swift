@@ -16,9 +16,19 @@ class Storyboards {
     class var main: UIStoryboard {
         return UIStoryboard(name: StoryboardsName.main.rawValue, bundle: nil)
     }
+    
+    class var kanji: UIStoryboard {
+        return UIStoryboard(name: StoryboardsName.kanji.rawValue, bundle: nil)
+    }
+    
+    class var alphabet: UIStoryboard {
+        return UIStoryboard(name: StoryboardsName.alphabet.rawValue, bundle: nil)
+    }
 }
 
 private enum StoryboardsName: String {
     case detail = "Detail"
     case main = "Main"
+    case kanji = "Kanji"
+    case alphabet = "Alphabet"
 }

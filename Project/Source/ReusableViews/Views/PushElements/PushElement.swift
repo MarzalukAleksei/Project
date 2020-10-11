@@ -9,12 +9,14 @@
 import UIKit
 
 class PushElement: UIView {
-    @IBOutlet weak var firstLabel: UILabel!
-    @IBOutlet weak var secondLabel: UILabel!
-    @IBOutlet weak var sideView: UIImageView!
     
-    var view: UIView!
-    var nibName = "PushElement"
+    @IBOutlet private weak var symbolLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    func setupButtons(symbol: String, description: String) {
+        symbolLabel.text = symbol
+        descriptionLabel.text = description
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,24 +24,7 @@ class PushElement: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+        loadFromNib(name: String(describing: PushElement.self))
     }
-    
-    func loadFromNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        
-        return view
-    }
-    
-    func setup() {
-        view = loadFromNib()
-        view.frame = bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(view)
-    }
-    
-    
 }
 

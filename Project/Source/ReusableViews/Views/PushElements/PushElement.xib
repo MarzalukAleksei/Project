@@ -8,14 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushElement" customModule="Project" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushElement" customModule="Project" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="Dxl-ul-Blp" id="2Ux-NT-olj"/>
+                <outlet property="symbolLabel" destination="WUt-yl-euW" id="kks-pO-t9m"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="jl0-5p-TS5">
-            <rect key="frame" x="0.0" y="0.0" width="225" height="380"/>
+            <rect key="frame" x="0.0" y="0.0" width="192" height="358"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WUt-yl-euW">
-                    <rect key="frame" x="125" y="16" width="84" height="211"/>
+                    <rect key="frame" x="92" y="16" width="84" height="211"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="211" id="Gbx-g1-Kwh"/>
                         <constraint firstAttribute="width" constant="84" id="Gr9-6B-bpM"/>
@@ -24,22 +29,17 @@
                         <fragment content="漢字">
                             <attributes>
                                 <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <font key="NSFont" metaFont="system" size="89"/>
+                                <font key="NSFont" size="89" name=".AppleSimplifiedChineseFont-Bold"/>
+                                <font key="NSOriginalFont" size="89" name=".AppleSimplifiedChineseFont-Bold"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="rightToLeft" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-30-71E">
-                    <rect key="frame" x="16" y="318" width="193" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-ul-Blp">
-                    <rect key="frame" x="16" y="333" width="193" height="27"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иероглифы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-ul-Blp">
+                    <rect key="frame" x="16" y="310" width="160" height="32"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -50,13 +50,16 @@
                 <constraint firstItem="Dxl-ul-Blp" firstAttribute="leading" secondItem="US1-Ac-LcI" secondAttribute="leading" constant="16" id="9Pu-Bc-HWy"/>
                 <constraint firstItem="US1-Ac-LcI" firstAttribute="trailing" secondItem="WUt-yl-euW" secondAttribute="trailing" constant="16" id="Fs5-mY-VMU"/>
                 <constraint firstItem="US1-Ac-LcI" firstAttribute="trailing" secondItem="Dxl-ul-Blp" secondAttribute="trailing" constant="16" id="Idm-Gj-zLC"/>
-                <constraint firstItem="US1-Ac-LcI" firstAttribute="trailing" secondItem="nRh-30-71E" secondAttribute="trailing" constant="16" id="L6I-ka-mYZ"/>
+                <constraint firstItem="US1-Ac-LcI" firstAttribute="bottom" secondItem="Dxl-ul-Blp" secondAttribute="bottom" constant="16" id="hVL-O0-4Ul"/>
                 <constraint firstItem="WUt-yl-euW" firstAttribute="top" secondItem="jl0-5p-TS5" secondAttribute="top" constant="16" id="q6W-VM-F1z"/>
-                <constraint firstItem="nRh-30-71E" firstAttribute="leading" secondItem="US1-Ac-LcI" secondAttribute="leading" constant="16" id="vR0-Bl-zdk"/>
-                <constraint firstItem="Dxl-ul-Blp" firstAttribute="top" secondItem="nRh-30-71E" secondAttribute="bottom" constant="-1" id="xgE-SQ-fYp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-32.608695652173914" y="96.428571428571431"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-56.521739130434788" y="89.0625"/>
         </view>
     </objects>
 </document>

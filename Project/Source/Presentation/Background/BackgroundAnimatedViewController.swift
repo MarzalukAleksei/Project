@@ -13,10 +13,10 @@ class BackgroundAnimatedViewController: UIViewController {
     private let backgroundInteractor: IBackgroundInteractor = BackgroundInteractor(kanjiRepository: KanjiRepository(kanjiMapper: KanjiMapper(csvMapper: CSVMapper()), kanjiStore: Stores.shared.kanjiStore))
     
     private let backgroundAnimateDurationFrom: CGFloat = 10
-    private let backgroundAnimateDurationTo: CGFloat = 30
-    private let widthOfLabel: CGFloat = 30
-    private let heightOfLabel: CGFloat = 30
-    private let firstCordinate: CGFloat = -30
+    private let backgroundAnimateDurationTo: CGFloat = 15
+    private let widthOfLabel: CGFloat = 50
+    private let heightOfLabel: CGFloat = 50
+    private let firstCordinate: CGFloat = -10
     private var labels = [UILabel]()
     private var onDisplay = true
     
@@ -51,9 +51,10 @@ class BackgroundAnimatedViewController: UIViewController {
         for value in 0...countOfLabels {
             guard let randomText = arrayItem.randomElement()?.body else { return }
             let alpha = randomFloat(from: 0.40, to: 0.85)
-            let widthSize = randomFloat(from: 15, to: 49)
+            let heightSize = randomFloat(from: 30, to: 49)
             let y = heightOfLabel * CGFloat(value)
-            let newLabel = UILabel(labelText: randomText, labelWidth: widthOfLabel, labelHeight: heightOfLabel, yCordinate: y, xCordinate: 0, widthSize: widthSize, alpha: alpha)
+            let newLabel = UILabel(labelText: randomText, labelWidth: widthOfLabel, labelHeight: heightSize, yCordinate: y, xCordinate: 0, widthSize: widthOfLabel, alpha: alpha)
+            newLabel.font = UIFont.boldSystemFont(ofSize: heightSize)
             labels.append(newLabel)
             view.addSubview(newLabel)
             view.sendSubviewToBack(newLabel)
@@ -61,15 +62,18 @@ class BackgroundAnimatedViewController: UIViewController {
     }
     
     private func animateLabel(label: UILabel, duration: Double) {
-        UIView.animate(withDuration: duration, animations: {
+        UIView.animate(withDuration: duration, delay: 0, options: .curveLinear) {
+            label.alpha = 0
             label.frame.origin.x = self.view.frame.width
-        }) { [weak self] (_) in
+        } completion: { [weak self] (_) in
             guard let weakSelf = self else { return }
             if weakSelf.onDisplay {
+                label.alpha = 1
                 label.frame.origin.x = weakSelf.firstCordinate
                 weakSelf.animateLabel(label: label, duration: duration)
             }
         }
+
     }
     
     private func getCountOfLabels(heightOfLabel: CGFloat) -> Int {

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MainChosenViewController: BackgroundAnimatedViewController {
+class MainChosenViewController: UIViewController {
     
     @IBOutlet weak var alphabetButtom: PushElement!
     @IBOutlet weak var kanjiButtom: PushElement!

@@ -24,6 +24,10 @@ class Storyboards {
     class var alphabet: UIStoryboard {
         return UIStoryboard(name: StoryboardsName.alphabet.rawValue, bundle: nil)
     }
+    
+    class var detailSearch: UIStoryboard {
+        return UIStoryboard(name: StoryboardsName.detailSearch.rawValue, bundle: nil)
+    }
 }
 
 private enum StoryboardsName: String {
@@ -31,4 +35,5 @@ private enum StoryboardsName: String {
     case main = "Main"
     case kanji = "Kanji"
     case alphabet = "Alphabet"
+    case detailSearch = "SearchDetail"
 }

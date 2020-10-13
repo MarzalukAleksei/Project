@@ -77,6 +77,8 @@
 		CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF956740251D47B300AB7F3E /* DifficultLevel.swift */; };
 		CFA51B382534A715000106FB /* SearchDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA51B372534A715000106FB /* SearchDetail.storyboard */; };
 		CFA51B3C2534A75F000106FB /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */; };
+		CFA51B402534B3F2000106FB /* SearchDetailViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */; };
+		CFA51B4425360D9E000106FB /* SearchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */; };
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
 		CFE931C52528D4CF0097E02B /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931C32528D4CF0097E02B /* Kanji.csv */; };
 		CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931D22529CFB60097E02B /* Vocabulary.csv */; };
@@ -169,6 +171,8 @@
 		CF956740251D47B300AB7F3E /* DifficultLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultLevel.swift; sourceTree = "<group>"; };
 		CFA51B372534A715000106FB /* SearchDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchDetail.storyboard; sourceTree = "<group>"; };
 		CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDetailViewController + Extension.swift"; sourceTree = "<group>"; };
+		CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewCell.swift; sourceTree = "<group>"; };
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
 		CFE931C32528D4CF0097E02B /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
 		CFE931D22529CFB60097E02B /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
@@ -688,8 +692,10 @@
 		CFA51B3A2534A71D000106FB /* SearchDetail */ = {
 			isa = PBXGroup;
 			children = (
-				CFA51B372534A715000106FB /* SearchDetail.storyboard */,
 				CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */,
+				CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */,
+				CFA51B372534A715000106FB /* SearchDetail.storyboard */,
+				CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */,
 			);
 			name = SearchDetail;
 			path = Detail/SearchDetail;
@@ -847,6 +853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1038B6332528E36A00C4539A /* LaunchController.swift in Sources */,
+				CFA51B402534B3F2000106FB /* SearchDetailViewController + Extension.swift in Sources */,
 				104187B52529E03F00812AE4 /* KanaMapper.swift in Sources */,
 				CF69657F25063F4000FCE031 /* DesignParameters.swift in Sources */,
 				CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */,
@@ -883,6 +890,7 @@
 				1078AC6725322ADB004124CD /* IVocabularyRepository.swift in Sources */,
 				CF78EC0324CA3AE40098424F /* KanjiViewController.swift in Sources */,
 				CFA51B3C2534A75F000106FB /* SearchDetailViewController.swift in Sources */,
+				CFA51B4425360D9E000106FB /* SearchDetailTableViewCell.swift in Sources */,
 				1078AC752532420C004124CD /* BackgroundInteractor.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,

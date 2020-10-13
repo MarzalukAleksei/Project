@@ -10,12 +10,18 @@ import UIKit
 
 class SearchDetailViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var mainElement: Any?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tabbleViewParameters()
     }
     
+    func tabbleViewParameters() {
+//        tableView.
+    }
 
 
 }

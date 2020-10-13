@@ -29,8 +29,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func pushToDetailViewController(element: Any) {
-        guard let vc = ViewControllers.detail as? DetailViewController else { return }
-        vc.startElement = element
+        let vc = ViewControllers.detailSearch
+        vc.mainElement = element
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

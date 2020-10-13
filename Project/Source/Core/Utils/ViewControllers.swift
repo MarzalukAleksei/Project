@@ -23,6 +23,10 @@ class ViewControllers {
     class var alphabet: AlphabetViewController {
         return Storyboards.alphabet.instantiateViewController(withIdentifier: ViewControllersName.alphabet.rawValue) as! AlphabetViewController
     }
+    
+    class var detailSearch: SearchDetailViewController {
+        return Storyboards.detailSearch.instantiateViewController(withIdentifier: ViewControllersName.detailSearch.rawValue) as! SearchDetailViewController
+    }
 }
 
 private enum ViewControllersName: String {
@@ -30,4 +34,5 @@ private enum ViewControllersName: String {
     case mainBar = "MainBarViewController"
     case alphabet = "AlphabetViewController"
     case kanji = "KanjiViewController"
+    case detailSearch = "SearchDetailViewController"
 }

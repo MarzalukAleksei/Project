@@ -56,6 +56,7 @@ class BackgroundSymbolsFullViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: xCor, y: yCor, width: width, height: height))
         label.text = text
         label.textAlignment = .center
+        label.alpha = 0.3
         return label
     }
 }

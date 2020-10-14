@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MainChosenViewController: UIViewController {
+class MainChosenViewController: BackgroundSymbolsFullViewController {
     
     @IBOutlet weak var alphabetButtom: PushElement!
     @IBOutlet weak var kanjiButtom: PushElement!

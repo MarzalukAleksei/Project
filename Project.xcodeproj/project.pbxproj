@@ -575,6 +575,10 @@
 		1078AC7225324182004124CD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
+				CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */,
+				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
+				CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -673,9 +677,6 @@
 				CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */,
 				CFD012CE24E723DB001F0032 /* CSVAction.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
-				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
-				CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */,
-				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
 				CF4B81FD24AA429600A2CBA8 /* KanaSetter.swift */,
 				CF956740251D47B300AB7F3E /* DifficultLevel.swift */,
@@ -695,7 +696,6 @@
 				CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */,
 				CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */,
 				CFA51B372534A715000106FB /* SearchDetail.storyboard */,
-				CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */,
 			);
 			name = SearchDetail;
 			path = Detail/SearchDetail;

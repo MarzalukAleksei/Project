@@ -8,36 +8,67 @@
 
 import UIKit
 
-class KanaCollectionViewController: UICollectionViewController {
+class KanaViewController: UIViewController {
 
+    @IBOutlet private weak var bottomView: BottomView!
+    @IBOutlet private weak var collection: UICollectionView!
+    
     let itemsAtRow = itemsInCollectionView
     let sectionInsets = UIEdgeInsets(top: edgeInCollectionViewTop, left: edgeInCollectionViewLeft, bottom: edgeInCollectionViewBottom, right: edgeInCollectionViewRight)
-    
+
     var typeOfCollection: TypeOfCollectionItem?
 
     var arrayOfElements = [Any]()
-    
+
     let difficult = DifficultLevel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        prepareViewController()
+    }
+
+    private func prepareViewController() {
         guard let type = typeOfCollection else { return }
         arrayOfElements = difficult.getArray(typeOf: type)
-      //  collectionView.backgroundColor = UIColor.init(named: "backgroundColor")
+        collection.register(UINib(nibName: "KanaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "KanaCollectionViewCell")
+        collection.delegate = self
+        collection.dataSource = self
+        bottomView.delegate = self
     }
     
     func pushToNextViewController(element: Any) {
-        guard let vc = ViewControllers.detail as? DetailViewController else { return }
+        let vc = ViewControllers.detail
         vc.startElement = element
         vc.typeOfColletion = typeOfCollection
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+
     func elementByIndex(array: [Any], index: Int) -> Any? {
         return array[index]
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+}
+extension KanaViewController: UICollectionViewDelegateFlowLayout{
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+            let paddingWidth = sectionInsets.left * (itemsAtRow + 1.000001)
+            let avalableWidth = collectionView.frame.width - paddingWidth
+            let widthPerItem = avalableWidth / itemsAtRow
+            return CGSize(width: widthPerItem, height: widthPerItem)
+        }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return sectionInsets
+        }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return sectionInsets.left
+        }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return sectionInsets.left
+        }
+}
+
+extension KanaViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var element: Any?
         switch typeOfCollection {
         case .hiragana:
@@ -60,56 +91,31 @@ class KanaCollectionViewController: UICollectionViewController {
         }
         pushToNextViewController(element: element as Any)
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
         // #warning Incomplete implementation, return the number of items
         return arrayOfElements.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kanaCell", for: indexPath) as? KanaCollectionViewCell else { return UICollectionViewCell() }
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KanaCollectionViewCell", for: indexPath) as? KanaCollectionViewCell else { return UICollectionViewCell() }
+
         switch typeOfCollection {
         case .hiragana, .katakana:
             let element = arrayOfElements[indexPath.item] as? KanaModel
-            cell.label.text = element?.kana ?? "-"
-            if element?.mistake == true {
-                cell.label.textColor = .red
-            }
+            cell.setupLabelText(text: element?.kana ?? "-")
+
         case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             let element = arrayOfElements[indexPath.item] as? KanjiModel
-            cell.label.text = element?.body ?? "-"
-            if element?.mistake == true {
-                cell.label.textColor = .red
-            }
+            cell.setupLabelText(text: element?.body ?? "-")
         case .none: break
         }
-        cell.layer.cornerRadius = cell.bounds.width * designElementCornerRadius
-      //  cell.backgroundColor = UIColor.init(named: "buttomColor")
-        cell.label.textAlignment = .center
-     //   cell.label.textColor = UIColor.init(named: "textColor")
         return cell
     }
 }
-extension KanaCollectionViewController: UICollectionViewDelegateFlowLayout{
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            
-            let paddingWidth = sectionInsets.left * (itemsAtRow + 1.000001)
-            let avalableWidth = collectionView.frame.width - paddingWidth
-            let widthPerItem = avalableWidth / itemsAtRow
-            return CGSize(width: widthPerItem, height: widthPerItem)
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return sectionInsets
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return sectionInsets.left
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return sectionInsets.left
-        }
-}
-    
-   
 
+extension KanaViewController: BottomViewDelegate {
+    func backButtonAction() {
+        navigationController?.popViewController(animated: true)
+    }
+}

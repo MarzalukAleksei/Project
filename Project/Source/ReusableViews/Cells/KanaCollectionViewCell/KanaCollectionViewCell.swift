@@ -10,6 +10,14 @@ import UIKit
 
 class KanaCollectionViewCell: UICollectionViewCell {
         
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var itemLabel: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func setupLabelText(text: String) {
+        itemLabel.text = text
+    }
     
 }

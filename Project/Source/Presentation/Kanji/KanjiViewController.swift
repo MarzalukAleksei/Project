@@ -25,8 +25,9 @@ class KanjiViewController: BackgroundSymbolsFullViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinasion = segue.destination as? KanaCollectionViewController, let typeOfSegue = segue.identifier else { return }
+        guard let destinasion = segue.destination as? KanaViewController, let typeOfSegue = segue.identifier else { return }
         let typeOfCollection = TypeOfCollectionItem(rawValue: typeOfSegue)
-        destinasion.typeOfCollection = typeOfCollection
+      //  destinasion.typeOfCollection = typeOfCollection
     }
 }
+

@@ -21,12 +21,15 @@
 		1038B6362528E3A300C4539A /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1038B6352528E3A300C4539A /* Launch.storyboard */; };
 		103D475D251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */; };
 		103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */; };
+		103D7CBC25378F5B0024ABE3 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D7CBB25378F5B0024ABE3 /* BottomView.swift */; };
+		103D7CC025378F940024ABE3 /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103D7CBF25378F940024ABE3 /* BottomView.xib */; };
 		104187AA2529D61800812AE4 /* IMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104187A92529D61800812AE4 /* IMapper.swift */; };
 		104187AF2529D64D00812AE4 /* IMapper + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104187AE2529D64D00812AE4 /* IMapper + Extension.swift */; };
 		104187B52529E03F00812AE4 /* KanaMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104187B42529E03F00812AE4 /* KanaMapper.swift */; };
 		104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104187B92529EB0700812AE4 /* MainBarViewController.swift */; };
 		10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FE3251FCCFC00F39215 /* UILabel.swift */; };
 		10734FEB251FDAC300F39215 /* SearchController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */; };
+		1074D42725379E4D008C4FD9 /* KanaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1074D42625379E4D008C4FD9 /* KanaCollectionViewCell.xib */; };
 		1077167D252E5EEE0001ABA2 /* VocabularyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */; };
 		10771681252E5F100001ABA2 /* KanjiMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10771680252E5F100001ABA2 /* KanjiMapper.swift */; };
 		10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10780CC2252EFEAF0022C517 /* Colors.xcassets */; };
@@ -109,12 +112,15 @@
 		1038B6352528E3A300C4539A /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		103D475C251E02C700F0BE92 /* BackgroundSymbolsFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSymbolsFullViewController.swift; sourceTree = "<group>"; };
 		103D477E251E0A3100F0BE92 /* DetailViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController + Extensions.swift"; sourceTree = "<group>"; };
+		103D7CBB25378F5B0024ABE3 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		103D7CBF25378F940024ABE3 /* BottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomView.xib; sourceTree = "<group>"; };
 		104187A92529D61800812AE4 /* IMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMapper.swift; sourceTree = "<group>"; };
 		104187AE2529D64D00812AE4 /* IMapper + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IMapper + Extension.swift"; sourceTree = "<group>"; };
 		104187B42529E03F00812AE4 /* KanaMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaMapper.swift; sourceTree = "<group>"; };
 		104187B92529EB0700812AE4 /* MainBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarViewController.swift; sourceTree = "<group>"; };
 		10734FE3251FCCFC00F39215 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		10734FEA251FDAC300F39215 /* SearchController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController + Extensions.swift"; sourceTree = "<group>"; };
+		1074D42625379E4D008C4FD9 /* KanaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KanaCollectionViewCell.xib; sourceTree = "<group>"; };
 		1077167C252E5EEE0001ABA2 /* VocabularyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMapper.swift; sourceTree = "<group>"; };
 		10771680252E5F100001ABA2 /* KanjiMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiMapper.swift; sourceTree = "<group>"; };
 		10780CC2252EFEAF0022C517 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -262,6 +268,15 @@
 				108736162521179500926E6E /* Detail.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		103D7CB925378F360024ABE3 /* BottomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				103D7CBB25378F5B0024ABE3 /* BottomView.swift */,
+				103D7CBF25378F940024ABE3 /* BottomView.xib */,
+			);
+			path = BottomMenu;
 			sourceTree = "<group>";
 		};
 		104187A82529D60B00812AE4 /* Mappers */ = {
@@ -456,6 +471,15 @@
 			path = CSV;
 			sourceTree = "<group>";
 		};
+		1074D42525379E37008C4FD9 /* KanaCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
+				1074D42625379E4D008C4FD9 /* KanaCollectionViewCell.xib */,
+			);
+			path = KanaCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		1077167A252E5E5D0001ABA2 /* Vocabulary */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +508,7 @@
 		10771689252E5FDD0001ABA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				103D7CB925378F360024ABE3 /* BottomMenu */,
 				CFE9321C2530536B0097E02B /* FourButtoms */,
 				1077168B252E5FEC0001ABA2 /* PushElements */,
 			);
@@ -575,9 +600,9 @@
 		1078AC7225324182004124CD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1074D42525379E37008C4FD9 /* KanaCollectionViewCell */,
 				CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */,
 				CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */,
-				CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */,
 				CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */,
 			);
 			path = Cells;
@@ -783,8 +808,10 @@
 				10873614252115BA00926E6E /* Kana.storyboard in Resources */,
 				108736112521153500926E6E /* Alphabet.storyboard in Resources */,
 				1087361C252118CE00926E6E /* Kanji.storyboard in Resources */,
+				1074D42725379E4D008C4FD9 /* KanaCollectionViewCell.xib in Resources */,
 				CF30CD602472CD1F005B09F4 /* LaunchScreen.storyboard in Resources */,
 				CFF1237F249B848600323497 /* GoogleService-Info.plist in Resources */,
+				103D7CC025378F940024ABE3 /* BottomView.xib in Resources */,
 				CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */,
 				CF30CD5D2472CD1F005B09F4 /* Assets.xcassets in Resources */,
 				CF2BCC5724F40397003859FD /* Kana.csv in Resources */,
@@ -896,6 +923,7 @@
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
 				1078AC6A25322AE7004124CD /* VocabularyRepository.swift in Sources */,
 				10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */,
+				103D7CBC25378F5B0024ABE3 /* BottomView.swift in Sources */,
 				CFE93211252C7AD60097E02B /* PushElement.swift in Sources */,
 				CF4B81F624AA338200A2CBA8 /* AlphabetViewController.swift in Sources */,
 				1078AC6125322ABD004124CD /* KanaRepository.swift in Sources */,

@@ -10,27 +10,37 @@ import UIKit
 
 class AlphabetViewController: BackgroundSymbolsFullViewController {
 
-    @IBOutlet weak var hiraganaButtom: UIButton!
-    @IBOutlet weak var katakanaButtom: UIButton!
+    @IBOutlet private weak var hiraganaButtom: UIButton!
+    @IBOutlet private weak var katakanaButtom: UIButton!
+    @IBOutlet private weak var bottomView: BottomView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDesign()
+        setupView()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "hiraganaSegue" {
-            guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
+            guard let destitantion = segue.destination as? KanaViewController else { return }
                 destitantion.typeOfCollection = TypeOfCollectionItem.hiragana
         } else if segue.identifier == "katakanaSegue" {
-            guard let destitantion = segue.destination as? KanaCollectionViewController else { return }
+            guard let destitantion = segue.destination as? KanaViewController else { return }
             destitantion.typeOfCollection = TypeOfCollectionItem.katakana
         }
     }
     
+    private func setupView() {
+        bottomView.delegate = self
+    }
+    
     private func loadDesign() {
-//        view.backgroundColor = designBackgroundColor
-      //  hiraganaButtom.backgroundColor = UIColor.init(named: "buttomColor")
-       // katakanaButtom.backgroundColor = UIColor.init(named: "buttomColor")
+        navigationController?.navigationBar.isHidden = true
+    }
+}
+
+extension AlphabetViewController: BottomViewDelegate {
+    func backButtonAction() {
+        navigationController?.popViewController(animated: true)
     }
 }

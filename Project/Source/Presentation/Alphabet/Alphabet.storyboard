@@ -4,12 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kana-->
+        <!--Alphabet View Controller-->
         <scene sceneID="oGj-8d-ECq">
             <objects>
                 <viewController storyboardIdentifier="AlphabetViewController" id="h86-cs-elo" customClass="AlphabetViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,69 +18,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEZ-9D-6HR">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.80784313725490198" blue="0.82745098039215681" alpha="0.36983625856164382" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnY-co-m0d">
                                 <rect key="frame" x="32" y="151" width="350" height="85"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Crayola"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="egF-j9-2iU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="ХИРАГАНА">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="tpj-Ct-T9c" kind="show" identifier="hiraganaSegue" id="Cov-pY-Mau"/>
+                                    <segue destination="A9t-7F-lOZ" kind="show" identifier="hiraganaSegue" id="gVR-DC-BTj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-QC-xvO">
                                 <rect key="frame" x="32" y="296" width="350" height="85"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Crayola"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <state key="normal" title="КАТАКАНА">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="tpj-Ct-T9c" kind="show" identifier="katakanaSegue" id="fW5-cO-NKo"/>
+                                    <segue destination="A9t-7F-lOZ" kind="show" identifier="katakanaSegue" id="zzK-HF-7hE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STJ-Gw-1EE" customClass="BottomView" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O3I-dR-gNd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZ2-qg-mfS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="STJ-Gw-1EE" firstAttribute="trailing" secondItem="eZ2-qg-mfS" secondAttribute="trailing" id="9Gy-2A-ggo"/>
                             <constraint firstItem="g6v-QC-xvO" firstAttribute="height" secondItem="AnY-co-m0d" secondAttribute="height" id="A1s-SD-j82"/>
                             <constraint firstItem="g6v-QC-xvO" firstAttribute="centerX" secondItem="eZ2-qg-mfS" secondAttribute="centerX" id="C18-cZ-Tl0"/>
                             <constraint firstItem="AnY-co-m0d" firstAttribute="top" secondItem="eZ2-qg-mfS" secondAttribute="top" constant="107" id="IbS-E3-rui"/>
                             <constraint firstItem="g6v-QC-xvO" firstAttribute="width" secondItem="AnY-co-m0d" secondAttribute="width" id="JCm-ah-ljy"/>
+                            <constraint firstItem="STJ-Gw-1EE" firstAttribute="leading" secondItem="eZ2-qg-mfS" secondAttribute="leading" id="Ou0-wh-xxB"/>
                             <constraint firstItem="AnY-co-m0d" firstAttribute="leading" secondItem="eZ2-qg-mfS" secondAttribute="leading" constant="32" id="YjY-Vb-qwY"/>
+                            <constraint firstAttribute="bottom" secondItem="STJ-Gw-1EE" secondAttribute="bottom" id="ZSR-1m-dZn"/>
                             <constraint firstItem="g6v-QC-xvO" firstAttribute="top" secondItem="AnY-co-m0d" secondAttribute="bottom" constant="60" id="sBH-xI-1T3"/>
                             <constraint firstItem="AnY-co-m0d" firstAttribute="centerX" secondItem="eZ2-qg-mfS" secondAttribute="centerX" id="sVg-1S-l0S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kana" id="3WA-Mf-ohr"/>
                     <connections>
+                        <outlet property="bottomView" destination="STJ-Gw-1EE" id="M90-K6-Qgc"/>
                         <outlet property="hiraganaButtom" destination="AnY-co-m0d" id="Q0J-sd-ItV"/>
                         <outlet property="katakanaButtom" destination="g6v-QC-xvO" id="qiI-64-Wrp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2r-rx-iAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="-364"/>
+            <point key="canvasLocation" x="1350.7246376811595" y="-364.28571428571428"/>
         </scene>
         <!--Kana-->
-        <scene sceneID="P1x-mb-gUq">
+        <scene sceneID="aUX-FI-XIV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Kana" id="tpj-Ct-T9c" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="kke-pf-Vpg"/>
+                <viewControllerPlaceholder storyboardName="Kana" id="A9t-7F-lOZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RwX-s7-i8N"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pBE-dt-NK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpI-ho-710" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="-486"/>
+            <point key="canvasLocation" x="2207" y="-573"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fW5-cO-NKo"/>
+        <segue reference="zzK-HF-7hE"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <namedColor name="Crayola">
+            <color red="0.10980392156862745" green="0.58823529411764708" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,11 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
   
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var previousButtonOutlet: UIButton!
-    @IBOutlet weak var nextButtonOutlet: UIButton!
-
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var detailLabel: UILabel!
+    @IBOutlet private weak var previousButtonOutlet: UIButton!
+    @IBOutlet private weak var nextButtonOutlet: UIButton!
+    @IBOutlet private weak var bottomView: BottomView!
+    
     var startElement: Any?
     var typeOfColletion: TypeOfCollectionItem?
     var twoDemensionalArray: [SectionsInTableView: [Any]] = [:]
@@ -67,17 +68,10 @@ class DetailViewController: UIViewController {
     }
     
     func viewParameters() {
-       // detailLabel.textColor = UIColor.init(named: "textColor")
-      //  view.backgroundColor = UIColor.init(named: "backgroundColor")
+        bottomView.delegate = self
         tableView.allowsSelection = false
-     //   tableView.backgroundColor = UIColor.init(named: "buttomColor")
-      //  tableView.separatorColor = UIColor.init(named: "separatorColor")
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * designElementCornerRadius
-       // previousButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
-       // previousButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
         nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * designElementCornerRadius
-      //  nextButtonOutlet.backgroundColor = UIColor.init(named: "buttomColor")
-       // nextButtonOutlet.setTitleColor(UIColor.init(named: "textColor"), for: .normal)
     }
     
     func changeCollectionArray() {

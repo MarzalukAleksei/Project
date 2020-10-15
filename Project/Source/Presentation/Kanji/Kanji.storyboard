@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,86 +18,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-5h-f42">
-                                <rect key="frame" x="32" y="144" width="350" height="48"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="N 1">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gON-sL-XUh">
-                                <rect key="frame" x="32" y="212" width="350" height="48"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="N 2">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-8l-rPh">
-                                <rect key="frame" x="32" y="280" width="350" height="48"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="N 3">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heN-ay-Vwl">
-                                <rect key="frame" x="32" y="348" width="350" height="48"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="N 4">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-sA-OsA" userLabel="All">
-                                <rect key="frame" x="32" y="76" width="350" height="48"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="All">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgR-dc-pac">
-                                <rect key="frame" x="32" y="416" width="350" height="48"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.90980392160000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <state key="normal" title="N 5">
-                                    <color key="titleColor" systemColor="darkTextColor"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-Mq-194">
+                                <rect key="frame" x="16" y="60" width="382" height="736"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-sA-OsA" userLabel="All">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="106"/>
+                                        <color key="backgroundColor" name="Crayola"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <state key="normal" title="All">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ij5-ww-bMe" kind="show" identifier="AllSegue" id="5YL-Gp-GLs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-5h-f42">
+                                        <rect key="frame" x="0.0" y="126" width="382" height="106"/>
+                                        <color key="backgroundColor" name="Crayola"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <state key="normal" title="N 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ij5-ww-bMe" kind="show" identifier="n1Segue" id="gwq-LF-dUT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gON-sL-XUh">
+                                        <rect key="frame" x="0.0" y="252" width="382" height="106"/>
+                                        <color key="backgroundColor" name="Crayola"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <state key="normal" title="N 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ij5-ww-bMe" kind="show" identifier="n2Segue" id="ibe-rX-Pyb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-8l-rPh">
+                                        <rect key="frame" x="0.0" y="378" width="382" height="106"/>
+                                        <color key="backgroundColor" name="Crayola"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <state key="normal" title="N 3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ij5-ww-bMe" kind="show" identifier="n3Segue" id="NbO-nr-1Nn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heN-ay-Vwl">
+                                        <rect key="frame" x="0.0" y="504" width="382" height="106"/>
+                                        <color key="backgroundColor" name="Crayola"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <state key="normal" title="N 4">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ij5-ww-bMe" kind="show" identifier="n4Segue" id="ZVd-tR-cW0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgR-dc-pac">
+                                        <rect key="frame" x="0.0" y="630" width="382" height="106"/>
+                                        <color key="backgroundColor" name="Crayola"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <state key="normal" title="N 5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ij5-ww-bMe" kind="show" identifier="n5Segue" id="HHG-lO-1LK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gON-sL-XUh" firstAttribute="height" secondItem="Ccj-5h-f42" secondAttribute="height" id="48I-rX-BFX"/>
+                                    <constraint firstItem="5s7-8l-rPh" firstAttribute="height" secondItem="gON-sL-XUh" secondAttribute="height" id="IAp-jX-0qq"/>
+                                    <constraint firstItem="Ccj-5h-f42" firstAttribute="height" secondItem="2LI-sA-OsA" secondAttribute="height" id="Tli-ek-KUc"/>
+                                    <constraint firstItem="lgR-dc-pac" firstAttribute="height" secondItem="heN-ay-Vwl" secondAttribute="height" id="f8H-eC-hcI"/>
+                                    <constraint firstItem="heN-ay-Vwl" firstAttribute="height" secondItem="5s7-8l-rPh" secondAttribute="height" id="xiO-c5-G4E"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-Tq-Z1J" customClass="BottomView" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mPT-Ma-9mB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UoB-Ew-0H7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gON-sL-XUh" firstAttribute="trailing" secondItem="Ccj-5h-f42" secondAttribute="trailing" id="6Up-ZG-Ypq"/>
-                            <constraint firstItem="2LI-sA-OsA" firstAttribute="leading" secondItem="UoB-Ew-0H7" secondAttribute="leading" constant="32" id="DAc-qN-fc9"/>
-                            <constraint firstItem="gON-sL-XUh" firstAttribute="top" secondItem="Ccj-5h-f42" secondAttribute="bottom" constant="20" id="El5-IH-DJ4"/>
-                            <constraint firstItem="Ccj-5h-f42" firstAttribute="top" secondItem="2LI-sA-OsA" secondAttribute="bottom" constant="20" id="Jhk-dl-xaF"/>
-                            <constraint firstItem="lgR-dc-pac" firstAttribute="height" secondItem="heN-ay-Vwl" secondAttribute="height" id="L9i-n3-tel"/>
-                            <constraint firstItem="lgR-dc-pac" firstAttribute="leading" secondItem="heN-ay-Vwl" secondAttribute="leading" id="LmD-xd-XaG"/>
-                            <constraint firstItem="gON-sL-XUh" firstAttribute="height" secondItem="Ccj-5h-f42" secondAttribute="height" id="R8s-Lh-aVs"/>
-                            <constraint firstItem="5s7-8l-rPh" firstAttribute="height" secondItem="gON-sL-XUh" secondAttribute="height" id="T6u-Uy-A5C"/>
-                            <constraint firstItem="gON-sL-XUh" firstAttribute="leading" secondItem="Ccj-5h-f42" secondAttribute="leading" id="WNl-tW-DfP"/>
-                            <constraint firstItem="heN-ay-Vwl" firstAttribute="leading" secondItem="5s7-8l-rPh" secondAttribute="leading" id="Yhd-cN-CWj"/>
-                            <constraint firstItem="heN-ay-Vwl" firstAttribute="height" secondItem="5s7-8l-rPh" secondAttribute="height" id="Zjl-No-yZb"/>
-                            <constraint firstItem="Ccj-5h-f42" firstAttribute="leading" secondItem="2LI-sA-OsA" secondAttribute="leading" id="c5s-nr-2EI"/>
-                            <constraint firstItem="heN-ay-Vwl" firstAttribute="top" secondItem="5s7-8l-rPh" secondAttribute="bottom" constant="20" id="clg-Q4-wJd"/>
-                            <constraint firstItem="5s7-8l-rPh" firstAttribute="trailing" secondItem="gON-sL-XUh" secondAttribute="trailing" id="daB-SL-MX1"/>
-                            <constraint firstItem="5s7-8l-rPh" firstAttribute="leading" secondItem="gON-sL-XUh" secondAttribute="leading" id="h4I-pw-eGY"/>
-                            <constraint firstItem="heN-ay-Vwl" firstAttribute="trailing" secondItem="5s7-8l-rPh" secondAttribute="trailing" id="iya-JN-NRM"/>
-                            <constraint firstItem="UoB-Ew-0H7" firstAttribute="trailing" secondItem="2LI-sA-OsA" secondAttribute="trailing" constant="32" id="j91-WE-CfD"/>
-                            <constraint firstItem="lgR-dc-pac" firstAttribute="trailing" secondItem="heN-ay-Vwl" secondAttribute="trailing" id="kj9-uJ-vOx"/>
-                            <constraint firstItem="lgR-dc-pac" firstAttribute="top" secondItem="heN-ay-Vwl" secondAttribute="bottom" constant="20" id="kjo-Sf-Sst"/>
-                            <constraint firstItem="Ccj-5h-f42" firstAttribute="height" secondItem="2LI-sA-OsA" secondAttribute="height" id="lO1-it-OI1"/>
-                            <constraint firstItem="5s7-8l-rPh" firstAttribute="top" secondItem="gON-sL-XUh" secondAttribute="bottom" constant="20" id="ray-UQ-wnF"/>
-                            <constraint firstItem="Ccj-5h-f42" firstAttribute="trailing" secondItem="2LI-sA-OsA" secondAttribute="trailing" id="tw2-Rc-6s6"/>
-                            <constraint firstItem="2LI-sA-OsA" firstAttribute="top" secondItem="UoB-Ew-0H7" secondAttribute="top" constant="32" id="ymb-ZE-PgM"/>
+                            <constraint firstItem="fV0-Tq-Z1J" firstAttribute="top" secondItem="Ehq-Mq-194" secondAttribute="bottom" constant="50" id="1qv-K0-b6y"/>
+                            <constraint firstItem="fV0-Tq-Z1J" firstAttribute="trailing" secondItem="UoB-Ew-0H7" secondAttribute="trailing" id="H28-7s-fmc"/>
+                            <constraint firstItem="UoB-Ew-0H7" firstAttribute="trailing" secondItem="Ehq-Mq-194" secondAttribute="trailing" constant="16" id="QaQ-kp-Kla"/>
+                            <constraint firstItem="fV0-Tq-Z1J" firstAttribute="leading" secondItem="UoB-Ew-0H7" secondAttribute="leading" id="epK-Tf-R7D"/>
+                            <constraint firstAttribute="bottom" secondItem="fV0-Tq-Z1J" secondAttribute="bottom" id="gKr-E5-aEU"/>
+                            <constraint firstItem="Ehq-Mq-194" firstAttribute="top" secondItem="UoB-Ew-0H7" secondAttribute="top" constant="16" id="huu-zK-1W4"/>
+                            <constraint firstItem="Ehq-Mq-194" firstAttribute="leading" secondItem="UoB-Ew-0H7" secondAttribute="leading" constant="16" id="t8l-4U-LgK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hNu-1c-Scq"/>
                     <navigationItem key="navigationItem" title="Kanji" id="jTy-OR-HUC"/>
                     <connections>
+                        <outlet property="bottomView" destination="fV0-Tq-Z1J" id="c5p-en-OZm"/>
                         <outletCollection property="buttons" destination="2LI-sA-OsA" collectionClass="NSMutableArray" id="Ykj-oq-qVU"/>
                         <outletCollection property="buttons" destination="Ccj-5h-f42" collectionClass="NSMutableArray" id="ltE-Cu-Fcc"/>
                         <outletCollection property="buttons" destination="gON-sL-XUh" collectionClass="NSMutableArray" id="aEi-c0-z1f"/>
@@ -107,28 +160,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys2-MJ-4wl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352" y="554"/>
+            <point key="canvasLocation" x="1350.7246376811595" y="553.125"/>
+        </scene>
+        <!--Kana-->
+        <scene sceneID="oOs-RN-KBA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Kana" id="ij5-ww-bMe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nba-pr-o6X"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hW7-z2-Ulz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2274" y="504"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HHG-lO-1LK"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="Crayola">
+            <color red="0.10980392156862745" green="0.58823529411764708" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

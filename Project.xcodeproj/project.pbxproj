@@ -56,6 +56,8 @@
 		10873614252115BA00926E6E /* Kana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10873613252115BA00926E6E /* Kana.storyboard */; };
 		108736172521179500926E6E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108736162521179500926E6E /* Detail.storyboard */; };
 		1087361C252118CE00926E6E /* Kanji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1087361B252118CE00926E6E /* Kanji.storyboard */; };
+		10BB09292538455C0049BC66 /* KanjiViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB09282538455C0049BC66 /* KanjiViewController + Extension.swift */; };
+		10BB092C25384BBE0049BC66 /* KanaCollectionViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB092B25384BBE0049BC66 /* KanaCollectionViewController + Extensions.swift */; };
 		CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E5B6B24E0252400851627 /* DetailTableViewCell.swift */; };
 		CF2BCC5324F40386003859FD /* Vokabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2BCC5224F40386003859FD /* Vokabulary.swift */; };
 		CF2BCC5724F40397003859FD /* Kana.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF2BCC5524F40397003859FD /* Kana.csv */; };
@@ -147,6 +149,8 @@
 		10873613252115BA00926E6E /* Kana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Kana.storyboard; sourceTree = "<group>"; };
 		108736162521179500926E6E /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		1087361B252118CE00926E6E /* Kanji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Kanji.storyboard; sourceTree = "<group>"; };
+		10BB09282538455C0049BC66 /* KanjiViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KanjiViewController + Extension.swift"; sourceTree = "<group>"; };
+		10BB092B25384BBE0049BC66 /* KanaCollectionViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KanaCollectionViewController + Extensions.swift"; sourceTree = "<group>"; };
 		2703ADBE244F9602DB16AFE2 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		49AB3B4574642CAF2AB66A54 /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D5D54F2EB396135C4EE15 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -384,6 +388,7 @@
 			children = (
 				CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */,
 				10873613252115BA00926E6E /* Kana.storyboard */,
+				10BB092B25384BBE0049BC66 /* KanaCollectionViewController + Extensions.swift */,
 			);
 			path = Kana;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 			children = (
 				CF78EC0224CA3AE40098424F /* KanjiViewController.swift */,
 				1087361B252118CE00926E6E /* Kanji.storyboard */,
+				10BB09282538455C0049BC66 /* KanjiViewController + Extension.swift */,
 			);
 			path = Kanji;
 			sourceTree = "<group>";
@@ -891,8 +897,10 @@
 				1038B6242528E07D00C4539A /* CSVRepository.swift in Sources */,
 				103D477F251E0A3100F0BE92 /* DetailViewController + Extensions.swift in Sources */,
 				CFE93222253053C40097E02B /* FourButtom.swift in Sources */,
+				10BB092C25384BBE0049BC66 /* KanaCollectionViewController + Extensions.swift in Sources */,
 				1078AC6F2532360F004124CD /* Stores.swift in Sources */,
 				CF0E5B6C24E0252400851627 /* DetailTableViewCell.swift in Sources */,
+				10BB09292538455C0049BC66 /* KanjiViewController + Extension.swift in Sources */,
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
 				1078AC5425322620004124CD /* KanaStore.swift in Sources */,
 				CF4B81FE24AA429600A2CBA8 /* KanaSetter.swift in Sources */,

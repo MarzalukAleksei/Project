@@ -19,7 +19,6 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             case .main:
                 label.text = "Чтение и Значение"
         }
-       // headerVIew.backgroundColor = UIColor.init(named: "headerColor")
         headerVIew.addSubview(label)
         return headerVIew
     }
@@ -53,17 +52,11 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.kanjiBody.text = row.kanji
                     cell.kanjiReading.text = row.kana
                     cell.translateTableViewCell.text = row.translate
-//                    cell.kanjiBody.textColor = UIColor.init(named: "textColor")
-//                    cell.kanjiReading.textColor = UIColor.init(named: "textColor")
-//                    cell.translateTableViewCell.textColor = UIColor.init(named: "textColor")
                 case .main:
                     guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
                     cell.kanjiBody.text = row
                     cell.kanjiReading.text = ""
                     cell.translateTableViewCell.text = ""
-//                    cell.kanjiBody.textColor = UIColor.init(named: "textColor")
-//                    cell.kanjiReading.textColor = UIColor.init(named: "textColor")
-//                    cell.translateTableViewCell.textColor = UIColor.init(named: "textColor")
                 }
             }
         case is KanaModel:
@@ -98,7 +91,12 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             }
         default: break
         }
-        //    cell.backgroundColor = UIColor.init(named: "buttomColor")
-            return cell
+        return cell
+    }
+}
+
+extension DetailViewController: BottomViewDelegate {
+    func backButtonAction() {
+        navigationController?.popViewController(animated: true)
     }
 }

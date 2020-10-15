@@ -38,7 +38,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ONO-uc-fXm">
-                                <rect key="frame" x="15" y="204" width="384" height="643"/>
+                                <rect key="frame" x="15" y="204" width="384" height="627"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="J53-Eq-2Cb" customClass="DetailTableViewCell" customModule="Project" customModuleProvider="target">
@@ -118,6 +118,13 @@
                                     <action selector="previousButton:" destination="0AH-cy-9cY" eventType="touchUpInside" id="8IM-19-vz2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3el-CH-xbG" customClass="BottomView" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jek-2Y-L1g"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6nu-iO-HBu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,19 +134,23 @@
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="top" secondItem="6nu-iO-HBu" secondAttribute="top" constant="40" id="9QI-W9-4fa"/>
                             <constraint firstItem="ONO-uc-fXm" firstAttribute="centerX" secondItem="6nu-iO-HBu" secondAttribute="centerX" id="Gsz-nU-5CS"/>
                             <constraint firstItem="6nu-iO-HBu" firstAttribute="trailing" secondItem="MSx-w0-upU" secondAttribute="trailing" constant="15" id="GwZ-1t-28a"/>
-                            <constraint firstItem="6nu-iO-HBu" firstAttribute="bottom" secondItem="ONO-uc-fXm" secondAttribute="bottom" constant="15" id="KtS-mq-ilb"/>
                             <constraint firstItem="Rok-rW-dKG" firstAttribute="leading" secondItem="MWZ-9p-r1I" secondAttribute="trailing" constant="67" id="Pp7-lh-Z0e"/>
+                            <constraint firstItem="3el-CH-xbG" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" id="U3Z-cM-sbN"/>
                             <constraint firstItem="ONO-uc-fXm" firstAttribute="top" secondItem="Rok-rW-dKG" secondAttribute="bottom" constant="45" id="b1y-xH-cL4"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="height" secondItem="MSx-w0-upU" secondAttribute="height" id="cTr-Nh-tg6"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" constant="15" id="did-hR-nYN"/>
                             <constraint firstItem="Rok-rW-dKG" firstAttribute="top" secondItem="6nu-iO-HBu" secondAttribute="top" constant="15" id="eYS-JI-Pc7"/>
+                            <constraint firstAttribute="bottom" secondItem="3el-CH-xbG" secondAttribute="bottom" id="fM0-Zt-3f5"/>
                             <constraint firstItem="Rok-rW-dKG" firstAttribute="centerX" secondItem="xLu-G7-6hZ" secondAttribute="centerX" id="hDF-54-NUS"/>
+                            <constraint firstItem="3el-CH-xbG" firstAttribute="top" secondItem="ONO-uc-fXm" secondAttribute="bottom" constant="15" id="iSQ-jK-WXy"/>
+                            <constraint firstItem="3el-CH-xbG" firstAttribute="trailing" secondItem="6nu-iO-HBu" secondAttribute="trailing" id="pbz-08-Sma"/>
                             <constraint firstItem="ONO-uc-fXm" firstAttribute="leading" secondItem="6nu-iO-HBu" secondAttribute="leading" constant="15" id="tJo-W2-jIq"/>
                             <constraint firstItem="MWZ-9p-r1I" firstAttribute="width" secondItem="MSx-w0-upU" secondAttribute="width" id="wWn-gF-jOA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sbR-uy-gW4"/>
                     <connections>
+                        <outlet property="bottomView" destination="3el-CH-xbG" id="ttx-Vz-NJm"/>
                         <outlet property="detailLabel" destination="okN-jm-wEm" id="t3T-yg-euc"/>
                         <outlet property="nextButtonOutlet" destination="MSx-w0-upU" id="JZn-IY-LqI"/>
                         <outlet property="previousButtonOutlet" destination="MWZ-9p-r1I" id="MCq-Gb-YGq"/>
@@ -148,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DI-Ar-kfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3129" y="-638"/>
+            <point key="canvasLocation" x="3128.985507246377" y="-638.16964285714278"/>
         </scene>
     </scenes>
     <resources>

@@ -28,7 +28,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         array = vocablary.transformToVocabulary()
-        
+        prepareViewController()
         searchController.searchResultsUpdater = self
         searchController.searchBar.sizeToFit()
         searchController.obscuresBackgroundDuringPresentation = false
@@ -37,5 +37,11 @@ class SearchViewController: UIViewController {
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
 //        tableView.allowsSelection = false
+    }
+    
+    private func prepareViewController () {
+        tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchTableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 }

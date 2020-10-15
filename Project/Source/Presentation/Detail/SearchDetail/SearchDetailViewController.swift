@@ -20,7 +20,9 @@ class SearchDetailViewController: UIViewController {
     }
     
     func tabbleViewParameters() {
-//        tableView.
+        tableView.register(UINib(nibName: "SearchDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchDetailTableViewCell")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
 

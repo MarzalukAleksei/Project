@@ -41,7 +41,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as? DetailTableViewCell else { return UITableViewCell() }
         
         switch startElement {
         case is KanjiModel:
@@ -49,14 +49,12 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
                 switch tableSection {
                 case .examples:
                     guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyModel else { return UITableViewCell() }
-                    cell.kanjiBody.text = row.kanji
-                    cell.kanjiReading.text = row.kana
-                    cell.translateTableViewCell.text = row.translate
+                    
+                    cell.setupElements(kanji: row.kanji, reading: row.kana, translate: row.translate)
                 case .main:
                     guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
-                    cell.kanjiBody.text = row
-                    cell.kanjiReading.text = ""
-                    cell.translateTableViewCell.text = ""
+                    
+                    cell.setupElements(kanji: row, reading: "", translate: "")
                 }
             }
         case is KanaModel:
@@ -64,31 +62,15 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             switch tableSection {
             case .examples:
             guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? VocabularyModel else { return UITableViewCell() }
-            cell.kanjiBody.text = row.kana
-            cell.translateTableViewCell.text = row.translate
-            cell.kanjiReading.text = ""
+                
+                cell.setupElements(kanji: row.kanji, reading: row.kana, translate: row.translate)
             case .main:
             guard let row = twoDemensionalArray[DetailViewController.SectionsInTableView(rawValue: indexPath.section)!]?[indexPath.row] as? String else { return UITableViewCell() }
-            cell.kanjiBody.text = row
-            cell.kanjiReading.text = ""
-            cell.translateTableViewCell.text = ""
+                
+                cell.setupElements(kanji: row, reading: "", translate: "")
             }
             }
-        case is VocabularyModel:
-            guard let tableSection = SectionsInTableView(rawValue: indexPath.section) else { return UITableViewCell() }
-            switch tableSection {
-            case .main:
-                guard let element = startElement as? VocabularyModel else { return UITableViewCell() }
-                if element.kanji == "" {
-                    cell.kanjiBody.text = element.kana
-                    cell.kanjiReading.text = ""
-                } else {
-                    cell.kanjiBody.text = element.kanji
-                    cell.kanjiReading.text = element.kana
-                }
-                cell.translateTableViewCell.text = element.translate
-            default: break
-            }
+            
         default: break
         }
         return cell

@@ -35,7 +35,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         let searchElement: VocabularyModel
         
         if isFiltering {
@@ -45,14 +45,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         if searchElement.kanji == "" {
-            cell.kanjiBody.text = searchElement.kana
-            cell.kanjiReading.text = ""
+            cell.setupElements(kanji: searchElement.kana, reading: "", translate: searchElement.translate)
         } else {
-            cell.kanjiBody.text = searchElement.kanji
-            cell.kanjiReading.text = searchElement.kana
+            cell.setupElements(kanji: searchElement.kanji, reading: searchElement.kana, translate: searchElement.translate)
         }
-        cell.kanjiTranslate.text = searchElement.translate
-
         return cell
     }
 }

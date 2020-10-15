@@ -22,29 +22,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="yzE-lP-F20" customClass="SearchDetailTableViewCell" customModule="Project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yzE-lP-F20" id="ZzW-nw-Brv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI8-2n-Deb">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="VI8-2n-Deb" secondAttribute="bottom" id="76p-TS-unF"/>
-                                                <constraint firstItem="VI8-2n-Deb" firstAttribute="trailing" secondItem="ZzW-nw-Brv" secondAttribute="trailingMargin" id="Awv-zz-u88"/>
-                                                <constraint firstItem="VI8-2n-Deb" firstAttribute="leading" secondItem="ZzW-nw-Brv" secondAttribute="leadingMargin" id="aQd-DZ-uxa"/>
-                                                <constraint firstItem="VI8-2n-Deb" firstAttribute="top" secondItem="ZzW-nw-Brv" secondAttribute="topMargin" id="j9F-Bd-4vh"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="kanjiLabel" destination="VI8-2n-Deb" id="67X-QD-To6"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

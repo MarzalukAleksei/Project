@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareViewController()
         viewParameters()
         changeCollectionArray()
         setTwoDemensionalArray()
@@ -41,6 +42,12 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         guard let element = startElement else { return }
         setupElement(element: element)
+    }
+    
+    private func prepareViewController() {
+        tableView.register(UINib(nibName: "DetailTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailTableViewCell")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func setTwoDemensionalArray() { // отображение данных в таблице

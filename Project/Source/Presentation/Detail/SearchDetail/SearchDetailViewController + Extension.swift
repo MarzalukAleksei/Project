@@ -17,10 +17,10 @@ extension SearchDetailViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SearchDetailTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchDetailTableViewCell", for: indexPath) as? SearchDetailTableViewCell else { return UITableViewCell() }
         guard let element = mainElement as? VocabularyModel else { return UITableViewCell() }
         
-        cell.kanjiLabel.text = "\(element.kanji) [\(element.kana)] ー \(element.translate)"
+        cell.setupElement(string: "\(element.kanji) [\(element.kana)] ー \(element.translate)")
 
         return cell
     }

@@ -8,22 +8,22 @@
 import UIKit
 
 extension KanaViewController: UICollectionViewDelegateFlowLayout{
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-            let paddingWidth = sectionInsets.left * (itemsAtRow + 1.000001)
-            let avalableWidth = collectionView.frame.width - paddingWidth
-            let widthPerItem = avalableWidth / itemsAtRow
-            return CGSize(width: widthPerItem, height: widthPerItem)
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return sectionInsets
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return sectionInsets.left
-        }
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return sectionInsets.left
-        }
+//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//            let paddingWidth = sectionInsets.left * (itemsAtRow + 1.000001)
+//            let avalableWidth = collectionView.frame.width - paddingWidth
+//            let widthPerItem = avalableWidth / itemsAtRow
+//            return CGSize(width: widthPerItem, height: widthPerItem)
+//        }
+//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//            return sectionInsets
+//        }
+//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//            return sectionInsets.left
+//        }
+//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//            return sectionInsets.left
+//        }
 }
 
 extension KanaViewController : UICollectionViewDataSource, UICollectionViewDelegate {

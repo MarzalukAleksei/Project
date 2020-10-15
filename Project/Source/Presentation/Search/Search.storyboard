@@ -21,51 +21,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="VhR-Yg-omE" customClass="SearchTableViewCell" customModule="Project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="30.666666030883789"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VhR-Yg-omE" customClass="SearchTableViewCell" customModule="Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VhR-Yg-omE" id="VqB-4C-3m6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="30.666666030883789"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="漢字" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-kd-GDi">
-                                                    <rect key="frame" x="10" y="7.9999999999999982" width="32.666666666666664" height="19.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кандзи, название японских иероглифов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-vM-kcU">
-                                                    <rect key="frame" x="47.666666666666657" y="5" width="351.33333333333337" height="20.666666666666668"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かんじ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSI-Cs-6rx">
-                                                    <rect key="frame" x="10" y="0.66666666666666696" width="32.666666666666664" height="10"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="9x2-vM-kcU" secondAttribute="trailing" constant="15" id="5pD-FA-Cjz"/>
-                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="leading" secondItem="VqB-4C-3m6" secondAttribute="leading" constant="10" id="DcI-5S-7Cl"/>
-                                                <constraint firstItem="9x2-vM-kcU" firstAttribute="top" secondItem="VqB-4C-3m6" secondAttribute="top" constant="5" id="F9I-8j-Rtp"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EeL-kd-GDi" secondAttribute="bottom" constant="2.9999993642171248" id="KkL-rY-8BY"/>
-                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VqB-4C-3m6" secondAttribute="top" constant="7.6666666666666661" id="T6y-zg-iKG"/>
-                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="top" secondItem="hSI-Cs-6rx" secondAttribute="bottom" constant="-2.6666666666666288" id="agm-ea-O9p"/>
-                                                <constraint firstItem="9x2-vM-kcU" firstAttribute="leading" secondItem="EeL-kd-GDi" secondAttribute="trailing" constant="5" id="hg8-vI-neQ"/>
-                                                <constraint firstItem="hSI-Cs-6rx" firstAttribute="trailing" secondItem="EeL-kd-GDi" secondAttribute="trailing" id="jKS-rq-CsR"/>
-                                                <constraint firstItem="hSI-Cs-6rx" firstAttribute="leading" secondItem="EeL-kd-GDi" secondAttribute="leading" id="l0c-xn-KyA"/>
-                                                <constraint firstAttribute="bottom" secondItem="9x2-vM-kcU" secondAttribute="bottom" constant="5" id="sJe-EV-3fF"/>
-                                                <constraint firstItem="EeL-kd-GDi" firstAttribute="centerY" secondItem="9x2-vM-kcU" secondAttribute="centerY" constant="2.1666666666667016" id="u53-Ci-STb"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="kanjiBody" destination="EeL-kd-GDi" id="hY8-r2-lF5"/>
-                                            <outlet property="kanjiReading" destination="hSI-Cs-6rx" id="L2d-0e-rwi"/>
-                                            <outlet property="kanjiTranslate" destination="9x2-vM-kcU" id="HTL-6U-YDZ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

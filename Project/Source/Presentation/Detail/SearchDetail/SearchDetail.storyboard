@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q0f-87-9kw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="794"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="yzE-lP-F20" customClass="SearchDetailTableViewCell" customModule="Project" customModuleProvider="target">
@@ -35,17 +35,28 @@
                                     <outlet property="delegate" destination="XMH-pU-N1L" id="zpF-v2-8lw"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcV-FQ-Q2O" customClass="BottomView" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gZQ-AO-SAV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Wi-5p-aUN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8Wi-5p-aUN" firstAttribute="bottom" secondItem="q0f-87-9kw" secondAttribute="bottom" id="2V9-fL-v67"/>
-                            <constraint firstItem="q0f-87-9kw" firstAttribute="leading" secondItem="8Wi-5p-aUN" secondAttribute="leading" id="4rV-sj-shR"/>
-                            <constraint firstItem="8Wi-5p-aUN" firstAttribute="trailing" secondItem="q0f-87-9kw" secondAttribute="trailing" id="HqI-ow-SWo"/>
-                            <constraint firstItem="q0f-87-9kw" firstAttribute="top" secondItem="8Wi-5p-aUN" secondAttribute="top" id="LHd-X9-gEI"/>
+                            <constraint firstItem="RcV-FQ-Q2O" firstAttribute="trailing" secondItem="8Wi-5p-aUN" secondAttribute="trailing" id="Kwj-0X-2w4"/>
+                            <constraint firstItem="q0f-87-9kw" firstAttribute="trailing" secondItem="8Wi-5p-aUN" secondAttribute="trailing" id="ST1-3n-yHE"/>
+                            <constraint firstItem="q0f-87-9kw" firstAttribute="leading" secondItem="8Wi-5p-aUN" secondAttribute="leading" id="bUG-aS-8es"/>
+                            <constraint firstItem="q0f-87-9kw" firstAttribute="top" secondItem="8Wi-5p-aUN" secondAttribute="top" id="cst-ZG-Lsd"/>
+                            <constraint firstItem="RcV-FQ-Q2O" firstAttribute="top" secondItem="q0f-87-9kw" secondAttribute="bottom" constant="8" symbolic="YES" id="dEQ-HV-fy3"/>
+                            <constraint firstAttribute="bottom" secondItem="RcV-FQ-Q2O" secondAttribute="bottom" id="nco-qm-FFt"/>
+                            <constraint firstItem="RcV-FQ-Q2O" firstAttribute="leading" secondItem="8Wi-5p-aUN" secondAttribute="leading" id="rdk-I5-MQl"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomView" destination="RcV-FQ-Q2O" id="Vy3-nx-THF"/>
                         <outlet property="tableView" destination="q0f-87-9kw" id="YdY-mz-x15"/>
                     </connections>
                 </viewController>

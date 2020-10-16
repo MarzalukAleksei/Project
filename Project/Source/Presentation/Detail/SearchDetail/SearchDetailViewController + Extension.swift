@@ -50,8 +50,31 @@ extension SearchDetailViewController: UITableViewDelegate, UITableViewDataSource
             cell.setupElement(string: "\(element.body) [\(element.readingHiragana)][\(element.readingKatakana)] - \(element.translate)\nУровень кандзи: \(element.level)")
             
         }
-        
         return cell
     }
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        let element: KanjiModel
+        switch section {
+        case .containsKanji:
+            element = twoDemensionalArray[section]?[indexPath.row] as! KanjiModel
+            pushToDetailViewController(element: element)
+        default: break
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
+    private func pushToDetailViewController(element: Any) {
+        let vc = ViewControllers.detail
+        vc.startElement = element
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+extension SearchDetailViewController: BottomViewDelegate {
+    func backButtonAction() {
+        navigationController?.popViewController(animated: true)
+    }
 }

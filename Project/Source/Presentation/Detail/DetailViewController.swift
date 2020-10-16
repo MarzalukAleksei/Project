@@ -44,10 +44,16 @@ class DetailViewController: UIViewController {
         setupElement(element: element)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+    }
+    
     private func prepareViewController() {
         tableView.register(UINib(nibName: "DetailTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+        guard let element = startElement as? KanjiModel else { return } // не понятно почему, при переходе с searchDetail не обновляет элемент. Написав сюда, обновил
+        detailLabel.text = element.body
     }
     
     func setTwoDemensionalArray() { // отображение данных в таблице

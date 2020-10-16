@@ -11,6 +11,7 @@ import UIKit
 class SearchDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomView: BottomView!
     
     var mainElement: Any?
     var twoDemensionalArray: [Section: [Any]] = [:]
@@ -33,6 +34,7 @@ class SearchDetailViewController: UIViewController {
     }
     
     private func tabbleViewParameters() {
+        bottomView.delegate = self
         tableView.register(UINib(nibName: "SearchDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchDetailTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self

@@ -402,8 +402,8 @@
 		10734FCD251FC54900F39215 /* MainChosen */ = {
 			isa = PBXGroup;
 			children = (
-				CFE931FF252B38960097E02B /* MainChosen.storyboard */,
 				CFE931FD252B38950097E02B /* MainChosenViewController.swift */,
+				CFE931FF252B38960097E02B /* MainChosen.storyboard */,
 			);
 			path = MainChosen;
 			sourceTree = "<group>";

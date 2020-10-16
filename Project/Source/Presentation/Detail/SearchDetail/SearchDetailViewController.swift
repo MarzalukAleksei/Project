@@ -13,20 +13,21 @@ class SearchDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var mainElement: Any?
-    var array: [Section: [Any?]] = [:]
-//    let kanji = KanjiSetter()
-//    let kana = KanaSetter()
+    var twoDemensionalArray: [Section: [Any]] = [:]
+    let kanji = KanjiSetter()
+    let kana = KanaSetter()
     var kanaList = ""
     
     
     enum Section: Int {
         case main = 0
-        case kanji = 1
+        case containsKanji = 1
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tabbleViewParameters()
+        kanaListSetup()
         searchElementsForArray()
         
     }
@@ -39,19 +40,24 @@ class SearchDetailViewController: UIViewController {
 
     private func searchElementsForArray() {
         guard let element = mainElement as? VocabularyModel else { return }
-        
-        array[.main]?.append(element)
-        for _ in element.kanji {
-            
+        var array = [Any]()
+        for item in element.kanji {
+            if !kanaList.contains(item) {
+                for searchElement in kanji.setKanji() {
+                    if String(item) == searchElement.body {
+                        array.append(searchElement)
+                    }
+                }
+            }
         }
-        
-        
+        twoDemensionalArray[.main] = [element]
+        twoDemensionalArray[.containsKanji] = array
     }
     
     private func kanaListSetup() {
-//        for item in kana.transformToKana(<#T##typeOf: TypeOfCollectionItem##TypeOfCollectionItem#>) {
-//            
-//        }
+        for item in kana.transformToKana(.hiragana) {
+            kanaList += item.kana
+        }
     }
     
 }

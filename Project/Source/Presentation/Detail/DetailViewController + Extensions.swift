@@ -10,8 +10,8 @@ import UIKit
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerVIew = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
-        let label = UILabel(frame: CGRect(x: 10, y: 1.5, width: tableView.bounds.width, height: headerVIew.bounds.height - 5))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
+        let label = UILabel(frame: CGRect(x: 10, y: 1.5, width: tableView.bounds.width, height: headerView.bounds.height - 5))
         guard let tableviewSection = SectionsInTableView(rawValue: section) else { return UIView() }
         switch tableviewSection {
             case .examples:
@@ -19,8 +19,8 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             case .main:
                 label.text = "Чтение и Значение"
         }
-        headerVIew.addSubview(label)
-        return headerVIew
+        headerView.addSubview(label)
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

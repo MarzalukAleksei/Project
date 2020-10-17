@@ -25,7 +25,6 @@ class DetailViewController: UIViewController {
     let kunLabel = "訓: "
     let onLabel = "音: "
     let imiLabel = "意味: "
-    var searchDetailViewControllerIsInitial = false
 
     enum SectionsInTableView: Int {
         case main = 0, examples = 1
@@ -53,13 +52,6 @@ class DetailViewController: UIViewController {
         tableView.register(UINib(nibName: "DetailTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-//        if searchDetailViewControllerIsInitial == true {
-//            previousButtonOutlet.alpha = 0
-//            nextButtonOutlet.alpha = 0
-//        }
-//        guard let element = startElement as? KanjiModel else { return } // не понятно почему, при переходе с searchDetail не обновляет элемент. Написав сюда, обновил
-//        detailLabel.text = element.body
-//        print(array)
     }
     
     func setTwoDemensionalArray() { // отображение данных в таблице

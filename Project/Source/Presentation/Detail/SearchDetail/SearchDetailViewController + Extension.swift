@@ -70,7 +70,6 @@ extension SearchDetailViewController: UITableViewDelegate, UITableViewDataSource
         let vc = ViewControllers.detail
         vc.startElement = element
         vc.array = array
-        vc.searchDetailViewControllerIsInitial = true
         navigationController?.pushViewController(vc, animated: true)
     }
  

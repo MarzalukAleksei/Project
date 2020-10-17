@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,26 +11,33 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KanaCollectionViewCell" id="VBv-iU-Kdh" customClass="KanaCollectionViewCell" customModule="Project" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="144" height="95"/>
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fjX-T8-pnQ">
-                <rect key="frame" x="0.0" y="0.0" width="144" height="95"/>
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHR-En-Blh">
-                        <rect key="frame" x="0.0" y="0.0" width="144" height="95"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" name="Encycolorpedia"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="口" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHR-En-Blh">
+                        <rect key="frame" x="7" y="0.0" width="106" height="120"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.10980392160000001" green="0.58823529409999997" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="GHR-En-Blh" secondAttribute="bottom" id="A0j-IS-oo7"/>
-                    <constraint firstAttribute="trailing" secondItem="GHR-En-Blh" secondAttribute="trailing" id="Dtq-Iy-Gz4"/>
-                    <constraint firstItem="GHR-En-Blh" firstAttribute="top" secondItem="fjX-T8-pnQ" secondAttribute="top" id="X9q-Xg-dEj"/>
-                    <constraint firstItem="GHR-En-Blh" firstAttribute="leading" secondItem="fjX-T8-pnQ" secondAttribute="leading" id="bPM-II-yy0"/>
+                    <constraint firstItem="GHR-En-Blh" firstAttribute="top" secondItem="fjX-T8-pnQ" secondAttribute="top" id="1Bs-Au-hP8"/>
+                    <constraint firstAttribute="bottom" secondItem="GHR-En-Blh" secondAttribute="bottom" id="EPW-tG-Xkg"/>
+                    <constraint firstItem="GHR-En-Blh" firstAttribute="leading" secondItem="fjX-T8-pnQ" secondAttribute="leading" constant="7" id="LxJ-En-4eP"/>
+                    <constraint firstAttribute="trailing" secondItem="GHR-En-Blh" secondAttribute="trailing" constant="7" id="bOZ-QA-sUT"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <integer key="value" value="10"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </collectionViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <size key="customSize" width="144" height="95"/>
             <connections>
                 <outlet property="itemLabel" destination="GHR-En-Blh" id="jTA-6d-wj8"/>
@@ -39,9 +45,4 @@
             <point key="canvasLocation" x="297.10144927536237" y="53.90625"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <namedColor name="Encycolorpedia">
-            <color red="0.99215686274509807" green="0.48627450980392156" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

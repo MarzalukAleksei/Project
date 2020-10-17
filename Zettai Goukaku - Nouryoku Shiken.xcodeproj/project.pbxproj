@@ -160,7 +160,7 @@
 		CF0EAC702507C7BA00293613 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CF2BCC5224F40386003859FD /* Vokabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vokabulary.swift; sourceTree = "<group>"; };
 		CF2BCC5524F40397003859FD /* Kana.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kana.csv; sourceTree = "<group>"; };
-		CF30CD502472CD1C005B09F4 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF30CD502472CD1C005B09F4 /* Zettai Goukaku - Nouryoku Shiken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zettai Goukaku - Nouryoku Shiken.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF30CD532472CD1C005B09F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF30CD5A2472CD1C005B09F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -707,7 +707,7 @@
 		CF30CD512472CD1C005B09F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF30CD502472CD1C005B09F4 /* Project.app */,
+				CF30CD502472CD1C005B09F4 /* Zettai Goukaku - Nouryoku Shiken.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -794,9 +794,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF30CD4F2472CD1C005B09F4 /* Project */ = {
+		CF30CD4F2472CD1C005B09F4 /* Zettai Goukaku - Nouryoku Shiken */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF30CD642472CD1F005B09F4 /* Build configuration list for PBXNativeTarget "Project" */;
+			buildConfigurationList = CF30CD642472CD1F005B09F4 /* Build configuration list for PBXNativeTarget "Zettai Goukaku - Nouryoku Shiken" */;
 			buildPhases = (
 				CA6C6C9820C93C4419F14FC1 /* [CP] Check Pods Manifest.lock */,
 				CF30CD4C2472CD1C005B09F4 /* Sources */,
@@ -808,9 +808,9 @@
 			);
 			dependencies = (
 			);
-			name = Project;
+			name = "Zettai Goukaku - Nouryoku Shiken";
 			productName = Project;
-			productReference = CF30CD502472CD1C005B09F4 /* Project.app */;
+			productReference = CF30CD502472CD1C005B09F4 /* Zettai Goukaku - Nouryoku Shiken.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -828,7 +828,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF30CD4B2472CD1C005B09F4 /* Build configuration list for PBXProject "Project" */;
+			buildConfigurationList = CF30CD4B2472CD1C005B09F4 /* Build configuration list for PBXProject "Zettai Goukaku - Nouryoku Shiken" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -842,7 +842,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF30CD4F2472CD1C005B09F4 /* Project */,
+				CF30CD4F2472CD1C005B09F4 /* Zettai Goukaku - Nouryoku Shiken */,
 			);
 		};
 /* End PBXProject section */
@@ -1179,7 +1179,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF30CD4B2472CD1C005B09F4 /* Build configuration list for PBXProject "Project" */ = {
+		CF30CD4B2472CD1C005B09F4 /* Build configuration list for PBXProject "Zettai Goukaku - Nouryoku Shiken" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF30CD622472CD1F005B09F4 /* Debug */,
@@ -1188,7 +1188,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF30CD642472CD1F005B09F4 /* Build configuration list for PBXNativeTarget "Project" */ = {
+		CF30CD642472CD1F005B09F4 /* Build configuration list for PBXNativeTarget "Zettai Goukaku - Nouryoku Shiken" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF30CD652472CD1F005B09F4 /* Debug */,

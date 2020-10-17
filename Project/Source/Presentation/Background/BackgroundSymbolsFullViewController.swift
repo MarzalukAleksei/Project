@@ -42,7 +42,7 @@ class BackgroundSymbolsFullViewController: UIViewController {
     }
     
     func verticalCount(labelheigh: CGFloat) -> Int {
-        let count = UIScreen.main.boundss.height / labelheigh
+        let count = UIScreen.main.bounds.height / labelheigh
         return Int(count)
     }
     

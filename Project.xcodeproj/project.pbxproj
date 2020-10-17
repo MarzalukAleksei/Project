@@ -261,6 +261,20 @@
 			path = LaunchView;
 			sourceTree = "<group>";
 		};
+		1039F45E253AE05200566A62 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				CFD012CE24E723DB001F0032 /* CSVAction.swift */,
+				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
+				CF4B81FD24AA429600A2CBA8 /* KanaSetter.swift */,
+				CF956740251D47B300AB7F3E /* DifficultLevel.swift */,
+				CF857BD724C1B25A0084DCE9 /* KanjiSetter.swift */,
+				CF69657E25063F4000FCE031 /* DesignParameters.swift */,
+				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
 		103D475F251E047400F0BE92 /* Background */ = {
 			isa = PBXGroup;
 			children = (
@@ -711,15 +725,9 @@
 		CF4B820B24AD208600A2CBA8 /* Another */ = {
 			isa = PBXGroup;
 			children = (
+				1039F45E253AE05200566A62 /* Refactor */,
 				CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */,
-				CFD012CE24E723DB001F0032 /* CSVAction.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
-				CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */,
-				CF4B81FD24AA429600A2CBA8 /* KanaSetter.swift */,
-				CF956740251D47B300AB7F3E /* DifficultLevel.swift */,
-				CF857BD724C1B25A0084DCE9 /* KanjiSetter.swift */,
-				CF69657E25063F4000FCE031 /* DesignParameters.swift */,
-				CF2BCC5224F40386003859FD /* Vokabulary.swift */,
 				CF30CD612472CD1F005B09F4 /* Info.plist */,
 				CFF1237E249B848600323497 /* GoogleService-Info.plist */,
 				1078AC6E2532360F004124CD /* Stores.swift */,

@@ -25,7 +25,7 @@ class KanaMapper: IMapper {
         for (index, row) in stringArray.enumerated() {
             let rowData = row.components(separatedBy:  ",")
             guard rowData.count > 2 else { continue }
-            let model = KanaModel(kana: String(rowData[0]), reading: String(rowData[1]), id: index, example: [])
+            let model = KanaModel(hiragana: rowData[0], katakana: rowData[5], reading: rowData[6], id: index, example: [])
             result.append(model)
         }
         return result

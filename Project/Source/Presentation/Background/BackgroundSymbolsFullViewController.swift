@@ -13,6 +13,8 @@ class BackgroundSymbolsFullViewController: UIViewController {
     private let widthOfLabel: CGFloat = 30
     private let heightOfLabel: CGFloat = 30
     
+    private let interactor: IBackgroundInteractor = BackgroundInteractor(kanaRepository: KanaRepository(store: Stores.shared.kanaStore, mapper: KanaMapper(csvMapper: CSVMapper())))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         kanaBackgroundLabel()
@@ -21,21 +23,18 @@ class BackgroundSymbolsFullViewController: UIViewController {
     func kanaBackgroundLabel() {
         let labelWidth = widthOfLabel
         let labelHeigth = heightOfLabel
-        let kana = KanaSetter()
-
         let horizontal = horizontalCount(labelWidth: labelWidth)
         let vertical = verticalCount(labelheigh: labelHeigth)
-        let katakana = kana.transformToKana(.katakana)
-        let hiragana = kana.transformToKana(.hiragana)
+        let symbols = interactor.getKana()
+ 
         for horizontalItem in 0...horizontal {
             for verticalItem in 0...vertical {
                 let x = labelWidth * CGFloat(horizontalItem)
                 let y = labelHeigth * CGFloat(verticalItem)
-                let arrayOfItems = verticalItem % 2 == 0 ? katakana : hiragana
-                guard let object = arrayOfItems.randomElement() else {
+                guard let object = symbols.randomElement() else {
                     return
                 }
-                let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: object.kana)
+                let newLabel = createLabel(xCor: x, yCor: y, width: labelWidth, height: labelHeigth, text: verticalItem % 2 == 0 ? object.hiragana : object.katakana )
                 view.addSubview(newLabel)
                 view.sendSubviewToBack(newLabel)
             }
@@ -43,7 +42,7 @@ class BackgroundSymbolsFullViewController: UIViewController {
     }
     
     func verticalCount(labelheigh: CGFloat) -> Int {
-        let count = UIScreen.main.bounds.height / labelheigh
+        let count = UIScreen.main.boundss.height / labelheigh
         return Int(count)
     }
     

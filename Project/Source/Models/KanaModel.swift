@@ -7,14 +7,16 @@
 //
 
 struct KanaModel {
-    var kana: String
+    var hiragana: String
+    var katakana: String
     var reading: String
     var id: Int = 0
     var example: [String] = []
     var mistake: Bool = false
     
-    init(kana: String, reading: String, id: Int , example: [String], mistake: Bool = false) {
-        self.kana = kana
+    init(hiragana: String, katakana: String, reading: String, id: Int , example: [String], mistake: Bool = false) {
+        self.hiragana = hiragana
+        self.katakana = katakana
         self.reading = reading
         self.id = id
         self.example = example

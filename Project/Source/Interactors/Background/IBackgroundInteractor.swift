@@ -8,5 +8,5 @@
 
 protocol IBackgroundInteractor {
     
-    func getKanji() -> [KanjiModel]
+    func getKana() -> [KanaModel]
 }

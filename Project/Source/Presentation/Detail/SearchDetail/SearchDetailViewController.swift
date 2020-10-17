@@ -58,7 +58,7 @@ class SearchDetailViewController: UIViewController {
     
     private func kanaListSetup() {
         for item in kana.transformToKana(.hiragana) {
-            kanaList += item.kana
+            kanaList += item.katakana
         }
     }
     

@@ -40,7 +40,7 @@ class FileReader {
         return string.components(separatedBy: ",")
     }
 
-    private func cleanCSV(File file: String) -> String { // убирает \r в конце строки
+    private func cleanCSV(File file: String) -> String {
         var cleanFile = file
         cleanFile = cleanFile.replacingOccurrences(of: "\r\n", with: "\n")
         return cleanFile

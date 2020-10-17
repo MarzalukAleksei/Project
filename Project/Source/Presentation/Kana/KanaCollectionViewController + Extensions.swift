@@ -62,7 +62,7 @@ extension KanaViewController : UICollectionViewDataSource, UICollectionViewDeleg
         switch typeOfCollection {
         case .hiragana, .katakana:
             let element = arrayOfElements[indexPath.item] as? KanaModel
-            cell.setupLabelText(text: element?.kana ?? "-")
+            cell.setupLabelText(text: element?.katakana ?? "-")
 
         case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             let element = arrayOfElements[indexPath.item] as? KanjiModel

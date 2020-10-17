@@ -8,13 +8,14 @@
 
 class BackgroundInteractor: IBackgroundInteractor {
     
-    private let kanjiRepository: IKanjiRepository
+    private let kanaRepository: IKanaRepository
     
-    init(kanjiRepository: IKanjiRepository) {
-        self.kanjiRepository = kanjiRepository
+    init(kanaRepository: IKanaRepository) {
+        self.kanaRepository = kanaRepository
     }
     
-    func getKanji() -> [KanjiModel] {
-        return kanjiRepository.getData()
+    func getKana() -> [KanaModel] {
+        return kanaRepository.getData()
     }
+    
 }

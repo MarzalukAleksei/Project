@@ -79,7 +79,7 @@ class DetailViewController: UIViewController {
             var array = [Any]()
             array.append(element.reading)
             twoDemensionalArray[.main] = array
-            twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(element.kana, typeOf: .kana)
+            twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(element.katakana, typeOf: .kana)
         case is VocabularyModel:
             twoDemensionalArray[.main] = [startElement as Any]
         default: break
@@ -89,6 +89,7 @@ class DetailViewController: UIViewController {
     func viewParameters() {
         bottomView.delegate = self
         tableView.allowsSelection = false
+        let designElementCornerRadius: CGFloat = 0.2
         previousButtonOutlet.layer.cornerRadius = previousButtonOutlet.bounds.size.width * designElementCornerRadius
         nextButtonOutlet.layer.cornerRadius = nextButtonOutlet.bounds.size.width * designElementCornerRadius
     }
@@ -119,18 +120,18 @@ class DetailViewController: UIViewController {
             guard let currentElement = element as? KanaModel else { return }
             guard let currentArray = array as? [KanaModel] else { return }
             if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
-                previous = currentArray[currentElement.id - 2].kana
+                previous = currentArray[currentElement.id - 2].katakana
                 previousElement = currentArray[currentElement.id - 2]
-                next = currentArray[currentElement.id].kana
+                next = currentArray[currentElement.id].katakana
                 nextElement = currentArray[currentElement.id]
             } else if currentElement.id == currentArray.first?.id{
-                next = currentArray[currentElement.id].kana
+                next = currentArray[currentElement.id].katakana
                 nextElement = currentArray[currentElement.id]
             } else if currentElement.id == currentArray.last?.id{
-                previous = currentArray[currentElement.id - 2].kana
+                previous = currentArray[currentElement.id - 2].katakana
                 previousElement = currentArray[currentElement.id - 2]
             }
-            detail = currentElement.kana
+            detail = currentElement.katakana
             startElement = currentArray[currentElement.id - 1]
         case is KanjiModel:
             guard let currentElement = element as? KanjiModel else { return }
@@ -171,21 +172,21 @@ class DetailViewController: UIViewController {
             guard let currentArray = array as? [KanaModel] else { return }
             guard var preElement = previousElement as? KanaModel else { return }
             if preElement.id != currentArray.first?.id && previousElement != nil {
-                next = currentElement.kana
+                next = currentElement.katakana
                 currentElement = preElement
                 startElement = currentElement
                 preElement = currentArray[currentElement.id - 2]
                 previousElement = preElement
                 nextElement = currentArray[currentElement.id]
-                detail = currentElement.kana
-                previous = preElement.kana
+                detail = currentElement.katakana
+                previous = preElement.katakana
             } else if preElement.id == currentArray.first?.id {
-                next = currentElement.kana
+                next = currentElement.katakana
                 currentElement = preElement
                 startElement = currentElement
                 previousElement = nil
                 nextElement = currentArray[currentElement.id]
-                detail = currentElement.kana
+                detail = currentElement.katakana
                 previous = ""
             }
         case is KanjiModel:
@@ -227,21 +228,21 @@ class DetailViewController: UIViewController {
             guard let currentArray = array as? [KanaModel] else { return }
             guard var nexElement = nextElement as? KanaModel else { return }
             if nexElement.id != currentArray.last?.id && nextElement != nil {
-                previous = currentElement.kana
+                previous = currentElement.katakana
                 previousElement = currentElement
                 currentElement = nexElement
                 startElement = currentElement
                 nexElement = currentArray[currentElement.id]
                 nextElement = nexElement
-                detail = currentElement.kana
-                next = nexElement.kana
+                detail = currentElement.katakana
+                next = nexElement.katakana
             } else if nexElement.id == currentArray.last?.id {
-                previous = currentElement.kana
+                previous = currentElement.katakana
                 previousElement = currentElement
                 currentElement = nexElement
                 startElement = currentElement
                 nextElement = nil
-                detail = currentElement.kana
+                detail = currentElement.katakana
                 next = ""
             }
         case is KanjiModel:

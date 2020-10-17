@@ -12,9 +12,13 @@ class KanaViewController: UIViewController {
 
     @IBOutlet private weak var bottomView: BottomView!
     @IBOutlet private weak var collection: UICollectionView!
+//    let edgeInCollectionViewTop: CGFloat = 10
+//    let edgeInCollectionViewBottom: CGFloat = 10
+//    let edgeInCollectionViewLeft: CGFloat = 10
+//    let edgeInCollectionViewRight: CGFloat = 10
     
-    let itemsAtRow = itemsInCollectionView
-    let sectionInsets = UIEdgeInsets(top: edgeInCollectionViewTop, left: edgeInCollectionViewLeft, bottom: edgeInCollectionViewBottom, right: edgeInCollectionViewRight)
+//    let itemsAtRow = itemsInCollectionView
+//    let sectionInsets = UIEdgeInsets(top: edgeInCollectionViewTop, left: edgeInCollectionViewLeft, bottom: edgeInCollectionViewBottom, right: edgeInCollectionViewRight)
 
     var typeOfCollection: TypeOfCollectionItem?
 

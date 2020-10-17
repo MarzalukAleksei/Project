@@ -68,6 +68,7 @@ extension SearchDetailViewController: UITableViewDelegate, UITableViewDataSource
     private func pushToDetailViewController(element: Any) {
         let vc = ViewControllers.detail
         vc.startElement = element
+        vc.array = twoDemensionalArray[.containsKanji]
         navigationController?.pushViewController(vc, animated: true)
     }
     

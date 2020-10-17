@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100B49CE253B864100D3918E /* ISearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100B49CD253B864100D3918E /* ISearchInteractor.swift */; };
+		100B49D2253B865600D3918E /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100B49D1253B865600D3918E /* SearchInteractor.swift */; };
 		1038B6082528D99300C4539A /* KanaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B6072528D99300C4539A /* KanaModel.swift */; };
 		1038B60B2528D9B700C4539A /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B60A2528D9B700C4539A /* KanjiModel.swift */; };
 		1038B60E2528D9CE00C4539A /* VocabularyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B60D2528D9CE00C4539A /* VocabularyModel.swift */; };
@@ -100,6 +102,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100B49CD253B864100D3918E /* ISearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchInteractor.swift; sourceTree = "<group>"; };
+		100B49D1253B865600D3918E /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		1038B6072528D99300C4539A /* KanaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaModel.swift; sourceTree = "<group>"; };
 		1038B60A2528D9B700C4539A /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
 		1038B60D2528D9CE00C4539A /* VocabularyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyModel.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100B49CC253B862D00D3918E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				100B49CD253B864100D3918E /* ISearchInteractor.swift */,
+				100B49D1253B865600D3918E /* SearchInteractor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		1038B6152528DB4900C4539A /* CSVManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +371,7 @@
 		10734FC9251FC4D800F39215 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				100B49CC253B862D00D3918E /* Search */,
 				1078AC73253241E9004124CD /* Background */,
 				1077168D252E61910001ABA2 /* Launch */,
 			);
@@ -908,7 +922,9 @@
 				CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */,
 				104187AA2529D61800812AE4 /* IMapper.swift in Sources */,
 				108735952521030F00926E6E /* Storyboards.swift in Sources */,
+				100B49CE253B864100D3918E /* ISearchInteractor.swift in Sources */,
 				10771681252E5F100001ABA2 /* KanjiMapper.swift in Sources */,
+				100B49D2253B865600D3918E /* SearchInteractor.swift in Sources */,
 				CF30CD542472CD1C005B09F4 /* AppDelegate.swift in Sources */,
 				CF9265712538D19600A23937 /* DetailTableViewCell.swift in Sources */,
 				1078AC5A25322A93004124CD /* KanjiRepository.swift in Sources */,

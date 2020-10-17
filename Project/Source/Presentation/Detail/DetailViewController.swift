@@ -53,10 +53,10 @@ class DetailViewController: UIViewController {
         tableView.register(UINib(nibName: "DetailTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        if searchDetailViewControllerIsInitial == true {
-            previousButtonOutlet.alpha = 0
-            nextButtonOutlet.alpha = 0
-        }
+//        if searchDetailViewControllerIsInitial == true {
+//            previousButtonOutlet.alpha = 0
+//            nextButtonOutlet.alpha = 0
+//        }
 //        guard let element = startElement as? KanjiModel else { return } // не понятно почему, при переходе с searchDetail не обновляет элемент. Написав сюда, обновил
 //        detailLabel.text = element.body
 //        print(array)

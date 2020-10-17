@@ -55,24 +55,37 @@ extension SearchDetailViewController: UITableViewDelegate, UITableViewDataSource
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let section = Section(rawValue: indexPath.section) else { return }
-        let element: KanjiModel
         switch section {
         case .containsKanji:
-            element = twoDemensionalArray[section]?[indexPath.row] as! KanjiModel
-            pushToDetailViewController(element: element)
+            guard let element = twoDemensionalArray[section]?[indexPath.row] as? KanjiModel else { return }
+            guard let array = twoDemensionalArray[section] as? [KanjiModel] else { return }
+            let function = resetIdElements(array: array, element: element)
+            pushToDetailViewController(element: function.element, array: function.array)
         default: break
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    private func pushToDetailViewController(element: Any) {
+    private func pushToDetailViewController(element: Any, array: [Any]) {
         let vc = ViewControllers.detail
         vc.startElement = element
-        vc.array = twoDemensionalArray[.containsKanji]
+        vc.array = array
         vc.searchDetailViewControllerIsInitial = true
         navigationController?.pushViewController(vc, animated: true)
     }
-    
+ 
+    private func resetIdElements(array: [KanjiModel], element: KanjiModel) -> (array: [KanjiModel], element: KanjiModel) {
+        var newArray = [KanjiModel]()
+        var newElement = element
+        for var item in array {
+            item.id = newArray.count + 1 // Даже не спрашивай, почему так, я хз, под чем я писал логику DetailView
+            newArray.append(item)
+            if item.body == element.body {
+                newElement.id = newArray.last!.id
+            }
+        }
+        return (newArray, newElement)
+    }
 }
 
 extension SearchDetailViewController: BottomViewDelegate {

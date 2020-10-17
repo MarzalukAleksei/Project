@@ -8,10 +8,6 @@
 
 import UIKit
 
-func randomFloat(from: CGFloat, to: CGFloat) -> CGFloat {
-    return CGFloat.random(in: from...to)
-}
-
 enum TypeOfCollectionItem: String {
     case hiragana = "hiragana"
     case katakana = "katakana"

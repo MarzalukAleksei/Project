@@ -27,16 +27,15 @@ func selectLevelFromArray (difficultLevel: Int) -> [Any] {
     
 func getArray(typeOf: TypeOfCollectionItem) -> [Any] {
     let kana = KanaSetter()
-    let difficult = DifficultLevel()
     switch typeOf {
         case .hiragana: return kana.transformToKana(.hiragana)
         case .katakana: return kana.transformToKana(.katakana)
-        case .kanjiAll: return difficult.selectLevelFromArray(difficultLevel: 0)
-        case .kanjiN1: return difficult.selectLevelFromArray(difficultLevel: 1)
-        case .kanjiN2: return difficult.selectLevelFromArray(difficultLevel: 2)
-        case .kanjiN3: return difficult.selectLevelFromArray(difficultLevel: 3)
-        case .kanjiN4: return difficult.selectLevelFromArray(difficultLevel: 4)
-        case .kanjiN5: return difficult.selectLevelFromArray(difficultLevel: 5)
+        case .kanjiAll: return selectLevelFromArray(difficultLevel: 0)
+        case .kanjiN1: return selectLevelFromArray(difficultLevel: 1)
+        case .kanjiN2: return selectLevelFromArray(difficultLevel: 2)
+        case .kanjiN3: return selectLevelFromArray(difficultLevel: 3)
+        case .kanjiN4: return selectLevelFromArray(difficultLevel: 4)
+        case .kanjiN5: return selectLevelFromArray(difficultLevel: 5)
         }
     }
 }

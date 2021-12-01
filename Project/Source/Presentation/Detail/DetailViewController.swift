@@ -58,20 +58,20 @@ class DetailViewController: UIViewController {
         let vocabulary = VocabularySetter()
         switch startElement {
         case is KanjiModel:
-            guard let element = startElement as? KanjiModel else { return }
-            let examplesSection = vocabulary.findElementsInVocabulary(element.body, typeOf: .kanji)
+            guard let startElement = startElement as? KanjiModel else { return }
+            let examplesSection = vocabulary.findElementsInVocabulary(startElement.body, typeOf: .kanji)
             var array = [Any]()
-            array.append(kunLabel + element.readingHiragana)
-            array.append(onLabel + element.readingKatakana)
-            array.append(imiLabel + element.translate)
+            array.append(kunLabel + startElement.readingHiragana)
+            array.append(onLabel + startElement.readingKatakana)
+            array.append(imiLabel + startElement.translate)
             twoDemensionalArray[.main] = array
             twoDemensionalArray[.examples] = examplesSection
         case is KanaModel:
-            guard let element = startElement as? KanaModel else { return }
+            guard let startElement = startElement as? KanaModel else { return }
             var array = [Any]()
-            array.append(element.reading)
+            array.append(startElement.reading)
             twoDemensionalArray[.main] = array
-            twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(element.katakana, typeOf: .kana)
+            twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(startElement.katakana, typeOf: .kana)
         case is VocabularyModel:
             twoDemensionalArray[.main] = [startElement as Any]
         default: break
@@ -87,18 +87,22 @@ class DetailViewController: UIViewController {
     }
     
     func changeCollectionArray() {
-        let kana = KanaSetter()
-        let difficult = DifficultLevel()
+        let kana = KanaSetter() // Refactor
+//        let difficult = DifficultLevel() // Refactor
         switch typeOfColletion {
         case .hiragana:
-            array = kana.transformToKana(.hiragana)
+            array = kana.transformToKana(.hiragana) // Refactor
+//            array = Stores.shared.kanaStore.getData()
         case .katakana:
-            array = kana.transformToKana(.katakana)
+            array = kana.transformToKana(.katakana) // Refactor
+//            array = Stores.shared.kanaStore.getData()
         case .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
-            guard let element = startElement as? KanjiModel else { return }
-            array = difficult.selectLevelFromArray(difficultLevel: element.level)
+            guard let startElement = startElement as? KanjiModel else { return }
+            array = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == startElement.level})
+//            array = difficult.selectLevelFromArray(difficultLevel: startElement.level) // Refactor
         case .kanjiAll:
-            array = difficult.selectLevelFromArray(difficultLevel: 0)
+            array = Stores.shared.kanjiStore.getData()
+//            array = difficult.selectLevelFromArray(difficultLevel: 0) // Refactor
         default: break
         }
     }

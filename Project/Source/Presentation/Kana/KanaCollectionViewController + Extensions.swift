@@ -29,25 +29,27 @@ extension KanaViewController: UICollectionViewDelegateFlowLayout{
 extension KanaViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var element: Any?
-        switch typeOfCollection {
-        case .hiragana:
-            element = elementByIndex(array: difficult.getArray(typeOf: .hiragana), index: indexPath.row)
-        case .katakana:
-            element = elementByIndex(array: difficult.getArray(typeOf: .katakana), index: indexPath.row)
-        case .kanjiN1:
-            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN1), index: indexPath.row)
-        case .kanjiN2:
-            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN2), index: indexPath.row)
-        case .kanjiN3:
-            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN3), index: indexPath.row)
-        case .kanjiN4:
-            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN4), index: indexPath.row)
-        case .kanjiN5:
-            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN5), index: indexPath.row)
-        case .kanjiAll:
-            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiAll), index: indexPath.row)
-        default: break
-        }
+//        switch typeOfCollection {
+//        case .hiragana:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .hiragana), index: indexPath.row)
+//        case .katakana:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .katakana), index: indexPath.row)
+//        case .kanjiN1:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN1), index: indexPath.row)
+//        case .kanjiN2:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN2), index: indexPath.row)
+//        case .kanjiN3:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN3), index: indexPath.row)
+//        case .kanjiN4:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiN4), index: indexPath.row)
+//        case .kanjiN5:
+//            element = elementByIndex(array: arrayOfElements, index: indexPath.row)
+//        case .kanjiAll:
+//            element = elementByIndex(array: difficult.getArray(typeOf: .kanjiAll), index: indexPath.row)
+//        default: break
+//        }
+            element = arrayOfElements[indexPath.row]
+        
         pushToNextViewController(element: element as Any)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,14 +62,16 @@ extension KanaViewController : UICollectionViewDataSource, UICollectionViewDeleg
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KanaCollectionViewCell", for: indexPath) as? KanaCollectionViewCell else { return UICollectionViewCell() }
 
         switch typeOfCollection {
-        case .hiragana, .katakana:
+        case .hiragana:
+            let element = arrayOfElements[indexPath.item] as? KanaModel
+            cell.setupLabelText(text: element?.hiragana ?? "-")
+        case .katakana:
             let element = arrayOfElements[indexPath.item] as? KanaModel
             cell.setupLabelText(text: element?.katakana ?? "-")
-
         case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             let element = arrayOfElements[indexPath.item] as? KanjiModel
             cell.setupLabelText(text: element?.body ?? "-")
-        case .none: break
+        case _: break
         }
         return cell
     }

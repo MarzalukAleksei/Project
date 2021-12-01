@@ -36,6 +36,7 @@ func getArray(typeOf: TypeOfCollectionItem) -> [Any] {
         case .kanjiN3: return selectLevelFromArray(difficultLevel: 3)
         case .kanjiN4: return selectLevelFromArray(difficultLevel: 4)
         case .kanjiN5: return selectLevelFromArray(difficultLevel: 5)
+        case _: return [Any]()
         }
     }
 }

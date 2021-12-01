@@ -92,6 +92,7 @@
 		CFA51B3C2534A75F000106FB /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */; };
 		CFA51B402534B3F2000106FB /* SearchDetailViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */; };
 		CFA51B4425360D9E000106FB /* SearchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */; };
+		CFB721B12757AC5F00EEC9D0 /* Array extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB721B02757AC5F00EEC9D0 /* Array extension.swift */; };
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
 		CFE0DBE225B4E20B001F34CD /* TangoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0DBE125B4E20B001F34CD /* TangoModel.swift */; };
 		CFE0DBE625B4E4C6001F34CD /* TangoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0DBE525B4E4C6001F34CD /* TangoMapper.swift */; };
@@ -196,6 +197,7 @@
 		CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDetailViewController + Extension.swift"; sourceTree = "<group>"; };
 		CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewCell.swift; sourceTree = "<group>"; };
+		CFB721B02757AC5F00EEC9D0 /* Array extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array extension.swift"; sourceTree = "<group>"; };
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
 		CFE0DBE125B4E20B001F34CD /* TangoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangoModel.swift; sourceTree = "<group>"; };
 		CFE0DBE525B4E4C6001F34CD /* TangoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangoMapper.swift; sourceTree = "<group>"; };
@@ -726,6 +728,7 @@
 		CF4B820B24AD208600A2CBA8 /* Another */ = {
 			isa = PBXGroup;
 			children = (
+				CFB721AF2757AC2D00EEC9D0 /* ArraysSetting */,
 				1039F45E253AE05200566A62 /* Refactor */,
 				CF30CD552472CD1C005B09F4 /* SceneDelegate.swift */,
 				CF30CD532472CD1C005B09F4 /* AppDelegate.swift */,
@@ -789,6 +792,14 @@
 			);
 			name = SearchDetail;
 			path = Detail/SearchDetail;
+			sourceTree = "<group>";
+		};
+		CFB721AF2757AC2D00EEC9D0 /* ArraysSetting */ = {
+			isa = PBXGroup;
+			children = (
+				CFB721B02757AC5F00EEC9D0 /* Array extension.swift */,
+			);
+			path = ArraysSetting;
 			sourceTree = "<group>";
 		};
 		CFE0DBE425B4E4B0001F34CD /* Tango */ = {
@@ -956,6 +967,7 @@
 				104187AF2529D64D00812AE4 /* IMapper + Extension.swift in Sources */,
 				CFE0DBE625B4E4C6001F34CD /* TangoMapper.swift in Sources */,
 				1038B60B2528D9B700C4539A /* KanjiModel.swift in Sources */,
+				CFB721B12757AC5F00EEC9D0 /* Array extension.swift in Sources */,
 				104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
 				1078AC5125322618004124CD /* IKanaStore.swift in Sources */,

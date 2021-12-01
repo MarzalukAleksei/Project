@@ -11,7 +11,7 @@ import UIKit
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 25))
-        let label = UILabel(frame: CGRect(x: 10, y: 1.5, width: tableView.bounds.width, height: headerView.bounds.height - 5))
+        let label = UILabel(frame: CGRect(x: 10, y: 0, width: tableView.bounds.width, height: headerView.bounds.height))
         guard let tableviewSection = SectionsInTableView(rawValue: section) else { return UIView() }
         switch tableviewSection {
             case .examples:
@@ -20,6 +20,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
                 label.text = "Чтение и Значение"
         }
         headerView.addSubview(label)
+        headerView.backgroundColor = .white
         return headerView
     }
     

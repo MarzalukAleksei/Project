@@ -24,7 +24,7 @@ class KanaViewController: UIViewController {
 
     var arrayOfElements = [Any]()
 
-    let difficult = DifficultLevel()
+//    let difficult = DifficultLevel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,25 @@ class KanaViewController: UIViewController {
     }
 
     private func prepareViewController() {
-        guard let type = typeOfCollection else { return }
-        arrayOfElements = difficult.getArray(typeOf: type)
+//        guard let type = typeOfCollection else { return }
+//        arrayOfElements = difficult.getArray(typeOf: type)
+        switch typeOfCollection {
+        case .hiragana, .katakana:
+            arrayOfElements = Stores.shared.kanaStore.getData()
+        case .kanjiN1:
+            arrayOfElements = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == 1 })
+        case .kanjiN2:
+            arrayOfElements = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == 2 })
+        case .kanjiN3:
+            arrayOfElements = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == 3 })
+        case .kanjiN4:
+            arrayOfElements = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == 4 })
+        case .kanjiN5:
+            arrayOfElements = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == 5 })
+        case .kanjiAll:
+            arrayOfElements = Stores.shared.kanjiStore.getData()
+        default: break
+        }
         collection.register(UINib(nibName: "KanaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "KanaCollectionViewCell")
         collection.delegate = self
         collection.dataSource = self

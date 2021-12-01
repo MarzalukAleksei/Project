@@ -40,8 +40,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let element = startElement else { return }
-        setupElement(element: element)
+        setupElement()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,181 +86,194 @@ class DetailViewController: UIViewController {
     }
     
     func changeCollectionArray() {
-        let kana = KanaSetter() // Refactor
-//        let difficult = DifficultLevel() // Refactor
         switch typeOfColletion {
-        case .hiragana:
-            array = kana.transformToKana(.hiragana) // Refactor
-//            array = Stores.shared.kanaStore.getData()
-        case .katakana:
-            array = kana.transformToKana(.katakana) // Refactor
-//            array = Stores.shared.kanaStore.getData()
+        case .hiragana, .katakana:
+            array = Stores.shared.kanaStore.getData()
         case .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
             guard let startElement = startElement as? KanjiModel else { return }
             array = Stores.shared.kanjiStore.getData().compareWith(condition: { $0.level == startElement.level})
-//            array = difficult.selectLevelFromArray(difficultLevel: startElement.level) // Refactor
         case .kanjiAll:
             array = Stores.shared.kanjiStore.getData()
-//            array = difficult.selectLevelFromArray(difficultLevel: 0) // Refactor
         default: break
         }
     }
     
-    func setupElement(element: Any) { // устрановка стартовых значений экрана
+    func setupElement() { // устрановка стартовых значений экрана
         var detail = ""
         var previous = ""
         var next = ""
-        switch element {
-        case is KanaModel:
-            guard let currentElement = element as? KanaModel else { return }
-            guard let currentArray = array as? [KanaModel] else { return }
-            if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
-                previous = currentArray[currentElement.id - 2].katakana
-                previousElement = currentArray[currentElement.id - 2]
-                next = currentArray[currentElement.id].katakana
-                nextElement = currentArray[currentElement.id]
-            } else if currentElement.id == currentArray.first?.id{
-                next = currentArray[currentElement.id].katakana
-                nextElement = currentArray[currentElement.id]
-            } else if currentElement.id == currentArray.last?.id{
-                previous = currentArray[currentElement.id - 2].katakana
-                previousElement = currentArray[currentElement.id - 2]
+        switch typeOfColletion {
+        case .hiragana:
+            guard let startElement = startElement as? KanaModel,
+                  let array = array as? [KanaModel],
+                  let index = array.firstIndex(where: { $0.hiragana == startElement.hiragana }) else { return }
+            detail = startElement.hiragana
+            if array.count > 1 {
+                if index == 0 {
+                    next = array[index + 1].hiragana
+                } else if index == array.count - 1 {
+                    previous = array[index - 1].hiragana
+                } else {
+                    next = array[index + 1].hiragana
+                    previous = array[index - 1].hiragana
+                }
             }
-            detail = currentElement.katakana
-            startElement = currentArray[currentElement.id - 1]
-        case is KanjiModel:
-            guard let currentElement = element as? KanjiModel else { return }
-            guard let currentArray = array as? [KanjiModel] else { return }
-            if currentElement.id != currentArray.first?.id && currentElement.id != currentArray.last?.id {
-                previous = currentArray[currentElement.id - 2].body
-                previousElement = currentArray[currentElement.id - 2]
-                next = currentArray[currentElement.id].body
-                nextElement = currentArray[currentElement.id]
-            } else if currentElement.id == currentArray.first?.id && currentElement.id == currentArray.last?.id {
-                nextElement = nil
-                previousElement = nil
-            } else if currentElement.id == currentArray.last?.id{
-                previous = currentArray[currentElement.id - 2].body
-                previousElement = currentArray[currentElement.id - 2]
-            } else if currentElement.id == currentArray.first?.id {
-                next = currentArray[currentElement.id].body
-                nextElement = currentArray[currentElement.id]
+        case .katakana:
+            guard let startElement = startElement as? KanaModel,
+                  let array = array as? [KanaModel],
+                  let index = array.firstIndex(where: { $0.katakana == startElement.katakana }) else { return }
+            detail = startElement.katakana
+            if array.count > 1 {
+                if index == 0 {
+                    next = array[index + 1].katakana
+                } else if index == array.count - 1 {
+                    previous = array[index - 1].katakana
+                } else {
+                    next = array[index + 1].katakana
+                    previous = array[index - 1].katakana
+                }
             }
-            detail = currentElement.body
-        case is VocabularyModel: break
-//            guard let currentElement = startElement as? VocabularyModel else { return }
-            
-        default: break
+        case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
+            guard let startElement = startElement as? KanjiModel,
+                  let array = array as? [KanjiModel],
+                  let index = array.firstIndex(where: { $0.body == startElement.body }) else { return }
+            detail = array[index].body
+            if array.count > 1 {
+                if index == 0 {
+                    next = array[index + 1].body
+                } else if index == array.count - 1 {
+                    previous = array[index - 1].body
+                } else {
+                    next = array[index + 1].body
+                    previous = array[index - 1].body
+                }
+        }
+        case _: break
         }
         detailLabel.text = detail
         previousButtonOutlet.setTitle(previous, for: .normal)
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    func leftButtonAction(element: Any) {
-        var detail: String?
-        var previous: String?
-        var next: String?
-        switch element {
-        case is KanaModel:
-            guard var currentElement = element as? KanaModel else { return }
-            guard let currentArray = array as? [KanaModel] else { return }
-            guard var preElement = previousElement as? KanaModel else { return }
-            if preElement.id != currentArray.first?.id && previousElement != nil {
-                next = currentElement.katakana
-                currentElement = preElement
-                startElement = currentElement
-                preElement = currentArray[currentElement.id - 2]
-                previousElement = preElement
-                nextElement = currentArray[currentElement.id]
-                detail = currentElement.katakana
-                previous = preElement.katakana
-            } else if preElement.id == currentArray.first?.id {
-                next = currentElement.katakana
-                currentElement = preElement
-                startElement = currentElement
-                previousElement = nil
-                nextElement = currentArray[currentElement.id]
-                detail = currentElement.katakana
-                previous = ""
+    func leftButtonAction() {
+        var detail = detailLabel.text
+        var previous = previousButtonOutlet.currentTitle
+        var next = nextButtonOutlet.currentTitle
+        
+        switch typeOfColletion {
+        case .hiragana:
+            guard let startElement = startElement as? KanaModel,
+                  let array = array as? [KanaModel],
+                  let index = array.firstIndex(where: { $0.hiragana == startElement.hiragana }) else { return }
+            if array.count > 1 {
+                if index == 1 {
+                    detail = array[index - 1].hiragana
+                    previous = ""
+                    next = array[index].hiragana
+                    self.startElement = array[index - 1]
+                } else if index > 0 {
+                    detail = array[index - 1].hiragana
+                    previous = array[index - 2].hiragana
+                    next = array[index].hiragana
+                    self.startElement = array[index - 1]
+                }
             }
-        case is KanjiModel:
-            guard var currentElement = element as? KanjiModel else { return }
-            guard let currentArray = array as? [KanjiModel] else { return }
-            guard var preElement = previousElement as? KanjiModel else { return }
-            if preElement.id != currentArray.first?.id && previousElement != nil {
-                next = currentElement.body
-                currentElement = preElement
-                startElement = currentElement
-                preElement = currentArray[currentElement.id - 2]
-                previousElement = preElement
-                nextElement = currentArray[currentElement.id]
-                detail = currentElement.body
-                previous = preElement.body
-            } else if preElement.id == currentArray.first?.id {
-                next = currentElement.body
-                currentElement = preElement
-                startElement = currentElement
-                previousElement = nil
-                nextElement = currentArray[currentElement.id]
-                detail = currentElement.body
-                previous = ""
+        case .katakana:
+            guard let startElement = startElement as? KanaModel,
+                  let array = array as? [KanaModel],
+                  let index = array.firstIndex(where: { $0.katakana == startElement.katakana}) else { return }
+            if array.count > 1 {
+                if index == 1 {
+                    detail = array[index - 1].katakana
+                    previous = ""
+                    next = array[index].katakana
+                    self.startElement = array[index - 1]
+                } else if index > 0 {
+                    detail = array[index - 1].katakana
+                    previous = array[index - 2].katakana
+                    next = array[index].katakana
+                    self.startElement = array[index - 1]
+                }
             }
-        default: break
+        case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
+            guard let startElement = startElement as? KanjiModel,
+                  let array = array as? [KanjiModel],
+                  let index = array.firstIndex(where: { $0.body == startElement.body}) else { return }
+            if array.count > 1 {
+                if index == 1 {
+                    detail = array[index - 1].body
+                    previous = ""
+                    next = array[index].body
+                    self.startElement = array[index - 1]
+                } else if index > 0 {
+                    detail = array[index - 1].body
+                    previous = array[index - 2].body
+                    next = array[index].body
+                    self.startElement = array[index - 1]
+                }
+            }
+        case _: break
         }
         detailLabel.text = detail
         previousButtonOutlet.setTitle(previous, for: .normal)
         nextButtonOutlet.setTitle(next, for: .normal)
     }
     
-    func rightButtonAction(element: Any) {
-        var detail: String?
-        var previous: String?
-        var next: String?
-        switch element {
-        case is KanaModel:
-            guard var currentElement = element as? KanaModel else { return }
-            guard let currentArray = array as? [KanaModel] else { return }
-            guard var nexElement = nextElement as? KanaModel else { return }
-            if nexElement.id != currentArray.last?.id && nextElement != nil {
-                previous = currentElement.katakana
-                previousElement = currentElement
-                currentElement = nexElement
-                startElement = currentElement
-                nexElement = currentArray[currentElement.id]
-                nextElement = nexElement
-                detail = currentElement.katakana
-                next = nexElement.katakana
-            } else if nexElement.id == currentArray.last?.id {
-                previous = currentElement.katakana
-                previousElement = currentElement
-                currentElement = nexElement
-                startElement = currentElement
-                nextElement = nil
-                detail = currentElement.katakana
-                next = ""
+    func rightButtonAction() {
+        var detail = detailLabel.text
+        var previous = previousButtonOutlet.currentTitle
+        var next = nextButtonOutlet.currentTitle
+        switch typeOfColletion {
+        case .hiragana:
+            guard let startElement = startElement as? KanaModel,
+                  let array = array as? [KanaModel],
+                  let index = array.firstIndex(where: { $0.hiragana == startElement.hiragana }) else { return }
+            if array.count > 1 {
+                if array.count - 2 == index {
+                    detail = array[index + 1].hiragana
+                    next = ""
+                    previous = array[index].hiragana
+                    self.startElement = array[index + 1]
+                } else if array.count - 2 > index {
+                    detail = array[index + 1].hiragana
+                    next = array[index + 2].hiragana
+                    previous = array[index].hiragana
+                    self.startElement = array[index + 1]
+                }
             }
-        case is KanjiModel:
-            guard var currentElement = element as? KanjiModel else { return }
-            guard let currentArray = array as? [KanjiModel] else { return }
-            guard var nexElement = nextElement as? KanjiModel else { return }
-            if nexElement.id != currentArray.last?.id && nextElement != nil {
-                previous = currentElement.body
-                previousElement = currentElement
-                currentElement = nexElement
-                startElement = currentElement
-                nexElement = currentArray[currentElement.id]
-                nextElement = nexElement
-                next = nexElement.body
-                detail = currentElement.body
-            } else if nexElement.id == currentArray.last?.id {
-                previous = currentElement.body
-                previousElement = currentElement
-                currentElement = nexElement
-                startElement = currentElement
-                nextElement = nil
-                detail = currentElement.body
-                next = ""
+        case .katakana:
+            guard let startElement = startElement as? KanaModel,
+                  let array = array as? [KanaModel],
+                  let index = array.firstIndex(where: { $0.katakana == startElement.katakana }) else { return }
+            if array.count > 1 {
+                if array.count - 2 == index {
+                    detail = array[index + 1].katakana
+                    next = ""
+                    previous = array[index].katakana
+                    self.startElement = array[index + 1]
+                } else if array.count - 2 > index {
+                    detail = array[index + 1].katakana
+                    next = array[index + 2].katakana
+                    previous = array[index].katakana
+                    self.startElement = array[index + 1]
+                }
+            }
+        case .kanjiAll, .kanjiN1, .kanjiN2, .kanjiN3, .kanjiN4, .kanjiN5:
+            guard let startElement = startElement as? KanjiModel,
+                  let array = array as? [KanjiModel],
+                  let index = array.firstIndex(where: { $0.body == startElement.body }) else { return }
+            if array.count > 1 {
+                if array.count - 2 == index {
+                    detail = array[index + 1].body
+                    next = ""
+                    previous = array[index].body
+                    self.startElement = array[index + 1]
+                } else if array.count - 2 > index {
+                    detail = array[index + 1].body
+                    next = array[index + 2].body
+                    previous = array[index].body
+                    self.startElement = array[index + 1]
+                }
             }
         default: break
         }
@@ -271,16 +283,15 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func previousButton(_ sender: UIButton) {
-        guard let element = startElement else { return }
-        leftButtonAction(element: element)
+        leftButtonAction()
         setTwoDemensionalArray()
         tableView.reloadData()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
-        guard let element = startElement else { return }
-        rightButtonAction(element: element)
+        rightButtonAction()
         setTwoDemensionalArray()
         tableView.reloadData()
     }
 }
+

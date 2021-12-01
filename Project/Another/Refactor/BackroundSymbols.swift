@@ -9,7 +9,6 @@
 import UIKit
 
 enum TypeOfCollectionItem: String {
-    case kana = "kana"
     case hiragana = "hiragana"
     case katakana = "katakana"
     case kanjiAll = "AllSegue"

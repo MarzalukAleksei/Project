@@ -77,17 +77,24 @@
 		CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7192D2251FE44100F285CC /* SearchViewController.swift */; };
 		CF78EC0324CA3AE40098424F /* KanjiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78EC0224CA3AE40098424F /* KanjiViewController.swift */; };
 		CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */; };
+		CF8520A625FD49D3003B3958 /* ITangoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8520A525FD49D3003B3958 /* ITangoStore.swift */; };
+		CF8520A925FD49E2003B3958 /* TangoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8520A825FD49E2003B3958 /* TangoStore.swift */; };
+		CF8520AD25FD4BC1003B3958 /* ITangoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8520AC25FD4BC1003B3958 /* ITangoRepository.swift */; };
+		CF8520B025FD4BD7003B3958 /* TangoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8520AF25FD4BD7003B3958 /* TangoRepository.swift */; };
 		CF857BD824C1B25A0084DCE9 /* KanjiSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF857BD724C1B25A0084DCE9 /* KanjiSetter.swift */; };
 		CF92656E2538D18900A23937 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF92656D2538D18900A23937 /* DetailTableViewCell.xib */; };
 		CF9265712538D19600A23937 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9265702538D19600A23937 /* DetailTableViewCell.swift */; };
 		CF9265782538EAFB00A23937 /* SearchDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9265772538EAFB00A23937 /* SearchDetailTableViewCell.xib */; };
 		CF92657C2538EB0B00A23937 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF92657B2538EB0B00A23937 /* SearchTableViewCell.xib */; };
+		CF93541625FD52A1000B7104 /* Tango.csv in Resources */ = {isa = PBXBuildFile; fileRef = CF93541525FD52A1000B7104 /* Tango.csv */; };
 		CF956741251D47B300AB7F3E /* DifficultLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF956740251D47B300AB7F3E /* DifficultLevel.swift */; };
 		CFA51B382534A715000106FB /* SearchDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA51B372534A715000106FB /* SearchDetail.storyboard */; };
 		CFA51B3C2534A75F000106FB /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */; };
 		CFA51B402534B3F2000106FB /* SearchDetailViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */; };
 		CFA51B4425360D9E000106FB /* SearchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */; };
 		CFD012CF24E723DB001F0032 /* CSVAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD012CE24E723DB001F0032 /* CSVAction.swift */; };
+		CFE0DBE225B4E20B001F34CD /* TangoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0DBE125B4E20B001F34CD /* TangoModel.swift */; };
+		CFE0DBE625B4E4C6001F34CD /* TangoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0DBE525B4E4C6001F34CD /* TangoMapper.swift */; };
 		CFE931C52528D4CF0097E02B /* Kanji.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931C32528D4CF0097E02B /* Kanji.csv */; };
 		CFE931D32529CFB60097E02B /* Vocabulary.csv in Resources */ = {isa = PBXBuildFile; fileRef = CFE931D22529CFB60097E02B /* Vocabulary.csv */; };
 		CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE931FD252B38950097E02B /* MainChosenViewController.swift */; };
@@ -174,17 +181,24 @@
 		CF7192D2251FE44100F285CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF78EC0224CA3AE40098424F /* KanjiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewController.swift; sourceTree = "<group>"; };
 		CF8019D3249BBC9000E60D8C /* BackroundSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundSymbols.swift; sourceTree = "<group>"; };
+		CF8520A525FD49D3003B3958 /* ITangoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITangoStore.swift; sourceTree = "<group>"; };
+		CF8520A825FD49E2003B3958 /* TangoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangoStore.swift; sourceTree = "<group>"; };
+		CF8520AC25FD4BC1003B3958 /* ITangoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITangoRepository.swift; sourceTree = "<group>"; };
+		CF8520AF25FD4BD7003B3958 /* TangoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangoRepository.swift; sourceTree = "<group>"; };
 		CF857BD724C1B25A0084DCE9 /* KanjiSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiSetter.swift; sourceTree = "<group>"; };
 		CF92656D2538D18900A23937 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		CF9265702538D19600A23937 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		CF9265772538EAFB00A23937 /* SearchDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDetailTableViewCell.xib; sourceTree = "<group>"; };
 		CF92657B2538EB0B00A23937 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		CF93541525FD52A1000B7104 /* Tango.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tango.csv; sourceTree = "<group>"; };
 		CF956740251D47B300AB7F3E /* DifficultLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultLevel.swift; sourceTree = "<group>"; };
 		CFA51B372534A715000106FB /* SearchDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchDetail.storyboard; sourceTree = "<group>"; };
 		CFA51B3B2534A75F000106FB /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		CFA51B3F2534B3F2000106FB /* SearchDetailViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDetailViewController + Extension.swift"; sourceTree = "<group>"; };
 		CFA51B4325360D9E000106FB /* SearchDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewCell.swift; sourceTree = "<group>"; };
 		CFD012CE24E723DB001F0032 /* CSVAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVAction.swift; sourceTree = "<group>"; };
+		CFE0DBE125B4E20B001F34CD /* TangoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangoModel.swift; sourceTree = "<group>"; };
+		CFE0DBE525B4E4C6001F34CD /* TangoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangoMapper.swift; sourceTree = "<group>"; };
 		CFE931C32528D4CF0097E02B /* Kanji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kanji.csv; sourceTree = "<group>"; };
 		CFE931D22529CFB60097E02B /* Vocabulary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabulary.csv; sourceTree = "<group>"; };
 		CFE931FD252B38950097E02B /* MainChosenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainChosenViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +251,7 @@
 		1038B6222528E06600C4539A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				CF8520AB25FD4BAE003B3958 /* Tango */,
 				1078AC5825322A0C004124CD /* Vocabulary */,
 				1078AC5725322A07004124CD /* Kana */,
 				1078AC56253229F1004124CD /* Kanji */,
@@ -347,6 +362,7 @@
 		10734FC7251FC4B900F39215 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				CFE0DBE425B4E4B0001F34CD /* Tango */,
 				1077167F252E5F060001ABA2 /* Kanji */,
 				1077167A252E5E5D0001ABA2 /* Vocabulary */,
 				104187B22529E02C00812AE4 /* Kana */,
@@ -361,6 +377,7 @@
 				1038B6072528D99300C4539A /* KanaModel.swift */,
 				1038B60A2528D9B700C4539A /* KanjiModel.swift */,
 				1038B60D2528D9CE00C4539A /* VocabularyModel.swift */,
+				CFE0DBE125B4E20B001F34CD /* TangoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -494,6 +511,7 @@
 				CF2BCC5524F40397003859FD /* Kana.csv */,
 				CFE931C32528D4CF0097E02B /* Kanji.csv */,
 				CFE931D22529CFB60097E02B /* Vocabulary.csv */,
+				CF93541525FD52A1000B7104 /* Tango.csv */,
 			);
 			path = CSV;
 			sourceTree = "<group>";
@@ -563,6 +581,7 @@
 		1078AC3D253225A8004124CD /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				CF8520A425FD49B7003B3958 /* Tango */,
 				1078AC40253225B7004124CD /* Vocabulary */,
 				1078AC3F253225B2004124CD /* Kanji */,
 				1078AC3E253225AE004124CD /* Kana */,
@@ -600,8 +619,8 @@
 		1078AC56253229F1004124CD /* Kanji */ = {
 			isa = PBXGroup;
 			children = (
-				1078AC5925322A93004124CD /* KanjiRepository.swift */,
 				1078AC5D25322A9B004124CD /* IKanjiRepository.swift */,
+				1078AC5925322A93004124CD /* KanjiRepository.swift */,
 			);
 			path = Kanji;
 			sourceTree = "<group>";
@@ -609,8 +628,8 @@
 		1078AC5725322A07004124CD /* Kana */ = {
 			isa = PBXGroup;
 			children = (
-				1078AC6025322ABD004124CD /* KanaRepository.swift */,
 				1078AC6325322AC9004124CD /* IKanaRepository.swift */,
+				1078AC6025322ABD004124CD /* KanaRepository.swift */,
 			);
 			path = Kana;
 			sourceTree = "<group>";
@@ -716,6 +735,24 @@
 			path = Another;
 			sourceTree = "<group>";
 		};
+		CF8520A425FD49B7003B3958 /* Tango */ = {
+			isa = PBXGroup;
+			children = (
+				CF8520A525FD49D3003B3958 /* ITangoStore.swift */,
+				CF8520A825FD49E2003B3958 /* TangoStore.swift */,
+			);
+			path = Tango;
+			sourceTree = "<group>";
+		};
+		CF8520AB25FD4BAE003B3958 /* Tango */ = {
+			isa = PBXGroup;
+			children = (
+				CF8520AC25FD4BC1003B3958 /* ITangoRepository.swift */,
+				CF8520AF25FD4BD7003B3958 /* TangoRepository.swift */,
+			);
+			path = Tango;
+			sourceTree = "<group>";
+		};
 		CF92656C2538D17000A23937 /* DetailTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +789,14 @@
 			);
 			name = SearchDetail;
 			path = Detail/SearchDetail;
+			sourceTree = "<group>";
+		};
+		CFE0DBE425B4E4B0001F34CD /* Tango */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0DBE525B4E4C6001F34CD /* TangoMapper.swift */,
+			);
+			path = Tango;
 			sourceTree = "<group>";
 		};
 		CFE9321C2530536B0097E02B /* FourButtoms */ = {
@@ -847,6 +892,7 @@
 				CFE9320E252C7A290097E02B /* PushElement.xib in Resources */,
 				108735982521069D00926E6E /* Search.storyboard in Resources */,
 				CFA51B382534A715000106FB /* SearchDetail.storyboard in Resources */,
+				CF93541625FD52A1000B7104 /* Tango.csv in Resources */,
 				1038B6362528E3A300C4539A /* Launch.storyboard in Resources */,
 				CFE93203252B38960097E02B /* MainChosen.storyboard in Resources */,
 				10780CC3252EFEAF0022C517 /* Colors.xcassets in Resources */,
@@ -900,6 +946,7 @@
 				CFE93222253053C40097E02B /* FourButtom.swift in Sources */,
 				10BB092C25384BBE0049BC66 /* KanaCollectionViewController + Extensions.swift in Sources */,
 				1078AC6F2532360F004124CD /* Stores.swift in Sources */,
+				CFE0DBE225B4E20B001F34CD /* TangoModel.swift in Sources */,
 				10BB09292538455C0049BC66 /* KanjiViewController + Extension.swift in Sources */,
 				CFE93201252B38960097E02B /* MainChosenViewController.swift in Sources */,
 				1078AC5425322620004124CD /* KanaStore.swift in Sources */,
@@ -907,6 +954,7 @@
 				1078AC7C253386A6004124CD /* UIView.swift in Sources */,
 				1038B6272528E09200C4539A /* ICSVRepository.swift in Sources */,
 				104187AF2529D64D00812AE4 /* IMapper + Extension.swift in Sources */,
+				CFE0DBE625B4E4C6001F34CD /* TangoMapper.swift in Sources */,
 				1038B60B2528D9B700C4539A /* KanjiModel.swift in Sources */,
 				104187BA2529EB0700812AE4 /* MainBarViewController.swift in Sources */,
 				CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */,
@@ -926,12 +974,15 @@
 				CF9265712538D19600A23937 /* DetailTableViewCell.swift in Sources */,
 				1078AC5A25322A93004124CD /* KanjiRepository.swift in Sources */,
 				1078AC6725322ADB004124CD /* IVocabularyRepository.swift in Sources */,
+				CF8520A925FD49E2003B3958 /* TangoStore.swift in Sources */,
 				CF78EC0324CA3AE40098424F /* KanjiViewController.swift in Sources */,
 				CFA51B3C2534A75F000106FB /* SearchDetailViewController.swift in Sources */,
 				CFA51B4425360D9E000106FB /* SearchDetailTableViewCell.swift in Sources */,
 				1078AC752532420C004124CD /* BackgroundInteractor.swift in Sources */,
 				CF30CD562472CD1C005B09F4 /* SceneDelegate.swift in Sources */,
+				CF8520B025FD4BD7003B3958 /* TangoRepository.swift in Sources */,
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
+				CF8520A625FD49D3003B3958 /* ITangoStore.swift in Sources */,
 				1078AC6A25322AE7004124CD /* VocabularyRepository.swift in Sources */,
 				10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */,
 				103D7CBC25378F5B0024ABE3 /* BottomView.swift in Sources */,
@@ -952,6 +1003,7 @@
 				1078AC42253225DF004124CD /* IVocabularyStore.swift in Sources */,
 				CF8019D4249BBC9000E60D8C /* BackroundSymbols.swift in Sources */,
 				CFE932362530F1720097E02B /* NewViewController.swift in Sources */,
+				CF8520AD25FD4BC1003B3958 /* ITangoRepository.swift in Sources */,
 				CF857BD824C1B25A0084DCE9 /* KanjiSetter.swift in Sources */,
 				1038B62D2528E28100C4539A /* LaunchScreenInteractor.swift in Sources */,
 			);

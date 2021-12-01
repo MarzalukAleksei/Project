@@ -28,4 +28,3 @@ class KanjiViewController: BackgroundSymbolsFullViewController {
         destinasion.typeOfCollection = typeOfCollection
     }
 }
-

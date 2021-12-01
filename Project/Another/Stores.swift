@@ -14,4 +14,5 @@ class Stores {
     let kanaStore = KanaStore()
     let kanjiStore = KanjiStore()
     let vocabularyStore = VocabularyStore()
+    let tangoStore = TangoStore()
 }

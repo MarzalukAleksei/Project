@@ -24,7 +24,7 @@ class KanjiMapper: IMapper {
         stringArray.removeFirst()
         for row in stringArray {
             let rowData = row.components(separatedBy: ",")
-            guard let levelStr = rowData.last, let level = Int(levelStr), level > 1 , let bodyFirst = rowData.first else { continue }
+            guard let levelStr = rowData.last, let level = Int(levelStr), level >= 1 , let bodyFirst = rowData.first else { continue } // Убрать проверку level при расширении библиотеки
             let body = String(bodyFirst)
             let translate = String(rowData[1])
             let readingKatakana = String(rowData[2])

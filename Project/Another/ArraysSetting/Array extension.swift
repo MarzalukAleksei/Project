@@ -22,4 +22,16 @@ extension Array {
         return newArray as? [T] ?? [T]()
     }
     
+    func compareWith(condition select: (VocabularyModel) -> Bool) -> [VocabularyModel] {
+        var newArray = [VocabularyModel]()
+        
+        for element in self {
+            guard let element = element as? VocabularyModel else { return newArray }
+            if select(element) {
+                newArray.append(element)
+            }
+        }
+        return newArray
+    }
+    
 }

@@ -54,12 +54,12 @@ class DetailViewController: UIViewController {
     }
     
     func setTwoDemensionalArray() { // отображение данных в таблице
-        let vocabulary = VocabularySetter()
+        let vocabulary = Stores.shared.vocabularyStore.getData()
+        var array = [Any]()
         switch startElement {
         case is KanjiModel:
             guard let startElement = startElement as? KanjiModel else { return }
-            let examplesSection = vocabulary.findElementsInVocabulary(startElement.body, typeOf: .kanji)
-            var array = [Any]()
+            let examplesSection = vocabulary.compareWith(condition: { $0.kanji.contains(startElement.body) })
             array.append(kunLabel + startElement.readingHiragana)
             array.append(onLabel + startElement.readingKatakana)
             array.append(imiLabel + startElement.translate)
@@ -67,10 +67,29 @@ class DetailViewController: UIViewController {
             twoDemensionalArray[.examples] = examplesSection
         case is KanaModel:
             guard let startElement = startElement as? KanaModel else { return }
-            var array = [Any]()
             array.append(startElement.reading)
             twoDemensionalArray[.main] = array
-            twoDemensionalArray[.examples] = vocabulary.findElementsInVocabulary(startElement.katakana, typeOf: .kana)
+            array.removeAll()
+            guard var array = array as? [VocabularyModel] else { return }
+            array = vocabulary.compareWith(condition: { $0.level == 5 || $0.level == 4 })
+            switch typeOfColletion {
+            case .katakana:
+                if startElement.katakana != "ン" {
+                    twoDemensionalArray[.examples] = array.compareWith(condition: { $0.kana.hasPrefix(startElement.katakana) })
+                } else {
+                    array = [VocabularyModel(kanji: "", kana: "", translate: "Слово не может начинаться на ン", level: 0)] + array.compareWith(condition: { $0.kana.hasSuffix("ン")})
+                    twoDemensionalArray[.examples] = array
+                }
+            case .hiragana:
+                if startElement.hiragana != "ん" {
+                    twoDemensionalArray[.examples] = array.compareWith(condition: { $0.kana.hasPrefix(startElement.hiragana) })
+                } else {
+                    array = [VocabularyModel(kanji: "", kana: "", translate: "Слово не может начинаться на ん", level: 0)] + array.compareWith(condition: { $0.kana.hasSuffix("ん")})
+                    twoDemensionalArray[.examples] = array
+                }
+            case _: break
+            }
+            
         case is VocabularyModel:
             twoDemensionalArray[.main] = [startElement as Any]
         default: break

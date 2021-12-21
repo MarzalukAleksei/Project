@@ -72,6 +72,8 @@
 		CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */; };
 		CF4B820524AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */; };
 		CF4B820724ACDC5C00A2CBA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */; };
+		CF4C62FB27720367001543AB /* WordLearning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4C62FA27720367001543AB /* WordLearning.storyboard */; };
+		CF4C62FD2772062D001543AB /* WordLearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C62FC2772062D001543AB /* WordLearningViewController.swift */; };
 		CF681C1025322B320088AF0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF681C0F25322B320088AF0B /* Images.xcassets */; };
 		CF6FC634251F51B100E3FB9E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */; };
 		CF7192D3251FE44100F285CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7192D2251FE44100F285CC /* SearchViewController.swift */; };
@@ -177,6 +179,8 @@
 		CF4B820224AC702600A2CBA8 /* KanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewController.swift; sourceTree = "<group>"; };
 		CF4B820424AC8ACD00A2CBA8 /* KanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF4B820624ACDC5C00A2CBA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CF4C62FA27720367001543AB /* WordLearning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordLearning.storyboard; sourceTree = "<group>"; };
+		CF4C62FC2772062D001543AB /* WordLearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordLearningViewController.swift; sourceTree = "<group>"; };
 		CF681C0F25322B320088AF0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF6FC633251F51B100E3FB9E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		CF7192D2251FE44100F285CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 				1038B6392528E3B200C4539A /* LaunchView */,
 				1087361A252118A800926E6E /* LaunchScreen */,
 				108736192521189900926E6E /* Main */,
+				CF4C62F72771FADF001543AB /* WordLearning */,
 				10734FD0251FC57A00F39215 /* Kanji */,
 				10734FCE251FC55300F39215 /* Alphabet */,
 				10734FCD251FC54900F39215 /* MainChosen */,
@@ -738,6 +743,15 @@
 			path = Another;
 			sourceTree = "<group>";
 		};
+		CF4C62F72771FADF001543AB /* WordLearning */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C62FA27720367001543AB /* WordLearning.storyboard */,
+				CF4C62FC2772062D001543AB /* WordLearningViewController.swift */,
+			);
+			path = WordLearning;
+			sourceTree = "<group>";
+		};
 		CF8520A425FD49B7003B3958 /* Tango */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,6 +902,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4C62FB27720367001543AB /* WordLearning.storyboard in Resources */,
 				10873614252115BA00926E6E /* Kana.storyboard in Resources */,
 				108736112521153500926E6E /* Alphabet.storyboard in Resources */,
 				1087361C252118CE00926E6E /* Kanji.storyboard in Resources */,
@@ -996,6 +1011,7 @@
 				CF4B820324AC702600A2CBA8 /* KanaCollectionViewController.swift in Sources */,
 				CF8520A625FD49D3003B3958 /* ITangoStore.swift in Sources */,
 				1078AC6A25322AE7004124CD /* VocabularyRepository.swift in Sources */,
+				CF4C62FD2772062D001543AB /* WordLearningViewController.swift in Sources */,
 				10734FE4251FCCFC00F39215 /* UILabel.swift in Sources */,
 				103D7CBC25378F5B0024ABE3 /* BottomView.swift in Sources */,
 				CFE93211252C7AD60097E02B /* PushElement.swift in Sources */,
@@ -1165,7 +1181,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5SSC8HW5N8;
+				DEVELOPMENT_TEAM = 3KF52TUDQF;
 				INFOPLIST_FILE = Project/Another/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1183,7 +1199,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5SSC8HW5N8;
+				DEVELOPMENT_TEAM = 3KF52TUDQF;
 				INFOPLIST_FILE = Project/Another/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

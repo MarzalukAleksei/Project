@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEH-dt-b2O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEH-dt-b2O">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +28,16 @@
             </objects>
             <point key="canvasLocation" x="-501" y="761"/>
         </scene>
+        <!--WordLearning-->
+        <scene sceneID="B5V-DM-Vam">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WordLearning" id="O86-Wg-6Lb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Слова" image="magazine" catalog="system" id="VdE-Zq-bQa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRj-dp-aD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="859"/>
+        </scene>
         <!--Main Bar View Controller-->
         <scene sceneID="eSC-xp-ixi">
             <objects>
@@ -43,6 +53,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="yaO-ar-EaG" kind="relationship" relationship="viewControllers" id="den-VE-qRw"/>
+                        <segue destination="O86-Wg-6Lb" kind="relationship" relationship="viewControllers" id="4iP-ml-ww0"/>
                         <segue destination="dz9-8x-8ip" kind="relationship" relationship="viewControllers" id="RNd-o2-7Mb"/>
                     </connections>
                 </tabBarController>
@@ -52,6 +63,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magazine" catalog="system" width="113" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="Crayola">
             <color red="0.10980392156862745" green="0.58823529411764708" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

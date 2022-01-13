@@ -11,4 +11,5 @@ struct VocabularyModel {
     var kana: String
     var translate: String
     var level: Int
+    var mistake: Bool?
 }
